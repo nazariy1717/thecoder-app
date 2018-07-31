@@ -1,11 +1,9 @@
 @import "../tools/mixins";
 @import "../tools/breakpoints";
 
-
-
 a{
   text-decoration: none;
-  color: inherit;
+  color: currentColor;
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   @include transition;
@@ -13,7 +11,6 @@ a{
 
 .modalTrigger{  cursor: pointer;  }
 
-// text classes
 .text-right   { text-align: right;  }
 .text-center  { text-align: center; }
 .text-left    { text-align: left;   }
@@ -21,63 +18,22 @@ a{
 
 
 
-.page-title-wrap{
-  border-bottom: 1px solid rgba(0,0,0,0.07);
-  margin-bottom: 30px;
-}
-
 .page-title{
-  display: inline-block;
-  position: relative;
-  font-size: 24px;
-  font-weight: normal;
-  line-height: 1.5;
-  color: var(--black--87);
-  padding-bottom: 10px;
-  &:after{
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -1px;
-    height: 2px;
-    background-color: #444;
-  }
+  font-family: 'MADE Evolve Sans EVO',sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: black;
 }
 
-.app-title{
-  display: block;
-  font-family: 'PT Serif',sans-serif;
-  font-size: 36px;
-  line-height: 1.33;
-  color: var(--black--87);
-  margin-bottom: 30px;
-  @media (max-width: $breakpoint-sm){
-    font-size: 28px;
-    line-height: 36px;
-  }
-}
 
 .app-txt{
-  font-family: 'FuturaMediumC',sans-serif;
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 1.33;
-  text-align: justify;
-  color: var(--black--87);
-  margin-bottom: 30px;
-  &.--grey{
-    color: var(--black-54);
-  }
-  @media (max-width: $breakpoint-sm){
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 20px;
-  }
+
+
+
 }
 
-
-// end of text classes
 
 
 

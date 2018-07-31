@@ -1,17 +1,27 @@
 import React from 'react';
-const header = props => (
-  <header>
-      <div className="row m-row align-justify">
-          <div className="column">
-              <a href="/" className="header__logo">
-                  <img src="" alt=""/>
-              </a>
-          </div>
-          <div className="column">
-              <div className="hamburger">
 
+
+const header = () => (
+  <header className="header">
+      <div className="header__container container">
+
+          <a href="/" className="header__logo">
+              <img src="" alt=""/>
+          </a>
+
+
+          <div className="hamburger">
+              <div className="hamburger__content">
+                  <div className="hamburger__caption">
+                      <span>Menu</span>
+                      <span>Close</span>
+                  </div>
+                  <span className="hamburger__inner">
+                  </span>
               </div>
           </div>
+
+
       </div>
   </header>
 );

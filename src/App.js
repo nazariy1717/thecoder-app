@@ -8,6 +8,7 @@ class App extends Component {
       <div className="coder">
           <Header />
 
+          <h1 className="page-title">розробка сайтів</h1>
 
           <Footer />
       </div>

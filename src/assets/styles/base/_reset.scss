@@ -38,13 +38,11 @@ html {
 }
 
 body {
-  font-family: 'FuturaMediumC', sans-serif;
+  font-family: "Myriad Pro", sans-serif;
+  color: var(--primary-gray);
   font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5;
-  color: var(--black-54);
-  background-color: #f5f5f5;
-  overflow-x: hidden;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 ol, ul {

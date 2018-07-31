@@ -1,52 +1,54 @@
 
 
 @font-face {
-  font-family: 'PT Serif';
-  src: url('/src/fonts/PTSerif-Regular.woff2') format('woff2'),
-  url('/src/fonts/PTSerif-Regular.woff') format('woff');
-  font-weight: normal;
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-ExtraBold.woff2') format('woff2'),
+  url('../fonts/Raleway-ExtraBold.woff') format('woff');
+  font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'FuturaDemiC';
-  src: url('/src/fonts/FuturaDemiC.woff2') format('woff2'),
-  url('/src/fonts/FuturaDemiC.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'FuturaBookC';
-  src: url('/src/fonts/FuturaBookC.woff2') format('woff2'),
-  url('/src/fonts/FuturaBookC.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'FuturaMediumC';
-  src: url('/src/fonts/FuturaMediumC.woff2') format('woff2'),
-  url('/src/fonts/FuturaMediumC.woff') format('woff');
-  font-weight: 500;
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
+  url('..//fonts/Raleway-Bold.woff') format('woff');
+  font-weight: bold;
   font-style: normal;
 }
 
 
 @font-face {
-  font-family: 'Oswald';
-  src: url('/src/fonts/Oswald-Bold.woff2') format('woff2'),
-  url('/src/fonts/Oswald-Bold.woff') format('woff');
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Black.woff2') format('woff2'),
+  url('../fonts/Raleway-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MADE Evolve Sans EVO';
+  src: url('../fonts/MADEEvolveSansEVO-Bold.woff2') format('woff2'),
+  url('../fonts/MADEEvolveSansEVO-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'icomoon';
-  src:  url('/src/fonts/icomoon.eot?jivfck');
-  src:  url('/src/fonts/icomoon.eot?jivfck#iefix') format('embedded-opentype'),
-  url('/src/fonts/icomoon.ttf?jivfck') format('truetype'),
-  url('/src/fonts/icomoon.woff?jivfck') format('woff'),
-  url('/src/fonts/icomoon.svg?jivfck#icomoon') format('svg');
+  font-family: 'Myriad Pro';
+  src: url('../fonts/MyriadPro-Regular.woff2') format('woff2'),
+  url('../fonts/MyriadPro-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
+
+//
+//@font-face {
+//  font-family: 'icomoon';
+//  src:  url('/src/fonts/icomoon.eot?jivfck');
+//  src:  url('/src/fonts/icomoon.eot?jivfck#iefix') format('embedded-opentype'),
+//  url('/src/fonts/icomoon.ttf?jivfck') format('truetype'),
+//  url('/src/fonts/icomoon.woff?jivfck') format('woff'),
+//  url('/src/fonts/icomoon.svg?jivfck#icomoon') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//}
