@@ -1,12 +1,10 @@
 :root {
   --container: 1140px;
   --grid-gap: 30px;
-  --denim-blue: #384d9d;
-  --white: #d4d4d4;
-  --white-two: #ededed;
-  --black-54: rgba(0, 0, 0, 0.54);
-  --black--87: rgba(0, 0, 0, 0.87);
-  --nice-blue: #136cb2; }
+  --black: black;
+  --primary-gray: #706f6f;
+  --gray: #e6e6e6;
+  --white: #fff; }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -41,13 +39,11 @@ html {
   overflow-x: hidden; }
 
 body {
-  font-family: 'FuturaMediumC', sans-serif;
+  font-family: "Myriad Pro", sans-serif;
+  color: var(--primary-gray);
   font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5;
-  color: var(--black-54);
-  background-color: #f5f5f5;
-  overflow-x: hidden; }
+  font-weight: 400;
+  line-height: 24px; }
 
 ol, ul {
   list-style: none; }
@@ -1414,12 +1410,65 @@ input[type=radio]:checked ~ label {
   right: 0;
   z-index: 9; }
   .header__container {
-    position: relative; }
+    position: relative;
+    height: 100px; }
 
 .hamburger {
   position: absolute;
-  right: 0;
-  top: 0; }
+  right: 15px;
+  top: 50%;
+  cursor: pointer;
+  transform: translateY(-50%); }
+  .hamburger:hover .hamburger__caption span {
+    transform: translateY(-18px); }
+  .hamburger:hover .hamburger__inner i:nth-child(1) {
+    transform: rotate(-30deg);
+    top: 6px; }
+  .hamburger:hover .hamburger__inner i:nth-child(4) {
+    transform: rotate(30deg);
+    top: 25px; }
+  .hamburger:hover .hamburger__inner i:nth-child(2), .hamburger:hover .hamburger__inner i:nth-child(3) {
+    opacity: 0;
+    transform: translateX(60px); }
+  .hamburger__content {
+    width: 40px;
+    height: 30px;
+    position: relative;
+    background-color: #f3f3f3; }
+  .hamburger__caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 35px;
+    height: 18px;
+    text-align: center;
+    overflow: hidden; }
+    .hamburger__caption span {
+      display: block;
+      line-height: 18px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--black);
+      text-transform: uppercase;
+      transition: all 0.2s ease-out; }
+  .hamburger__inner i {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 40px;
+    height: 1px;
+    background-color: var(--black);
+    transition: all 0.25s ease-out; }
+  .hamburger__inner i:nth-child(1) {
+    top: 0; }
+  .hamburger__inner i:nth-child(2) {
+    top: 8px; }
+  .hamburger__inner i:nth-child(3) {
+    top: 16px;
+    transition: all 0.3s ease-out; }
+  .hamburger__inner i:nth-child(4) {
+    top: 24px; }
 
 .footer {
   padding: 45px 0;

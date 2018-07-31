@@ -14,9 +14,13 @@ const header = () => (
               <div className="hamburger__content">
                   <div className="hamburger__caption">
                       <span>Menu</span>
-                      <span>Close</span>
+                      <span>Open</span>
                   </div>
                   <span className="hamburger__inner">
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                      <i></i>
                   </span>
               </div>
           </div>
