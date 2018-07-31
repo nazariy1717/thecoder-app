@@ -1,0 +1,75 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+
+.btn{
+  position: relative;
+  display: block;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  border: 0;
+  background-color: transparent;
+  backface-visibility: hidden;
+}
+
+.btn-primary{
+  width: 100%;
+  max-width: 200px;
+  height: 40px;
+  padding: 0;
+  border-radius: 5px;
+  text-align: center;
+  font-family: 'FuturaBookC',sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  color: #fff;
+  background-color: var(--denim-blue);
+  @include transition;
+  span{
+    display: block;
+    line-height: 40px;
+    @include transition;
+  }
+  &:hover{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
+    span{
+      transform: translateY(-40px);
+    }
+  }
+  &[disabled]{
+    cursor: not-allowed;
+  }
+}
+
+.btn-secondary{
+  width: 100%;
+  max-width: 200px;
+  height: 40px;
+  padding: 0;
+  border-radius: 5px;
+  text-align: center;
+  font-family: 'FuturaBookC',sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  border: 1px solid var(--denim-blue);
+  color: var(--denim-blue);
+  background-color: #fff;
+  @include transition;
+  span{
+    display: block;
+    line-height: 40px;
+    @include transition;
+  }
+  &:hover{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
+    span{
+      transform: translateY(-40px);
+    }
+  }
+  &[disabled]{
+    cursor: not-allowed;
+  }
+}
+
