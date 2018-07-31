@@ -9,7 +9,6 @@ const header = () => (
               <img src="" alt=""/>
           </a>
 
-
           <div className="hamburger">
               <div className="hamburger__content">
                   <div className="hamburger__caption">
@@ -24,7 +23,6 @@ const header = () => (
                   </span>
               </div>
           </div>
-
 
       </div>
   </header>

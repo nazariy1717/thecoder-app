@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
+import PageScreen from './components/layout/PageScreen';
 
 class App extends Component {
   render() {
@@ -8,7 +9,7 @@ class App extends Component {
       <div className="coder">
           <Header />
 
-          {/*<h1 className="page-title">розробка сайтів</h1>*/}
+          <PageScreen />
 
           <Footer />
       </div>
