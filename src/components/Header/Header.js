@@ -1,7 +1,9 @@
 import React from 'react';
 import logo from './logo-coder.png';
+import Hamburger from './Hamburger';
+import './header.scss';
 
-const header = () => (
+const Header = () => (
   <header className="header">
       <div className="header__container container">
 
@@ -9,35 +11,10 @@ const header = () => (
               <img src={logo} alt="coder logo" className="image"/>
           </a>
 
-          <div className="hamburger">
-              <div className="hamburger__content">
-                  <div className="hamburger__caption">
-                      <span>Menu</span>
-                      <span>Open</span>
-                  </div>
-                  <span className="hamburger__inner">
-                      <i>
-                        <span></span>
-                        <span></span>
-                      </i>
-                       <i>
-                        <span></span>
-                        <span></span>
-                      </i>
-                       <i>
-                        <span></span>
-                        <span></span>
-                      </i>
-                       <i>
-                        <span></span>
-                        <span></span>
-                      </i>
-                  </span>
-              </div>
-          </div>
+          <Hamburger />
 
       </div>
   </header>
 );
 
-export default header;
+export default Header;

@@ -2,41 +2,40 @@
 
 @font-face {
   font-family: 'Raleway';
-  src: url('../fonts/Raleway-ExtraBold.woff2') format('woff2'),
-  url('../fonts/Raleway-ExtraBold.woff') format('woff');
+  src: url('/Raleway-ExtraBold.woff2') format('woff2'),
+  url('/Raleway-ExtraBold.woff') format('woff');
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Raleway';
-  src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
-  url('..//fonts/Raleway-Bold.woff') format('woff');
+  src: url('/Raleway-Bold.woff2') format('woff2'),
+  url('/Raleway-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
 
-
 @font-face {
   font-family: 'Raleway';
-  src: url('../fonts/Raleway-Black.woff2') format('woff2'),
-  url('../fonts/Raleway-Black.woff') format('woff');
+  src: url('/Raleway-Black.woff2') format('woff2'),
+  url('/Raleway-Black.woff') format('woff');
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'MADE Evolve Sans EVO';
-  src: url('../fonts/MADEEvolveSansEVO-Bold.woff2') format('woff2'),
-  url('../fonts/MADEEvolveSansEVO-Bold.woff') format('woff');
+  src: url('/MADEEvolveSansEVO-Bold.woff2') format('woff2'),
+  url('/MADEEvolveSansEVO-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Myriad Pro';
-  src: url('../fonts/MyriadPro-Regular.woff2') format('woff2'),
-  url('../fonts/MyriadPro-Regular.woff') format('woff');
+  src: url('/MyriadPro-Regular.woff2') format('woff2'),
+  url('/MyriadPro-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
