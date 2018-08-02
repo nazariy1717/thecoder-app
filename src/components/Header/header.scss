@@ -9,6 +9,13 @@
     position: relative;
     height: 100px;
   }
+  &__logo{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
 }
 
 .pageScreen{

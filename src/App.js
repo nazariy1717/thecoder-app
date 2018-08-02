@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header/Header';
-import Footer from './components/layout/Footer';
+import Footer from './components/Footer/Footer';
 import PageScreen from './components/layout/PageScreen';
 
 class App extends Component {
