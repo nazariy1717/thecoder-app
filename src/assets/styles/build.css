@@ -66,31 +66,31 @@ table {
 
 @font-face {
   font-family: 'Raleway';
-  src: url("../fonts/Raleway-ExtraBold.woff2") format("woff2"), url("../fonts/Raleway-ExtraBold.woff") format("woff");
+  src: url("fonts/Raleway-ExtraBold.woff2") format("woff2"), url("fonts/Raleway-ExtraBold.woff") format("woff");
   font-weight: 800;
   font-style: normal; }
 
 @font-face {
   font-family: 'Raleway';
-  src: url("../fonts/Raleway-Bold.woff2") format("woff2"), url("..//fonts/Raleway-Bold.woff") format("woff");
+  src: url("fonts/Raleway-Bold.woff2") format("woff2"), url("..//fonts/Raleway-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'Raleway';
-  src: url("../fonts/Raleway-Black.woff2") format("woff2"), url("../fonts/Raleway-Black.woff") format("woff");
+  src: url("fonts/Raleway-Black.woff2") format("woff2"), url("fonts/Raleway-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal; }
 
 @font-face {
   font-family: 'MADE Evolve Sans EVO';
-  src: url("../fonts/MADEEvolveSansEVO-Bold.woff2") format("woff2"), url("../fonts/MADEEvolveSansEVO-Bold.woff") format("woff");
+  src: url("fonts/MADEEvolveSansEVO-Bold.woff2") format("woff2"), url("fonts/MADEEvolveSansEVO-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'Myriad Pro';
-  src: url("../fonts/MyriadPro-Regular.woff2") format("woff2"), url("../fonts/MyriadPro-Regular.woff") format("woff");
+  src: url("fonts/MyriadPro-Regular.woff2") format("woff2"), url("fonts/MyriadPro-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -813,50 +813,17 @@ a {
 .icon-pinterest:before {
   content: "\ead1"; }
 
-.fade-in {
-  animation: fade-in 0.35s cubic-bezier(0.165, 0.84, 0.44, 1); }
-
-.animate-in {
-  animation: modalIn 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
-  animation-iteration-count: 1; }
-
-.animate-away {
-  animation: modalAway 1.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  animation-iteration-count: 1; }
-
-@-webkit-keyframes modalIn {
+@keyframes hamburger_1 {
   0% {
-    transform: translateY(200%);
-    opacity: 0; }
-  100% {
-    transform: translateY(0%);
-    opacity: 1; } }
+    left: 0; }
+  to {
+    left: -40px; } }
 
-@keyframes modalIn {
+@-webkit-keyframes hamburger_2 {
   0% {
-    transform: translateY(200%);
-    opacity: 0; }
-  100% {
-    transform: translateY(0%);
-    opacity: 1; } }
-
-@-webkit-keyframes modalAway {
-  0% {
-    transform: translateY(0%); }
-  100% {
-    transform: translateY(200%); } }
-
-@keyframes modalAway {
-  0% {
-    transform: translateY(0%); }
-  100% {
-    transform: translateY(200%); } }
-
-@keyframes fade-in {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
+    left: 25px; }
+  to {
+    left: -15px; } }
 
 .modal {
   display: none;
@@ -1414,7 +1381,6 @@ input[type=radio]:checked ~ label {
     height: 100px; }
 
 .pageScreen {
-  padding-top: 150px;
   height: 100vh; }
 
 .hamburger {
@@ -1425,15 +1391,6 @@ input[type=radio]:checked ~ label {
   transform: translateY(-50%); }
   .hamburger:hover .hamburger__caption span {
     transform: translateY(-18px); }
-  .hamburger:hover .hamburger__inner i:nth-child(1) {
-    transform: rotate(-30deg);
-    top: 6px; }
-  .hamburger:hover .hamburger__inner i:nth-child(4) {
-    transform: rotate(30deg);
-    top: 25px; }
-  .hamburger:hover .hamburger__inner i:nth-child(2), .hamburger:hover .hamburger__inner i:nth-child(3) {
-    opacity: 0;
-    transform: translateX(60px); }
   .hamburger__content {
     width: 40px;
     height: 70px;
@@ -1461,8 +1418,28 @@ input[type=radio]:checked ~ label {
     right: 0;
     width: 40px;
     height: 1px;
-    background-color: var(--black);
+    overflow: hidden;
     transition: all 0.25s ease-out; }
+    .hamburger__inner i span {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--black); }
+      .hamburger__inner i span:nth-child(1) {
+        -webkit-animation-duration: .5s;
+        animation-duration: .5s;
+        -webkit-animation-delay: 0s;
+        animation-delay: 0s; }
+      .hamburger__inner i span:nth-child(2) {
+        -webkit-animation-duration: .5s;
+        animation-duration: .5s;
+        -webkit-animation-delay: 0s;
+        animation-delay: 0s;
+        -webkit-transform: translateX(15px);
+        transform: translateX(15px); }
   .hamburger__inner i:nth-child(1) {
     top: 0; }
   .hamburger__inner i:nth-child(2) {

@@ -3,10 +3,10 @@ import React from 'react';
 
 class pageScreen extends React.Component{
 
-    constructor(props) {
-        super(props);
-        // this.submit = this.submit.bind(this);
-    }
+    // constructor(props) {
+    //     super(props);
+    //     // this.submit = this.submit.bind(this);
+    // }
 
 
     componentDidMount() {
