@@ -6,7 +6,7 @@ import logo from './logo-foot.svg';
 const footer = () => (
     <footer className="footer">
         <div className="container">
-            <div className="row m-row align-middle ">
+            <div className="row m-row">
                 <div className="column col-lg-3">
                     <a href="/">
                         <img src={logo} alt="the coder logo" title="the coder logo" className="footer__logo"/>
@@ -21,11 +21,11 @@ const footer = () => (
                         </div>
                         <div className="column col-lg-4 footer__column">
                             <span className="footer__txt --title">телефон/</span>
-                            <span className="footer__txt">+380 00 000 000</span>
+                            <a href="tel:" className="footer__txt">+380 00 000 000</a>
                             <span className="footer__txt">+380 00 000 000</span>
                         </div>
                         <div className="column col-lg-4 footer__column">
-                            <span className="footer__txt --title">e-mail/</span>
+                            <a href="mailto:thecoder@gmail.com" className="footer__txt --title">e-mail/</a>
                             <span className="footer__txt">thecoder@gmail.com</span>
                         </div>
                     </div>

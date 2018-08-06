@@ -15,6 +15,25 @@ a{
 .text-center  { text-align: center; }
 .text-left    { text-align: left;   }
 
+.title-box{
+  &__hidden{
+    display: none;
+  }
+  p{
+    display: block;
+    font-family: 'MADE Evolve Sans EVO',sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 12px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: var(--gray);
+    strong{
+      color: var(--black);
+    }
+  }
+}
+
 .page-title{
   font-family: 'MADE Evolve Sans EVO',sans-serif;
   font-size: 36px;
