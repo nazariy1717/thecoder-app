@@ -1,0 +1,41 @@
+
+.footer{
+  padding: 60px 0;
+  &__logo{
+    display: block;
+    height: 100px;
+    margin: auto;
+    max-width: 100%;
+  }
+  &__column{
+    margin-bottom: 20px;
+  }
+  &__txt{
+    display: block;
+    color: var(--black);
+    font-family: 'Raleway',sans-serif;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 800;
+    &.--title{
+      font-size: 16px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+  }
+  &__link{
+    height: 24px;
+    display: inline-block;
+    overflow: hidden;
+    span{
+      display: block;
+      line-height: 24px;
+      transition: all 0.2s ease-in-out;
+    }
+    &:hover{
+      span{
+        transform: translateY(-24px);
+      }
+    }
+  }
+}
