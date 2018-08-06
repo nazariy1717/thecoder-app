@@ -1,6 +1,7 @@
 import React from 'react';
 import './contact_us.scss';
 import TextScramble from "../TextScramble";
+import ContactForm from "./ContactForm";
 
 class ContactUs extends React.Component{
 
@@ -17,13 +18,11 @@ class ContactUs extends React.Component{
     render() {
 
         return (
-            <section className="section">
+            <section className="section contact-us">
                 <div className="container">
                     <div className="row m-row align-middle">
                         <div className="column col-lg-6">
                             <TextScramble text={this.title}/>
-                        </div>
-                        <div className="column col-lg-5">
                             <div className="title-box">
                                 <p>
                                     <strong>
@@ -69,6 +68,9 @@ class ContactUs extends React.Component{
                                 </p>
                                 <h2 className="title-box__hidden">зв’яжіться з нами</h2>
                             </div>
+                        </div>
+                        <div className="column col-lg-5">
+                            <ContactForm />
                         </div>
                     </div>
                 </div>
