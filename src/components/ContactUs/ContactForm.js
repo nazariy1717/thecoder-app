@@ -38,8 +38,8 @@ class ContactForm extends React.Component{
                             onChange={e => this.onChangeHandler(e)}
                         />
                         <label htmlFor="name" className="form__label">
-                            <div><span>ім’я</span></div>
-                            <div><span>ім’я</span></div>
+                            <div><span>full name</span></div>
+                            <div><span>full name</span></div>
                         </label>
                     </div>
                     <div className="form__group-30">
@@ -50,8 +50,8 @@ class ContactForm extends React.Component{
                             onChange={e => this.onChangeHandler(e)}
                         />
                         <label htmlFor="phone" className="form__label">
-                            <div><span>телефон</span></div>
-                            <div><span>телефон</span></div>
+                            <div><span>phone</span></div>
+                            <div><span>phone</span></div>
                         </label>
                     </div>
                     <div className="form__group-30">
@@ -66,7 +66,7 @@ class ContactForm extends React.Component{
                             <div><span>e-mail</span></div>
                         </label>
                     </div>
-                    <div className="form__group-30">
+                    <div className="form__group-40">
                         <textarea
                             name="message" id="message"
                             className="form__area"
@@ -74,13 +74,16 @@ class ContactForm extends React.Component{
                             onChange={e => this.onChangeHandler(e)}
                         />
                         <label htmlFor="email" className="form__label">
-                            <div><span>коментар</span></div>
-                            <div><span>коментар</span></div>
+                            <div><span>details</span></div>
+                            <div><span>details</span></div>
                         </label>
                     </div>
 
-                    <button type="submit" className="btn">
-                        submit
+                    <button type="submit" className="btn btn-primary m-auto">
+                        <i className="btn-primary__line btn-primary__line-1"></i>
+                        <i className="btn-primary__line btn-primary__line-2"></i>
+                        <span className="btn-primary__txt">submit</span>
+                        <span className="btn-primary__txt">submit</span>
                     </button>
 
                 </form>

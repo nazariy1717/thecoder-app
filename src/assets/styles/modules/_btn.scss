@@ -1,6 +1,8 @@
 @import "../tools/mixins";
 @import "../tools/breakpoints";
 
+$btn-height: 35px;
+$btn-width: 215px;
 
 .btn{
   position: relative;
@@ -12,64 +14,57 @@
   border: 0;
   background-color: transparent;
   backface-visibility: hidden;
+  &[disabled]{
+    cursor: not-allowed;
+  }
 }
 
 .btn-primary{
   width: 100%;
-  max-width: 200px;
-  height: 40px;
+  max-width: $btn-width;
+  height: $btn-height;
   padding: 0;
-  border-radius: 5px;
   text-align: center;
-  font-family: 'FuturaBookC',sans-serif;
-  font-size: 16px;
-  line-height: 40px;
-  color: #fff;
-  background-color: var(--denim-blue);
-  @include transition;
-  span{
-    display: block;
-    line-height: 40px;
-    @include transition;
-  }
-  &:hover{
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
-    span{
-      transform: translateY(-40px);
+  font-family: 'Raleway',sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: $btn-height;
+  text-transform: uppercase;
+  color: var(--black);
+  background-color: transparent;
+  transition: all 0.35s;
+  &__line{
+    &:before, &:after{
+      content: '';
+      position: absolute;
+      background-color: #A0A0A0;
+      transition: all 0.35s;
     }
   }
-  &[disabled]{
-    cursor: not-allowed;
-  }
-}
+  &__line-1, &__line-2{ &:before{ height: 1px; width: 10px; }}
+  &__line-1, &__line-2{ &:after{ width: 1px; height: 10px; }}
 
-.btn-secondary{
-  width: 100%;
-  max-width: 200px;
-  height: 40px;
-  padding: 0;
-  border-radius: 5px;
-  text-align: center;
-  font-family: 'FuturaBookC',sans-serif;
-  font-size: 16px;
-  line-height: 40px;
-  border: 1px solid var(--denim-blue);
-  color: var(--denim-blue);
-  background-color: #fff;
-  @include transition;
-  span{
+  &__line-1{ &:before{top: 0; left: 0; }}
+  &__line-1{ &:after{top: 0; left: 0; }}
+  &__line-2{ &:before{bottom: 0; right: 0; }}
+  &__line-2{ &:after{bottom: 0; right: 0; }}
+
+  &:hover > &__line-1{
+    &:before{ left: calc(100% - 10px); }
+    &:after{ top: calc(100% - 10px); }
+  }
+  &:hover > &__line-2{
+    &:before{ right: calc(100% - 10px); }
+    &:after{ bottom: calc(100% - 10px); }
+  }
+
+  &__txt{
     display: block;
-    line-height: 40px;
-    @include transition;
+    line-height: 35px;
+    transition: all 0.35s;
   }
-  &:hover{
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
-    span{
-      transform: translateY(-40px);
-    }
-  }
-  &[disabled]{
-    cursor: not-allowed;
+  &:hover > &__txt{
+    transform: translateY(-35px);
   }
 }
 

@@ -15,6 +15,7 @@ input[type=number]::-webkit-outer-spin-button {
   &__group-15{  margin-bottom: 15px;position: relative;  }
   &__group-20{  margin-bottom: 20px;position: relative;  }
   &__group-30{  margin-bottom: 30px;position: relative;  }
+  &__group-40{  margin-bottom: 40px;position: relative;  }
   &__group-50{  margin-bottom: 30px;position: relative;  }
 
   &__label{
@@ -94,17 +95,24 @@ span.error-valid{
 }
 
 
-::-webkit-input-placeholder {
+.placeholder{
+  color: var(--primary-gray);
+  font-family: 'Myriad Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
 
+::-webkit-input-placeholder {
+  @extend .placeholder;
 }
 ::-moz-placeholder {
-
+  @extend .placeholder;
 }
 :-ms-input-placeholder {
-
+  @extend .placeholder;
 }
 :-moz-placeholder {
-
+  @extend .placeholder;
 }
 
 
