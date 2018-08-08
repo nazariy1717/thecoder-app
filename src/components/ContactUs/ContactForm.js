@@ -9,15 +9,18 @@ class ContactForm extends React.Component{
     }
 
     state = {
-        name: '',
-        phone: '',
-        email: '',
-        message: ''
+        data: {
+            name: '',
+            phone: '',
+            email: '',
+            message: ''
+        },
+        errors: []
     };
 
-    onChangeHandler(e){
+    onChangeHandler(event){
        this.setState({
-          [e.target.name]: e.target.value
+           data: { ...this.state.data, [event.target.name]: event.target.value}
        })
     }
 
@@ -29,13 +32,13 @@ class ContactForm extends React.Component{
     render(){
         return(
             <div className="contacts-form">
-                <form action="/" onSubmit={e => this.onSubmitHandler(e)}>
+                <form action="/" onSubmit={this.onSubmitHandler}>
                     <div className="form__group-30">
                         <input
                             type="text" name="name" id="name"
                             className="form__input"
                             value={this.state.name}
-                            onChange={e => this.onChangeHandler(e)}
+                            onChange={this.onChangeHandler}
                         />
                         <label htmlFor="name" className="form__label">
                             <div><span>full name</span></div>
@@ -47,7 +50,7 @@ class ContactForm extends React.Component{
                             type="text" name="phone" id="phone"
                             className="form__input"
                             value={this.state.phone}
-                            onChange={e => this.onChangeHandler(e)}
+                            onChange={this.onChangeHandler}
                         />
                         <label htmlFor="phone" className="form__label">
                             <div><span>phone</span></div>
@@ -59,7 +62,7 @@ class ContactForm extends React.Component{
                             type="email" name="email" id="email"
                             className="form__input"
                             value={this.state.email}
-                            onChange={e => this.onChangeHandler(e)}
+                            onChange={this.onChangeHandler}
                         />
                         <label htmlFor="email" className="form__label">
                             <div><span>e-mail</span></div>
@@ -71,7 +74,7 @@ class ContactForm extends React.Component{
                             name="message" id="message"
                             className="form__area"
                             value={this.state.message}
-                            onChange={e => this.onChangeHandler(e)}
+                            onChange={this.onChangeHandler}
                         />
                         <label htmlFor="email" className="form__label">
                             <div><span>details</span></div>
@@ -80,8 +83,8 @@ class ContactForm extends React.Component{
                     </div>
 
                     <button type="submit" className="btn btn-primary m-auto">
-                        <i className="btn-primary__line btn-primary__line-1"></i>
-                        <i className="btn-primary__line btn-primary__line-2"></i>
+                        <i className="btn-primary__line btn-primary__line-1"/>
+                        <i className="btn-primary__line btn-primary__line-2"/>
                         <span className="btn-primary__txt">submit</span>
                         <span className="btn-primary__txt">submit</span>
                     </button>

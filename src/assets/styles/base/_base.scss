@@ -16,6 +16,7 @@ a{
 .text-left    { text-align: left;   }
 
 .title-box{
+  max-width: 350px;
   &__hidden{
     display: none;
   }

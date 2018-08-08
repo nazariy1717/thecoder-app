@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import PageScreen from './components/layout/PageScreen';
+import PageScreen from './components/PageScreen';
+import OurMission from './components/OurMission/OurMission';
 import ContactUs from './components/ContactUs/ContactUs';
 
 class App extends Component {
@@ -9,9 +10,8 @@ class App extends Component {
     return (
       <div className="coder">
           <Header />
-
           <PageScreen />
-
+          <OurMission />
           <ContactUs />
           <Footer />
       </div>

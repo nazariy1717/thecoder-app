@@ -22,28 +22,31 @@ const footer = () => (
                         <div className="column col-lg-4 footer__column">
                             <span className="footer__txt --title">телефон/</span>
                             <a href="tel:" className="footer__txt">+380 00 000 000</a>
-                            <span className="footer__txt">+380 00 000 000</span>
+                            <a href="tel:" className="footer__txt">+380 00 000 000</a>
                         </div>
                         <div className="column col-lg-4 footer__column">
-                            <a href="mailto:thecoder@gmail.com" className="footer__txt --title">e-mail/</a>
-                            <span className="footer__txt">thecoder@gmail.com</span>
+                            <span className="footer__txt --title">e-mail/</span>
+                            <a href="mailto:thecoder@gmail.com" className="footer__txt">thecoder@gmail.com</a>
                         </div>
                     </div>
                     <ul className="row m-row align-spaced">
                         <li className="column col-lg-4">
-                            <a href="/" className="footer__txt footer__link" target="_blank" rel="nofollow">
+                            <a href="/"
+                               className="footer__txt footer__link" target="_blank" rel="nofollow">
                                 <span>Facebook</span>
                                 <span>Facebook</span>
                             </a>
                         </li>
                         <li className="column col-lg-4">
-                            <a href="/" className="footer__txt footer__link" target="_blank" rel="nofollow">
+                            <a href="/"
+                               className="footer__txt footer__link" target="_blank" rel="nofollow">
                                 <span>Instagram</span>
                                 <span>Instagram</span>
                             </a>
                         </li>
                         <li className="column col-lg-4">
-                            <a href="/" className="footer__txt footer__link" target="_blank" rel="nofollow">
+                            <a href="/"
+                               className="footer__txt footer__link" target="_blank" rel="nofollow">
                                 <span>Linkedin</span>
                                 <span>Linkedin</span>
                             </a>

@@ -16,7 +16,6 @@ class ContactUs extends React.Component{
     ];
 
     render() {
-
         return (
             <section className="section contact-us">
                 <div className="container">
@@ -78,10 +77,5 @@ class ContactUs extends React.Component{
         )
     }
 }
-
-
-
-
-
 
 export default ContactUs;
