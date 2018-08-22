@@ -1,7 +1,7 @@
 import React from 'react';
 import Hamburger from './Hamburger';
 import Menu from './Menu';
-import TweenMax from "gsap";
+import { TweenMax, Bounce }  from "gsap";
 
 import './header.scss';
 import logo from './logo-head.svg';
@@ -20,34 +20,55 @@ class Header extends React.Component{
 
     toggleHamburger = () => {
 
-        if(this.state.isHamburgerActive){
-            TweenMax.fromTo(".menu", 0.75,{
-                opacity: 1
-            },{
-                opacity: 0
-            });
-        } else{
-            TweenMax.fromTo(".menu", 0.75,{
-                opacity: 0
-            },{
-                opacity: 1
-            });
-
-        }
-
         this.setState(
             (prevState) => {
                 return {
                     isHamburgerActive: !prevState.isHamburgerActive
                 };
-        });
-
-
-
-
-
-
+            });
         console.log(this.state.isHamburgerActive);
+
+
+        if(this.state.isHamburgerActive){
+            console.log('close');
+            // TweenMax.to(".menu", 0.4, {
+            //     opacity: 0,
+            //     delay: 1.25
+            // });
+            // TweenMax.staggerTo(".menu__link", 0.35, {
+            //     opacity: 0,
+            //     y: 35,
+            //     delay: 0.35,
+            // }, 0.12);
+            // TweenMax.staggerTo(".menu-soc__link", 0.35, {
+            //     opacity: 0,
+            //     y: 35,
+            // }, 0.2);
+
+        } else {
+            console.log('open');
+
+            TweenMax.fromTo(".menu", 0.4, {opacity: 0,}, {opacity: 1,});
+            TweenMax.staggerFrom(".menu__link", 0.35, {
+                opacity: 0,
+                y: 35,
+                delay: 0.25,
+            }, 0.12);
+            TweenMax.staggerFrom(".menu-soc__link", 0.35, {
+                opacity: 0,
+                y: 35,
+                delay: 0.75,
+            }, 0.2);
+
+        }
+
+
+
+
+
+
+
+
     };
 
 
