@@ -5,16 +5,29 @@
   left: 0;
   right: 0;
   z-index: 9;
+  &.--white{
+    .header__logo{
+      img{
+        transform: translateY(-100%);
+      }
+    }
+  }
   &__container{
     position: relative;
     height: 100px;
   }
   &__logo{
+    display: block;
     position: absolute;
     left: 15px;
-    top: 50%;
+    top: 25px;
+    width: 175px;
+    height: 55px;
+    overflow: hidden;
     cursor: pointer;
-    transform: translateY(-50%);
+    img{
+      transition: all 0.3s;
+    }
   }
 }
 

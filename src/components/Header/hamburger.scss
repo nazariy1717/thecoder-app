@@ -29,6 +29,7 @@
     .hamburger__caption{
       span{
         transform: translateY(-36px);
+        color: #fff;
       }
     }
     .hamburger__inner{
@@ -45,6 +46,9 @@
            transform: translateX(50px);
            opacity: 0;
          }
+        span{
+          background-color: #fff;
+        }
       }
     }
   }

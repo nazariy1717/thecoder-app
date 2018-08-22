@@ -1,10 +1,10 @@
 import React from 'react';
 import './hamburger.scss';
 
-const hamburger = props => {
-
+const Hamburger = props => {
 
     let hamburgerClass = 'hamburger';
+
     if (props.show){
         hamburgerClass = 'hamburger is-open';
     }
@@ -41,4 +41,4 @@ const hamburger = props => {
 
 };
 
-export default hamburger;
+export default Hamburger;
