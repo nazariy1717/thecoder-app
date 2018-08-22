@@ -1,19 +1,25 @@
 import React from 'react';
 import './contact_us.scss';
-import TextScramble from "../TextScramble";
 import ContactForm from "./ContactForm";
-
+import ScrollMagic from 'scrollmagic';
+import TweenLite from "gsap/TweenMax";
 class ContactUs extends React.Component{
 
     constructor(props){
         super(props);
     }
+    componentDidMount() {
 
-    title = [
-        `зв\'яжітьсяі`,
-        `зрфлвайкоі`,
-        `намилдшал`,
-    ];
+        // init controller
+        let controller = new ScrollMagic.Controller();
+        let t1 = new TweenLite();
+
+        // build scene
+        let scene = new ScrollMagic.Scene({triggerElement: "#trigger"})
+        // trigger a velocity opaticy animation
+            .TweenLite("#trigger", 0.5, {backgroundColor: "red", scale: 3})
+            .addTo(controller);
+    }
 
     render() {
         return (
@@ -21,8 +27,7 @@ class ContactUs extends React.Component{
                 <div className="container">
                     <div className="row m-row align-middle">
                         <div className="column col-lg-6">
-                            <TextScramble text={this.title}/>
-                            <div className="title-box">
+                            <div className="title-box" id="trigger">
                                 <p>
                                     <strong>
                                         <span>з</span>
