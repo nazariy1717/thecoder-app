@@ -1,5 +1,4 @@
 import React from 'react';
-import ScrollMagic from 'scrollmagic';
 
 class pageScreen extends React.Component{
 
@@ -12,9 +11,6 @@ class pageScreen extends React.Component{
                         <h1 className="page-title" id="trigger">розробка сайтів</h1>
                     </div>
                 </div>
-
-
-
             </div>
         )
     }
