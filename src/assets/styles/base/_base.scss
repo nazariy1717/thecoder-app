@@ -23,14 +23,21 @@ a{
   p{
     display: block;
     font-family: 'MADE Evolve Sans EVO',sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    letter-spacing: 12px;
     line-height: 48px;
-    text-transform: uppercase;
-    color: var(--gray);
-    strong{
+    letter-spacing: 12px;
+    height: 48px;
+    overflow: hidden;
+    span{
+      display: inline-block;
+      position: relative;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 48px;
+      text-transform: uppercase;
       color: var(--black);
+      &.sub{
+        color: var(--gray);
+      }
     }
   }
 }

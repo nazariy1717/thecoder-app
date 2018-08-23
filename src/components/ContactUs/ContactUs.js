@@ -1,15 +1,24 @@
 import React from 'react';
 import './contact_us.scss';
-import TextScramble from "../TextScramble";
+import { TweenMax }  from "gsap";
+import ScrollMagic from 'ScrollMagic';
 import ContactForm from "./ContactForm";
 
 class ContactUs extends React.Component{
 
-    chars = "!<>-_\\/[]{}—=+*^?#_";
-
     constructor(props){
         super(props);
         this.doAnimate = this.doAnimate.bind(this);
+    }
+
+    componentDidMount() {
+        var controller = new ScrollMagic.Controller();
+        new ScrollMagic.Scene({
+            duration: 100,    // the scene should last for a scroll distance of 100px
+            offset: 50        // start this scene after scrolling for 50px
+        })
+            .setPin("#my-sticky-element") // pins the element for the the scene's duration
+            .addTo(controller); // assign the scene to the controller
     }
 
     doAnimate(){
@@ -18,33 +27,13 @@ class ContactUs extends React.Component{
         let array = document.querySelectorAll('.contacts-title span');
         console.log(array);
 
-        let charArray = [];
-        for(let i = 0; i < this.chars.length; i++) {
-            charArray.push(this.chars.charAt(i));
-        }
-        console.log(charArray[0]);
-
-
-
-        for (let i = 0; i < array.length; i++){
-            setTimeout(function(){
-                for (let j = 0; j < charArray.length; j++){
-                    setTimeout(function(){
-                        array[i].innerText = charArray[j];
-                    },j * 50);
-                }
-            },i * 50);
-        }
+        TweenMax.staggerFrom(array, 0.3, {
+            opacity: 0,
+            y: 55
+        }, 0.05);
 
     }
 
-
-
-    // title = [
-    //     `зв\'яжітьсяі`,
-    //     `зрфлвайкоі`,
-    //     `намилдшал`,
-    // ];
 
     render() {
         return (
@@ -55,52 +44,32 @@ class ContactUs extends React.Component{
                             {/*<TextScramble text={this.title}/>*/}
                             <div className="title-box contacts-title">
                                 <p>
-                                    <strong>
-                                        <span>з</span>
-                                        <span>в</span>
-                                        <span>’</span>
-                                        <span>я</span>
-                                        <span>ж</span>
-                                        <span>і</span>
-                                        <span>т</span>
-                                        <span>ь</span>
-                                        <span>с</span>
-                                        <span>я</span>
-                                    </strong>
-                                    <span>і</span>
+                                    <span>C</span>
+                                    <span>o</span>
+                                    <span>n</span>
+                                    <span>t</span>
+                                    <span>a</span>
+                                    <span>c</span>
+                                    <span>t</span>
+                                    <span className="sub">m</span>
+                                    <span className="sub">u</span>
                                 </p>
                                 <p>
-                                    <strong>
-                                        <span>з</span>
-                                    </strong>
-                                    <span>р</span>
-                                    <span>ф</span>
-                                    <span>л</span>
-                                    <span>в</span>
-                                    <span>а</span>
-                                    <span>й</span>
-                                    <span>к</span>
-                                    <span>о</span>
-                                    <span>і</span>
-                                </p>
-                                <p>
-                                    <strong>
-                                        <span>н</span>
-                                        <span>а</span>
-                                        <span>м</span>
-                                        <span>и</span>
-                                    </strong>
-                                    <span>л</span>
-                                    <span>д</span>
-                                    <span>ш</span>
-                                    <span>а</span>
-                                    <span>л</span>
+                                    <span>u</span>
+                                    <span>s</span>
+                                    <span className="sub">k</span>
+                                    <span className="sub">i</span>
+                                    <span className="sub">d</span>
+                                    <span className="sub">p</span>
+                                    <span className="sub">h</span>
+                                    <span className="sub">p</span>
+                                    <span className="sub">j</span>
+                                    <span className="sub">t</span>
                                 </p>
                                 <h2 className="title-box__hidden">зв’яжіться з нами</h2>
                             </div>
                         </div>
                         <div className="column col-lg-5">
-
                             <button onClick={this.doAnimate}>do animate </button>
                             <ContactForm />
                         </div>
