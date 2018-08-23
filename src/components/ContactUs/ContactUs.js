@@ -5,15 +5,46 @@ import ContactForm from "./ContactForm";
 
 class ContactUs extends React.Component{
 
+    chars = "!<>-_\\/[]{}—=+*^?#_";
+
     constructor(props){
         super(props);
+        this.doAnimate = this.doAnimate.bind(this);
     }
 
-    title = [
-        `зв\'яжітьсяі`,
-        `зрфлвайкоі`,
-        `намилдшал`,
-    ];
+    doAnimate(){
+        console.log('do animete');
+
+        let array = document.querySelectorAll('.contacts-title span');
+        console.log(array);
+
+        let charArray = [];
+        for(let i = 0; i < this.chars.length; i++) {
+            charArray.push(this.chars.charAt(i));
+        }
+        console.log(charArray[0]);
+
+
+
+        for (let i = 0; i < array.length; i++){
+            setTimeout(function(){
+                for (let j = 0; j < charArray.length; j++){
+                    setTimeout(function(){
+                        array[i].innerText = charArray[j];
+                    },j * 50);
+                }
+            },i * 50);
+        }
+
+    }
+
+
+
+    // title = [
+    //     `зв\'яжітьсяі`,
+    //     `зрфлвайкоі`,
+    //     `намилдшал`,
+    // ];
 
     render() {
         return (
@@ -21,8 +52,8 @@ class ContactUs extends React.Component{
                 <div className="container">
                     <div className="row m-row align-middle">
                         <div className="column col-lg-6">
-                            <TextScramble text={this.title}/>
-                            <div className="title-box">
+                            {/*<TextScramble text={this.title}/>*/}
+                            <div className="title-box contacts-title">
                                 <p>
                                     <strong>
                                         <span>з</span>
@@ -69,6 +100,8 @@ class ContactUs extends React.Component{
                             </div>
                         </div>
                         <div className="column col-lg-5">
+
+                            <button onClick={this.doAnimate}>do animate </button>
                             <ContactForm />
                         </div>
                     </div>
