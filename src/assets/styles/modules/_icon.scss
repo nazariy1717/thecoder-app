@@ -10,62 +10,11 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-.icon-keyboard_arrow_right:before {
-  content: "\e905";
-}
-.icon-keyboard_arrow_left:before {
-  content: "\e906";
-}
-.icon-phone-mobile:before {
-  content: "\e903";
-}
-.icon-mail-envelope-closed2:before {
-  content: "\e904";
-}
-.icon-mail-envelope-closed:before {
-  content: "\e902";
-}
-.icon-time:before {
-  content: "\e907";
-}
-.icon-search:before {
+.icon-logo-head:before {
   content: "\e900";
-}
-.icon-phone:before {
-  content: "\e901";
-}
-.icon-location:before {
-  content: "\e947";
-}
-.icon-earth:before {
-  content: "\e9ca";
-}
-.icon-arrow-left2:before {
-  content: "\ea40";
-}
-.icon-google-plus:before {
-  content: "\ea8b";
-}
-.icon-facebook:before {
-  content: "\ea90";
-}
-.icon-instagram:before {
-  content: "\ea92";
-}
-.icon-twitter:before {
-  content: "\ea96";
-}
-.icon-youtube:before {
-  content: "\ea9d";
-}
-.icon-linkedin2:before {
-  content: "\eaca";
-}
-.icon-pinterest:before {
-  content: "\ead1";
 }

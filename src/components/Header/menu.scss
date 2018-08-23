@@ -1,0 +1,117 @@
+
+
+
+.menu{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 8;
+  background-color: var(--black);
+  display: none;
+  //&.is-open{
+  //  display: block;
+  //}
+  &__content{
+    position: relative;
+    height: 100vh;
+
+  }
+  &__list{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    counter-reset: item;
+  }
+  &__item{
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+  &__link{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding-left: 95px;
+    text-align: right;
+    color: var(--primary-gray);
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    line-height: 30px;
+    font-weight: 800;
+    transition: all 0.3s;
+    &:before{
+      counter-increment: item;
+      content: "0" counter(item);
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      left: 0;
+      top: 0;
+      color: var(--primary-gray);
+      font-size: 24px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 800;
+      transition: all 0.3s;
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      left: 0;
+      top: 0;
+      background: url(logo-item.svg) center no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+      transform: translateY(45px);
+      transition: all 0.3s;
+    }
+    &:hover{
+      color: #fff;
+      &:before{
+        transform: translateY(-45px);
+      }
+      &:after{
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+
+.menu-soc{
+  position: absolute;
+  bottom: 30px;
+  left: 15px;
+  right: 15px;
+  &__item{
+    overflow: hidden;
+    height: 30px;
+    text-align: center;
+  }
+  &__link{
+    display: inline-block;
+    color: var(--primary-gray);
+    font-family: 'Raleway',sans-serif;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 800;
+    height: 30px;
+    overflow: hidden;
+    span{
+      display: block;
+      line-height: 30px;
+      transition: transform .35s;
+    }
+    &:hover{
+      span{
+        transform: translateY(-30px);
+      }
+      span:nth-child(2){
+        color: #fff;
+      }
+    }
+  }
+}
