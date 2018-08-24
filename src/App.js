@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import PageScreen from './components/PageScreen';
+import FirstScreen from './components/FirstScreen/FirstScreen';
 import OurMission from './components/OurMission/OurMission';
 import ContactUs from './components/ContactUs/ContactUs';
 
@@ -9,8 +9,9 @@ class App extends Component {
   render() {
     return (
       <div className="coder">
+          <div className="trigger"></div>
           <Header />
-          <PageScreen />
+          <FirstScreen />
           <OurMission />
           <ContactUs />
           <Footer />

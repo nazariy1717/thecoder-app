@@ -1,16 +1,10 @@
 @import "../tools/mixins";
 @import "../tools/breakpoints";
 
-
-
 .container {
   max-width: var(--container);
   padding: 0 15px;
   margin: auto;
-}
-
-.container-large {
-
 }
 
 .row {

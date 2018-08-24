@@ -1,6 +1,6 @@
 import React from 'react';
 import './contact_us.scss';
-import { TweenMax, TimelineMax }  from "gsap";
+import { TweenMax }  from "gsap";
 import ContactForm from "./ContactForm";
 import ScrollMagic from 'scrollmagic';
 import 'animation.gsap';
@@ -8,49 +8,33 @@ import 'debug.addIndicators';
 
 class ContactUs extends React.Component{
 
-    constructor(props){
-        super(props);
-        this.doAnimate = this.doAnimate.bind(this);
-    }
+    // constructor(props){
+    //     super(props);
+    // }
 
-    componentDidMount() {
-
-       let t1 = new TweenMax.staggerFrom( document.querySelectorAll('.contacts-title span'), 0.3, {
-            opacity: 0,
-            y: 55
-        }, 0.05);
-
-       let controller = new ScrollMagic.Controller();
-       let scene = new ScrollMagic.Scene({
-           duration: 100,
-           offset: -300,
-           triggerElement: '.trigger',
-           triggerHook: 0,
-       });
-       scene.addIndicators({name: 'ffd'});
-       scene.setTween(t1);
-       scene.addTo(controller);
-
-    }
-
-    doAnimate(){
-        console.log('do animete');
-
-        let array = document.querySelectorAll('.contacts-title span');
-        console.log(array);
-
-        TweenMax.staggerFrom(array, 0.3, {
-            opacity: 0,
-            y: 55
-        }, 0.05);
-
-    }
-
+    // componentDidMount() {
+    //
+    //    let t1 = new TweenMax.staggerFrom( document.querySelectorAll('.contact-us .contacts-title span'), 0.3, {
+    //         opacity: 0,
+    //         y: 55
+    //     }, 0.05);
+    //
+    //    let controller = new ScrollMagic.Controller();
+    //    let scene = new ScrollMagic.Scene({
+    //        duration: 100,
+    //        offset: -300,
+    //        triggerElement: '.trigger',
+    //        triggerHook: 0,
+    //    });
+    //    scene.addIndicators({name: 'ffd'});
+    //    scene.setTween(t1);
+    //    scene.addTo(controller);
+    //
+    // }
 
     render() {
         return (
             <section className="section contact-us">
-                <div className="trigger"> </div>
                 <div className="container">
                     <div className="row m-row align-middle">
                         <div className="column col-lg-6">
@@ -82,7 +66,6 @@ class ContactUs extends React.Component{
                             </div>
                         </div>
                         <div className="column col-lg-5">
-                            <button onClick={this.doAnimate}>do animate </button>
                             <ContactForm />
                         </div>
                     </div>
