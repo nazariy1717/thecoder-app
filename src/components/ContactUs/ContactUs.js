@@ -1,8 +1,10 @@
 import React from 'react';
 import './contact_us.scss';
-import { TweenMax }  from "gsap";
-import ScrollMagic from 'ScrollMagic';
+import { TweenMax, TimelineMax }  from "gsap";
 import ContactForm from "./ContactForm";
+import ScrollMagic from 'scrollmagic';
+import 'animation.gsap';
+import 'debug.addIndicators';
 
 class ContactUs extends React.Component{
 
@@ -12,13 +14,23 @@ class ContactUs extends React.Component{
     }
 
     componentDidMount() {
-        var controller = new ScrollMagic.Controller();
-        new ScrollMagic.Scene({
-            duration: 100,    // the scene should last for a scroll distance of 100px
-            offset: 50        // start this scene after scrolling for 50px
-        })
-            .setPin("#my-sticky-element") // pins the element for the the scene's duration
-            .addTo(controller); // assign the scene to the controller
+
+       let t1 = new TweenMax.staggerFrom( document.querySelectorAll('.contacts-title span'), 0.3, {
+            opacity: 0,
+            y: 55
+        }, 0.05);
+
+       let controller = new ScrollMagic.Controller();
+       let scene = new ScrollMagic.Scene({
+           duration: 100,
+           offset: -300,
+           triggerElement: '.trigger',
+           triggerHook: 0,
+       });
+       scene.addIndicators({name: 'ffd'});
+       scene.setTween(t1);
+       scene.addTo(controller);
+
     }
 
     doAnimate(){
@@ -38,10 +50,10 @@ class ContactUs extends React.Component{
     render() {
         return (
             <section className="section contact-us">
+                <div className="trigger"> </div>
                 <div className="container">
                     <div className="row m-row align-middle">
                         <div className="column col-lg-6">
-                            {/*<TextScramble text={this.title}/>*/}
                             <div className="title-box contacts-title">
                                 <p>
                                     <span>C</span>
