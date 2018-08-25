@@ -1,35 +1,15 @@
 import React from 'react';
 import './firstScreen.scss';
 import { TweenMax }  from "gsap";
-import ScrollMagic from 'scrollmagic';
-import 'animation.gsap';
-import 'debug.addIndicators';
 
 class FirstScreen extends React.Component{
 
     componentDidMount() {
 
-        let t1 = new TweenMax.staggerFrom( document.querySelectorAll('.first-screen__title span'), 0.45, {
+       TweenMax.staggerFrom( document.querySelectorAll('.first-screen__title span'), 0.35, {
             opacity: 0,
             y: 55
         }, 0.05);
-
-        let t2 = new TweenMax.to( document.querySelectorAll('.first-screen__content'), 0.45, {
-            rotate: '360deg'
-        });
-
-        let controller = new ScrollMagic.Controller();
-        let scene = new ScrollMagic.Scene({
-            duration: '100%',
-            offset: 0,
-            triggerElement: '.trigger',
-            triggerHook: 0,
-        });
-        scene.addIndicators({name: 'f1'});
-        scene.setTween(t1);
-        // scene.setPin('.first-screen');
-        scene.reverse(false);
-        scene.addTo(controller);
 
     }
 
