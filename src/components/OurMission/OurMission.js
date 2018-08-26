@@ -38,11 +38,10 @@ class OurMission extends React.Component{
             reverse: true,
         });
 
-        scene.addIndicators({name: '1'});
+        scene.addIndicators({name: '2'});
         scene.setTween(timeline);
-        scene.setPin('.our-mission');
+        // scene.setPin('.our-mission');
         scene.addTo(controller);
-
     }
 
     render(){

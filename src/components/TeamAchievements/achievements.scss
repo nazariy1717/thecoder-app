@@ -1,0 +1,79 @@
+.achievements{
+  padding: 200px 0;
+  background-color: var(--black);
+  &__content{
+    position: relative;
+    height: 725px;
+    width: 725px;
+    margin: auto;
+    background: url(circle.png) center no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+  &__title{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 60%;
+    transform: translate(-50%,-50%);
+    p span{
+      color: var(--white);
+      &.sub{
+        color: #2b2b2b;
+      }
+    }
+  }
+}
+
+.achievement-item{
+  position: absolute;
+  &.--item-1{
+    top: -30px;
+    left: 325px;
+  }
+  &.--item-2{
+    top: 130px;
+    left: -5px;
+  }
+  &.--item-3{
+    top: 130px;
+    right: -75px;
+  }
+  &.--item-4{
+    bottom: 185px;
+    left: -5px;
+  }
+  &.--item-5{
+    bottom: 185px;
+    right: -75px;
+  }
+  &.--item-6{
+    bottom: -30px;
+    left: 325px;
+  }
+  &__title{
+    span{
+      display: block;
+      font-family: 'CenturyGothic', sans-serif;
+      color: white;
+      font-weight: 700;
+      line-height: 40px;
+      font-size: 24px;
+      strong{
+        font-size: 40px;
+      }
+    }
+  }
+  &__txt{
+    height: 24px;
+    overflow: hidden;
+    padding-left: 30px;
+    p{
+      color: white;
+      font-family: 'Myriad Pro', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+}
