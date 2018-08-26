@@ -1,36 +1,42 @@
 import React from 'react';
 import './contact_us.scss';
-import { TweenMax }  from "gsap";
 import ContactForm from "./ContactForm";
+
+import { TweenMax,TimelineMax }  from "gsap";
 import ScrollMagic from 'scrollmagic';
 import 'animation.gsap';
 import 'debug.addIndicators';
 
 class ContactUs extends React.Component{
 
-    // constructor(props){
-    //     super(props);
-    // }
 
-    // componentDidMount() {
-    //
-    //    let t1 = new TweenMax.staggerFrom( document.querySelectorAll('.contact-us .contacts-title span'), 0.3, {
-    //         opacity: 0,
-    //         y: 55
-    //     }, 0.05);
-    //
-    //    let controller = new ScrollMagic.Controller();
-    //    let scene = new ScrollMagic.Scene({
-    //        duration: 100,
-    //        offset: -300,
-    //        triggerElement: '.trigger',
-    //        triggerHook: 0,
-    //    });
-    //    scene.addIndicators({name: 'ffd'});
-    //    scene.setTween(t1);
-    //    scene.addTo(controller);
-    //
-    // }
+    componentDidMount() {
+
+        let timeline = new TimelineMax();
+
+        let t1 =TweenMax.from( document.querySelector('.contacts-title'), 0.15, {
+            y: 155,
+        });
+
+        let t2 =TweenMax.from( document.querySelector('.contacts-form'), 0.15, {
+            y: 100,
+        });
+
+
+        timeline.add(t1);
+
+        let controller = new ScrollMagic.Controller();
+        let scene = new ScrollMagic.Scene({
+            duration:  '50%',
+            offset:  0,
+            triggerElement: '.contact-us',
+            reverse: true,
+            triggerHook: .7,
+        });
+        scene.setTween(timeline);
+        scene.addTo(controller);
+
+    }
 
     render() {
         return (
