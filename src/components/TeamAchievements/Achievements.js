@@ -15,33 +15,29 @@ class Achievements extends React.Component{
         let t1 =TweenMax.staggerFrom( document.querySelectorAll('.achievements__title span'), 0.15, {
             opacity: 0,
             y: 55,
+            delay: .3,
         }, 0.05);
 
-        let t2 =TweenMax.staggerFrom( document.querySelectorAll('.achievement-item__title span'), 0.25, {
+
+        let t2 =TweenMax.staggerFrom( document.querySelectorAll('.achievement-item p'), 0.35, {
             opacity: 0,
-            y: 45,
-        }, 0.05);
+            y: 50,
+        }, 0.15);
 
-        let t3 =TweenMax.staggerFrom( document.querySelectorAll('.achievement-item__txt p'), 0.25, {
-            opacity: 0,
-            y: 45,
-        }, 0.05);
-
-        timeline.add(t2).add(t3);
+        timeline.add(t1).add(t2);
 
         let controller = new ScrollMagic.Controller();
         let scene = new ScrollMagic.Scene({
-            duration: '100%',
             offset:  0,
             triggerElement: '.achievements',
             reverse: true,
-            triggerHook: 0.5,
+            triggerHook: .7,
         });
 
-        scene.addIndicators({name: '1'});
         scene.setTween(timeline);
         scene.setClassToggle('.header','--white');
         scene.addTo(controller);
+
     }
 
     render(){
@@ -83,7 +79,7 @@ class Achievements extends React.Component{
 
                         <div className="achievement-item --item-1">
                             <div className="achievement-item__title">
-                                <span><strong>4</strong> years</span>
+                                <p><strong>4</strong> years</p>
                             </div>
                             <div className="achievement-item__txt">
                                 <p>Being the best in class web development team</p>
@@ -91,7 +87,7 @@ class Achievements extends React.Component{
                         </div>
                         <div className="achievement-item --item-2">
                             <div className="achievement-item__title">
-                                <span><strong>8448</strong> hours</span>
+                                <p><strong>8448</strong> hours</p>
                             </div>
                             <div className="achievement-item__txt">
                                 <p>Experience in web site developing</p>
@@ -99,7 +95,7 @@ class Achievements extends React.Component{
                         </div>
                         <div className="achievement-item --item-3">
                             <div className="achievement-item__title">
-                                <span><strong>51</strong></span>
+                                <p><strong>51</strong></p>
                             </div>
                             <div className="achievement-item__txt">
                                 <p>Web projects completed</p>
@@ -107,7 +103,7 @@ class Achievements extends React.Component{
                         </div>
                         <div className="achievement-item --item-4">
                             <div className="achievement-item__title">
-                                <span><strong>123</strong></span>
+                                <p><strong>123</strong></p>
                             </div>
                             <div className="achievement-item__txt">
                                 <p>Logos developed</p>
@@ -115,7 +111,7 @@ class Achievements extends React.Component{
                         </div>
                         <div className="achievement-item --item-5">
                             <div className="achievement-item__title">
-                                <span><strong>5</strong></span>
+                                <p><strong>5</strong></p>
                             </div>
                             <div className="achievement-item__txt">
                                 <p>startups launched with</p>
@@ -126,7 +122,7 @@ class Achievements extends React.Component{
                         </div>
                         <div className="achievement-item --item-6">
                             <div className="achievement-item__title">
-                                <span><strong>12</strong></span>
+                                <p><strong>12</strong></p>
                             </div>
                             <div className="achievement-item__txt">
                                 <p>startups launched with our products</p>
