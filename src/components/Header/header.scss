@@ -11,6 +11,14 @@
         transform: translateY(-100%);
       }
     }
+    .hamburger__caption{
+      span{
+        color: #fff;
+      }
+    }
+    .hamburger__inner i span{
+      background-color: #fff;
+    }
   }
   &__container{
     position: relative;

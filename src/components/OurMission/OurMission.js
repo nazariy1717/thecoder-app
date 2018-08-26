@@ -1,53 +1,12 @@
 import React from "react";
 import './our_mission.scss'
-import { TweenMax,TimelineMax }  from "gsap";
-import ScrollMagic from 'scrollmagic';
-import 'animation.gsap';
-import 'debug.addIndicators';
 
 class OurMission extends React.Component{
 
-    componentDidMount() {
-
-        let timeline = new TimelineMax();
-
-        let t1 =TweenMax.staggerFrom( document.querySelectorAll('.our-mission__title span'), 0.45, {
-            opacity: 0,
-            y: 55
-        }, 0.05);
-
-        let t2 = TweenMax.staggerFrom( document.querySelectorAll('.quote__content .app-txt'), 0.45, {
-            opacity: 0,
-            y: 75
-        }, 0.05);
-        let t3 = TweenMax.from( document.querySelector('.quote__author'), 0.45, {
-            opacity: 0,
-            x: -75,
-        });
-
-        timeline.add(t1);
-        timeline.add(t2);
-        timeline.add(t3);
-
-        let h = window.innerHeight / 3;
-        let controller = new ScrollMagic.Controller();
-        let scene = new ScrollMagic.Scene({
-            duration: '50%',
-            offset: 0,
-            triggerElement: '.our-mission',
-            reverse: true,
-        });
-
-        scene.addIndicators({name: '2'});
-        scene.setTween(timeline);
-        // scene.setPin('.our-mission');
-        scene.addTo(controller);
-    }
 
     render(){
         return(
             <section className="our-mission">
-                <div className="our-mission-trigger"></div>
                 <div className="container">
                     <div className="our-mission__title title-box">
                         <p>

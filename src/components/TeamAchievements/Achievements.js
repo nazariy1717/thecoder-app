@@ -12,31 +12,42 @@ class Achievements extends React.Component{
 
         let timeline = new TimelineMax();
 
-        let t1 =TweenMax.staggerFrom( document.querySelectorAll('.achievements__title span'), 0.45, {
+        let t1 =TweenMax.staggerFrom( document.querySelectorAll('.achievements__title span'), 0.15, {
             opacity: 0,
-            y: 55
+            y: 55,
         }, 0.05);
 
+        let t2 =TweenMax.staggerFrom( document.querySelectorAll('.achievement-item__title span'), 0.25, {
+            opacity: 0,
+            y: 45,
+        }, 0.05);
 
-        timeline.add(t1);
+        let t3 =TweenMax.staggerFrom( document.querySelectorAll('.achievement-item__txt p'), 0.25, {
+            opacity: 0,
+            y: 45,
+        }, 0.05);
+
+        timeline.add(t2).add(t3);
 
         let controller = new ScrollMagic.Controller();
-        let scene1 = new ScrollMagic.Scene({
+        let scene = new ScrollMagic.Scene({
             duration: '100%',
-            offset: '0%',
-            triggerElement: '.achievements__content',
+            offset:  0,
+            triggerElement: '.achievements',
             reverse: true,
+            triggerHook: 0.5,
         });
 
-        scene1.addIndicators({name: '1'});
-        scene1.setTween(timeline);
-        scene1.setPin('.achievements__content');
-        scene1.addTo(controller);
+        scene.addIndicators({name: '1'});
+        scene.setTween(timeline);
+        scene.setClassToggle('.header','--white');
+        scene.addTo(controller);
     }
 
     render(){
         return(
             <section className="achievements">
+                <div className="a_trigger"></div>
                 <div className="container">
                     <div className="achievements__content">
                         <div className="achievements__title title-box">
