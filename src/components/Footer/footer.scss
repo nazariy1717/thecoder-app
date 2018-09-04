@@ -1,14 +1,29 @@
+@import "../../assets/styles/tools/breakpoints";
 
 .footer{
   padding: 60px 0;
+  @media (max-width: $breakpoint-sm) {
+    padding: 30px 0;
+  }
   &__logo{
     display: block;
     height: 105px;
     margin: auto;
     max-width: 100%;
+    @media (max-width: $breakpoint-sm) {
+      margin: auto auto 15px auto;
+    }
+  }
+  &__row{
+    @media (max-width: $breakpoint-sm) {
+      margin: 0 -7px;
+    }
   }
   &__column{
     margin-bottom: 15px;
+    @media (max-width: $breakpoint-sm) {
+      padding: 0 7px;
+    }
   }
   &__txt{
     display: block;
@@ -17,16 +32,26 @@
     line-height: 24px;
     font-size: 14px;
     font-weight: 800;
+    @media (max-width: $breakpoint-sm) {
+      font-size: 11px;
+      font-weight: 400;
+    }
     &.--title{
       font-size: 16px;
       font-weight: 900;
       text-transform: uppercase;
+      @media (max-width: $breakpoint-sm) {
+        font-size: 13px;
+      }
     }
   }
   &__link{
     height: 24px;
     display: inline-block;
     overflow: hidden;
+    @media (max-width: $breakpoint-sm) {
+      text-align: center;
+    }
     span{
       display: block;
       line-height: 24px;
