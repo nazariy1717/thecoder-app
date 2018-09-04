@@ -31,7 +31,7 @@ class OurMission extends React.Component{
             reverse: true,
             triggerHook: .7,
         });
-        scene.setTween(timeline);
+        // scene.setTween(timeline);
         scene.addTo(controller);
     }
     render(){
