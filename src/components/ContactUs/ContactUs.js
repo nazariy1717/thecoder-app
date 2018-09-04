@@ -26,7 +26,7 @@ class ContactUs extends React.Component{
             offset:  0,
             triggerElement: '.contact-us',
             reverse: true,
-            triggerHook: .5,
+            triggerHook: .7,
         });
         scene.setTween(timeline);
         scene.addTo(controller);

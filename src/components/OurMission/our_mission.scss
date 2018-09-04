@@ -1,8 +1,30 @@
+@import "../../assets/styles/tools/breakpoints";
+
 .our-mission{
   position: relative;
   padding: 95px 0 60px 0;
+  @media (max-width: $breakpoint-sm) {
+    padding: 60px 0 30px 0;
+  }
+  &__coder{
+    position: absolute;
+    left: 50%;
+    top: 90px;
+    transform: rotate(-90deg) translateX(-50%);
+    font-family: 'Raleway',sans-serif;
+    font-weight: 700;
+    color: #000;
+    font-size: 12px;
+    letter-spacing: 3px;
+    @media (max-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
   &__title{
     margin-bottom: 90px;
+    @media (max-width: $breakpoint-sm) {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -19,12 +41,27 @@
       font-size: 150px;
       color: var(--black);
       font-family: 'icomoon' !important;
+      @media (max-width: $breakpoint-lg) {
+        font-size: 100px;
+        left: 45px;
+      }
+      @media (max-width: $breakpoint-md) {
+        font-size: 100px;
+        left: 0;
+      }
+      @media (max-width: $breakpoint-sm) {
+        font-size: 60px;
+        left: 0;
+        top: 10px;
+      }
     }
   }
   &__author{
     margin-left: auto;
     margin-right: 0;
     max-width: 160px;
+    height: 45px;
+    overflow: hidden;
   }
   &__list{
     display: inline-block;

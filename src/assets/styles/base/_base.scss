@@ -62,7 +62,14 @@ a{
 
 
 .app-txt{
-
+  font-family: "Myriad Pro", sans-serif;
+  color: var(--primary-gray);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  @media (max-width: $breakpoint-sm) {
+    font-size: 14px;
+  }
 }
 
 
