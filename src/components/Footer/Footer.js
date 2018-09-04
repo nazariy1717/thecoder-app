@@ -21,12 +21,12 @@ const footer = () => (
                         </div>
                         <div className="column col-sm-4 col-xs-12 footer__column">
                             <span className="footer__txt --title">phones/</span>
-                            <a href="tel:" className="footer__txt">+380 00 000 000</a>
+                            <a href="tel:" className="footer__txt">+14155236050</a>
                             <a href="tel:" className="footer__txt">+380 00 000 000</a>
                         </div>
                         <div className="column col-sm-4 col-xs-12 footer__column">
                             <span className="footer__txt --title">e-mail/</span>
-                            <a href="mailto:thecoder@gmail.com" className="footer__txt">thecoder@gmail.com</a>
+                            <a href="mailto:thecoder@gmail.com" className="footer__txt">office@thecoderdev.com</a>
                         </div>
                     </div>
                     <ul className="row m-row align-spaced footer__row">

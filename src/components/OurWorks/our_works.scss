@@ -14,10 +14,25 @@
 
 .work-item{
   margin-bottom: 30px;
+  &:hover{
+    .work-item__desc{
+      span{
+        transform: translateY(0);
+      }
+    }
+  }
   &__content{
     height: 325px;
     position: relative;
     overflow: hidden;
+    -webkit-background-size: cover;
+    background-size: cover;
+    &.--item-1{
+      background: url(items/leodrive.gif) top center no-repeat;
+    }
+    &.--item-2{
+      background: url(items/kucherstudio.gif) top center no-repeat;
+    }
   }
   &__video{
     position: absolute;
@@ -28,6 +43,19 @@
     object-fit: cover;
   }
   &__desc{
-
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Raleway',sans-serif;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    height: 25px;
+    overflow: hidden;
+    text-align: right;
+    span{
+      display: block;
+      transform: translateY(30px);
+      transition: all 0.3s;
+    }
   }
 }

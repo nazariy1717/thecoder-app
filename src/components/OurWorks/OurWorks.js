@@ -6,9 +6,6 @@ import ScrollMagic from 'scrollmagic';
 import 'animation.gsap';
 import 'debug.addIndicators';
 
-import item1 from './items/leodrive.mp4';
-import item2 from './items/kucherstudio.mp4';
-
 class OurWorks extends React.Component{
 
     componentDidMount() {
@@ -71,28 +68,28 @@ class OurWorks extends React.Component{
                 <div className="our-works__container">
                     <div className="row">
                         <div className="col-md-4">
-                            <a href="/" rel="nofollow" target="_blank">
+                            <a href="https://leodrive.com.ua/" rel="nofollow" target="_blank">
                                 <div className="work-item">
-                                    <div className="work-item__content">
-                                        <video className="work-item__video" loop="true" muted="muted"
-                                               autoPlay="true" data-keepplaying="" data-autoplay="true" playsinline=""
-                                               webkit-playsinline="" src={item1}>
-                                        </video>
-                                    </div>
-                                    <p className="work-item__desc">Leodrive - Daily rent of hybrid cars</p>
+                                    <div className="work-item__content --item-1"></div>
+                                    <p className="work-item__desc"><span>Leodrive</span></p>
                                 </div>
                             </a>
                         </div>
                         <div className="col-md-4">
-                            <a href="/" rel="nofollow" target="_blank">
+                            <a href="https://kucheriavi-studio.pro/" rel="nofollow" target="_blank">
+                                <div className="work-item">
+                                    <div className="work-item__content --item-2"></div>
+                                    <p className="work-item__desc"><span>Kucheriavi studio</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-md-4">
+                            <a href="https://komaagency.com/" rel="nofollow" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content">
-                                        <video className="work-item__video" loop="true" muted="muted"
-                                               autoPlay="true" data-keepplaying="" data-autoplay="true" playsinline=""
-                                               webkit-playsinline="" src={item2}>
-                                        </video>
+
                                     </div>
-                                    <p className="work-item__desc"></p>
+                                    <p className="work-item__desc"><span>Koma agency</span></p>
                                 </div>
                             </a>
                         </div>
