@@ -1,4 +1,19 @@
+@import "../../assets/styles/tools/breakpoints";
 
 .contact-us{
   padding: 120px 0;
+  @media (max-width: $breakpoint-lg) {
+    padding: 90px 0;
+  }
+  @media (max-width: $breakpoint-md) {
+    padding: 60px 0;
+  }
+  @media (max-width: $breakpoint-sm) {
+    padding: 45px 0;
+  }
+  &__title{
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 30px;
+    }
+  }
 }

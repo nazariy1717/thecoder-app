@@ -27,6 +27,11 @@ a{
     letter-spacing: 12px;
     height: 48px;
     overflow: hidden;
+    @media (max-width: $breakpoint-md) {
+      line-height: 36px;
+      letter-spacing: 8px;
+      height: 36px;
+    }
     span{
       display: inline-block;
       position: relative;
@@ -35,6 +40,10 @@ a{
       line-height: 48px;
       text-transform: uppercase;
       color: var(--black);
+      @media (max-width: $breakpoint-md) {
+        font-size: 30px;
+        line-height: 36px;
+      }
       &.sub{
         color: var(--gray);
       }

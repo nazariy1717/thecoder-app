@@ -11,7 +11,7 @@
     margin: auto;
     max-width: 100%;
     @media (max-width: $breakpoint-sm) {
-      margin: auto auto 15px auto;
+      margin: auto auto 30px auto;
     }
   }
   &__row{
@@ -23,6 +23,7 @@
     margin-bottom: 15px;
     @media (max-width: $breakpoint-sm) {
       padding: 0 7px;
+      text-align: center;
     }
   }
   &__txt{
