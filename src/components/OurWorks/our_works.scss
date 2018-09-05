@@ -22,16 +22,21 @@
     }
   }
   &__content{
+    max-width: 455px;
     height: 325px;
+    margin: auto;
     position: relative;
     overflow: hidden;
     -webkit-background-size: cover;
     background-size: cover;
+    @media (max-width: $breakpoint-sm) {
+      height: 250px;
+    }
     &.--item-1{
-      background: url(items/leodrive.gif) top center no-repeat;
+      background: url(./items/leodrive.gif) top center no-repeat;
     }
     &.--item-2{
-      background: url(items/kucherstudio.gif) top center no-repeat;
+      background: url(./items/kucherstudio.gif) top center no-repeat;
     }
   }
   &__video{
@@ -43,15 +48,19 @@
     object-fit: cover;
   }
   &__desc{
+    max-width: 455px;
     color: #000;
     font-size: 14px;
     font-weight: 700;
     font-family: 'Raleway',sans-serif;
     letter-spacing: 1px;
-    margin-top: 15px;
+    margin: 15px auto auto auto;
     height: 25px;
     overflow: hidden;
     text-align: right;
+    @media (max-width: $breakpoint-sm) {
+      display: none;
+    }
     span{
       display: block;
       transform: translateY(30px);

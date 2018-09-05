@@ -2,7 +2,6 @@ import React from 'react';
 import './footer.scss';
 import logo from './logo-foot.svg';
 
-
 const footer = () => (
     <footer className="footer">
         <div className="container">
@@ -20,9 +19,8 @@ const footer = () => (
                             <span className="footer__txt">м. Cан-Франциско</span>
                         </div>
                         <div className="column col-sm-4 col-xs-12 footer__column">
-                            <span className="footer__txt --title">phones/</span>
+                            <span className="footer__txt --title">phone/</span>
                             <a href="tel:" className="footer__txt">+14155236050</a>
-                            <a href="tel:" className="footer__txt">+380 00 000 000</a>
                         </div>
                         <div className="column col-sm-4 col-xs-12 footer__column">
                             <span className="footer__txt --title">e-mail/</span>

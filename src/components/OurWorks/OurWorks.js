@@ -67,7 +67,7 @@ class OurWorks extends React.Component{
                 </div>
                 <div className="our-works__container">
                     <div className="row">
-                        <div className="col-md-4 col-xs-12">
+                        <div className="col-lg-4 col-md-6 col-xs-12">
                             <a href="https://leodrive.com.ua/" rel="nofollow" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content --item-1"></div>
@@ -75,7 +75,7 @@ class OurWorks extends React.Component{
                                 </div>
                             </a>
                         </div>
-                        <div className="col-md-4 col-xs-12">
+                        <div className="col-lg-4 col-md-6 col-xs-12">
                             <a href="https://kucheriavi-studio.pro/" rel="nofollow" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content --item-2"></div>
@@ -83,7 +83,7 @@ class OurWorks extends React.Component{
                                 </div>
                             </a>
                         </div>
-                        <div className="col-md-4 col-xs-12">
+                        <div className="col-lg-4 col-md-6 col-xs-12">
                             <a href="https://komaagency.com/" rel="nofollow" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content --item-1"></div>
