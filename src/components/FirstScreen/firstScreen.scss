@@ -2,6 +2,17 @@
 .first-screen{
   height: 100vh;
   position: relative;
+  &__coder{
+    position: absolute;
+    left: calc(50% - 70px);
+    top: 15px;
+    transform: rotate(-90deg) translateX(-50%);
+    font-family: 'Raleway',sans-serif;
+    font-weight: 700;
+    color: #000;
+    font-size: 14px;
+    letter-spacing: 3px;
+  }
   &__content{
     position: absolute;
     left: 50%;
