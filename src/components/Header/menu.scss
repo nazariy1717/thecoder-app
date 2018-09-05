@@ -1,3 +1,5 @@
+@import "../../assets/styles/tools/breakpoints";
+
 .menu{
   position: fixed;
   left: 0;
@@ -10,7 +12,6 @@
   &__content{
     position: relative;
     height: 100vh;
-
   }
   &__list{
     position: absolute;
@@ -22,6 +23,12 @@
   &__item{
     overflow: hidden;
     margin-bottom: 30px;
+    @media (max-width: $breakpoint-md){
+      margin-bottom: 20px;
+    }
+    @media (max-width: $breakpoint-sm){
+      margin-bottom: 5px;
+    }
   }
   &__link{
     display: block;
@@ -35,6 +42,13 @@
     line-height: 30px;
     font-weight: 800;
     transition: all 0.3s;
+    @media (max-width: $breakpoint-md){
+      font-size: 28px;
+      padding-left: 60px;
+    }
+    @media (max-width: $breakpoint-sm){
+      font-size: 20px;
+    }
     &:before{
       counter-increment: item;
       content: "0" counter(item);
@@ -48,6 +62,9 @@
       font-family: 'Raleway', sans-serif;
       font-weight: 800;
       transition: all 0.3s;
+      @media (max-width: $breakpoint-sm){
+        font-size: 20px;
+      }
     }
     &:after{
       content: "";
@@ -80,6 +97,9 @@
   bottom: 30px;
   left: 15px;
   right: 15px;
+  @media (max-width: $breakpoint-sm){
+    bottom: 15px;
+  }
   &__item{
     overflow: hidden;
     height: 30px;
@@ -94,6 +114,9 @@
     font-weight: 800;
     height: 30px;
     overflow: hidden;
+    @media (max-width: $breakpoint-sm){
+      font-size: 13px;
+    }
     span{
       display: block;
       line-height: 30px;

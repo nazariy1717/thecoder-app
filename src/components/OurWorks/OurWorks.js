@@ -86,9 +86,7 @@ class OurWorks extends React.Component{
                         <div className="col-md-4">
                             <a href="https://komaagency.com/" rel="nofollow" target="_blank">
                                 <div className="work-item">
-                                    <div className="work-item__content">
-
-                                    </div>
+                                    <div className="work-item__content --item-1"></div>
                                     <p className="work-item__desc"><span>Koma agency</span></p>
                                 </div>
                             </a>
