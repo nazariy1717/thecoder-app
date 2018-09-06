@@ -12,17 +12,23 @@ class OurWorks extends React.Component{
 
         let timeline = new TimelineMax();
 
-        let t1 =  TweenMax.staggerFrom( document.querySelectorAll('.our-mission__title span'), 0.3, {
+        let t1 =  TweenMax.staggerFrom( document.querySelectorAll('.our-works__title span'), 0.3, {
             opacity: 0,
             y: 55
         }, 0.05);
-        timeline.add(t1);
+
+        let t2 = TweenMax.staggerFrom( document.querySelectorAll('.work-item'), 0.3, {
+            opacity: 0,
+            y: 55
+        }, 0.2);
+
+        timeline.add(t1).add(t2);
 
         let controller = new ScrollMagic.Controller();
         let scene = new ScrollMagic.Scene({
             offset:  0,
-            triggerElement: '.our-mission',
-            reverse: true,
+            triggerElement: '.our-works',
+            reverse: false,
             triggerHook: .7,
         });
         scene.setTween(timeline);
@@ -30,7 +36,7 @@ class OurWorks extends React.Component{
     }
     render(){
         return(
-            <section className="our-works">
+            <section className="our-works" id="our-works">
                 <div className="container">
                     <div className="our-works__title title-box">
                         <p>
@@ -86,7 +92,7 @@ class OurWorks extends React.Component{
                         <div className="col-lg-4 col-md-6 col-xs-12">
                             <a href="https://komaagency.com/" rel="nofollow" target="_blank">
                                 <div className="work-item">
-                                    <div className="work-item__content --item-1"></div>
+                                    <div className="work-item__content --item-3"></div>
                                     <p className="work-item__desc"><span>Koma agency</span></p>
                                 </div>
                             </a>

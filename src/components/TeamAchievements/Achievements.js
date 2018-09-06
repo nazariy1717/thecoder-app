@@ -49,7 +49,7 @@ class Achievements extends React.Component{
 
     render(){
         return(
-            <section className="achievements">
+            <section className="achievements" id="achievements">
                 <div className="a_trigger"></div>
                 <div className="container">
                     <div className="achievements__content">

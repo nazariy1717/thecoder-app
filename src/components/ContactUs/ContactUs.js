@@ -34,7 +34,7 @@ class ContactUs extends React.Component{
 
     render() {
         return (
-            <section className="section contact-us">
+            <section className="section contact-us" id="contact-us">
                 <div className="container">
                     <div className="row m-row align-middle">
                         <div className="column col-lg-6 col-md-6 col-xs-12">

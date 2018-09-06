@@ -41,6 +41,7 @@
     "react-input-mask": "^2.0.4",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "react-scrollchor": "^6.0.0",
     "resolve": "1.6.0",
     "sass-loader": "^7.1.0",
     "style-loader": "0.19.0",

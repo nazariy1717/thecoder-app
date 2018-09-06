@@ -36,7 +36,7 @@ class OurMission extends React.Component{
     }
     render(){
         return(
-            <section className="our-mission">
+            <section className="our-mission" id="our-mission">
                 <p className="our-mission__coder">
                     details matter
                 </p>

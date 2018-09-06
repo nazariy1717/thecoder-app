@@ -45,7 +45,7 @@ class OurServices extends React.Component{
 
     render(){
         return(
-            <section className="our-services">
+            <section className="our-services" id="our-services">
                 <div className="container">
                     <div className="our-services__content">
                         <div className="our-services__tab --active" id="tab-1">

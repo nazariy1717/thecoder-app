@@ -1,9 +1,12 @@
 import React from 'react';
+import Scrollchor from 'react-scrollchor';
 import './menu.scss';
-
 
 class Menu extends React.Component{
 
+    constructor(props){
+        super(props);
+    }
 
     render() {
         let menuClass = 'menu ';
@@ -16,22 +19,22 @@ class Menu extends React.Component{
                 <div className="menu__content container">
                     <ul className="menu__list">
                         <li className="menu__item">
-                            <a href="/" className="menu__link">Main</a>
+                            <Scrollchor to="" className="menu__link" onClick={this.props.close}>Main</Scrollchor>
                         </li>
                         <li className="menu__item">
-                            <a href="/" className="menu__link">Our Services</a>
+                            <a to="our-services" className="menu__link" onClick={this.props.close}>Our Services</a>
                         </li>
                         <li className="menu__item">
-                            <a href="/" className="menu__link">Portfolio</a>
+                            <Scrollchor to="our-works" className="menu__link" onClick={this.props.close}>Portfolio</Scrollchor>
                         </li>
                         <li className="menu__item">
-                            <a href="/" className="menu__link">Team achievements</a>
+                            <Scrollchor to="achievements" className="menu__link" onClick={this.props.close}>Team achievements</Scrollchor>
                         </li>
                         <li className="menu__item">
-                            <a href="/" className="menu__link">Our Mission</a>
+                            <Scrollchor to="our-mission" className="menu__link" onClick={this.props.close}>Our Mission</Scrollchor>
                         </li>
                         <li className="menu__item">
-                            <a href="/" className="menu__link">Contact us</a>
+                            <Scrollchor to="contact-us" className="menu__link" onClick={this.props.close}>Contact us</Scrollchor>
                         </li>
                     </ul>
                     <ul className="menu-soc row">

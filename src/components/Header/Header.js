@@ -86,7 +86,7 @@ class Header extends React.Component{
                                    show={this.state.isHamburgerActive}/>
                     </div>
                 </header>
-                <Menu show={this.state.isHamburgerActive}/>
+                <Menu show={this.state.isHamburgerActive} close={this.toggleHamburger}/>
             </div>
         )
     }
