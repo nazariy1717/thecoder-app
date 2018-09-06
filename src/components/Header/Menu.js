@@ -35,19 +35,19 @@ class Menu extends React.Component{
                         </li>
                     </ul>
                     <ul className="menu-soc row">
-                        <li className="menu-soc__item col-lg-4">
+                        <li className="menu-soc__item col-xs-4">
                             <a href="/" className="menu-soc__link" rel="nofollow" target="_blank">
                                 <span>Facebook</span>
                                 <span>Facebook</span>
                             </a>
                         </li>
-                        <li className="menu-soc__item col-lg-4">
+                        <li className="menu-soc__item col-xs-4">
                             <a href="/" className="menu-soc__link" rel="nofollow" target="_blank">
                                 <span>Instagram</span>
                                 <span>Instagram</span>
                             </a>
                         </li>
-                        <li className="menu-soc__item col-lg-4">
+                        <li className="menu-soc__item col-xs-4">
                             <a href="/" className="menu-soc__link" rel="nofollow" target="_blank">
                                 <span>Linkedin</span>
                                 <span>Linkedin</span>

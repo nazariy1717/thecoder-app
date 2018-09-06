@@ -1,10 +1,13 @@
 import React from 'react';
+import InputMask from 'react-input-mask';
+import Validator from 'validator';
 
 class ContactForm extends React.Component{
 
     constructor(props){
         super(props);
         this.onChangeHandler = this.onChangeHandler.bind(this);
+        this.validate = this.validate.bind(this);
         this.onSubmitHandler = this.onSubmitHandler.bind(this);
     }
 
@@ -24,12 +27,45 @@ class ContactForm extends React.Component{
        })
     }
 
-    onSubmitHandler = (event) => {
-        event.preventDefault();
-        console.log(this.state);
+    validate(data){
+        const errors = {};
+
+        if(!data.name){
+            errors.name = "Required field";
+        } else if(!Validator.isLength(data.name, {min:2, max: undefined})) {
+            errors.name = "Full name must be longer than 2 characters";
+        }
+
+        if(!data.email){
+            errors.email = "Required field";
+        } else if(!Validator.isEmail(data.email)){
+            errors.email = 'Email is incorrect';
+        }
+
+        if(!data.phone){
+            errors.phone = "Required field";
+        }  else if(!Validator.isLength(data.phone, {min:12, max: 12})) {
+            errors.phone = "Full name must be 10 characters long";
+        }
+
+
+        return errors;
+    }
+
+    onSubmitHandler(e){
+        e.preventDefault();
+        const errors = this.validate(this.state.data);
+        this.setState({ errors });
+
+        if(Object.keys(errors).length === 0){
+           console.log(this.state.data);
+        }
     }
 
     render(){
+
+        const { data, errors } = this.state;
+
         return(
             <div className="contacts-form">
                 <form action="/" onSubmit={this.onSubmitHandler}>
@@ -37,43 +73,46 @@ class ContactForm extends React.Component{
                         <input
                             type="text" name="name" id="name"
                             className="form__input"
-                            value={this.state.name}
+                            value={data.name}
                             onChange={this.onChangeHandler}
                         />
                         <label htmlFor="name" className="form__label">
                             <div><span>full name</span></div>
                             <div><span>full name</span></div>
                         </label>
+                        { errors.name && <span className="form__error">{errors.name}</span>    }
                     </div>
                     <div className="form__group-30">
-                        <input
-                            type="text" name="phone" id="phone"
-                            className="form__input"
-                            value={this.state.phone}
-                            onChange={this.onChangeHandler}
-                        />
+                        <InputMask  type="text" name="phone" id="phone"
+                                    className="form__input"
+                                    value={data.phone}
+                                    onChange={this.onChangeHandler}
+                                    mask="999 999 9999" maskChar="" />
                         <label htmlFor="phone" className="form__label">
                             <div><span>phone</span></div>
                             <div><span>phone</span></div>
                         </label>
+                        { errors.phone && <span className="form__error">{errors.phone}</span>    }
+
                     </div>
                     <div className="form__group-30">
                         <input
-                            type="email" name="email" id="email"
+                            type="text" name="email" id="email"
                             className="form__input"
-                            value={this.state.email}
+                            value={data.email}
                             onChange={this.onChangeHandler}
                         />
                         <label htmlFor="email" className="form__label">
                             <div><span>e-mail</span></div>
                             <div><span>e-mail</span></div>
                         </label>
+                        { errors.email && <span className="form__error">{errors.email}</span>    }
                     </div>
                     <div className="form__group-40">
                         <textarea
                             name="message" id="message"
                             className="form__area"
-                            value={this.state.message}
+                            value={data.message}
                             onChange={this.onChangeHandler}
                         />
                         <label htmlFor="email" className="form__label">

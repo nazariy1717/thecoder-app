@@ -1,14 +1,31 @@
+@import "../../assets/styles/tools/breakpoints";
+
 .achievements{
   padding: 200px 0;
   background-color: var(--black);
+  @media (max-width: $breakpoint-lg) {
+    padding: 150px 0;
+  }
+  @media (max-width: $breakpoint-md) {
+    padding: 100px 0;
+  }
   &__content{
     position: relative;
     height: 725px;
     width: 725px;
     margin: auto;
-    background: url(circle.png) center no-repeat;
+    background: url(./circle.png) center no-repeat;
     -webkit-background-size: contain;
     background-size: contain;
+    @media (max-width: $breakpoint-lg) {
+      height: 600px;
+      width: 600px;
+    }
+    @media (max-width: $breakpoint-md) {
+      height: initial;
+      width: initial;
+      background: none;
+    }
   }
   &__title{
     position: absolute;
@@ -16,6 +33,18 @@
     width: 100%;
     left: 60%;
     transform: translate(-50%,-50%);
+    @media (max-width: $breakpoint-lg) {
+      left: 55%;
+    }
+    @media (max-width: $breakpoint-md) {
+      position: relative;
+      top: initial;
+      left: initial;
+      right: initial;
+      bottom: initial;
+      transform: initial;
+      margin-bottom: 30px;
+    }
     p span{
       color: var(--white);
       &.sub{
@@ -27,29 +56,80 @@
 
 .achievement-item{
   position: absolute;
+  @media (max-width: $breakpoint-md) {
+    position: relative;
+    top: initial;
+    left: initial;
+    right: initial;
+    bottom: initial;
+    margin-bottom: 20px;
+  }
   &.--item-1{
     top: -30px;
     left: 325px;
+    @media (max-width: $breakpoint-lg) {
+      left: 250px;
+    }
+    @media (max-width: $breakpoint-md) {
+      top: 0;
+      left: 0;
+    }
   }
   &.--item-2{
     top: 130px;
     left: -5px;
+    @media (max-width: $breakpoint-lg) {
+      top: 100px;
+    }
+    @media (max-width: $breakpoint-md) {
+      top: 0;
+      left: 0;
+    }
   }
   &.--item-3{
     top: 130px;
     right: -75px;
+    @media (max-width: $breakpoint-lg) {
+      top: 100px;
+    }
+    @media (max-width: $breakpoint-md) {
+      top: 0;
+      right: 0;
+    }
   }
   &.--item-4{
     bottom: 185px;
     left: -5px;
+    @media (max-width: $breakpoint-lg) {
+      bottom: 120px;
+    }
+    @media (max-width: $breakpoint-md) {
+      bottom: 0;
+      left: 0;
+    }
   }
   &.--item-5{
     bottom: 185px;
     right: -75px;
+    @media (max-width: $breakpoint-lg) {
+      bottom: 120px;
+      right: -55px;
+    }
+    @media (max-width: $breakpoint-md) {
+      bottom: 0;
+      right: 0;
+    }
   }
   &.--item-6{
     bottom: -30px;
     left: 325px;
+    @media (max-width: $breakpoint-lg) {
+      left: 250px;
+    }
+    @media (max-width: $breakpoint-md) {
+      bottom: 0;
+      left: 0;
+    }
   }
   &__title{
     p{

@@ -16,6 +16,7 @@ class FirstScreen extends React.Component{
     render(){
         return(
             <div className="first-screen">
+                <p className="first-screen__coder">details matter</p>
                 <div className="first-screen__content">
                     <div className="first-screen__title title-box ">
                         <p>

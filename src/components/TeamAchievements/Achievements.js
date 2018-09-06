@@ -36,13 +36,14 @@ class Achievements extends React.Component{
 
         let scene1 = new ScrollMagic.Scene({
             offset:  0,
-            duration: '100%',
+            duration: '175%',
             triggerElement: '.achievements',
             reverse: true,
             triggerHook: 0,
         });
         scene1.setClassToggle('.header','--white');
         scene1.addTo(controller);
+        // scene1.addIndicators();
     }
 
     render(){

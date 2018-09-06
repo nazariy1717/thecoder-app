@@ -1,12 +1,45 @@
 import React from "react";
 import './our_mission.scss'
 
+import { TweenMax,TimelineMax }  from "gsap";
+import ScrollMagic from 'scrollmagic';
+import 'animation.gsap';
+import 'debug.addIndicators';
+
 class OurMission extends React.Component{
 
+    componentDidMount() {
 
+        let timeline = new TimelineMax();
+
+        let t1 =  TweenMax.staggerFrom( document.querySelectorAll('.our-mission__title span'), 0.3, {
+            opacity: 0,
+            y: 55
+        }, 0.05);
+
+        let t3 =  TweenMax.from( document.querySelector('.quote__author'), 0.3, {
+            opacity: 0,
+            y: 45
+        });
+
+        timeline.add(t1).add(t3);
+
+        let controller = new ScrollMagic.Controller();
+        let scene = new ScrollMagic.Scene({
+            offset:  0,
+            triggerElement: '.our-mission',
+            reverse: true,
+            triggerHook: .7,
+        });
+        // scene.setTween(timeline);
+        scene.addTo(controller);
+    }
     render(){
         return(
             <section className="our-mission">
+                <p className="our-mission__coder">
+                    details matter
+                </p>
                 <div className="container">
                     <div className="our-mission__title title-box">
                         <p>
@@ -37,7 +70,6 @@ class OurMission extends React.Component{
                             <span className="sub">j</span>
                             <span className="sub">y</span>
                         </p>
-
                         <h2 className="title-box__hidden">зв’яжіться з нами</h2>
                     </div>
                     <div className="quote">
@@ -47,20 +79,20 @@ class OurMission extends React.Component{
                          </div>
                         <div className="quote__author">
                             <span className="quote__name">Ruslan</span>
-                            <ul className="quote__list">
-                                <li>
-                                    <a href="/" className="" rel="nofollow" target="_blank">
-                                        <span className="icon-facebook"></span>
-                                        <span className="icon-facebook"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/" className="" rel="nofollow" target="_blank">
-                                        <span className="icon-linkedin2"></span>
-                                        <span className="icon-linkedin2"></span>
-                                    </a>
-                                </li>
-                            </ul>
+                            {/*<ul className="quote__list">*/}
+                                {/*<li>*/}
+                                    {/*<a href="/" className="" rel="nofollow" target="_blank">*/}
+                                        {/*<span className="icon-facebook"></span>*/}
+                                        {/*<span className="icon-facebook"></span>*/}
+                                    {/*</a>*/}
+                                {/*</li>*/}
+                                {/*<li>*/}
+                                    {/*<a href="/" className="" rel="nofollow" target="_blank">*/}
+                                        {/*<span className="icon-linkedin2"></span>*/}
+                                        {/*<span className="icon-linkedin2"></span>*/}
+                                    {/*</a>*/}
+                                {/*</li>*/}
+                            {/*</ul>*/}
                             <p className="quote__txt">Founder + CEO</p>
                         </div>
                     </div>

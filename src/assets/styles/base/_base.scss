@@ -27,6 +27,11 @@ a{
     letter-spacing: 12px;
     height: 48px;
     overflow: hidden;
+    @media (max-width: $breakpoint-md) {
+      line-height: 36px;
+      letter-spacing: 8px;
+      height: 36px;
+    }
     span{
       display: inline-block;
       position: relative;
@@ -35,6 +40,10 @@ a{
       line-height: 48px;
       text-transform: uppercase;
       color: var(--black);
+      @media (max-width: $breakpoint-md) {
+        font-size: 30px;
+        line-height: 36px;
+      }
       &.sub{
         color: var(--gray);
       }
@@ -53,7 +62,14 @@ a{
 
 
 .app-txt{
-
+  font-family: "Myriad Pro", sans-serif;
+  color: var(--primary-gray);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  @media (max-width: $breakpoint-sm) {
+    font-size: 14px;
+  }
 }
 
 
