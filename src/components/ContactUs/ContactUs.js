@@ -62,7 +62,7 @@ class ContactUs extends React.Component{
                                     <span className="sub">j</span>
                                     <span className="sub">t</span>
                                 </p>
-                                <h2 className="title-box__hidden">зв’яжіться з нами</h2>
+                                <h2 className="title-box__hidden">Contact us</h2>
                             </div>
                         </div>
                         <div className="column col-lg-5 col-md-6 col-xs-12">

@@ -1,0 +1,129 @@
+@import "../../assets/styles/tools/breakpoints";
+
+.our-services{
+  padding: 100px 0;
+  &__title{
+    margin-bottom: 50px;
+    @media (max-width: $breakpoint-md){
+      margin-bottom: 30px;
+    }
+  }
+  &__tab{
+    display: none;
+    &.--active{
+      display: block;
+    }
+  }
+  &__form{
+    margin: auto;
+    max-width: 445px;
+  }
+  &__btn{
+    @media (max-width: $breakpoint-lg){
+      margin-bottom: 30px;
+    }
+    @media (max-width: $breakpoint-sm){
+      display: none;
+    }
+  }
+
+}
+
+.services-item{
+  position: relative;
+  padding-left: 135px;
+  padding-bottom: 75px;
+  @media (max-width: $breakpoint-sm){
+    padding-bottom: 50px;
+    padding-left: 75px;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    left: 80px;
+    background-color: #000;
+    @media (max-width: $breakpoint-sm){
+      left: 40px;
+    }
+  }
+  &:last-child{
+    padding-bottom: 0;
+  }
+  &__title{
+    position: relative;
+    display: block;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 18px;
+    margin-bottom: 20px;
+    @media (max-width: $breakpoint-sm){
+      margin-bottom: 10px;
+    }
+    i{
+      position: absolute;
+      left: -110px;
+      font-size: 16px;
+      font-weight: 900;
+      @media (max-width: $breakpoint-sm){
+        left: -75px;
+      }
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      top: 6px;
+      left: -57px;
+      border-radius: 50%;
+      background-color: #000;
+      @media (max-width: $breakpoint-sm){
+        left: -37px;
+      }
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 1px;
+      top: 8px;
+      left: -55px;
+      background-color: #000;
+      @media (max-width: $breakpoint-sm){
+        left: -35px;
+        width: 25px;
+      }
+    }
+  }
+  &__txt{
+    padding-left: 50px;
+    font-family: 'Myriad Pro', sans-serif;
+    color: var(--primary-gray);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 20px;
+    @media (max-width: $breakpoint-sm){
+      padding-left: 0;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+  }
+  &__list{
+    padding-left: 50px;
+    @media (max-width: $breakpoint-sm){
+      padding-left: 0;
+    }
+    li{
+      color: #000;
+      font-family: 'Raleway', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+}

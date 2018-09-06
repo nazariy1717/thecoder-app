@@ -6,6 +6,7 @@ import OurWorks from './components/OurWorks/OurWorks';
 import OurMission from './components/OurMission/OurMission';
 import ContactUs from './components/ContactUs/ContactUs';
 import Achievements from "./components/TeamAchievements/Achievements";
+import OurServices from "./components/OurServices/OurServices";
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
           <div className="trigger"></div>
           <Header />
           <FirstScreen />
+          <OurServices />
           <OurWorks />
           <Achievements />
           <OurMission />

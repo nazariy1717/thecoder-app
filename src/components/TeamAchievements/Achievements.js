@@ -17,6 +17,7 @@ class Achievements extends React.Component{
             y: 55,
             delay: .3,
         }, 0.05);
+
         let t2 =TweenMax.staggerFrom( document.querySelectorAll('.achievement-item p'), 0.35, {
             opacity: 0,
             y: 50,
@@ -36,7 +37,7 @@ class Achievements extends React.Component{
 
         let scene1 = new ScrollMagic.Scene({
             offset:  0,
-            duration: '175%',
+            duration: '100%',
             triggerElement: '.achievements',
             reverse: true,
             triggerHook: 0,
