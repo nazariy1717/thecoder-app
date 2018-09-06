@@ -14,12 +14,17 @@ class ContactUs extends React.Component{
 
         let timeline = new TimelineMax();
 
-        let t1 =  TweenMax.staggerFrom( document.querySelectorAll('.contact-us__title span'), 0.35, {
+        let t1 = TweenMax.staggerFrom( document.querySelectorAll('.contact-us__title span'), 0.35, {
             opacity: 0,
             y: 55
         }, 0.05);
 
-        timeline.add(t1);
+        let t2 = TweenMax.from( document.querySelector('.contacts-form'), 0.45, {
+            opacity: 0,
+            y: 55
+        });
+
+        timeline.add(t1).add(t2);
 
         let controller = new ScrollMagic.Controller();
         let scene = new ScrollMagic.Scene({
@@ -28,6 +33,7 @@ class ContactUs extends React.Component{
             reverse: true,
             triggerHook: .7,
         });
+
         scene.setTween(timeline);
         scene.addTo(controller);
     }

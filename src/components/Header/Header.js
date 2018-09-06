@@ -12,6 +12,8 @@ class Header extends React.Component{
     constructor(props){
         super(props);
         this.toggleHamburger = this.toggleHamburger.bind(this);
+        this.animateOpen = this.animateOpen.bind(this);
+        this.animateClose = this.animateClose.bind(this);
     }
 
     state = {
@@ -23,7 +25,6 @@ class Header extends React.Component{
     }
 
     animateOpen(){
-        console.log('open');
         TweenMax.to(".menu", 0.4, {opacity: 1, display:'block' });
         TweenMax.staggerTo(".menu__link", 0.35, {
             opacity: 1,
@@ -38,7 +39,6 @@ class Header extends React.Component{
     }
 
     animateClose(){
-        console.log('close');
         TweenMax.to(".menu", 0.4, {
             opacity: 0,
             delay: 1,
@@ -62,12 +62,20 @@ class Header extends React.Component{
                     isHamburgerActive: !prevState.isHamburgerActive
                 };
             });
+        console.log(this.state.isHamburgerActive);
+        this.doAnimate();
+    };
+
+    doAnimate(){
+        console.log(this.state.isHamburgerActive);
+
         if(this.state.isHamburgerActive){
             this.animateClose();
         } else {
             this.animateOpen();
         }
-    };
+    }
+
 
     render() {
         let headerClass = 'header';
@@ -86,7 +94,7 @@ class Header extends React.Component{
                                    show={this.state.isHamburgerActive}/>
                     </div>
                 </header>
-                <Menu show={this.state.isHamburgerActive} close={this.toggleHamburger}/>
+                <Menu show={this.state.isHamburgerActive} close={this.toggleHamburger} closeA={this.animateClose}/>
             </div>
         )
     }

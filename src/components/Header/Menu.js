@@ -19,22 +19,22 @@ class Menu extends React.Component{
                 <div className="menu__content container">
                     <ul className="menu__list">
                         <li className="menu__item">
-                            <Scrollchor to="" className="menu__link" onClick={this.props.close}>Main</Scrollchor>
+                            <Scrollchor to="" className="menu__link" afterAnimate={this.props.close}>Main</Scrollchor>
                         </li>
                         <li className="menu__item">
-                            <a to="our-services" className="menu__link" onClick={this.props.close}>Our Services</a>
+                            <Scrollchor to="our-services" className="menu__link" afterAnimate={this.props.close} >Our Services</Scrollchor>
                         </li>
                         <li className="menu__item">
-                            <Scrollchor to="our-works" className="menu__link" onClick={this.props.close}>Portfolio</Scrollchor>
+                            <Scrollchor to="our-works" className="menu__link" afterAnimate={this.props.close}>Portfolio</Scrollchor>
                         </li>
                         <li className="menu__item">
-                            <Scrollchor to="achievements" className="menu__link" onClick={this.props.close}>Team achievements</Scrollchor>
+                            <Scrollchor to="achievements" className="menu__link" afterAnimate={this.props.close}>Team achievements</Scrollchor>
                         </li>
                         <li className="menu__item">
-                            <Scrollchor to="our-mission" className="menu__link" onClick={this.props.close}>Our Mission</Scrollchor>
+                            <Scrollchor to="our-mission" className="menu__link" afterAnimate={this.props.close}>Our Mission</Scrollchor>
                         </li>
                         <li className="menu__item">
-                            <Scrollchor to="contact-us" className="menu__link" onClick={this.props.close}>Contact us</Scrollchor>
+                            <Scrollchor to="contact-us" className="menu__link" afterAnimate={this.props.close}>Contact us</Scrollchor>
                         </li>
                     </ul>
                     <ul className="menu-soc row">

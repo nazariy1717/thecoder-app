@@ -17,12 +17,16 @@ class OurMission extends React.Component{
             y: 55
         }, 0.05);
 
+        let t2 =  TweenMax.from( document.querySelector('.quote__content'), 0.3, {
+            opacity: 0,
+            y: 45
+        });
         let t3 =  TweenMax.from( document.querySelector('.quote__author'), 0.3, {
             opacity: 0,
             y: 45
         });
 
-        timeline.add(t1).add(t3);
+        timeline.add(t1).add(t2).add(t3);
 
         let controller = new ScrollMagic.Controller();
         let scene = new ScrollMagic.Scene({
@@ -31,7 +35,8 @@ class OurMission extends React.Component{
             reverse: true,
             triggerHook: .7,
         });
-        // scene.setTween(timeline);
+
+        scene.setTween(timeline);
         scene.addTo(controller);
     }
     render(){

@@ -1,6 +1,6 @@
 import React from 'react';
 import './our_services.scss';
-import OurServicesForm from './OurServicesForm';
+// import OurServicesForm from './OurServicesForm';
 
 import { TweenMax,TimelineMax }  from "gsap";
 import ScrollMagic from 'scrollmagic';
@@ -24,10 +24,11 @@ class OurServices extends React.Component{
             y: 55
         });
 
-        let t3 = TweenMax.staggerFrom( document.querySelectorAll('.services-item'), 0.35, {
+        let t3 = TweenMax.staggerFrom( document.querySelectorAll('.services-item'), 0.4, {
             opacity: 0,
+            y: 55
 
-        }, 0.2);
+        }, 0.25);
 
         timelineServices.add(t1).add(t3).add(t2);
 
