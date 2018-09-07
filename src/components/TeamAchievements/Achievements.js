@@ -29,7 +29,7 @@ class Achievements extends React.Component{
         let scene = new ScrollMagic.Scene({
             offset:  0,
             triggerElement: '.achievements',
-            reverse: true,
+            reverse: false,
             triggerHook: .7,
         });
         scene.setTween(timeline);
@@ -81,7 +81,7 @@ class Achievements extends React.Component{
                                 <span>t</span>
                                 <span>s</span>
                             </p>
-                            <h2 className="title-box__hidden">зв’яжіться з нами</h2>
+                            <h2 className="title-box__hidden">TEAM ACHIEVEMENT</h2>
                         </div>
 
                         <div className="achievement-item --item-1">

@@ -1,6 +1,7 @@
 import React from 'react';
 import './our_services.scss';
 // import OurServicesForm from './OurServicesForm';
+import Scrollchor from 'react-scrollchor';
 
 import { TweenMax,TimelineMax }  from "gsap";
 import ScrollMagic from 'scrollmagic';
@@ -80,14 +81,14 @@ class OurServices extends React.Component{
                                             <span className="sub">n</span>
                                             <span className="sub">s</span>
                                         </p>
-                                        <h2 className="title-box__hidden">зв’яжіться з нами</h2>
+                                        <h2 className="title-box__hidden">OUR SERVICES</h2>
                                     </div>
-                                    <button type="button" className="btn btn-primary our-services__btn">
+                                    <Scrollchor type="button" className="btn btn-primary our-services__btn" to="contact-us" animate={{duration: 250}}>
                                         <i className="btn-primary__line btn-primary__line-1"></i>
                                         <i className="btn-primary__line btn-primary__line-2"></i>
                                         <span className="btn-primary__txt">Contact Us</span>
                                         <span className="btn-primary__txt">Contact Us</span>
-                                    </button>
+                                    </Scrollchor>
                                 </div>
                                 <div className="column col-lg-7 col-xs-12">
                                     <div className="our-services__right">

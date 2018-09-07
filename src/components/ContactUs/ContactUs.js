@@ -30,7 +30,7 @@ class ContactUs extends React.Component{
         let scene = new ScrollMagic.Scene({
             offset:  0,
             triggerElement: '.contact-us',
-            reverse: true,
+            reverse: false,
             triggerHook: .7,
         });
 

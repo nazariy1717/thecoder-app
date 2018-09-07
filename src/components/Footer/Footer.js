@@ -15,8 +15,8 @@ const footer = () => (
                     <div className="row m-row align-spaced footer__row">
                         <div className="column col-sm-4 col-xs-12 footer__column">
                             <span className="footer__txt --title">Address/</span>
-                            <span className="footer__txt">м. Львів</span>
-                            <span className="footer__txt">м. Cан-Франциско</span>
+                            <span className="footer__txt">Lviv</span>
+                            <span className="footer__txt">San Francisco</span>
                         </div>
                         <div className="column col-sm-4 col-xs-12 footer__column">
                             <span className="footer__txt --title">phone/</span>
@@ -30,21 +30,21 @@ const footer = () => (
                     <ul className="row m-row align-spaced footer__row">
                         <li className="column col-xs-4 footer__column">
                             <a href="/"
-                               className="footer__txt footer__link" target="_blank" rel="nofollow">
+                               className="footer__txt footer__link" target="_blank" rel="nofollow noopener noreferrer">
                                 <span>Facebook</span>
                                 <span>Facebook</span>
                             </a>
                         </li>
                         <li className="column col-xs-4 footer__column">
-                            <a href="/"
-                               className="footer__txt footer__link" target="_blank" rel="nofollow">
+                            <a href="https://www.instagram.com/thecoderdev/"
+                               className="footer__txt footer__link" target="_blank" rel="nofollow noopener noreferrer">
                                 <span>Instagram</span>
                                 <span>Instagram</span>
                             </a>
                         </li>
                         <li className="column col-xs-4 footer__column">
-                            <a href="/"
-                               className="footer__txt footer__link" target="_blank" rel="nofollow">
+                            <a href="https://www.linkedin.com/company/the-coder/"
+                               className="footer__txt footer__link" target="_blank" rel="nofollow noopener noreferrer">
                                 <span>Linkedin</span>
                                 <span>Linkedin</span>
                             </a>

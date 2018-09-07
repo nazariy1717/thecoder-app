@@ -67,14 +67,14 @@ class OurWorks extends React.Component{
                             <span className="sub">j</span>
                             <span className="sub">q</span>
                         </p>
-                        <h2 className="title-box__hidden">зв’яжіться з нами</h2>
+                        <h2 className="title-box__hidden">OUR WORKS</h2>
                     </div>
 
                 </div>
                 <div className="our-works__container">
                     <div className="row">
                         <div className="col-lg-4 col-md-6 col-xs-12">
-                            <a href="https://leodrive.com.ua/" rel="nofollow" target="_blank">
+                            <a href="https://leodrive.com.ua/" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content --item-1"></div>
                                     <p className="work-item__desc"><span>Leodrive</span></p>
@@ -82,7 +82,7 @@ class OurWorks extends React.Component{
                             </a>
                         </div>
                         <div className="col-lg-4 col-md-6 col-xs-12">
-                            <a href="https://kucheriavi-studio.pro/" rel="nofollow" target="_blank">
+                            <a href="https://kucheriavi-studio.pro/" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content --item-2"></div>
                                     <p className="work-item__desc"><span>Kucheriavi studio</span></p>
@@ -90,7 +90,7 @@ class OurWorks extends React.Component{
                             </a>
                         </div>
                         <div className="col-lg-4 col-md-6 col-xs-12">
-                            <a href="https://komaagency.com/" rel="nofollow" target="_blank">
+                            <a href="https://komaagency.com/" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content --item-3"></div>
                                     <p className="work-item__desc"><span>Koma agency</span></p>

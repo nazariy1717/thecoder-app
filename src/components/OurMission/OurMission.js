@@ -32,7 +32,7 @@ class OurMission extends React.Component{
         let scene = new ScrollMagic.Scene({
             offset:  0,
             triggerElement: '.our-mission',
-            reverse: true,
+            reverse: false,
             triggerHook: .7,
         });
 
@@ -75,7 +75,7 @@ class OurMission extends React.Component{
                             <span className="sub">j</span>
                             <span className="sub">y</span>
                         </p>
-                        <h2 className="title-box__hidden">зв’яжіться з нами</h2>
+                        <h2 className="title-box__hidden">OUR MISSION</h2>
                     </div>
                     <div className="quote">
                          <div className="quote__content">

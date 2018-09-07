@@ -75,7 +75,7 @@ class FirstScreen extends React.Component{
                             <span className="sub">x</span>
                             <span className="sub">z</span>
                         </p>
-                        <h1 className="title-box__hidden">зв’яжіться з нами</h1>
+                        <h1 className="title-box__hidden">WEBSITE DEVELOPMENT</h1>
                     </div>
                 </div>
             </div>
