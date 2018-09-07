@@ -1,6 +1,9 @@
 import React from 'react';
 import InputMask from 'react-input-mask';
 import Validator from 'validator';
+import axios from 'axios';
+import qs from 'qs';
+import {notify} from 'react-notify-toast';
 
 class ContactForm extends React.Component{
 
@@ -59,6 +62,19 @@ class ContactForm extends React.Component{
 
         if(Object.keys(errors).length === 0){
            console.log(this.state.data);
+
+            axios.post('/form.php', qs.stringify(this.state.data, { parseArrays: false }))
+                .then((res)=> {
+                    this.setState({
+                        data: {
+                            name: '',
+                            phone: '',
+                            email: '',
+                            message: ''
+                        },
+                    });
+                    notify.show("We have received your email", "success");
+                });
         }
     }
 

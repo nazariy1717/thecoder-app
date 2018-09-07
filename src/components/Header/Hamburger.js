@@ -9,6 +9,8 @@ const Hamburger = props => {
         hamburgerClass = 'hamburger is-open';
     }
 
+
+
     return (
         <div className={hamburgerClass} onClick={props.click}>
             <div className="hamburger__content">
