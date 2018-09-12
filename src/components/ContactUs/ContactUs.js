@@ -1,6 +1,7 @@
 import React from 'react';
 import './contact_us.scss';
 import ContactForm from "./ContactForm";
+import {isMobile} from 'react-device-detect';
 
 import { TweenMax,TimelineMax }  from "gsap";
 import ScrollMagic from 'scrollmagic';
@@ -9,33 +10,34 @@ import 'debug.addIndicators';
 
 class ContactUs extends React.Component{
 
-
     componentDidMount() {
+        if(!isMobile) {
 
-        let timeline = new TimelineMax();
+            let timeline = new TimelineMax();
 
-        let t1 = TweenMax.staggerFrom( document.querySelectorAll('.contact-us__title span'), 0.35, {
-            opacity: 0,
-            y: 55
-        }, 0.05);
+            let t1 = TweenMax.staggerFrom( document.querySelectorAll('.contact-us__title span'), 0.35, {
+                opacity: 0,
+                y: 55
+            }, 0.05);
 
-        let t2 = TweenMax.from( document.querySelector('.contacts-form'), 0.45, {
-            opacity: 0,
-            y: 55
-        });
+            let t2 = TweenMax.from( document.querySelector('.contacts-form'), 0.45, {
+                opacity: 0,
+                y: 55
+            });
 
-        timeline.add(t1).add(t2);
+            timeline.add(t1).add(t2);
 
-        let controller = new ScrollMagic.Controller();
-        let scene = new ScrollMagic.Scene({
-            offset:  0,
-            triggerElement: '.contact-us',
-            reverse: false,
-            triggerHook: .7,
-        });
+            let controller = new ScrollMagic.Controller();
+            let scene = new ScrollMagic.Scene({
+                offset:  0,
+                triggerElement: '.contact-us',
+                reverse: false,
+                triggerHook: .7,
+            });
 
-        scene.setTween(timeline);
-        scene.addTo(controller);
+            scene.setTween(timeline);
+            scene.addTo(controller);
+        }
     }
 
     render() {

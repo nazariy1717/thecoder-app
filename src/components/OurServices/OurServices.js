@@ -2,6 +2,7 @@ import React from 'react';
 import './our_services.scss';
 // import OurServicesForm from './OurServicesForm';
 import Scrollchor from 'react-scrollchor';
+import {isMobile} from 'react-device-detect';
 
 import { TweenMax,TimelineMax }  from "gsap";
 import ScrollMagic from 'scrollmagic';
@@ -12,36 +13,38 @@ class OurServices extends React.Component{
 
 
     componentDidMount() {
+        if(!isMobile) {
+            let timelineServices = new TimelineMax();
 
-        let timelineServices = new TimelineMax();
+            let t1 = TweenMax.staggerFrom(document.querySelectorAll('.our-services__title span'), 0.25, {
+                opacity: 0,
+                y: 55
+            }, 0.05);
 
-        let t1 = TweenMax.staggerFrom( document.querySelectorAll('.our-services__title span'), 0.25, {
-            opacity: 0,
-            y: 55
-        }, 0.05);
+            let t2 = TweenMax.from(document.querySelector('.our-services__btn'), 0.2, {
+                opacity: 0,
+                y: 55
+            });
 
-        let t2 = TweenMax.from( document.querySelector('.our-services__btn'), 0.2, {
-            opacity: 0,
-            y: 55
-        });
+            let t3 = TweenMax.staggerFrom(document.querySelectorAll('.services-item'), 0.4, {
+                opacity: 0,
+                y: 55
 
-        let t3 = TweenMax.staggerFrom( document.querySelectorAll('.services-item'), 0.4, {
-            opacity: 0,
-            y: 55
+            }, 0.25);
 
-        }, 0.25);
 
-        timelineServices.add(t1).add(t3).add(t2);
+            timelineServices.add(t1).add(t3).add(t2);
 
-        let controller = new ScrollMagic.Controller();
-        let scene = new ScrollMagic.Scene({
-            offset:  0,
-            triggerElement: '.our-services',
-            reverse: false,
-            triggerHook: .8,
-        });
-        scene.setTween(timelineServices);
-        scene.addTo(controller);
+            let controller = new ScrollMagic.Controller();
+            let scene = new ScrollMagic.Scene({
+                offset: 0,
+                triggerElement: '.our-services',
+                reverse: false,
+                triggerHook: .8,
+            });
+            scene.setTween(timelineServices);
+            scene.addTo(controller);
+        }
     }
 
 

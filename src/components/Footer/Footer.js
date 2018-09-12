@@ -23,7 +23,7 @@ const footer = () => (
                         </div>
                         <div className="column col-sm-4 col-xs-12 footer__column">
                             <span className="footer__txt --title">phone/</span>
-                            <a href="tel:+14155236050" className="footer__txt" itemProp="telephone">+14155236050</a>
+                            <a href="tel:+14155236050" className="footer__txt" itemProp="telephone">(415) 903-0707</a>
                         </div>
                         <div className="column col-sm-4 col-xs-12 footer__column">
                             <span className="footer__txt --title">e-mail/</span>

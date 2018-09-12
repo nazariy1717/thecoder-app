@@ -39,6 +39,7 @@
     "raf": "3.4.0",
     "react": "^16.4.1",
     "react-dev-utils": "^5.0.1",
+    "react-device-detect": "^1.5.9",
     "react-dom": "^16.4.1",
     "react-input-mask": "^2.0.4",
     "react-notify-toast": "^0.5.0",
