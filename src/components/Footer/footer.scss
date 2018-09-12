@@ -14,6 +14,10 @@
       margin: auto auto 30px auto;
     }
   }
+  &__privacy-policy{
+    text-align: center;
+    display: block;
+  }
   &__row{
     @media (max-width: $breakpoint-sm) {
       margin: 0 -7px;
@@ -48,8 +52,9 @@
   }
   &__link{
     height: 24px;
-    display: inline-block;
+    display: block;
     overflow: hidden;
+    margin-bottom: 10px;
     @media (max-width: $breakpoint-sm) {
       text-align: center;
     }
@@ -65,3 +70,4 @@
     }
   }
 }
+

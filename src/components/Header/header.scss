@@ -23,6 +23,9 @@
   &__container{
     position: relative;
     height: 100px;
+    @media (min-width: 1920px) {
+      max-width: 1920px;
+    }
   }
   &__logo{
     display: block;
@@ -33,6 +36,9 @@
     height: 50px;
     overflow: hidden;
     cursor: pointer;
+    @media (min-width: 1920px) {
+      left: 60px;
+    }
     img{
       transition: all 0.3s;
     }

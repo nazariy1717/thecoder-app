@@ -11,13 +11,13 @@ const footer = () => (
                         <img src={logo} alt="the coder logo" title="the coder logo"
                              itemProp="name" className="footer__logo"/>
                     </a>
+
                 </div>
                 <div className="column col-lg-9 col-md-9 col-sm-10 col-xs-12">
                     <div className="row m-row align-spaced footer__row">
                         <div className="column col-sm-4 col-xs-12 footer__column">
                             <div itemProp="address" itemScope="" itemType="http://schema.org/PostalAddress">
                                 <span className="footer__txt --title" >Address/</span>
-                                <span className="footer__txt" itemProp="addressLocality">Lviv</span>
                                 <span className="footer__txt" itemProp="addressLocality">San Francisco</span>
                             </div>
                         </div>
@@ -51,6 +51,9 @@ const footer = () => (
                                 <span>Linkedin</span>
                                 <span>Linkedin</span>
                             </a>
+                            <a href="https://www.iubenda.com/privacy-policy/64548822"
+                               className="iubenda-white iubenda-embed footer__privacy-policy"
+                               title="Privacy Policy">Privacy Policy</a>
                         </li>
                     </ul>
                 </div>

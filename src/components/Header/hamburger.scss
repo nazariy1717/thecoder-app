@@ -4,6 +4,9 @@
   top: 50%;
   cursor: pointer;
   transform: translateY(-50%);
+  @media (min-width: 1920px) {
+    right: 60px;
+  }
   &:hover{
     .hamburger__caption{
       span{

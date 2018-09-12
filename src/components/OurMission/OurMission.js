@@ -21,12 +21,12 @@ class OurMission extends React.Component{
             opacity: 0,
             y: 45
         });
-        let t3 =  TweenMax.from( document.querySelector('.quote__author'), 0.3, {
-            opacity: 0,
-            y: 45
-        });
+        // let t3 =  TweenMax.from( document.querySelector('.quote__author'), 0.3, {
+        //     opacity: 0,
+        //     y: 45
+        // });
 
-        timeline.add(t1).add(t2).add(t3);
+        timeline.add(t1).add(t2);
 
         let controller = new ScrollMagic.Controller();
         let scene = new ScrollMagic.Scene({
@@ -83,7 +83,7 @@ class OurMission extends React.Component{
                              <p className="app-txt">Whether it is the first impression or order completion, details matter! </p>
                          </div>
                         <div className="quote__author">
-                            <span className="quote__name">Ruslan</span>
+                            {/*<span className="quote__name">Ruslan</span>*/}
                             {/*<ul className="quote__list">*/}
                                 {/*<li>*/}
                                     {/*<a href="/" className="" rel="nofollow" target="_blank">*/}
@@ -98,7 +98,7 @@ class OurMission extends React.Component{
                                     {/*</a>*/}
                                 {/*</li>*/}
                             {/*</ul>*/}
-                            <p className="quote__txt">Founder + CEO</p>
+                            {/*<p className="quote__txt">Founder + CEO</p>*/}
                         </div>
                     </div>
                 </div>

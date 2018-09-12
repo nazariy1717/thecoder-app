@@ -11,6 +11,7 @@ class Header extends React.Component{
 
     constructor(props){
         super(props);
+
         this.toggleHamburger = this.toggleHamburger.bind(this);
         this.animateOpen = this.animateOpen.bind(this);
         this.animateClose = this.animateClose.bind(this);
@@ -42,7 +43,7 @@ class Header extends React.Component{
         TweenMax.to(".menu", 0.4, {
             opacity: 0,
             delay: 0.5,
-            clearProps:"display"
+            clearProps: "display"
         });
         TweenMax.staggerTo(".menu__link", 0.35, {
             opacity: 0,
@@ -56,22 +57,18 @@ class Header extends React.Component{
     }
 
     toggleHamburger = () => {
-        console.log('state before - ' + this.state.isHamburgerActive);
-
         this.setState(
             (prevState) => {
                 return {
                     isHamburgerActive: !prevState.isHamburgerActive
                 };
+            },() => {
+                if(this.state.isHamburgerActive){
+                    this.animateOpen();
+                } else {
+                    this.animateClose();
+                }
             });
-
-        console.log('state after - ' + this.state.isHamburgerActive);
-
-        if(this.state.isHamburgerActive){
-            this.animateClose();
-        } else {
-            this.animateOpen();
-        }
     };
 
 
@@ -89,11 +86,10 @@ class Header extends React.Component{
                             <img src={logo} alt="the coder logo" title="the coder logo" className="image"/>
                             <img src={logo_white} alt="coder logo" title="the coder logo" className="image"/>
                         </a>
-                        <Hamburger click={this.toggleHamburger}
-                                   show={this.state.isHamburgerActive}/>
+                        <Hamburger click={this.toggleHamburger} show={this.state.isHamburgerActive}/>
                     </div>
                 </header>
-                <Menu show={this.state.isHamburgerActive} close={this.toggleHamburger} />
+                <Menu show={this.state.isHamburgerActive} close={this.toggleHamburger}/>
             </div>
         )
     }
