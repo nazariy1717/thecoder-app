@@ -25,13 +25,14 @@ class ContactForm extends React.Component{
     };
 
     onChangeHandler(event){
-       this.setState({
-           data: { ...this.state.data, [event.target.name]: event.target.value}
-       })
+        this.setState({data: { ...this.state.data, [event.target.name]: event.target.value}});
+        const errors = this.validate(this.state.data);
+        this.setState({ errors });
     }
 
     validate(data){
         const errors = {};
+
 
         if(!data.name){
             errors.name = "Required field";
@@ -48,7 +49,7 @@ class ContactForm extends React.Component{
         if(!data.phone){
             errors.phone = "Required field";
         }  else if(!Validator.isLength(data.phone, {min:12, max: 12})) {
-            errors.phone = "Full name must be 10 characters long";
+            errors.phone = "Phone name must be 10 characters long";
         }
 
 
@@ -73,7 +74,7 @@ class ContactForm extends React.Component{
                             message: ''
                         },
                     });
-                    notify.show("We have received your email", "success");
+                    notify.show("We will contact you as soon as possible", "success");
                 });
         }
     }

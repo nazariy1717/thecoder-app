@@ -46,10 +46,10 @@ const footer = () => (
                             </a>
                         </li>
                         <li className="column col-xs-4 footer__column">
-                            <a href="https://www.linkedin.com/company/the-coder/"
+                            <a href="https://www.behance.net/thecoderdev"
                                className="footer__txt footer__link" target="_blank" rel="nofollow noopener noreferrer">
-                                <span>Linkedin</span>
-                                <span>Linkedin</span>
+                                <span>Behance</span>
+                                <span>Behance</span>
                             </a>
                             <a href="https://www.iubenda.com/privacy-policy/64548822"
                                className="iubenda-white iubenda-embed footer__privacy-policy"

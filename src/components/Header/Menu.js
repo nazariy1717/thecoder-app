@@ -59,10 +59,10 @@ class Menu extends React.Component{
                             </a>
                         </li>
                         <li className="menu-soc__item col-xs-4">
-                            <a href="https://www.linkedin.com/company/the-coder/"
+                            <a href="https://www.behance.net/thecoderdev"
                                className="menu-soc__link" rel="nofollow noopener noreferrer" target="_blank">
-                                <span>Linkedin</span>
-                                <span>Linkedin</span>
+                                <span>Behance</span>
+                                <span>Behance</span>
                             </a>
                         </li>
                     </ul>
