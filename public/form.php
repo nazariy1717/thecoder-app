@@ -11,7 +11,7 @@ $email = $_POST["email"];
 // PHONE
 $message = $_POST["message"];
 
-$EmailTo = "office@thecoderdev.com";
+$EmailTo = "info@thecoderdev.com";
 $Subject = "Site form";
 
 // prepare email body text

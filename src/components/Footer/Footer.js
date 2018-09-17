@@ -27,7 +27,7 @@ const footer = () => (
                         </div>
                         <div className="column col-sm-4 col-xs-12 footer__column">
                             <span className="footer__txt --title">e-mail/</span>
-                            <a href="mailto:thecoder@gmail.com" className="footer__txt" itemProp="email">office@thecoderdev.com</a>
+                            <a href="mailto:thecoder@gmail.com" className="footer__txt" itemProp="email">info@thecoderdev.com</a>
                         </div>
                     </div>
                     <ul className="row m-row align-spaced footer__row">
