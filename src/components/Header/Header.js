@@ -27,13 +27,13 @@ class Header extends React.Component{
     }
 
     animateOpen(){
-        TweenMax.to(".menu", 0.4, {opacity: 1, display:'block' });
-        TweenMax.staggerTo(".menu__link", 0.35, {
+        TweenMax.to(".menu", 0.3, {opacity: 1, display:'block' });
+        TweenMax.staggerTo(".menu__link", 0.25, {
             opacity: 1,
             y: 0,
             delay: 0.25,
         }, 0.12);
-        TweenMax.staggerTo(".menu-soc__link", 0.35, {
+        TweenMax.staggerTo(".menu-soc__link", 0.25, {
             opacity: 1,
             y: 0,
             delay: 0.75,
@@ -41,16 +41,16 @@ class Header extends React.Component{
     }
 
     animateClose(){
-        TweenMax.to(".menu", 0.4, {
+        TweenMax.to(".menu", 0.3, {
             opacity: 0,
             delay: 0.5,
             clearProps: "display"
         });
-        TweenMax.staggerTo(".menu__link", 0.35, {
+        TweenMax.staggerTo(".menu__link", 0.25, {
             opacity: 0,
             y: 35,
         }, 0.12);
-        TweenMax.staggerTo(".menu-soc__link", 0.35, {
+        TweenMax.staggerTo(".menu-soc__link", 0.25, {
             opacity: 0,
             y: 35,
             delay: 0.35,

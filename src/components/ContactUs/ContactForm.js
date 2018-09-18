@@ -25,14 +25,21 @@ class ContactForm extends React.Component{
     };
 
     onChangeHandler(event){
-        this.setState({data: { ...this.state.data, [event.target.name]: event.target.value}});
-        const errors = this.validate(this.state.data);
-        this.setState({ errors });
+        this.setState(
+            {
+                data: {...this.state.data, [event.target.name]: event.target.value},
+            }, () =>{
+                let errors = this.validate(this.state.data);
+                this.setState({errors});
+            }
+        );
     }
 
-    validate(data){
-        const errors = {};
 
+    validate(data){
+
+
+        const errors = {};
 
         if(!data.name){
             errors.name = "Required field";
@@ -52,9 +59,10 @@ class ContactForm extends React.Component{
             errors.phone = "Phone name must be 10 characters long";
         }
 
-
         return errors;
     }
+
+
 
     onSubmitHandler(e){
         e.preventDefault();

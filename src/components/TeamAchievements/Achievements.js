@@ -20,12 +20,12 @@ class Achievements extends React.Component{
                 opacity: 0,
                 y: 55,
                 delay: .3,
-            }, 0.05);
+            }, 0.03);
 
-            let t2 =TweenMax.staggerFrom( document.querySelectorAll('.achievement-item p'), 0.35, {
+            let t2 =TweenMax.staggerFrom( document.querySelectorAll('.achievement-item p'), 0.2, {
                 opacity: 0,
                 y: 50,
-            }, 0.15);
+            }, 0.05);
 
             timeline.add(t1).add(t2);
 

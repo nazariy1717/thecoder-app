@@ -7,15 +7,14 @@ class FirstScreen extends React.Component{
 
     componentDidMount() {
         if(!isMobile){
-            TweenMax.staggerFrom( document.querySelectorAll('.first-screen__title span'), 0.35, {
+            TweenMax.staggerFrom( document.querySelectorAll('.first-screen__title span'), 0.2, {
                 opacity: 0,
                 y: 55
-            }, 0.05);
+            }, 0.03);
         }
     }
 
     render(){
-        console.log(isMobile);
 
         return(
             <div className="first-screen">

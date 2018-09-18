@@ -14,15 +14,15 @@ class OurWorks extends React.Component{
 
             let timeline = new TimelineMax();
 
-            let t1 = TweenMax.staggerFrom(document.querySelectorAll('.our-works__title span'), 0.3, {
+            let t1 = TweenMax.staggerFrom(document.querySelectorAll('.our-works__title span'), 0.2, {
                 opacity: 0,
                 y: 55
-            }, 0.05);
+            }, 0.03);
 
-            let t2 = TweenMax.staggerFrom(document.querySelectorAll('.work-item'), 0.3, {
+            let t2 = TweenMax.staggerFrom(document.querySelectorAll('.work-item'), 0.15, {
                 opacity: 0,
                 y: 55
-            }, 0.2);
+            }, 0.1);
 
             timeline.add(t1).add(t2);
 

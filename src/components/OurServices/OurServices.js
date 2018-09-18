@@ -1,6 +1,6 @@
 import React from 'react';
 import './our_services.scss';
-// import OurServicesForm from './OurServicesForm';
+
 import Scrollchor from 'react-scrollchor';
 import {isMobile} from 'react-device-detect';
 
@@ -16,21 +16,21 @@ class OurServices extends React.Component{
         if(!isMobile) {
             let timelineServices = new TimelineMax();
 
-            let t1 = TweenMax.staggerFrom(document.querySelectorAll('.our-services__title span'), 0.25, {
+            let t1 = TweenMax.staggerFrom(document.querySelectorAll('.our-services__title span'), 0.2, {
                 opacity: 0,
                 y: 55
-            }, 0.05);
+            }, 0.03);
 
-            let t2 = TweenMax.from(document.querySelector('.our-services__btn'), 0.2, {
+            let t2 = TweenMax.from(document.querySelector('.our-services__btn'), 0.1, {
                 opacity: 0,
                 y: 55
             });
 
-            let t3 = TweenMax.staggerFrom(document.querySelectorAll('.services-item'), 0.4, {
+            let t3 = TweenMax.staggerFrom(document.querySelectorAll('.services-item'), 0.2, {
                 opacity: 0,
                 y: 55
 
-            }, 0.25);
+            }, 0.1);
 
 
             timelineServices.add(t1).add(t3).add(t2);

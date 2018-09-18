@@ -13,12 +13,12 @@ class OurMission extends React.Component{
         if(!isMobile) {
             let timeline = new TimelineMax();
 
-            let t1 =  TweenMax.staggerFrom( document.querySelectorAll('.our-mission__title span'), 0.3, {
+            let t1 =  TweenMax.staggerFrom( document.querySelectorAll('.our-mission__title span'), 0.2, {
                 opacity: 0,
                 y: 55
-            }, 0.05);
+            }, 0.03);
 
-            let t2 =  TweenMax.from( document.querySelector('.quote__content'), 0.3, {
+            let t2 =  TweenMax.from( document.querySelector('.quote__content'), 0.15, {
                 opacity: 0,
                 y: 45
             });

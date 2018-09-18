@@ -15,12 +15,12 @@ class ContactUs extends React.Component{
 
             let timeline = new TimelineMax();
 
-            let t1 = TweenMax.staggerFrom( document.querySelectorAll('.contact-us__title span'), 0.35, {
+            let t1 = TweenMax.staggerFrom( document.querySelectorAll('.contact-us__title span'), 0.2, {
                 opacity: 0,
                 y: 55
-            }, 0.05);
+            }, 0.03);
 
-            let t2 = TweenMax.from( document.querySelector('.contacts-form'), 0.45, {
+            let t2 = TweenMax.from( document.querySelector('.contacts-form'), 0.25, {
                 opacity: 0,
                 y: 55
             });
