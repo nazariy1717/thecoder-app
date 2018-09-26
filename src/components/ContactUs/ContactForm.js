@@ -93,13 +93,14 @@ class ContactForm extends React.Component{
 
         return(
             <div className="contacts-form">
-                <form action="/" onSubmit={this.onSubmitHandler}>
+                <form action="/" onSubmit={this.onSubmitHandler}  >
                     <div className="form__group-30">
                         <input
                             type="text" name="name" id="name"
                             className="form__input"
                             value={data.name}
                             onChange={this.onChangeHandler}
+                            autoComplete="off"
                         />
                         <label htmlFor="name" className="form__label">
                             <div><span>full name</span></div>
@@ -112,6 +113,7 @@ class ContactForm extends React.Component{
                                     className="form__input"
                                     value={data.phone}
                                     onChange={this.onChangeHandler}
+                                    autoComplete="off"
                                     mask="999 999 9999" maskChar="" />
                         <label htmlFor="phone" className="form__label">
                             <div><span>phone</span></div>
@@ -126,6 +128,7 @@ class ContactForm extends React.Component{
                             className="form__input"
                             value={data.email}
                             onChange={this.onChangeHandler}
+                            autoComplete="off"
                         />
                         <label htmlFor="email" className="form__label">
                             <div><span>e-mail</span></div>
@@ -139,6 +142,7 @@ class ContactForm extends React.Component{
                             className="form__area"
                             value={data.message}
                             onChange={this.onChangeHandler}
+                            autoComplete="off"
                         />
                         <label htmlFor="email" className="form__label">
                             <div><span>details</span></div>
