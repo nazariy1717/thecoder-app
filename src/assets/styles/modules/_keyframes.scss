@@ -9,3 +9,31 @@
   0% {left: 40px}
   to {left: -15px}
 }
+
+
+@-webkit-keyframes logo-path {
+  0% {
+    transform: translate(0) rotate(-20deg);
+  }
+  20% {
+    transform: translate(0) rotate(0deg);
+  }
+  40% {
+    transform: translate(0) rotate(20deg);
+  }
+  60% {
+    transform: translate(0) rotate(0deg);
+  }
+  70% {
+    transform: translate(0) rotate(-10deg);
+  }
+  80% {
+    transform: translate(0) rotate(0deg);
+  }
+  90% {
+    transform: translate(0) rotate(10deg);
+  }
+  100% {
+    transform: translate(0) rotate(0deg);
+  }
+}

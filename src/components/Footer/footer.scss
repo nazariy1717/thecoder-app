@@ -6,12 +6,26 @@
     padding: 30px 0;
   }
   &__logo{
-    display: block;
-    height: 105px;
+    display: table;
     margin: auto;
-    max-width: 100%;
+    &:hover{
+      svg{
+        overflow: visible;
+        #logo-path{
+          transform-origin: bottom;
+          animation-iteration-count: 1;
+          animation-duration: 0.45s;
+          animation-name: logo-path;
+        }
+      }
+    }
+
     @media (max-width: $breakpoint-sm) {
       margin: auto auto 30px auto;
+    }
+    svg{
+      height: 105px;
+
     }
   }
   &__privacy-policy{

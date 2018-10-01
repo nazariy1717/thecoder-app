@@ -77,7 +77,7 @@ class OurWorks extends React.Component{
                 <div className="our-works__container">
                     <div className="row">
                         <div className="col-lg-4 col-md-6 col-xs-12">
-                            <a href="https://leodrive.com.ua/" rel="nofollow noopener noreferrer" target="_blank">
+                            <a href="https://leodrive.com.ua/en/" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content --item-1"></div>
                                     <p className="work-item__desc"><span>Leodrive</span></p>
@@ -97,6 +97,22 @@ class OurWorks extends React.Component{
                                 <div className="work-item">
                                     <div className="work-item__content --item-3"></div>
                                     <p className="work-item__desc"><span>Koma agency</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-lg-4 col-md-6 col-xs-12">
+                            <a href="https://www.behance.net/gallery/70082431/Branding-for-DemsolFruit" rel="nofollow noopener noreferrer" target="_blank">
+                                <div className="work-item">
+                                    <div className="work-item__content --item-4"></div>
+                                    <p className="work-item__desc"><span>Demsol Fruit</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-lg-4 col-md-6 col-xs-12">
+                            <a href="https://www.behance.net/gallery/70082431/Branding-for-DemsolFruit" rel="nofollow noopener noreferrer" target="_blank">
+                                <div className="work-item">
+                                    <div className="work-item__content --item-5"></div>
+                                    <p className="work-item__desc"><span>Gjovtanecka united territorial community</span></p>
                                 </div>
                             </a>
                         </div>
