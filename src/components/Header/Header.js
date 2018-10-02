@@ -5,7 +5,8 @@ import { TweenMax }  from "gsap";
 
 import './header.scss';
 import logo from './logo-head.svg';
-import logo_white from './logo-head-white.svg';
+import logo_item_black from './logo-item-black.svg';
+import logo_item from './logo-item.svg';
 
 
 class Header extends React.Component{
@@ -16,6 +17,7 @@ class Header extends React.Component{
         this.toggleHamburger = this.toggleHamburger.bind(this);
         this.animateOpen = this.animateOpen.bind(this);
         this.animateClose = this.animateClose.bind(this);
+        this.toogleLogo = this.toogleLogo.bind(this);
     }
 
     state = {
@@ -24,7 +26,17 @@ class Header extends React.Component{
 
     componentDidMount(){
         this.animateClose();
+        window.addEventListener('scroll', this.toogleLogo);
     }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.toogleLogo);
+    }
+
+    toogleLogo() {
+        console.log();
+    }
+
 
     animateOpen(){
         TweenMax.to(".menu", 0.3, {opacity: 1, display:'block' });
@@ -85,7 +97,8 @@ class Header extends React.Component{
                     <div className="header__container container">
                         <a href="/" className="header__logo ">
                             <img src={logo} alt="the coder logo" title="the coder logo" className="image"/>
-                            <img src={logo_white} alt="coder logo" title="the coder logo" className="image"/>
+                            <img src={logo_item_black} alt="coder logo" title="the coder logo" className="image"/>
+                            <img src={logo_item} alt="coder logo" title="the coder logo" className="image"/>
                         </a>
                         <Hamburger click={this.toggleHamburger} show={this.state.isHamburgerActive}/>
                     </div>

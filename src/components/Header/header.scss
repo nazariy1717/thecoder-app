@@ -6,11 +6,14 @@
   right: 0;
   z-index: 9;
   &.--white{
+
     .header__logo{
       img{
         transform: translateY(-100%);
       }
     }
+
+
     .hamburger__caption{
       span{
         color: #fff;
@@ -20,6 +23,8 @@
       background-color: #fff;
     }
   }
+
+
   &__container{
     position: relative;
     height: 100px;
@@ -36,6 +41,13 @@
     height: 50px;
     overflow: hidden;
     cursor: pointer;
+    img:first-child{
+      width: 175px;
+      height: 50px;
+    }
+    img:nth-child(2){
+      height: 50px;
+    }
     @media (min-width: 1920px) {
       left: 60px;
     }
