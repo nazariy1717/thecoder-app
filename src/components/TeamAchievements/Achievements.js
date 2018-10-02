@@ -38,16 +38,17 @@ class Achievements extends React.Component{
             scene.setTween(timeline);
             scene.addTo(controller);
         }
-
-        let scene1 = new ScrollMagic.Scene({
-            offset:  0,
-            duration: '100%',
-            triggerElement: '.achievements',
-            reverse: true,
-            triggerHook: 0,
-        });
-        scene1.setClassToggle('.header','--white');
-        scene1.addTo(controller);
+        if(!isMobile) {
+            let scene1 = new ScrollMagic.Scene({
+                offset: 0,
+                duration: '100%',
+                triggerElement: '.achievements',
+                reverse: true,
+                triggerHook: 0,
+            });
+            scene1.setClassToggle('.header', '--white');
+            scene1.addTo(controller);
+        }
         // scene1.addIndicators();
     }
 
