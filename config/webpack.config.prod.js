@@ -178,6 +178,7 @@ module.exports = {
                             loader: 'css-loader',
                             options: {
                                 modules: false,
+                                importLoaders: 1,
                                 minimize: true,
                                 localIdentName: '[name]__[local]___[hash:base64:5]'
                             }
@@ -197,6 +198,7 @@ module.exports = {
                                 modules: false,
                                 sourceMap: true,
                                 importLoaders: 2,
+                                minimize: true,
                                 localIdentName: '[name]__[local]___[hash:base64:5]'
                             }
                         },
@@ -321,7 +323,7 @@ module.exports = {
     // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
     // You can remove this if you don't use Moment.js:
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-    new ExtractTextPlugin({ filename: 'styles.css', allChunks: true}),
+    // new ExtractTextPlugin({ filename: 'styles.css', allChunks: true}),
 
   ],
   // Some libraries import Node modules but don't use them in the browser.

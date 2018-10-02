@@ -109,9 +109,17 @@ class OurWorks extends React.Component{
                             </a>
                         </div>
                         <div className="col-lg-4 col-md-6 col-xs-12">
-                            <a href="https://www.behance.net/gallery/70082431/Branding-for-DemsolFruit" rel="nofollow noopener noreferrer" target="_blank">
+                            <a href="https://procaterteam.com/" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content --item-5"></div>
+                                    <p className="work-item__desc"><span>PROCATERTEAM Catering</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-lg-4 col-md-6 col-xs-12">
+                            <a href="https://www.behance.net/gallery/70041097/Logo-for-Zhovtanecka" rel="nofollow noopener noreferrer" target="_blank">
+                                <div className="work-item">
+                                    <div className="work-item__content --item-6"></div>
                                     <p className="work-item__desc"><span>Gjovtanecka united territorial community</span></p>
                                 </div>
                             </a>

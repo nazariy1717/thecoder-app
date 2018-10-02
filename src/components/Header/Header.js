@@ -38,7 +38,6 @@ class Header extends React.Component{
             y: 0,
             delay: 0.75,
         }, 0.2);
-
     }
 
     animateClose(){
@@ -56,7 +55,6 @@ class Header extends React.Component{
             y: 35,
             delay: 0.35,
         }, 0.2);
-
     }
 
     toggleHamburger = () => {
