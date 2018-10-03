@@ -15,7 +15,7 @@ class Menu extends React.Component{
                 <div className="menu__content container">
                     <ul className="menu__list">
                         <li className="menu__item">
-                            <Link to="/" className="menu__link">Main</Link>
+                            <Link to="/" className="menu__link" onClick={this.props.close}>Main</Link>
                         </li>
                         <li className="menu__item">
                             <Link to="/#our-services" className="menu__link" onClick={this.props.close}>Our Services</Link>
