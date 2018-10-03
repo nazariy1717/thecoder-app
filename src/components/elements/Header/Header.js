@@ -7,8 +7,6 @@ import './header.scss';
 import logo from './logo-head.svg';
 import logo_white from './logo-head-white.svg';
 
-
-
 class Header extends React.Component{
 
     constructor(props){

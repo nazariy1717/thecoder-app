@@ -1,7 +1,6 @@
 <?php
 error_reporting(E_ALL);
 
-
 // NAME
 $name = $_POST["name"];
 // PHONE
@@ -36,13 +35,13 @@ $Body .= "\n";
 $success = mail($EmailTo, $Subject, $Body, "From:".$email);
 
 // redirect to success page
-if ($success){
-	header('Location: /index.html');
-}else{
-    if($errorMSG == ""){
-        echo "Something went wrong :(";
-    } else {
-        echo $errorMSG;
-    }
-}
+//if ($success){
+//	header('Location: https://www.thecoderdev.com/thanks');
+//}else{
+ //   if($errorMSG == ""){
+  //      echo "Something went wrong :(";
+  //  } else {
+  //      echo $errorMSG;
+//    }
+//}
 ?>

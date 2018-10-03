@@ -9,8 +9,13 @@ import 'debug.addIndicators';
 
 class Achievements extends React.Component{
 
+    constructor(props) {
+        super(props);
+        this.controller = null;
+    }
+
     componentDidMount() {
-        let controller = new ScrollMagic.Controller();
+        this.controller = new ScrollMagic.Controller();
 
         if(!isMobile) {
 
@@ -36,7 +41,7 @@ class Achievements extends React.Component{
                 triggerHook: .7,
             });
             scene.setTween(timeline);
-            scene.addTo(controller);
+            scene.addTo(this.controller);
         }
         if(!isMobile) {
             let scene1 = new ScrollMagic.Scene({
@@ -47,15 +52,17 @@ class Achievements extends React.Component{
                 triggerHook: 0,
             });
             scene1.setClassToggle('.header', '--white');
-            scene1.addTo(controller);
+            scene1.addTo(this.controller);
         }
         // scene1.addIndicators();
+    }
+    componentWillUnmount(){
+        this.controller.destroy();
     }
 
     render(){
         return(
             <section className="achievements" id="achievements">
-                <div className="a_trigger"></div>
                 <div className="container">
                     <div className="achievements__content">
                         <div className="achievements__title title-box">

@@ -1,0 +1,29 @@
+.thanks-page{
+  height: 100vh;
+  min-height: 400px;
+  &__title{
+    line-height: 90px;
+    font-size: 60px;
+    letter-spacing: 12px;
+    font-family: 'MADE Evolve Sans EVO',sans-serif;
+    @media (max-width: 575px) {
+      line-height: 42px;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+  }
+  &__txt{
+    line-height: 38px;
+    font-size: 24px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    font-family: Raleway,sans-serif;
+  }
+  &__title, &__txt{
+    text-align: center;
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+}

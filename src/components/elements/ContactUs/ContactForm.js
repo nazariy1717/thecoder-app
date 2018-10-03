@@ -3,7 +3,7 @@ import InputMask from 'react-input-mask';
 import Validator from 'validator';
 import axios from 'axios';
 import qs from 'qs';
-import {notify} from 'react-notify-toast';
+import { withRouter } from 'react-router-dom';
 
 class ContactForm extends React.Component{
 
@@ -70,7 +70,8 @@ class ContactForm extends React.Component{
         this.setState({ errors });
 
         if(Object.keys(errors).length === 0){
-           console.log(this.state.data);
+           console.log(this.props.histr);
+            this.props.history.push('/thanks');
 
             axios.post('/form.php', qs.stringify(this.state.data, { parseArrays: false }))
                 .then((res)=> {
@@ -82,7 +83,7 @@ class ContactForm extends React.Component{
                             message: ''
                         },
                     });
-                    notify.show("We will contact you as soon as possible", "success");
+                    this.props.history.push('/thanks');
                 });
         }
     }
@@ -163,4 +164,4 @@ class ContactForm extends React.Component{
     }
 }
 
-export default ContactForm;
+export default withRouter(ContactForm);
