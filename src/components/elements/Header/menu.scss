@@ -1,4 +1,4 @@
-@import "../../assets/styles/tools/breakpoints";
+@import "../../../assets/styles/tools/breakpoints";
 
 .menu{
   position: fixed;
@@ -12,13 +12,14 @@
   &__content{
     position: relative;
     height: 100vh;
+    counter-reset: item2;
   }
   &__list{
     position: absolute;
     left: 15px;
     top: 50%;
     transform: translateY(-50%);
-    counter-reset: item;
+    counter-reset: item1;
   }
   &__item{
     overflow: hidden;
@@ -50,8 +51,10 @@
       font-size: 20px;
     }
     &:before{
-      counter-increment: item;
-      content: "0" counter(item);
+      counter-increment: item1;
+      content: "0" counter(item1);
+    }
+    &:before, &:after{
       position: absolute;
       width: 30px;
       height: 30px;
@@ -67,17 +70,10 @@
       }
     }
     &:after{
-      content: "";
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      left: 0;
-      top: 0;
-      background: url(./logo-item.svg) center no-repeat;
-      -webkit-background-size: contain;
-      background-size: contain;
+      counter-increment: item2;
+      content: "0" counter(item2);
+      color: #fff;
       transform: translateY(45px);
-      transition: all 0.3s;
     }
     &:hover{
       color: #fff;

@@ -1,4 +1,4 @@
-@import "../../assets/styles/tools/breakpoints";
+@import "../../../assets/styles/tools/breakpoints";
 
 .our-works{
   margin-bottom: 75px;
@@ -33,22 +33,22 @@
       height: 250px;
     }
     &.--item-1{
-      background: url(./items/leodrive.gif) top center no-repeat;
+      background: url(items/leodrive.gif) top center no-repeat;
     }
     &.--item-2{
-      background: url(./items/kucherstudio.gif) top center no-repeat;
+      background: url(items/kucherstudio.gif) top center no-repeat;
     }
     &.--item-3{
-      background: url(./items/koma.gif) top center no-repeat;
+      background: url(items/koma.gif) top center no-repeat;
     }
     &.--item-4{
-      background: url(./items/demsol.gif) top center no-repeat;
+      background: url(items/demsol.gif) top center no-repeat;
     }
     &.--item-5{
-      background: url(./items/cater.gif) top center no-repeat;
+      background: url(items/cater.gif) top center no-repeat;
     }
     &.--item-6{
-      background: url(./items/gjovtanecka.gif) top center no-repeat;
+      background: url(items/gjovtanecka.gif) top center no-repeat;
     }
   }
   &__video{

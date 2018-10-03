@@ -1,4 +1,4 @@
-@import "../../assets/styles/tools/breakpoints";
+@import "../../../assets/styles/tools/breakpoints";
 
 .achievements{
   padding: 200px 0;
@@ -14,7 +14,7 @@
     height: 725px;
     width: 725px;
     margin: auto;
-    background: url(./circle.png) center no-repeat;
+    background: url(circle.png) center no-repeat;
     -webkit-background-size: contain;
     background-size: contain;
     @media (max-width: $breakpoint-lg) {
