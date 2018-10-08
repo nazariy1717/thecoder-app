@@ -26,7 +26,8 @@ const footer = () => (
                         <div className="column col-sm-4 col-xs-12 footer__column">
                             <div itemProp="address" itemScope="" itemType="http://schema.org/PostalAddress">
                                 <span className="footer__txt --title" >Address/</span>
-                                <span className="footer__txt" itemProp="addressLocality">San Francisco</span>
+                                <span className="footer__txt" itemProp="addressLocality">San Francisco, CA, USA</span>
+                                <span className="footer__txt" itemProp="addressLocality">Lviv, Ukraine</span>
                             </div>
                         </div>
                         <div className="column col-sm-4 col-xs-12 footer__column">

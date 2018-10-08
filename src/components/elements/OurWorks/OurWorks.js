@@ -43,34 +43,34 @@ class OurWorks extends React.Component{
                 <div className="container">
                     <div className="our-works__title title-box">
                         <p>
+                            <span>C</span>
                             <span>o</span>
-                            <span>u</span>
-                            <span>r</span>
-                            <span className="sub">g</span>
-                            <span className="sub">a</span>
-                            <span className="sub">o</span>
-                            <span className="sub">f</span>
-                            <span className="sub">a</span>
-                            <span className="sub">b</span>
+                            <span>m</span>
+                            <span>p</span>
+                            <span>l</span>
+                            <span>e</span>
+                            <span>t</span>
+                            <span>e</span>
+                            <span>d</span>
                             <span className="sub">n</span>
                             <span className="sub">r</span>
                             <span className="sub">t</span>
                         </p>
                         <p>
-                            <span>w</span>
-                            <span>o</span>
+                            <span>p</span>
                             <span>r</span>
-                            <span>k</span>
+                            <span>o</span>
+                            <span>j</span>
+                            <span>e</span>
+                            <span>c</span>
+                            <span>t</span>
                             <span>s</span>
-                            <span className="sub">o</span>
-                            <span className="sub">n</span>
-                            <span className="sub">p</span>
                             <span className="sub">c</span>
                             <span className="sub">v</span>
                             <span className="sub">j</span>
                             <span className="sub">q</span>
                         </p>
-                        <h2 className="title-box__hidden">OUR WORKS</h2>
+                        <h2 className="title-box__hidden">Completed projects</h2>
                     </div>
 
                 </div>

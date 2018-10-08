@@ -7,15 +7,24 @@ import OurMission from '../elements/OurMission/OurMission';
 import ContactUs from '../elements/ContactUs/ContactUs';
 import Achievements from "../elements/TeamAchievements/Achievements";
 import OurServices from "../elements/OurServices/OurServices";
+import OurTeam from "../elements/OurTeam/OurTeam";
+import {withRouter} from "react-router-dom";
+
 
 
 class HomePage extends Component {
+
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
     render() {
         return (
             <div>
                 <FirstScreen />
                 <OurServices />
                 <OurWorks />
+                <OurTeam />
                 <Achievements />
                 <Testimonials />
                 <OurMission />

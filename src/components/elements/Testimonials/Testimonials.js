@@ -81,7 +81,7 @@ class Testimonials extends Component {
                             <img src={client1} alt=""/>
                             <span className="quote-client__name">
                                 Nathan Downs
-                                 <a href="https://www.linkedin.com/in/ndowns1/" className="quote-client__link" rel="nofollow" target="_blank">
+                                 <a href="https://www.linkedin.com/in/ndowns1/" className="quote-client__link" rel="noopener noreferrer nofollow" target="_blank">
                                         <span className="icon-linkedin2"></span>
                                         <span className="icon-linkedin2"></span>
                                     </a>

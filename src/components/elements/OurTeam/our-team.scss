@@ -1,0 +1,33 @@
+@import "../../../assets/styles/tools/breakpoints";
+
+.our-team{
+  padding: 100px 0;
+  @media (max-width: $breakpoint-md) {
+    padding: 100px 0;
+  }
+  @media (max-width: $breakpoint-sm) {
+    padding: 75px 0;
+  }
+  &__title{
+    margin-bottom: 60px;
+  }
+}
+
+.our-team-item{
+  margin-bottom: 30px;
+  img{
+    margin-bottom: 10px;
+  }
+  &__name{
+    display: block;
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 800;
+    font-family: Raleway,sans-serif;
+    line-height: 24px;
+  }
+  &__role{
+    display: block;
+    line-height: 18px;
+  }
+}
