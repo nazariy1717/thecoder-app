@@ -10,14 +10,14 @@ import ThanksPage from './components/pages/ThanksPage/ThanksPage';
 import NotFoundPage from './components/pages/NotFoundPage/NotFoundPage';
 
 
-
 const App = ({ location}) =>(
+
     <div className="coder-app">
         <Header />
-        <Switch >
+        <Switch  >
             <Route path="/" exact location={location} component={HomePage} />
-            <Route path="/thanks" location={location} exact component={ThanksPage} />
-            <Route path="" location={location} exact component={NotFoundPage} />
+            <Route path="/thanks" location={location} component={ThanksPage} />
+            <Route location={location} component={NotFoundPage} />
         </Switch>
 
         <Footer />
