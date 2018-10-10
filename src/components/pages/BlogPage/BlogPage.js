@@ -9,24 +9,48 @@ import 'debug.addIndicators';
 
 class BlogPage extends React.Component{
 
+    constructor(props) {
+        super(props);
+        this.controller = null;
+        this.posts = [
+            {
+                "id": 1,
+                "title": "Digital Marketing",
+                "description_short": "1We launched over 50 web projects and know what it takes to start your business successfully",
+                "date": "10.10.2018",
+            },
+            {
+                "id": 2,
+                "title": "Social Media Marketing",
+                "description_short": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur dicta distinctio natus rerum.",
+                "date": "11.10.2018",
+            },
+            {
+                "id": 3,
+                "title": "Email Marketing",
+                "description_short": "3We olofrds fd over 50 web projects and know what it takes to start your business successfully",
+                "date": "11.10.2018",
+            },
+        ];
+    }
+
     componentDidMount() {
+        window.scrollTo(0, 0);
+        this.doAnimate();
+    }
+
+    doAnimate(){
         if(!isMobile) {
-
             let timeline = new TimelineMax();
-
             let t1 = TweenMax.staggerFrom( document.querySelectorAll('.blog-wrap__title span'), 0.2, {
                 opacity: 0,
                 y: 55
             }, 0.03);
-
             let t2 = TweenMax.staggerFrom( document.querySelectorAll('.blog-categories-list__link'), 0.2, {
                 opacity: 0,
                 y: 55
             }, 0.1);
-
-
             timeline.add(t1).add(t2);
-
             let controller = new ScrollMagic.Controller();
             let scene = new ScrollMagic.Scene({
                 offset:  0,
@@ -34,10 +58,13 @@ class BlogPage extends React.Component{
                 reverse: false,
                 triggerHook: .7,
             });
-
             scene.setTween(timeline);
-            scene.addTo(controller);
+            scene.addTo(this.controller);
         }
+    }
+
+    componentWillUnmount(){
+        this.controller.destroy();
     }
 
     render(){

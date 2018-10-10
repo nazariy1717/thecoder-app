@@ -5,10 +5,9 @@ import Header from './components/elements/Header/Header';
 import Footer from './components/elements/Footer/Footer';
 
 import HomePage from './components/pages/HomePage';
-import ThanksPage from './components/pages/ThanksPage/ThanksPage';
 import BlogPage from './components/pages/BlogPage/BlogPage';
 
-
+import ThanksPage from './components/pages/ThanksPage/ThanksPage';
 import NotFoundPage from './components/pages/NotFoundPage/NotFoundPage';
 
 
@@ -17,9 +16,12 @@ const App = () =>(
         <Header />
         <Switch  >
             <Route exact path="/" component={HomePage} />
-            <Route path="/thanks" component={ThanksPage} />
-
             <Route path="/blog" component={BlogPage} />
+
+
+            <Route path="/thanks" component={ThanksPage} />
+            <Route component={NotFoundPage} />
+
         </Switch>
         <Footer />
     </div>
