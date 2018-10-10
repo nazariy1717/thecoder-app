@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 import './post-page.scss'
 
 class PostPage extends React.Component{
@@ -10,13 +12,13 @@ class PostPage extends React.Component{
                         <h1 className="post__title">Title</h1>
                         <ul className="post-breadcrumb">
                             <li className="post-breadcrumb__item">
-                                <a href="/" className="post-breadcrumb__link">Main</a>
+                                <Link to="/" className="post-breadcrumb__link">Main</Link>
                             </li>
                             <li className="post-breadcrumb__item">
-                                <a href="/" className="post-breadcrumb__link">Blog</a>
+                                <Link to="/blog" className="post-breadcrumb__link">Blog</Link>
                             </li>
                             <li className="post-breadcrumb__item">
-                                <a href="/" className="post-breadcrumb__link"></a>
+                                <a className="post-breadcrumb__link active"></a>
                             </li>
                         </ul>
                         <div className="post__content">

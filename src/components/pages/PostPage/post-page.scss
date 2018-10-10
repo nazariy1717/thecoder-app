@@ -15,3 +15,15 @@
     margin-bottom: 20px;
   }
 }
+
+.post-breadcrumb{
+  &__item{
+    display: inline-block;
+    position: relative;
+    & + &{
+      padding-left: 10px;
+    }
+  }
+  &__link{}
+
+}
