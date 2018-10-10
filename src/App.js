@@ -6,6 +6,7 @@ import Footer from './components/elements/Footer/Footer';
 
 import HomePage from './components/pages/HomePage';
 import BlogPage from './components/pages/BlogPage/BlogPage';
+import PostPage from './components/pages/PostPage/PostPage';
 
 import ThanksPage from './components/pages/ThanksPage/ThanksPage';
 import NotFoundPage from './components/pages/NotFoundPage/NotFoundPage';
@@ -16,7 +17,8 @@ const App = () =>(
         <Header />
         <Switch  >
             <Route exact path="/" component={HomePage} />
-            <Route path="/blog" component={BlogPage} />
+            <Route exact path="/blog" component={BlogPage} />
+            <Route path="/blog/:post" component={PostPage} />
 
 
             <Route path="/thanks" component={ThanksPage} />

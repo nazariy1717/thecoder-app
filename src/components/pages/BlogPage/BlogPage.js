@@ -1,7 +1,10 @@
 import React from 'react';
 import './blog-wrap.scss'
-import {isMobile} from 'react-device-detect';
 
+import BlogCategoriesList from '../../blog/BlogCategoriesList'
+import BlogItem from '../../blog/BlogItem'
+
+import {isMobile} from 'react-device-detect';
 import { TweenMax,TimelineMax }  from "gsap";
 import ScrollMagic from 'scrollmagic';
 import 'animation.gsap';
@@ -12,26 +15,37 @@ class BlogPage extends React.Component{
     constructor(props) {
         super(props);
         this.controller = null;
-        this.posts = [
-            {
-                "id": 1,
-                "title": "Digital Marketing",
-                "description_short": "1We launched over 50 web projects and know what it takes to start your business successfully",
-                "date": "10.10.2018",
-            },
-            {
-                "id": 2,
-                "title": "Social Media Marketing",
-                "description_short": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur dicta distinctio natus rerum.",
-                "date": "11.10.2018",
-            },
-            {
-                "id": 3,
-                "title": "Email Marketing",
-                "description_short": "3We olofrds fd over 50 web projects and know what it takes to start your business successfully",
-                "date": "11.10.2018",
-            },
-        ];
+        this.state = {
+            posts:  [
+                {
+                    "id": 1,
+                    "url": "/blog/Digital-Marketing",
+                    "title": "Digital Marketing",
+                    "description_short": "1We launched over 50 web projects and know what it takes to start your business successfully",
+                    "date": "10.10.2018",
+                    "category": ["Design","Development"],
+                    "image": "http://www.offscreen.be/sites/default/files/images/movie/fight-club-3.jpg",
+                },
+                {
+                    "id": 2,
+                    "url": "/blog/Media-Marketing",
+                    "title": "Social Media Marketing",
+                    "description_short": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur dicta distinctio natus rerum.",
+                    "date": "11.10.2018",
+                    "category": ["Development"],
+                    "image": "http://www.offscreen.be/sites/default/files/images/movie/fight-club-3.jpg",
+                },
+                {
+                    "id": 3,
+                    "url": "/blog/Email-Marketing",
+                    "title": "Email Marketing",
+                    "description_short": "3We olofrds fd over 50 web projects and know what it takes to start your business successfully",
+                    "date": "11.10.2018",
+                    "category": ["Company news"],
+                    "image": "http://www.offscreen.be/sites/default/files/images/movie/fight-club-3.jpg",
+                },
+            ]
+        };
     }
 
     componentDidMount() {
@@ -39,7 +53,7 @@ class BlogPage extends React.Component{
         this.doAnimate();
     }
 
-    doAnimate(){
+    doAnimate = () =>{
         if(!isMobile) {
             let timeline = new TimelineMax();
             let t1 = TweenMax.staggerFrom( document.querySelectorAll('.blog-wrap__title span'), 0.2, {
@@ -50,8 +64,12 @@ class BlogPage extends React.Component{
                 opacity: 0,
                 y: 55
             }, 0.1);
-            timeline.add(t1).add(t2);
-            let controller = new ScrollMagic.Controller();
+            let t3 = TweenMax.staggerFrom( document.querySelectorAll('.blog-item'), 0.2, {
+                opacity: 0,
+                y: 55
+            }, 0.1);
+            timeline.add(t1).add(t2).add(t3);
+            this.controller = new ScrollMagic.Controller();
             let scene = new ScrollMagic.Scene({
                 offset:  0,
                 triggerElement: '.blog-wrap',
@@ -101,32 +119,17 @@ class BlogPage extends React.Component{
                             </div>
                         </div>
                         <div className="column">
-                            <ul className="blog-categories-list">
-                                <li className="blog-categories-list__item">
-                                    <a href="/" className="blog-categories-list__link active">all</a>
-                                </li>
-                                <li className="blog-categories-list__item">
-                                    <a href="/" className="blog-categories-list__link">design</a>
-                                </li>
-                                <li className="blog-categories-list__item">
-                                    <a href="/" className="blog-categories-list__link">development</a>
-                                </li>
-                                <li className="blog-categories-list__item">
-                                    <a href="/" className="blog-categories-list__link">company news</a>
-                                </li>
-                                <li className="blog-categories-list__item">
-                                    <a href="/" className="blog-categories-list__link">cases</a>
-                                </li>
-                            </ul>
+                            <BlogCategoriesList />
                         </div>
                     </div>
-
                     <div className="blog-wrap__content">
-
-
-
-
-
+                        <div className="row m-row">
+                            {
+                                this.state.posts.map((item, index) => {
+                                    return <BlogItem data={item} key={index}/>
+                                })
+                            }
+                        </div>
                     </div>
                 </div>
             </section>

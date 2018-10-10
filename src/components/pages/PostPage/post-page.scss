@@ -1,0 +1,17 @@
+.post-wrap{
+  padding: 150px 0 ;
+  min-height: 100vh;
+}
+
+
+.post{
+  &__title{
+    display: block;
+    color: #000;
+    font-family: Raleway,sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 18px;
+    margin-bottom: 20px;
+  }
+}
