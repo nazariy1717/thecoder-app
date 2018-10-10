@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 import Hamburger from './Hamburger';
 import Menu from './Menu';
 import { TweenMax }  from "gsap";
@@ -81,7 +83,7 @@ class Header extends React.Component{
             <div className="coder-head">
                 <header className={headerClass} >
                     <div className="header__container container">
-                        <a href="/" className="header__logo ">
+                        <Link to="/" className="header__logo ">
                             <img src={logo} alt="the coder logo" title="the coder logo" className="image"/>
                             <img src={logo_white} alt="the coder logo" title="the coder logo" className="image"/>
                             <svg viewBox="2 8.2 45.7 62.3">
@@ -104,7 +106,7 @@ class Header extends React.Component{
                                     L8.2,68.4c-0.6,0-1-0.4-1-0.9V56.7c0-0.5,0.5-0.9,1-0.9L25,62.3l16.8-6.6c0.6,0,1,0.4,1,0.9C42.9,56.7,42.9,67.5,42.9,67.5z"/>
                                 </g>
                             </svg>
-                        </a>
+                        </Link>
                         <Hamburger click={this.toggleHamburger} show={this.state.isHamburgerActive}/>
                     </div>
                 </header>

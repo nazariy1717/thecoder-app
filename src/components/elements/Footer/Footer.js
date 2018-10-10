@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './footer.scss';
 
 const footer = () => (
@@ -6,7 +7,7 @@ const footer = () => (
         <div className="container">
             <div className="row m-row">
                 <div className="column col-lg-3 col-md-3 col-sm-2 col-xs-12 footer__column">
-                    <a href="/" className="footer__logo">
+                    <Link to="/" className="footer__logo">
 
                         <svg viewBox="2.3 8.3 45.4 62.4" itemProp="name">
                             <g>
@@ -18,7 +19,7 @@ const footer = () => (
                                 c-0.6,0-1-0.4-1-0.9V56.7c0-0.5,0.5-0.9,1-0.9L25,62.3l16.8-6.6c0.6,0,1,0.4,1,0.9C42.9,56.7,42.9,67.5,42.9,67.5z"/>
                             </g>
                         </svg>
-                    </a>
+                    </Link>
 
                 </div>
                 <div className="column col-lg-9 col-md-9 col-sm-10 col-xs-12 footer__column">
