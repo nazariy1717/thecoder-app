@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import  "./testimonials.scss";
 
-import client1 from './clients/client1.jpg';
+import client1 from './clients/client1.png';
 
 import {isMobile} from 'react-device-detect';
 

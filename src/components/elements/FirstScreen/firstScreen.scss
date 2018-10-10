@@ -8,6 +8,7 @@
     left: calc(50% - 70px);
     top: 15px;
     transform: rotate(-90deg) translateX(-50%);
+    z-index: 3;
     font-family: 'Raleway',sans-serif;
     font-weight: 700;
     color: #000;
@@ -25,7 +26,7 @@
     width: 100%;
     transform: translate(-50%, -50%);
     max-width: 920px;
-    background: url(page-circle.png) center no-repeat;
+    background: url(page-circle.jpg) center no-repeat;
     -webkit-background-size: contain;
     background-size: contain;
     @media (max-width: $breakpoint-md){
