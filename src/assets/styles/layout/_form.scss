@@ -48,6 +48,15 @@ input[type=number]::-webkit-outer-spin-button {
     }
   }
 
+  &__label-custom{
+    display: block;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 24px;
+  }
+
   &__input, &__select, &__area{
     width: 100%;
     height: 60px;
@@ -63,6 +72,9 @@ input[type=number]::-webkit-outer-spin-button {
     transition: border 0.35s;
     @media (max-width: $breakpoint-sm) {
       height: 50px;
+    }
+    &.--theme{
+      height: 45px;
     }
     &:focus{
       border-bottom: 1px solid #000;

@@ -1,0 +1,13 @@
+.adm-auth{
+  min-height: 100vh;
+  padding: 125px 0;
+  &__content{
+    max-width: 350px;
+    margin: auto;
+  }
+  &__logo{
+    width: 100px;
+    display: block;
+    margin: auto auto 20px;
+  }
+}
