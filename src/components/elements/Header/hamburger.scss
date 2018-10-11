@@ -1,3 +1,5 @@
+@import "../../../assets/styles/tools/breakpoints";
+
 .hamburger{
   position: absolute;
   right: 15px;
@@ -6,6 +8,10 @@
   transform: translateY(-50%);
   @media (min-width: 1440px) {
     right: 60px;
+  }
+  @media (max-width: $breakpoint-sm) {
+    transform: none;
+    top: 12px;
   }
   &:hover{
     .hamburger__caption{
@@ -68,6 +74,9 @@
     height: 18px;
     text-align: center;
     overflow: hidden;
+    @media (max-width: $breakpoint-sm) {
+      top: 35px;
+    }
     span{
       display: block;
       line-height: 18px;

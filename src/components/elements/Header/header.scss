@@ -5,13 +5,12 @@
     position: fixed;
     left: 0;
     right: 0;
-    height: 100px;
+    height: 70px;
     z-index: 7;
     background-color: #fff;
     box-shadow: 0 0 20px -8px rgba(0,0,0,0.3);
   }
 }
-
 
 .header{
   position: fixed;
@@ -39,6 +38,9 @@
     position: relative;
     height: 100px;
     max-width: 1920px;
+    @media (max-width: $breakpoint-sm) {
+      height: 70px;
+    }
   }
   &__logo{
     display: block;
@@ -49,6 +51,9 @@
     height: 50px;
     overflow: hidden;
     cursor: pointer;
+    @media (max-width: $breakpoint-sm) {
+      top: 11px;
+    }
     img{
       display: none;
       height: 50px;
