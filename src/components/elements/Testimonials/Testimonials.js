@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import  "./testimonials.scss";
 
 import client1 from './clients/client1.png';
+import client2 from './clients/client2.jpg';
 
 import {isMobile} from 'react-device-detect';
 
@@ -23,10 +24,10 @@ class Testimonials extends Component {
                 y: 55
             }, 0.03);
 
-            let t2 = TweenMax.from(document.querySelector('.quote-client__content'), 0.15, {
+            let t2 = TweenMax.staggerFrom(document.querySelectorAll('.quote-client__content'), 0.15, {
                 opacity: 0,
                 y: 55
-            });
+            }, 0.25);
 
             timeline.add(t1).add(t2);
 
@@ -78,7 +79,7 @@ class Testimonials extends Component {
                     </div>
                     <div className="quote-client">
                         <div className="quote-client__content">
-                            <img src={client1} alt=""/>
+                            <img src={client1} alt="testimonials-01" title="testimonials-01"/>
                             <span className="quote-client__name">
                                 Nathan Downs
                                  <a href="https://www.linkedin.com/in/ndowns1/" className="quote-client__link" rel="noopener noreferrer nofollow" target="_blank">
@@ -87,6 +88,17 @@ class Testimonials extends Component {
                                     </a>
                             </span>
                             <p className="app-txt">I have worked with the team from THE CODER on several branding/website development projects and they check all my boxes for a creative partnership. All in all I found them to be highly collaborative & creative in their approach. Fast with communication, efficient turnaround and they have a deep technical knowledge that made project management easy on our end while always staying on budget. Taras and team are highly recommended.</p>
+                        </div>
+                        <div className="quote-client__content">
+                            <img src={client2} alt="testimonials-02" title="testimonials-02"/>
+                            <span className="quote-client__name">
+                                Halina Kucheriava
+                                 <a href="https://www.linkedin.com/in/halina-kucheriava-8298ba35/" className="quote-client__link" rel="noopener noreferrer nofollow" target="_blank">
+                                        <span className="icon-linkedin2"></span>
+                                        <span className="icon-linkedin2"></span>
+                                    </a>
+                            </span>
+                            <p className="app-txt">The Coder team created our website from scratch. It was a great experience to work with Ruslan as the manager of the project and the whole team. They are true professionals. The website was developed within deadlines, the team paid a lot of attention to all details to showcase our services in the best possible way. The result is great, the website meets all our needs, it's pretty, clean, comfortable and easy to use. We had some updates several times after the website was developed and The Coder responded quickly and made all the needed updates. I highly recommend these guys as a great professional team, that cares about its clients!</p>
                         </div>
                     </div>
 

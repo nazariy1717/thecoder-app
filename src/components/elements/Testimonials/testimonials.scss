@@ -15,6 +15,7 @@
 .quote-client{
   &__content{
     position: relative;
+    min-height: 175px;
     padding-left: 200px;
     margin-bottom: 30px;
     @media (max-width: $breakpoint-sm) {
