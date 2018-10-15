@@ -3,7 +3,7 @@ import './footer.scss';
 import logo from './logo.svg';
 
 const footer = () => (
-    <footer className="footer" itemScope itemType="http://schema.org/LocalBusiness">
+    <footer className="footer" itemscope="" itemType="http://schema.org/LocalBusiness">
         <div className="container">
             <div className="row m-row">
                 <div className="column col-lg-3 col-md-3 col-sm-2 col-xs-12 footer__column">
@@ -25,15 +25,15 @@ const footer = () => (
                 <div className="column col-lg-9 col-md-9 col-sm-10 col-xs-12 footer__column">
                     <div className="row m-row align-spaced footer__row">
                         <div className="column col-sm-4 col-xs-12 footer__column">
-                            <div itemProp="address" itemScope="" itemType="http://schema.org/PostalAddress">
-                                <span className="footer__txt --title" >Address/</span>
-                                <span className="footer__txt" itemProp="addressLocality">San Francisco, CA, USA</span>
-                                <span className="footer__txt" itemProp="addressLocality">Lviv, Ukraine</span>
+                            <div>
+                                <span className="footer__txt --title">Address/</span>
+                                <span className="footer__txt" itemProp="address">San Francisco, CA, USA</span>
+                                <span className="footer__txt" itemProp="address">Lviv, Ukraine</span>
                             </div>
                         </div>
                         <div className="column col-sm-4 col-xs-12 footer__column">
                             <span className="footer__txt --title">phone/</span>
-                            <a href="tel:+14155236050" className="footer__txt" itemProp="telephone">(415) 903-0707</a>
+                            <span className="footer__txt" itemProp="telephone">(415) 903-0707</span>
                         </div>
                         <div className="column col-sm-4 col-xs-12 footer__column">
                             <span className="footer__txt --title">e-mail/</span>
