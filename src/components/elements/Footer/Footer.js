@@ -3,7 +3,7 @@ import './footer.scss';
 import logo from './logo.svg';
 
 const footer = () => (
-    <footer className="footer" itemscope="" itemType="http://schema.org/LocalBusiness">
+    <footer className="footer" itemScope="&nbsp;" itemType="http://schema.org/LocalBusiness">
         <div className="container">
             <div className="row m-row">
                 <div className="column col-lg-3 col-md-3 col-sm-2 col-xs-12 footer__column">
