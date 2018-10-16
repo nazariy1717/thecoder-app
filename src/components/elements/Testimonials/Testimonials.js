@@ -89,7 +89,7 @@ class Testimonials extends Component {
                             </span>
                             <p className="app-txt">I have worked with the team from THE CODER on several branding/website development projects and they check all my boxes for a creative partnership. All in all I found them to be highly collaborative & creative in their approach. Fast with communication, efficient turnaround and they have a deep technical knowledge that made project management easy on our end while always staying on budget. Taras and team are highly recommended.</p>
                         </div>
-                        <div className="quote-client__content">
+                        <div className="quote-client__content --right">
                             <img src={client2} alt="testimonials-02" title="testimonials-02"/>
                             <span className="quote-client__name">
                                 Halina Kucheriava
