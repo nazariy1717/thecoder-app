@@ -8,6 +8,7 @@ import BlogPage from './components/pages/BlogPage/BlogPage';
 import PostPage from './components/pages/PostPage/PostPage';
 
 import AdminAuth from './components/admin/AdminAuth/AdminAuth';
+import AdminDashboard from './components/admin/AdminDashboard/AdminDashboard';
 
 import ThanksPage from './components/pages/ThanksPage/ThanksPage';
 import NotFoundPage from './components/pages/NotFoundPage/NotFoundPage';
@@ -21,7 +22,8 @@ const App = () =>(
             <UserRoute exact path="/blog" component={BlogPage} />
             <UserRoute path="/blog/:post" component={PostPage} />
 
-            <Route exact path="/coder-admin" component={AdminAuth} />
+            <Route exact path="/admin" component={AdminAuth} />
+            <Route exact path="/admin/dashboard" component={AdminDashboard} />
 
             <UserRoute path="/thanks" component={ThanksPage} />
             <UserRoute component={NotFoundPage} />

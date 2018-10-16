@@ -76,6 +76,9 @@ input[type=number]::-webkit-outer-spin-button {
     &.--theme{
       height: 45px;
     }
+    &.--error-valid{
+      border-bottom: 1px solid #E53539;
+    }
     &:focus{
       border-bottom: 1px solid #000;
       & + label{

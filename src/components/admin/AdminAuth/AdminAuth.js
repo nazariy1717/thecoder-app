@@ -16,11 +16,29 @@ class AdminAuth extends Component{
         super(props);
         this.submitHandler = this.submitHandler.bind(this);
         this.onChangeHandler = this.onChangeHandler.bind(this);
+        this.validate = this.validate.bind(this);
     }
 
-    submitHandler(){
+    submitHandler(e){
+        e.preventDefault();
+        const errors = this.validate(this.state.data);
+        this.setState({ errors });
+        console.log();
 
+        if(Object.keys(errors).length === 0){
+            // axios.post('/api/', qs.stringify(this.state.data, { parseArrays: false }))
+            //     .then((res)=> {
+            //         this.setState({
+            //             data: {
+            //                 login: '',
+            //                 password: ''
+            //             },
+            //         });
+            //         this.props.history.push('/admin/dashboard');
+            //     });
+            this.props.history.push('/admin/dashboard');
 
+        }
     }
 
     onChangeHandler(e){
@@ -29,8 +47,17 @@ class AdminAuth extends Component{
         })
     }
 
+    validate(data){
+        const errors = {};
+        if(!data.login){ errors.login = "Required field"; }
+        if(!data.password){errors.password = "Required field"; }
+
+        return errors;
+    }
+
     render(){
-        let data = this.state.data;
+        let data= this.state.data;
+        let errors = this.state.errors;
 
         return(
             <div className="adm-auth display-table ">
@@ -51,7 +78,8 @@ class AdminAuth extends Component{
                                 <div className="form__group-30">
                                     <label htmlFor="login" className="form__label-custom">Login</label>
                                     <input type="text" name="login" id="login"
-                                           className="form__input --theme" autoComplete="off"
+                                           autoComplete="off"
+                                           className={(errors.password)?"form__input --theme --error-valid":"form__input --theme" }
                                            value={data.login}
                                            onChange={this.onChangeHandler}
                                     />
@@ -59,7 +87,8 @@ class AdminAuth extends Component{
                                 <div className="form__group-30">
                                     <label htmlFor="password" className="form__label-custom">Password</label>
                                     <input type="password" name="password" id="password"
-                                           className="form__input --theme" autoComplete="off"
+                                           autoComplete="off"
+                                           className={(errors.password)?"form__input --theme --error-valid":"form__input --theme" }
                                            value={data.password}
                                            onChange={this.onChangeHandler}
                                     />
