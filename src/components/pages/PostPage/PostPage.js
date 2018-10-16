@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-
+import { Helmet } from "react-helmet";
 import './post-page.scss'
 
 class PostPage extends React.Component{
@@ -8,9 +8,17 @@ class PostPage extends React.Component{
     render(){
         return(
             <div className="post-wrap">
+                <Helmet>
+                    <title>Post Title</title>
+                    <meta name="description" content="Lorem ipsum dolor sit amet" />
+                    <meta property="og:title" content="Post Title" />
+                    <meta property="og:description" content="Lorem ipsum dolor sit amet"/>
+                    <meta property="og:url" content="https://www.thecoderdev.com/"/>
+                    <meta property="og:image" content="http://www.offscreen.be/sites/default/files/images/movie/fight-club-3.jpg"/>
+                </Helmet>
                 <div className="container">
                     <div className="post">
-                        <div className="post__image"  style={{backgroundImage: "url(http://www.offscreen.be/sites/default/files/images/movie/fight-club-3.jpg)" }}></div>
+                        <div className="post__image" style={{backgroundImage: "url(http://www.offscreen.be/sites/default/files/images/movie/fight-club-3.jpg)"}}></div>
                         <ul className="post-breadcrumb">
                             <li className="post-breadcrumb__item" itemScope itemType = "http://data-vocabulary.org/Breadcrumb">
                                 <Link to="/" className="post-breadcrumb__link" itemProp="url">Main</Link>

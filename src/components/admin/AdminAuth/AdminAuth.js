@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import './admin-auth.scss'
-import {Link} from "react-router-dom";
-
 
 class AdminAuth extends Component{
     render(){
@@ -34,7 +32,6 @@ class AdminAuth extends Component{
                         </div>
                     </div>
                 </div>
-
             </div>
         )
     }

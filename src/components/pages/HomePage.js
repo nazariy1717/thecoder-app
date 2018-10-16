@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Helmet } from "react-helmet";
 
 import FirstScreen from '../elements/FirstScreen/FirstScreen';
 import OurWorks from '../elements/OurWorks/OurWorks';
@@ -20,6 +21,9 @@ class HomePage extends Component {
     render() {
         return (
             <div>
+                <Helmet>
+                    <title>THE CODER - Website development company</title>
+                </Helmet>
                 <FirstScreen />
                 <OurServices />
                 <OurWorks />

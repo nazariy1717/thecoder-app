@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './blog-wrap.scss'
+import { Helmet } from "react-helmet";
 
 import BlogCategoriesList from '../../blog/BlogCategoriesList'
 import BlogItem from '../../blog/BlogItem'
@@ -89,6 +90,14 @@ class BlogPage extends React.Component{
     render(){
         return(
             <section className="blog-wrap">
+
+                <Helmet>
+                    <title>Blog the coder </title>
+                    <meta name="description" content="Blog the coder " />
+                    <meta property="og:title" content="Blog the coder " />
+                    <meta property="og:description" content="Blog the coder "/>
+                    <meta property="og:url" content="https://www.thecoderdev.com/blog"/>
+                </Helmet>
                 <div className="container">
                     <div className="row m-row align-justify">
                         <div className="column">
