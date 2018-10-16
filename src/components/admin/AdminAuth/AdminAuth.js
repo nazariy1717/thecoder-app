@@ -2,7 +2,36 @@ import React, {Component} from 'react';
 import './admin-auth.scss'
 
 class AdminAuth extends Component{
+
+    state = {
+      data: {
+          login: '',
+          password: '',
+      },
+      loading: false,
+      errors: []
+    };
+
+    constructor(props){
+        super(props);
+        this.submitHandler = this.submitHandler.bind(this);
+        this.onChangeHandler = this.onChangeHandler.bind(this);
+    }
+
+    submitHandler(){
+
+
+    }
+
+    onChangeHandler(e){
+        this.setState({
+            data: { ...this.state.data, [e.target.name]: e.target.value}
+        })
+    }
+
     render(){
+        let data = this.state.data;
+
         return(
             <div className="adm-auth display-table ">
                 <div className="display-table__cell">
@@ -18,14 +47,22 @@ class AdminAuth extends Component{
                                     L8.2,68.4c-0.6,0-1-0.4-1-0.9V56.7c0-0.5,0.5-0.9,1-0.9L25,62.3l16.8-6.6c0.6,0,1,0.4,1,0.9C42.9,56.7,42.9,67.5,42.9,67.5z"/>
                                 </g>
                             </svg>
-                            <form action="/">
+                            <form onSubmit={this.submitHandler}>
                                 <div className="form__group-30">
                                     <label htmlFor="login" className="form__label-custom">Login</label>
-                                    <input type="text" name="login" id="login" className="form__input --theme" autoComplete="off" />
+                                    <input type="text" name="login" id="login"
+                                           className="form__input --theme" autoComplete="off"
+                                           value={data.login}
+                                           onChange={this.onChangeHandler}
+                                    />
                                 </div>
                                 <div className="form__group-30">
                                     <label htmlFor="password" className="form__label-custom">Password</label>
-                                    <input type="password" name="password" id="password" className="form__input --theme" autoComplete="off" />
+                                    <input type="password" name="password" id="password"
+                                           className="form__input --theme" autoComplete="off"
+                                           value={data.password}
+                                           onChange={this.onChangeHandler}
+                                    />
                                 </div>
                                 <button type="submit" className="btn btn-secondary">Sign in</button>
                             </form>
