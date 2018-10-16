@@ -1,15 +1,12 @@
 import React from 'react';
 import './footer.scss';
-import logo from './logo.svg';
 
 const footer = () => (
-    <footer className="footer" itemScope="&nbsp;" itemType="http://schema.org/LocalBusiness">
+    <footer className="footer">
         <div className="container">
             <div className="row m-row">
                 <div className="column col-lg-3 col-md-3 col-sm-2 col-xs-12 footer__column">
-                    <span className="hidden" itemProp="name">The Coder</span>
                     <a href="/" className="footer__logo">
-                        <img src={logo} alt="The Coder" className="hidden" itemProp="image"/>
                         <svg viewBox="2.3 8.3 45.4 62.4">
                             <g>
                                 <path stroke="#000000" strokeWidth="4.252" strokeMiterlimit="10" d="M39.5,16.4c3.7,3.7,6,8.8,6,14.4c0,5.6-2.3,10.7-6,14.4
@@ -27,17 +24,17 @@ const footer = () => (
                         <div className="column col-sm-4 col-xs-12 footer__column">
                             <div>
                                 <span className="footer__txt --title">Address/</span>
-                                <span className="footer__txt" itemProp="address">San Francisco, CA, USA</span>
-                                <span className="footer__txt" itemProp="address">Lviv, Ukraine</span>
+                                <span className="footer__txt">San Francisco, CA, USA</span>
+                                <span className="footer__txt">Lviv, Ukraine</span>
                             </div>
                         </div>
                         <div className="column col-sm-4 col-xs-12 footer__column">
                             <span className="footer__txt --title">phone/</span>
-                            <span className="footer__txt" itemProp="telephone">(415) 903-0707</span>
+                            <span className="footer__txt">(415) 903-0707</span>
                         </div>
                         <div className="column col-sm-4 col-xs-12 footer__column">
                             <span className="footer__txt --title">e-mail/</span>
-                            <a href="mailto:thecoder@gmail.com" className="footer__txt mb-15" itemProp="email">info@thecoderdev.com</a>
+                            <a href="mailto:thecoder@gmail.com" className="footer__txt mb-15">info@thecoderdev.com</a>
                             <a href="https://www.iubenda.com/privacy-policy/64548822"
                                className="iubenda-white iubenda-embed footer__privacy-policy"
                                title="Privacy Policy">Privacy Policy</a>
@@ -73,7 +70,6 @@ const footer = () => (
                         <span>Behance</span>
                         <span>Behance</span>
                     </a>
-
                 </li>
             </ul>
         </div>
