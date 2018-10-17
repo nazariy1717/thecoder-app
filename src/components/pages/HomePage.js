@@ -8,6 +8,7 @@ import ContactUs from '../elements/ContactUs/ContactUs';
 import Achievements from "../elements/TeamAchievements/Achievements";
 import OurServices from "../elements/OurServices/OurServices";
 import OurTeam from "../elements/OurTeam/OurTeam";
+import OurClients from "../elements/OurClients/OurClients";
 
 
 
@@ -23,6 +24,7 @@ class HomePage extends Component {
                 <FirstScreen />
                 <OurServices />
                 <OurWorks />
+                <OurClients />
                 <OurTeam />
                 <Achievements />
                 <Testimonials />

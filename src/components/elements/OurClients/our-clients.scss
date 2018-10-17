@@ -1,0 +1,29 @@
+@import "../../../assets/styles/tools/breakpoints";
+
+.our-clients{
+  padding: 100px 0 75px;
+  background-color: var(--black);
+  @media (max-width: $breakpoint-sm) {
+    padding: 75px 0;
+  }
+  &__title{
+    margin-bottom: 60px;
+    p span{
+      color: var(--white);
+      &.sub{
+        color: #2b2b2b;
+      }
+    }
+  }
+  &__item{
+    margin-bottom: 45px;
+    img{
+      display: block;
+      margin: auto;
+      max-width: 175px;
+      @media (max-width: 991px){
+        max-width: 100%;
+      }
+    }
+  }
+}

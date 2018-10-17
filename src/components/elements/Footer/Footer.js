@@ -23,55 +23,57 @@ const footer = () => (
                     <div className="row m-row align-spaced footer__row">
                         <div className="column col-sm-4 col-xs-12 footer__column">
                             <div>
-                                <span className="footer__txt --title">Address/</span>
+                                <span className="footer__txt --title">ADDRESS/</span>
                                 <span className="footer__txt">San Francisco, CA, USA</span>
                                 <span className="footer__txt">Lviv, Ukraine</span>
                             </div>
                         </div>
                         <div className="column col-sm-4 col-xs-12 footer__column">
-                            <span className="footer__txt --title">phone/</span>
-                            <span className="footer__txt">(415) 903-0707</span>
+                        <span className="footer__txt --title"> Contacts</span>
+                            <a href="tel:(415) 903-0707" className="footer__txt">(415) 903-0707</a>
+                            <a href="mailto:thecoder@gmail.com" className="footer__txt mb-15">info@thecoderdev.com</a>
                         </div>
                         <div className="column col-sm-4 col-xs-12 footer__column">
-                            <span className="footer__txt --title">e-mail/</span>
-                            <a href="mailto:thecoder@gmail.com" className="footer__txt mb-15">info@thecoderdev.com</a>
-                            <a href="https://www.iubenda.com/privacy-policy/64548822"
-                               className="iubenda-white iubenda-embed footer__privacy-policy"
-                               title="Privacy Policy">Privacy Policy</a>
+                            <span className="footer__txt --title">Social/</span>
+                            <ul className="footer__social">
+                                <li>
+                                    <a href="https://www.facebook.com/thecoderdev"
+                                       className="footer__txt footer__link --icon" target="_blank" rel="nofollow noopener noreferrer">
+                                        <span className="icon-facebook"></span>
+                                        <span className="icon-facebook"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/thecoderdev/"
+                                       className="footer__txt footer__link --icon" target="_blank" rel="nofollow noopener noreferrer">
+                                        <span className="icon-instagram"></span>
+                                        <span className="icon-instagram"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/company/the-coder/"
+                                       className="footer__txt footer__link --icon" target="_blank" rel="nofollow noopener noreferrer">
+                                        <span className="icon-linkedin2"></span>
+                                        <span className="icon-linkedin2"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.behance.net/thecoderdev"
+                                       className="footer__txt footer__link --icon" target="_blank" rel="nofollow noopener noreferrer">
+                                        <span className="icon-behance"></span>
+                                        <span className="icon-behance"></span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <ul className="row m-row align-spaced footer__row">
-                <li className="column col-xs-3 footer__column">
-                    <a href="https://www.facebook.com/thecoderdev"
-                       className="footer__txt footer__link" target="_blank" rel="nofollow noopener noreferrer">
-                        <span>Facebook</span>
-                        <span>Facebook</span>
-                    </a>
-                </li>
-                <li className="column col-xs-3 footer__column">
-                    <a href="https://www.instagram.com/thecoderdev/"
-                       className="footer__txt footer__link" target="_blank" rel="nofollow noopener noreferrer">
-                        <span>Instagram</span>
-                        <span>Instagram</span>
-                    </a>
-                </li>
-                <li className="column col-xs-3 footer__column">
-                    <a href="https://www.linkedin.com/company/the-coder/"
-                       className="footer__txt footer__link" target="_blank" rel="nofollow noopener noreferrer">
-                        <span>Linkedin</span>
-                        <span>Linkedin</span>
-                    </a>
-                </li>
-                <li className="column col-xs-3 footer__column">
-                    <a href="https://www.behance.net/thecoderdev"
-                       className="footer__txt footer__link" target="_blank" rel="nofollow noopener noreferrer">
-                        <span>Behance</span>
-                        <span>Behance</span>
-                    </a>
-                </li>
-            </ul>
+        </div>
+        <div className="copyright">
+            <div className="container">
+                <p className="copyright__txt">All rights reserved 2018. <a href="https://www.iubenda.com/privacy-policy/64548822" className="iubenda-white iubenda-embed footer__privacy-policy" title="Privacy Policy">Privacy Policy</a></p>
+            </div>
         </div>
     </footer>
 );

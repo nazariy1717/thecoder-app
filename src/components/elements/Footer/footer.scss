@@ -1,10 +1,7 @@
 @import "../../../assets/styles/tools/breakpoints";
 
 .footer{
-  padding: 60px 0;
-  @media (max-width: $breakpoint-sm) {
-    padding: 30px 0;
-  }
+  padding-top: 60px;
   &__logo{
     display: table;
     margin: auto;
@@ -19,13 +16,8 @@
         }
       }
     }
-
-    @media (max-width: $breakpoint-sm) {
-      margin: auto auto 30px auto;
-    }
     svg{
       height: 105px;
-
     }
   }
   &__privacy-policy{
@@ -38,10 +30,11 @@
     }
   }
   &__column{
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     @media (max-width: $breakpoint-sm) {
       padding: 0 7px;
       text-align: center;
+      margin-bottom: 15px;
     }
   }
   &__txt{
@@ -55,10 +48,14 @@
       font-size: 11px;
       font-weight: 400;
     }
+    &.--icon{
+      font-size: 17px;
+    }
     &.--title{
       font-size: 16px;
       font-weight: 900;
       text-transform: uppercase;
+      margin-bottom: 10px;
       @media (max-width: $breakpoint-sm) {
         font-size: 13px;
       }
@@ -66,7 +63,6 @@
   }
   &__link{
     height: 24px;
-    text-align: center;
     display: block;
     overflow: hidden;
     margin-bottom: 10px;
@@ -84,5 +80,32 @@
       }
     }
   }
+  &__social{
+    li{
+      display: inline-block;
+    }
+    li + li{
+      margin-left: 20px;
+
+    }
+  }
 }
 
+.copyright{
+  line-height: 36px;
+  background-color: #000;
+  @media (max-width: $breakpoint-sm) {
+    padding-bottom: 45px;
+  }
+  &__txt{
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+.iubenda-ibadge{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+}

@@ -1,7 +1,6 @@
 @import "../tools/mixins";
 @import "../tools/breakpoints";
 
-
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon' !important;
   speak: none;
@@ -10,16 +9,23 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-format_quote:before {
-  content: "\e901";
+  content: "\e900";
 }
 .icon-facebook:before {
   content: "\ea90";
+}
+.icon-instagram:before {
+  content: "\ea92";
+  font-weight: bold;
+}
+.icon-behance:before {
+  content: "\eaa8";
+  font-weight: bold;
 }
 .icon-linkedin2:before {
   content: "\eaca";
