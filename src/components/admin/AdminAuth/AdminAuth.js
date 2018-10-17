@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {adminLogin} from '../../../actions/admin/adminAuth';
 import './admin-auth.scss'
 
 class AdminAuth extends Component{
@@ -27,16 +28,7 @@ class AdminAuth extends Component{
         console.log();
 
         if(Object.keys(errors).length === 0){
-            // axios.post('/api/', qs.stringify(this.state.data, { parseArrays: false }))
-            //     .then((res)=> {
-            //         this.setState({
-            //             data: {
-            //                 login: '',
-            //                 password: ''
-            //             },
-            //         });
-            //         this.props.history.push('/admin/dashboard');
-            //     });
+            adminLogin();
             this.props.history.push('/admin/dashboard');
 
         }
