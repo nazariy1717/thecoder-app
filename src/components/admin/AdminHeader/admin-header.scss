@@ -1,3 +1,28 @@
 .admin-header{
-  background-color: #000;
+  height: 100px;
+  padding: 0 30px;
+  background-color: var(--gray);
+  &__title{
+    color: var(--black);
+    font-family: Raleway,sans-serif;
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  &__out{
+    padding: 2px 8px;
+    text-transform: uppercase;
+    line-height: 20px;
+    font-size: 13px;
+    display: block;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #000;
+    transition: all .3s;
+    &:hover{
+      background-color: #e53539;
+    }
+  }
 }
