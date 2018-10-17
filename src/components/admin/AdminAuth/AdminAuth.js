@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import './admin-auth.scss'
 
 class AdminAuth extends Component{
@@ -103,4 +104,4 @@ class AdminAuth extends Component{
     }
 }
 
-export default AdminAuth;
+export default connect(null,null)(AdminAuth);
