@@ -7,10 +7,10 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
 import rootReducer from './rootReducer';
+import './assets/styles/app.scss';
 
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import './assets/styles/app.scss';
 
 
 
