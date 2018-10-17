@@ -1,0 +1,2 @@
+export const ADMIN_LOGGED_IN = 'ADMIN_LOGGED_IN';
+export const ADMIN_LOGGED_OUT = 'ADMIN_LOGGED_OUT';
