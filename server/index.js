@@ -5,7 +5,7 @@ import path from "path";
 const app = express();
 const port = 8080;
 
-app.use('/api/admin-auth', auth);
+// app.use('/api/admin-auth', auth);
 
 
 
