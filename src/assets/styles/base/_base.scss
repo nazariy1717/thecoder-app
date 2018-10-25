@@ -18,7 +18,9 @@ a{
 .title-box{
   max-width: 385px;
   &__hidden{
-    display: none;
+    position: absolute;
+    right: -9999%;
+    top: -9999%;
   }
   p{
     display: block;
