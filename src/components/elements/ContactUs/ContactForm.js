@@ -102,6 +102,7 @@ class ContactForm extends React.Component{
                             value={data.name}
                             onChange={this.onChangeHandler}
                             autoComplete="off"
+                            placeholder="Enter your full name"
                         />
                         <label htmlFor="name" className="form__label">
                             <div><span>full name</span></div>
@@ -115,7 +116,9 @@ class ContactForm extends React.Component{
                                     value={data.phone}
                                     onChange={this.onChangeHandler}
                                     autoComplete="off"
-                                    mask="999 999 9999" maskChar="" />
+                                    mask="999 999 9999" maskChar=""
+                                    placeholder="Enter your phone"
+                        />
                         <label htmlFor="phone" className="form__label">
                             <div><span>phone</span></div>
                             <div><span>phone</span></div>
@@ -130,6 +133,7 @@ class ContactForm extends React.Component{
                             value={data.email}
                             onChange={this.onChangeHandler}
                             autoComplete="off"
+                            placeholder="Enter your email"
                         />
                         <label htmlFor="email" className="form__label">
                             <div><span>e-mail</span></div>
@@ -144,6 +148,8 @@ class ContactForm extends React.Component{
                             value={data.message}
                             onChange={this.onChangeHandler}
                             autoComplete="off"
+                            placeholder="Enter your details"
+
                         />
                         <label htmlFor="email" className="form__label">
                             <div><span>details</span></div>

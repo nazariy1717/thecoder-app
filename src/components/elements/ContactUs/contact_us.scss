@@ -12,8 +12,6 @@
     padding: 45px 0;
   }
   &__title{
-    @media (max-width: $breakpoint-md) {
-      margin-bottom: 30px;
-    }
+    margin-bottom: 20px;
   }
 }

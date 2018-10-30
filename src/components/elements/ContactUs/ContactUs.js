@@ -72,6 +72,7 @@ class ContactUs extends React.Component{
                                 </p>
                                 <h2 className="title-box__hidden">Contact us</h2>
                             </div>
+                            <p className="app-txt">Fill in the form and we will get back to you as soon as we can.</p>
                         </div>
                         <div className="column col-lg-5 col-md-6 col-xs-12">
                             <ContactForm  />
