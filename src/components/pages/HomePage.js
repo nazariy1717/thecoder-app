@@ -27,8 +27,8 @@ class HomePage extends Component {
                 <OurClients />
                 <OurTeam />
                 <Achievements />
-                <Testimonials />
                 <OurMission />
+                <Testimonials />
                 <ContactUs />
             </div>
         );

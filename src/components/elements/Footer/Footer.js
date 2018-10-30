@@ -1,5 +1,6 @@
 import React from 'react';
 import './footer.scss';
+import Scrollchor from 'react-scrollchor';
 
 const footer = () => (
     <footer className="footer">
@@ -26,12 +27,44 @@ const footer = () => (
                                 <span className="footer__txt --title">ADDRESS/</span>
                                 <span className="footer__txt">San Francisco, CA, USA</span>
                                 <span className="footer__txt">Lviv, Ukraine</span>
+                                <a href="tel:(415) 903-0707" className="footer__txt">(415) 903-0707</a>
+                                <a href="mailto:thecoder@gmail.com" className="footer__txt mb-15">info@thecoderdev.com</a>
                             </div>
                         </div>
                         <div className="column col-sm-4 col-xs-12 footer__column">
-                        <span className="footer__txt --title"> Contacts</span>
-                            <a href="tel:(415) 903-0707" className="footer__txt">(415) 903-0707</a>
-                            <a href="mailto:thecoder@gmail.com" className="footer__txt mb-15">info@thecoderdev.com</a>
+                            <span className="footer__txt --title">MENU/</span>
+                            <ul className="footer-nav">
+                                <li className="footer-nav__item">
+                                    <Scrollchor to="#our-services" className="footer-nav__link">
+                                        <span>Our Services</span>
+                                        <span>Our Services</span>
+                                    </Scrollchor>
+                                </li>
+                                <li className="footer-nav__item">
+                                    <Scrollchor to="#our-works" className="footer-nav__link">
+                                        <span>Portfolio</span>
+                                        <span>Portfolio</span>
+                                    </Scrollchor>
+                                </li>
+                                <li className="footer-nav__item">
+                                    <Scrollchor to="#achievements" className="footer-nav__link">
+                                        <span>Team achievements</span>
+                                        <span>Team achievements</span>
+                                    </Scrollchor>
+                                </li>
+                                <li className="footer-nav__item">
+                                    <Scrollchor to="#our-mission" className="footer-nav__link">
+                                        <span>Our Mission</span>
+                                        <span>Our Mission</span>
+                                    </Scrollchor>
+                                </li>
+                                <li className="footer-nav__item">
+                                    <Scrollchor to="#contact-us" className="footer-nav__link">
+                                        <span>Contact us</span>
+                                        <span>Contact us</span>
+                                    </Scrollchor>
+                                </li>
+                            </ul>
                         </div>
                         <div className="column col-sm-4 col-xs-12 footer__column">
                             <span className="footer__txt --title">Social/</span>

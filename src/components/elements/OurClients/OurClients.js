@@ -48,10 +48,10 @@ class OurClients extends Component {
         if(!isMobile) {
             let scene1 = new ScrollMagic.Scene({
                 offset: 0,
-                duration: '100%',
+                duration: document.getElementById('our-clients').offsetHeight,
                 triggerElement: '.our-clients',
                 reverse: true,
-                triggerHook: 0,
+                triggerHook: 0.03,
             });
             scene1.setClassToggle('.header', '--white');
             scene1.addTo(this.controller);
@@ -93,28 +93,28 @@ class OurClients extends Component {
                             <span className="sub">g</span>
                             <span className="sub">n</span>
                         </p>
-                        <h2 className="title-box__hidden">Our Clients</h2>
+                        <h2 className="title-box__hidden">Our clients</h2>
                     </div>
 
                     <div className="row m-row align-middle">
                         <div className="column col-md-3 col-sm-6 col-xs-6">
                             <div className="our-clients__item">
-                                <img src={client1} alt="our-clients-01" title="our-clients-01"/>
+                                <img src={client1} alt="CLOUD ONLY IT" title="CLOUD ONLY IT"/>
                             </div>
                         </div>
                         <div className="column col-md-3 col-sm-6 col-xs-6">
                             <div className="our-clients__item">
-                                <img src={client2} alt="our-clients-02" title="our-clients-02"/>
+                                <img src={client2} alt="Bombay Ruby" title="Bombay Ruby"/>
                             </div>
                         </div>
                         <div className="column col-md-3 col-sm-6 col-xs-6">
                             <div className="our-clients__item">
-                                <img src={client3} alt="our-clients-03" title="our-clients-03"/>
+                                <img src={client3} alt="CONCIERGE CATERING" title="CONCIERGE CATERING"/>
                             </div>
                         </div>
                         <div className="column col-md-3 col-sm-6 col-xs-6">
                             <div className="our-clients__item">
-                                <img src={client4} alt="our-clients-04" title="our-clients-04"/>
+                                <img src={client4} alt="METIS" title="METIS"/>
                             </div>
                         </div>
                     </div>

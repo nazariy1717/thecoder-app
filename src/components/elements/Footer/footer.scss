@@ -30,7 +30,7 @@
     }
   }
   &__column{
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     @media (max-width: $breakpoint-sm) {
       padding: 0 7px;
       text-align: center;
@@ -87,6 +87,33 @@
     li + li{
       margin-left: 20px;
 
+    }
+  }
+}
+
+.footer-nav{
+  &__item{
+    display: block;
+    margin-bottom: 5px;
+  }
+  &__link{
+    display: block;
+    color: var(--black);
+    height: 24px;
+    overflow: hidden;
+    font-family: Raleway,sans-serif;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 800;
+    transition: all 0.3s;
+    span{
+      display: block;
+      transition: all 0.3s;
+    }
+    &:hover{
+      span{
+        transform: translateY(-24px);
+      }
     }
   }
 }

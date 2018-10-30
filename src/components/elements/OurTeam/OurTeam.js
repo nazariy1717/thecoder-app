@@ -81,56 +81,56 @@ class OurClients extends Component {
                     <div className="row m-row">
                         <div className="column col-lg-3 col-md-4 col-xs-6">
                             <div className="our-team-item">
-                                <img src={item1} alt="team-01" title="team-01" className="image"/>
+                                <img src={item1} alt="Co-Founder, CMO of the CODER company" title="Co-Founder, CMO of the CODER company" className="image"/>
                                 <span className="our-team-item__name">Taras Melnychenko</span>
                                 <span className="our-team-item__role app-txt">Co-Founder, CMO</span>
                             </div>
                         </div>
                         <div className="column col-lg-3 col-md-4 col-xs-6">
                             <div className="our-team-item">
-                                <img src={item2} alt="team-02" title="team-02" className="image"/>
+                                <img src={item2} alt="Co-Founder, CEO of the CODER company" title="Co-Founder, CEO of the CODER company" className="image"/>
                                 <span className="our-team-item__name">Ruslan Senyo</span>
                                 <span className="our-team-item__role app-txt">Co-Founder, CEO</span>
                             </div>
                         </div>
                         <div className="column col-lg-3 col-md-4 col-xs-6">
                             <div className="our-team-item">
-                                <img src={item5} alt="team-03" title="team-03" className="image"/>
+                                <img src={item5} alt="Team lead, Senior Front-end of the CODER company" title="Team lead, Senior Front-end of the CODER company" className="image"/>
                                 <span className="our-team-item__name">Nazar Kalinchuk</span>
                                 <span className="our-team-item__role app-txt">Team lead, Senior Front-end Developer</span>
                             </div>
                         </div>
                         <div className="column col-lg-3 col-md-4 col-xs-6">
                             <div className="our-team-item">
-                                <img src={item6} alt="team-04" title="team-04" className="image"/>
+                                <img src={item6} alt="Art Director of the CODER company" title="Art Director of the CODER company" className="image"/>
                                 <span className="our-team-item__name">Sofia Havryso</span>
                                 <span className="our-team-item__role app-txt">Art Director</span>
                             </div>
                         </div>
                         <div className="column col-lg-3 col-md-4 col-xs-6">
                             <div className="our-team-item">
-                                <img src={item3} alt="team-05" title="team-05" className="image"/>
+                                <img src={item3} alt="Office manager of the CODER company" title="Office manager of the CODER company" className="image"/>
                                 <span className="our-team-item__name">Taras Navosha</span>
                                 <span className="our-team-item__role app-txt">Office manager</span>
                             </div>
                         </div>
                         <div className="column col-lg-3 col-md-4 col-xs-6">
                             <div className="our-team-item">
-                                <img src={item4} alt="team-06" title="team-06" className="image"/>
+                                <img src={item4} alt="Front-end Developer of the CODER company" title="Front-end Developer of the CODER company" className="image"/>
                                 <span className="our-team-item__name">Bohdan Hulovatyi</span>
                                 <span className="our-team-item__role app-txt">Junior Front-end Developer</span>
                             </div>
                         </div>
                         <div className="column col-lg-3 col-md-4 col-xs-6">
                             <div className="our-team-item">
-                                <img src={item7} alt="team-07" title="team-07" className="image"/>
+                                <img src={item7} alt="Senior Back-end Developer of the CODER company" title="Senior Back-end Developer of the CODER company" className="image"/>
                                 <span className="our-team-item__name">Yura Hymenetskiy</span>
                                 <span className="our-team-item__role app-txt">Senior Back-end Developer</span>
                             </div>
                         </div>
                         <div className="column col-lg-3 col-md-4 col-xs-6">
                             <div className="our-team-item">
-                                <img src={item8} alt="team-08" title="team-08" className="image"/>
+                                <img src={item8} alt="QA engineer of the CODER company" title="QA engineer of the CODER company" className="image"/>
                                 <span className="our-team-item__name">Mykhailo Baran</span>
                                 <span className="our-team-item__role app-txt">QA engineer</span>
                             </div>

@@ -84,7 +84,7 @@ class OurServices extends React.Component{
                                             <span className="sub">n</span>
                                             <span className="sub">s</span>
                                         </p>
-                                        <h2 className="title-box__hidden">OUR SERVICES</h2>
+                                        <h2 className="title-box__hidden">Our Services</h2>
                                     </div>
                                     <Scrollchor type="button" className="btn btn-primary our-services__btn" to="contact-us" animate={{duration: 250}}>
                                         <i className="btn-primary__line btn-primary__line-1"></i>

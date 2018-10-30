@@ -117,10 +117,10 @@ class OurWorks extends React.Component{
                             </a>
                         </div>
                         <div className="col-lg-4 col-md-6 col-xs-12">
-                            <a href="https://www.behance.net/gallery/70041097/Logo-for-Zhovtanecka" rel="nofollow noopener noreferrer" target="_blank">
+                            <a href="https://www.behance.net/gallery/71260113/Logo-design-and-corporate-style-for-an-Indian-restauran" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content --item-6"></div>
-                                    <p className="work-item__desc"><span>Gjovtanecka united territorial community</span></p>
+                                    <p className="work-item__desc"><span>Bombay Ruby Indian cuisine</span></p>
                                 </div>
                             </a>
                         </div>

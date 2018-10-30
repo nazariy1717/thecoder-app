@@ -79,7 +79,7 @@ class Testimonials extends Component {
                     </div>
                     <div className="quote-client">
                         <div className="quote-client__content">
-                            <img src={client1} alt="testimonials-01" title="testimonials-01"/>
+                            <img src={client1} alt="Nathan Downs" title="Nathan Downs"/>
                             <span className="quote-client__name">
                                 Nathan Downs
                                  <a href="https://www.linkedin.com/in/ndowns1/" className="quote-client__link" rel="noopener noreferrer nofollow" target="_blank">
@@ -90,7 +90,7 @@ class Testimonials extends Component {
                             <p className="app-txt">I have worked with the team from THE CODER on several branding/website development projects and they check all my boxes for a creative partnership. All in all I found them to be highly collaborative & creative in their approach. Fast with communication, efficient turnaround and they have a deep technical knowledge that made project management easy on our end while always staying on budget. Taras and team are highly recommended.</p>
                         </div>
                         <div className="quote-client__content --right">
-                            <img src={client2} alt="testimonials-02" title="testimonials-02"/>
+                            <img src={client2} alt="Halina Kucheriava" title="Halina Kucheriava"/>
                             <span className="quote-client__name">
                                 Halina Kucheriava
                                  <a href="https://www.linkedin.com/in/halina-kucheriava-8298ba35/" className="quote-client__link" rel="noopener noreferrer nofollow" target="_blank">

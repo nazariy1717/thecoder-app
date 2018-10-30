@@ -80,20 +80,20 @@ class Achievements extends React.Component{
                                 <span className="sub">j</span>
                             </p>
                             <p>
-                                <span>a</span>
-                                <span>c</span>
-                                <span>h</span>
+                                <span>e</span>
+                                <span>x</span>
+                                <span>p</span>
+                                <span>e</span>
+                                <span>r</span>
                                 <span>i</span>
                                 <span>e</span>
-                                <span>v</span>
-                                <span>e</span>
-                                <span>m</span>
-                                <span>e</span>
                                 <span>n</span>
-                                <span>t</span>
-                                <span>s</span>
+                                <span>c</span>
+                                <span>e</span>
+                                <span className="sub">q</span>
+                                <span className="sub">s</span>
                             </p>
-                            <h2 className="title-box__hidden">TEAM ACHIEVEMENT</h2>
+                            <h2 className="title-box__hidden">Team experience</h2>
                         </div>
 
                         <div className="achievement-item --item-1">
@@ -109,7 +109,7 @@ class Achievements extends React.Component{
                                 <p><strong>8448</strong> hours</p>
                             </div>
                             <div className="achievement-item__txt">
-                                <p>Experience in web site developing</p>
+                                <p>Experience in website developing</p>
                             </div>
                         </div>
                         <div className="achievement-item --item-3">
@@ -117,7 +117,7 @@ class Achievements extends React.Component{
                                 <p><strong>51</strong></p>
                             </div>
                             <div className="achievement-item__txt">
-                                <p>Web projects completed</p>
+                                <p>51 websites built</p>
                             </div>
                         </div>
                         <div className="achievement-item --item-4">
@@ -125,7 +125,7 @@ class Achievements extends React.Component{
                                 <p><strong>123</strong></p>
                             </div>
                             <div className="achievement-item__txt">
-                                <p>Logos developed</p>
+                                <p>Logos & style guides developed</p>
                             </div>
                         </div>
                         <div className="achievement-item --item-5">
