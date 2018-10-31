@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {adminLogin} from '../../../actions/admin/adminAuth';
+import {adminLogin} from '../../../actions/admin';
 import './admin-auth.scss'
 
 class AdminAuth extends Component{
@@ -25,7 +25,6 @@ class AdminAuth extends Component{
         e.preventDefault();
         const errors = this.validate(this.state.data);
         this.setState({ errors });
-        console.log();
 
         if(Object.keys(errors).length === 0){
             adminLogin();

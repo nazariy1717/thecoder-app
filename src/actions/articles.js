@@ -1,5 +1,5 @@
-import {LOAD_ARTICLES, VIEW_ARTICLE, CLAP_ARTICLE} from '../../types';
-import  api  from '../../api';
+import {LOAD_ARTICLES, VIEW_ARTICLE, CLAP_ARTICLE} from '../types';
+import  api  from '../api';
 
 export function loadArticles() {
     return (dispatch) => {

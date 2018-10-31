@@ -6,7 +6,6 @@ let ArticleSchema = new mongoose.Schema({
     feature_img: String,
     text: String,
     category: Array,
-
     claps: Number,
 });
 

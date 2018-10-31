@@ -5,12 +5,28 @@ import routes from './routes/';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import helmet from 'helmet';
+import dotenv from 'dotenv';
+
+
+dotenv.config();
 
 const app = express();
-const port = 8080;
+const port = process.env.PORT;
 const router = express.Router();
+const url = process.env.MONGODB_URL;
 
-// app.use('/api/admin-auth', auth);
+try {
+    mongoose.connect(url).then(()=>console.log('mongodb connected'));
+} catch (error) {
+    console.log(error);
+}
+
+routes(router);
+
+app.use(cors());
+app.use(bodyParser.json());
+app.use(helmet());
+app.use('/api', router);
 
 
 
