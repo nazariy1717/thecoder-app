@@ -5,7 +5,6 @@ module.exports = {
 
     addArticle: (req, res, next) => {
         let { text, title, claps, description } = req.body;
-
     },
 
     getAll: (req, res, next) => {
