@@ -19,6 +19,7 @@ class AdminAuth extends Component{
         this.submitHandler = this.submitHandler.bind(this);
         this.onChangeHandler = this.onChangeHandler.bind(this);
         this.validate = this.validate.bind(this);
+        console.log(this.props);
     }
 
     submitHandler(e){
@@ -27,8 +28,11 @@ class AdminAuth extends Component{
         this.setState({ errors });
 
         if(Object.keys(errors).length === 0){
-            adminLogin();
-            this.props.history.push('/admin/dashboard');
+            console.log('submit');
+            this.props.adminLogin(this.state.data);
+            console.log(this.state.data);
+
+            // this.props.history.push('/admin/dashboard');
 
         }
     }
@@ -95,4 +99,4 @@ class AdminAuth extends Component{
     }
 }
 
-export default connect(null,null)(AdminAuth);
+export default connect(null, {adminLogin})(AdminAuth);
