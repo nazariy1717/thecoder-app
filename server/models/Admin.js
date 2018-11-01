@@ -24,4 +24,4 @@ schema.methods.toAuthJson = function toAuthJson(){
     }
 };
 
-export default mongoose.model('admin', schema);
+export default mongoose.model('Admin', schema);

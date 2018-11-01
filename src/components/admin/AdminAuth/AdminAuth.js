@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+
 import {connect} from 'react-redux';
 import {adminLogin} from '../../../actions/admin';
 import './admin-auth.scss'
@@ -19,20 +21,22 @@ class AdminAuth extends Component{
         this.submitHandler = this.submitHandler.bind(this);
         this.onChangeHandler = this.onChangeHandler.bind(this);
         this.validate = this.validate.bind(this);
-        console.log(this.props);
     }
 
     submitHandler(e){
         e.preventDefault();
         const errors = this.validate(this.state.data);
+        const data = this.state.data;
         this.setState({ errors });
 
         if(Object.keys(errors).length === 0){
-            console.log('submit');
-            this.props.adminLogin(this.state.data);
-
-            // this.props.history.push('/admin/dashboard');
-
+            this.setState({ loading: true});
+            this.props.adminLogin(data)
+                .then(()=> this.props.history.push('/admin/dashboard'))
+                .catch((err)=> {
+                    console.log(err.response);
+                    this.setState({ loading: false, errors : err.response.data.errors})
+                })
         }
     }
 
@@ -46,13 +50,13 @@ class AdminAuth extends Component{
         const errors = {};
         if(!data.login){ errors.login = "Required field"; }
         if(!data.password){errors.password = "Required field"; }
-
         return errors;
     }
 
     render(){
         let data= this.state.data;
         let errors = this.state.errors;
+        let loading = this.state.loading;
 
         return(
             <div className="adm-auth display-table ">
@@ -79,7 +83,7 @@ class AdminAuth extends Component{
                                            onChange={this.onChangeHandler}
                                     />
                                 </div>
-                                <div className="form__group-30">
+                                <div className="form__group-50">
                                     <label htmlFor="password" className="form__label-custom">Password</label>
                                     <input type="password" name="password" id="password"
                                            autoComplete="off"
@@ -88,7 +92,20 @@ class AdminAuth extends Component{
                                            onChange={this.onChangeHandler}
                                     />
                                 </div>
-                                <button type="submit" className="btn btn-secondary">Sign in</button>
+                                <div className="form__group">
+                                    {(errors.global) ? <span className='credential-error'>Invalid credentials</span> : ""}
+                                    <button type="submit" className="btn btn-secondary">
+                                        <div className={(!loading) ? 'lds-ellipsis hidden': "lds-ellipsis"}>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        {(!loading) ? 'Sign in': ""}
+                                    </button>
+                                </div>
+
+
                             </form>
                         </div>
                     </div>
@@ -97,5 +114,12 @@ class AdminAuth extends Component{
         )
     }
 }
+
+AdminAuth.propTypes = {
+    history: PropTypes.shape({
+        push: PropTypes.func.isRequired
+    }).isRequired,
+    adminLogin: PropTypes.func.isRequired
+};
 
 export default connect(null, {adminLogin})(AdminAuth);

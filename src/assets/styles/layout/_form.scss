@@ -14,7 +14,7 @@ input[type=number]::-webkit-outer-spin-button {
   &__group-20{  margin-bottom: 20px;position: relative;  }
   &__group-30{  margin-bottom: 30px;position: relative;  }
   &__group-40{  margin-bottom: 40px;position: relative;  }
-  &__group-50{  margin-bottom: 30px;position: relative;  }
+  &__group-50{  margin-bottom: 50px;position: relative;  }
 
   &__label{
     position: absolute;
@@ -99,6 +99,20 @@ input[type=number]::-webkit-outer-spin-button {
    cursor: not-allowed;
   }
 
+}
+
+.credential-error{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -30px;
+  color: #E53539;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+
+  display: block;
+  text-align: center;
 }
 
 
