@@ -39,6 +39,7 @@
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.3.8",
     "node-sass": "^4.9.2",
+    "nodemon": "^1.18.5",
     "object-assign": "4.1.1",
     "path": "^0.12.7",
     "postcss-flexbugs-fixes": "3.2.0",
@@ -75,7 +76,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js ",
-    "start-backend": "babel-node server/index.js",
+    "start-backend": "nodemon --exec babel-node -- server/index.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },
@@ -123,5 +124,11 @@
   },
   "devDependencies": {
     "scrollmagic": "^2.0.5"
+  },
+  "proxy": {
+    "/api/*": {
+      "target": "http://localhost:8080",
+      "secure": false
+    }
   }
 }

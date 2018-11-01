@@ -6,7 +6,7 @@ module.exports = (router) => {
     router.route('/articles').get(articleController.getAll);
 
     /* add an article */
-    router.route('/article').post(multipartWare, articleController.addArticle);
+    // router.route('/article').post(multipartWare, articleController.addArticle);
 
     /* clap on an article */
     router.route('/article/clap').post(articleController.clapArticle);

@@ -30,7 +30,6 @@ class AdminAuth extends Component{
         if(Object.keys(errors).length === 0){
             console.log('submit');
             this.props.adminLogin(this.state.data);
-            console.log(this.state.data);
 
             // this.props.history.push('/admin/dashboard');
 

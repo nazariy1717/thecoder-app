@@ -8,12 +8,11 @@ import api from '../api';
 //
 //         dispatch({type: ADMIN_LOGGED_IN, admin})
 //     });
-
+// //
 export function adminLogin(credentials) {
     return (dispatch) =>{
         api.admin.login(credentials).then( admin => {
             localStorage.adminJWT = admin.token;
-            console.log(admin);
             dispatch({type: ADMIN_LOGGED_IN, admin})
         });
     }
