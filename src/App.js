@@ -11,6 +11,7 @@ import PostPage from './components/pages/PostPage/PostPage';
 
 import AdminAuth from './components/admin/AdminAuth/AdminAuth';
 import AdminDashboard from './components/admin/AdminDashboard/AdminDashboard';
+import AdminEditor from './components/admin/AdminEditor/AdminEditor';
 
 import ThanksPage from './components/pages/ThanksPage/ThanksPage';
 import NotFoundPage from './components/pages/NotFoundPage/NotFoundPage';
@@ -26,6 +27,7 @@ const App = (location) =>(
 
             <Route exact path="/admin" location={location} component={AdminAuth} />
             <AdminRoute exact path="/admin/dashboard" location={location} component={AdminDashboard} />
+            <AdminRoute exact path="/admin/editor" location={location} component={AdminEditor} />
 
             <UserRoute path="/thanks" component={ThanksPage} />
             <UserRoute component={NotFoundPage} />
