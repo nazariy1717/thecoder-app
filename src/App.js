@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch,Route } from 'react-router-dom';
+import AdminRoute from "./components/routes/AdminRoute";
 import UserRoute from "./components/routes/UserRoute";
 
 
@@ -24,7 +25,7 @@ const App = (location) =>(
             <UserRoute path="/blog/:post" component={PostPage} />
 
             <Route exact path="/admin" location={location} component={AdminAuth} />
-            <Route exact path="/admin/dashboard" location={location} component={AdminDashboard} />
+            <AdminRoute exact path="/admin/dashboard" location={location} component={AdminDashboard} />
 
             <UserRoute path="/thanks" component={ThanksPage} />
             <UserRoute component={NotFoundPage} />

@@ -1,19 +1,18 @@
-import React, {Component} from 'react';
+import React from 'react';
+import {adminLogout} from '../../../actions/admin';
+import { connect } from 'react-redux';
 import './admin-header.scss';
 
- class AdminHeader extends Component{
-    render(){
-        return(
-            <div className="admin-header row align-middle align-justify">
-                <div className="column">
-                    <h1 className="admin-header__title">The Coder Admin Dashboard</h1>
-                </div>
-                <div className="column">
-                    <a href="/" className="admin-header__out">sign out</a>
-                </div>
-            </div>
-        )
-    }
-}
+ const AdminHeader = ({ adminLogout}) => (
+    <div className="admin-header row align-middle align-justify">
+        <div className="column">
+            <h1 className="admin-header__title">The Coder Admin Dashboard</h1>
+        </div>
+        <div className="column">
+            <button type="button" className="btn admin-header__out" onClick={() => adminLogout()}>sign out</button>
+        </div>
+    </div>
+);
 
-export default AdminHeader;
+
+export default connect(null, {adminLogout})(AdminHeader);

@@ -7,7 +7,7 @@ module.exports = {
         console.log(credentials);
         Admin.findOne({ login: credentials.login }).then(admin => {
             if(admin && admin.isValidPassword(credentials.password)){
-                res.json({ student: admin.toAuthJson(),name: admin.name });
+                res.json({ admin: admin.toAuthJson() });
             } else {
                 res.status(400).json({errors: {global: 'Invalid credentials'}});
             }

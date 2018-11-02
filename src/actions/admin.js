@@ -1,25 +1,27 @@
 import { ADMIN_LOGGED_IN, ADMIN_LOGGED_OUT } from '../types';
 import api from '../api';
 
-// export function adminLogin(credentials) {
-//     return (dispatch) =>{
-//         api.admin.login(credentials).then( admin => {
-//             localStorage.adminJWT = admin.token;
-//             dispatch({type: ADMIN_LOGGED_IN, admin})
-//         });
-//     }
-// }
+export const adminLoggedIn = (admin) => ({
+    type: ADMIN_LOGGED_IN,
+    admin
+});
+
+export const adminLoggedOut = () => ({
+    type: ADMIN_LOGGED_OUT
+});
 
 export const adminLogin = credentials => dispatch =>
-    api.admin.login(credentials).then(admin =>{
-        localStorage.adminJWT = admin.token;
-        dispatch({type: ADMIN_LOGGED_IN, admin})
+    api.admin.login(credentials).then(user =>{
+        localStorage.adminJWT = user.admin.token;
+        dispatch(adminLoggedIn(user.admin));
     });
 
-export function logout(){
-    return (dispatch) =>{
-        localStorage.removeItem('adminJWT');
-        dispatch({ type: ADMIN_LOGGED_OUT});
-    }
-}
+export const adminLogout = () => dispatch => {
+    console.log(localStorage);
+
+    localStorage.removeItem('adminJWT');
+    dispatch(adminLoggedOut());
+};
+
+
 

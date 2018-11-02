@@ -7,6 +7,13 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 import { store } from './store';
+import {adminLoggedIn} from './actions/admin';
+
+if(localStorage.adminJWT){
+    const admin = { token: localStorage.adminJWT};
+    console.log(admin);
+    store.dispatch(adminLoggedIn(admin));
+}
 
 ReactDOM.render(
     <BrowserRouter>
