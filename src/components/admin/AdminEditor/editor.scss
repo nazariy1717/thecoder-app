@@ -1,4 +1,42 @@
 
 .admin-editor{
-  padding: 45px;
+  padding: 100px 75px;
+  max-width: 1200px;
+  margin: auto;
+  &__picture-upload{
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    left: -60px;
+    top: -60px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    font-style: italic;
+    font-size: 13px;
+    color: #000;
+    font-weight: 900;
+    border-radius: 50%;
+    border: 1px solid #000;
+    transition: all 0.3s;
+    &:hover{
+      background-color: #000;
+      color: #fff;
+    }
+  }
+  &__title{
+    height: 60px;
+    width: 100%;
+    resize: none;
+    font-family: 'Myriad Pro', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    border: 0;
+    outline: none;
+  }
+}
+
+.medium-editor-toolbar li button{
+
 }

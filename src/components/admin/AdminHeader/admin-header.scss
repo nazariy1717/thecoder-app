@@ -2,6 +2,10 @@
   height: 100px;
   padding: 0 30px;
   background-color: var(--gray);
+  &__image{
+    width: 60px;
+    height: 60px;
+  }
   &__title{
     color: var(--black);
     font-family: Raleway,sans-serif;
@@ -25,4 +29,50 @@
       background-color: #e53539;
     }
   }
+  &__list{
+  }
+  &__item{
+    display: inline-block;
+    text-align: center;
+    & + & {
+      margin-left: 30px;
+    }
+  }
+  &__link{
+    position: relative;
+    display: inline-block;
+    color: var(--black);
+    font-family: Raleway,sans-serif;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 800;
+    transition: all 0.3s;
+    &:hover{
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -3px;
+        width: 20px;
+        margin: auto;
+        height: 3px;
+        background-color: #000;
+      }
+    }
+    &.active{
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -3px;
+        width: 20px;
+        margin: auto;
+        height: 3px;
+        background-color: #000;
+      }
+    }
+  }
 }
+

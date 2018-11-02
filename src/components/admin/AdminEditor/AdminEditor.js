@@ -3,9 +3,7 @@ import {Component} from "react";
 import { connect } from 'react-redux'
 import MediumEditor from 'medium-editor';
 
-import AdminSidebar from "../AdminSidebar/AdminSidebar";
 import AdminHeader from "../AdminHeader/AdminHeader";
-
 import './../../../../node_modules/medium-editor/dist/css/medium-editor.min.css'
 import './editor.scss'
 
@@ -68,12 +66,27 @@ class AdminEditor extends Component{
     render(){
         return(
             <div className="admin-wrapper">
-                <AdminSidebar />
+                <AdminHeader />
                 <div className="admin-content">
-                    <AdminHeader />
-
                     <div className="admin-editor">
-                        <textarea id="medium-editable" className="medium-editable"></textarea>
+                        <form className="editor-form main-editor" autoComplete="off">
+
+                            <div className={this.state.imgSrc != null ? 'file-upload-previewer' : 'file-upload-previewer hidden'}>
+                                <img src="" alt="" id="image_preview"/>
+                            </div>
+                            <div className="existing-img-previewer" id="existing-img-previewer">
+                            </div>
+                            <div className="form__group">
+                                <span className="admin-editor__picture-upload" onClick={this.handleClick}>img</span>
+                            </div>
+                            <div className="form__group-30">
+                                <textarea  className="admin-editor__title" id="editor-title" placeholder="Title"></textarea>
+                            </div>
+                            <div className="form__group-30">
+                                <textarea className="medium-editable" id="medium-editable"></textarea>
+                            </div>
+                        </form>
+
 
                     </div>
                 </div>
