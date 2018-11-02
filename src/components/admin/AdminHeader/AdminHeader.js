@@ -14,9 +14,6 @@ import logo from "./logo.svg";
             </Link>
         </div>
         <div className="column">
-            <h1 className="admin-header__title">The Coder Admin Dashboard</h1>
-        </div>
-        <div className="column">
             <ul className="admin-header__list">
                 <li className="admin-header__item">
                     <Link to="/" className="admin-sidebar__link">Main</Link>
@@ -32,7 +29,6 @@ import logo from "./logo.svg";
                 </li>
                 <li className="admin-header__item">
                     <button type="button" className="btn admin-header__out" onClick={() => adminLogout()}>sign out</button>
-
                 </li>
             </ul>
         </div>
