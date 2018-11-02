@@ -1,47 +1,10 @@
 import React, {Component} from 'react';
 import  "./testimonials.scss";
-
 import client1 from './clients/client1.png';
 import client2 from './clients/client2.jpg';
 
-import {isMobile} from 'react-device-detect';
-
-import { TweenMax,TimelineMax }  from "gsap";
-import ScrollMagic from 'scrollmagic';
-import 'animation.gsap';
-import 'debug.addIndicators';
-
-
 class Testimonials extends Component {
 
-    componentDidMount() {
-        if(!isMobile) {
-
-            let timeline = new TimelineMax();
-
-            let t1 = TweenMax.staggerFrom(document.querySelectorAll('.testimonials__title span'), 0.2, {
-                opacity: 0,
-                y: 55
-            }, 0.03);
-
-            let t2 = TweenMax.staggerFrom(document.querySelectorAll('.quote-client__content'), 0.15, {
-                opacity: 0,
-                y: 55
-            }, 0.25);
-
-            timeline.add(t1).add(t2);
-
-            let controller = new ScrollMagic.Controller();
-            let scene = new ScrollMagic.Scene({
-                offset: 0,
-                triggerElement: '.our-works',
-                reverse: false,
-                triggerHook: .7,
-            });
-            scene.setTween(timeline);
-            scene.addTo(controller);
-        }
-    }
     render() {
         return (
             <section className="testimonials" id="testimonials">
@@ -101,7 +64,6 @@ class Testimonials extends Component {
                             <p className="app-txt">The Coder team created our website from scratch. It was a great experience to work with Ruslan as the manager of the project and the whole team. They are true professionals. The website was developed within deadlines, the team paid a lot of attention to all details to showcase our services in the best possible way. The result is great, the website meets all our needs, it's pretty, clean, comfortable and easy to use. We had some updates several times after the website was developed and The Coder responded quickly and made all the needed updates. I highly recommend these guys as a great professional team, that cares about its clients!</p>
                         </div>
                     </div>
-
                 </div>
             </section>
         );

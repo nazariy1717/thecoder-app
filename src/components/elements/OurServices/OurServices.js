@@ -1,52 +1,8 @@
 import React from 'react';
 import './our_services.scss';
-
 import Scrollchor from 'react-scrollchor';
-import {isMobile} from 'react-device-detect';
-
-import { TweenMax,TimelineMax }  from "gsap";
-import ScrollMagic from 'scrollmagic';
-import 'animation.gsap';
-import 'debug.addIndicators';
 
 class OurServices extends React.Component{
-
-
-    componentDidMount() {
-        if(!isMobile) {
-            let timelineServices = new TimelineMax();
-
-            let t1 = TweenMax.staggerFrom(document.querySelectorAll('.our-services__title span'), 0.2, {
-                opacity: 0,
-                y: 55
-            }, 0.03);
-
-            let t2 = TweenMax.from(document.querySelector('.our-services__btn'), 0.1, {
-                opacity: 0,
-                y: 55
-            });
-
-            let t3 = TweenMax.staggerFrom(document.querySelectorAll('.services-item'), 0.2, {
-                opacity: 0,
-                y: 55
-
-            }, 0.1);
-
-
-            timelineServices.add(t1).add(t3).add(t2);
-
-            let controller = new ScrollMagic.Controller();
-            let scene = new ScrollMagic.Scene({
-                offset: 0,
-                triggerElement: '.our-services',
-                reverse: false,
-                triggerHook: .8,
-            });
-            scene.setTween(timelineServices);
-            scene.addTo(controller);
-        }
-    }
-
 
     render(){
         return(

@@ -1,9 +1,5 @@
 import React, {Component} from 'react';
 import './our-team.scss';
-import ScrollMagic from "scrollmagic";
-import {isMobile} from "react-device-detect";
-import TimelineMax from "gsap/TimelineMax";
-import TweenMax from "gsap/TweenMax";
 
 import item1 from './items/taras.jpg'
 import item2 from './items/ruslan.jpg'
@@ -15,35 +11,6 @@ import item7 from './items/yura.jpg'
 import item8 from './items/misha.jpg'
 
 class OurClients extends Component {
-
-    componentDidMount() {
-        let controller = new ScrollMagic.Controller();
-
-        if(!isMobile) {
-            let timeline = new TimelineMax();
-
-            let t1 =TweenMax.staggerFrom( document.querySelectorAll('.our-team__title span'), 0.15, {
-                opacity: 0,
-                y: 55,
-            }, 0.03);
-
-            let t2 =TweenMax.staggerFrom( document.querySelectorAll('.our-team-item'), 0.15, {
-                opacity: 0,
-                y: 55,
-            }, 0.05);
-
-            timeline.add(t1).add(t2);
-
-            let scene = new ScrollMagic.Scene({
-                offset:  0,
-                triggerElement: '.our-team',
-                reverse: false,
-                triggerHook: .7,
-            });
-            scene.setTween(timeline);
-            scene.addTo(controller);
-        }
-    }
 
     render() {
         return (

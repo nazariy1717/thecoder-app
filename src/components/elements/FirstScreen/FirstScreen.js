@@ -1,21 +1,9 @@
 import React from 'react';
 import './firstScreen.scss';
-import { TweenMax }  from "gsap";
-import {isMobile} from 'react-device-detect';
 
 class FirstScreen extends React.Component{
 
-    componentDidMount() {
-        if(!isMobile){
-            TweenMax.staggerFrom( document.querySelectorAll('.first-screen__title span'), 0.2, {
-                opacity: 0,
-                y: 55
-            }, 0.03);
-        }
-    }
-
     render(){
-
         return(
             <div className="first-screen">
                 <p className="first-screen__coder">details matter</p>

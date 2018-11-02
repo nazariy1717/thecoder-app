@@ -1,64 +1,8 @@
 import React from 'react';
 import './achievements.scss';
-import {isMobile} from 'react-device-detect';
 
-import { TweenMax,TimelineMax }  from "gsap";
-import ScrollMagic from 'scrollmagic';
-import 'animation.gsap';
-import 'debug.addIndicators';
 
 class Achievements extends React.Component{
-
-    constructor(props) {
-        super(props);
-        this.controller = null;
-    }
-
-    componentDidMount() {
-        this.controller = new ScrollMagic.Controller();
-
-        if(!isMobile) {
-
-            let timeline = new TimelineMax();
-
-            let t1 =TweenMax.staggerFrom( document.querySelectorAll('.achievements__title span'), 0.15, {
-                opacity: 0,
-                y: 55,
-                delay: .3,
-            }, 0.03);
-
-            let t2 =TweenMax.staggerFrom( document.querySelectorAll('.achievement-item p'), 0.2, {
-                opacity: 0,
-                y: 50,
-            }, 0.05);
-
-            timeline.add(t1).add(t2);
-
-            let scene = new ScrollMagic.Scene({
-                offset:  0,
-                triggerElement: '.achievements',
-                reverse: false,
-                triggerHook: .7,
-            });
-            scene.setTween(timeline);
-            scene.addTo(this.controller);
-        }
-        if(!isMobile) {
-            let scene1 = new ScrollMagic.Scene({
-                offset: 0,
-                duration: '100%',
-                triggerElement: '.achievements',
-                reverse: true,
-                triggerHook: 0,
-            });
-            scene1.setClassToggle('.header', '--white');
-            scene1.addTo(this.controller);
-        }
-        // scene1.addIndicators();
-    }
-    componentWillUnmount(){
-        this.controller.destroy();
-    }
 
     render(){
         return(

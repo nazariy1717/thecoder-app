@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import './our-clients.scss';
-import ScrollMagic from "scrollmagic";
-import {isMobile} from "react-device-detect";
-import TimelineMax from "gsap/TimelineMax";
-import TweenMax from "gsap/TweenMax";
+
 
 import client1 from "./items/client1.png";
 import client2 from "./items/client2.png";
@@ -11,56 +8,6 @@ import client3 from "./items/client3.png";
 import client4 from "./items/client4.png";
 
 class OurClients extends Component {
-
-    constructor(props) {
-        super(props);
-        this.controller = null;
-    }
-
-    componentDidMount() {
-        this.controller = new ScrollMagic.Controller();
-
-        if(!isMobile) {
-            let timeline = new TimelineMax();
-
-            let t1 =TweenMax.staggerFrom( document.querySelectorAll('.our-clients__title span'), 0.15, {
-                opacity: 0,
-                y: 55,
-            }, 0.03);
-
-            let t2 =TweenMax.staggerFrom( document.querySelectorAll('.our-clients__item'), 0.15, {
-                opacity: 0,
-                y: 55,
-            }, 0.05);
-
-            timeline.add(t1).add(t2);
-
-            let scene = new ScrollMagic.Scene({
-                offset:  0,
-                triggerElement: '.our-clients',
-                reverse: false,
-                triggerHook: .7,
-            });
-            scene.setTween(timeline);
-            scene.addTo(this.controller);
-        }
-
-        if(!isMobile) {
-            let scene1 = new ScrollMagic.Scene({
-                offset: 0,
-                duration: document.getElementById('our-clients').offsetHeight,
-                triggerElement: '.our-clients',
-                reverse: true,
-                triggerHook: 0.03,
-            });
-            scene1.setClassToggle('.header', '--white');
-            scene1.addTo(this.controller);
-        }
-    }
-
-    componentWillUnmount(){
-        this.controller.destroy();
-    }
 
     render() {
         return (
