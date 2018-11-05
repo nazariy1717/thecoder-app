@@ -1,12 +1,11 @@
 import mongoose from 'mongoose';
 
 let ArticleSchema = new mongoose.Schema({
-    title: String,
-    description: String,
-    feature_img: String,
-    text: String,
-    category: Array,
-    claps: Number,
+    title: { type: String, required: true},
+    description: { type: String, required: true},
+    text: { type: String, required: true},
+    claps: { type: Number, required: true},
+    articleImg: { type: String, required: true}
 });
 
 ArticleSchema.methods.clap = function() {

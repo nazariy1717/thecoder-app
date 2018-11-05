@@ -1,5 +1,23 @@
-import {LOAD_ARTICLES, VIEW_ARTICLE, CLAP_ARTICLE} from '../types';
-import  api  from '../api';
+import {ADD_ARTICLE, LOAD_ARTICLES, VIEW_ARTICLE, CLAP_ARTICLE} from '../types';
+import api from '../api';
+
+export const adminAddedArticle = (article) => ({
+    type: ADD_ARTICLE,
+    article
+});
+
+export const adminAddArticle = article => dispatch =>
+    api.articles.addArticle(article).then(article =>{
+        console.log(article);
+        dispatch(adminAddedArticle(article));
+    });
+
+
+
+
+
+
+
 
 export function loadArticles() {
     return (dispatch) => {

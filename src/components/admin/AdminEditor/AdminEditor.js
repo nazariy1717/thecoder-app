@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import MediumEditor from 'medium-editor';
 import Notifications, {notify} from 'react-notify-toast';
 import AdminHeader from "../AdminHeader/AdminHeader";
+import {adminAddArticle} from "../../../actions/articles";
+
 import './../../../../node_modules/medium-editor/dist/css/medium-editor.min.css'
 import './../../../../node_modules/medium-editor/dist/css/themes/default.min.css'
 import './editor.scss'
@@ -16,7 +18,7 @@ class AdminEditor extends Component{
                 title: '',
                 description: '',
                 text: '',
-                imgSrc: null,
+                image: null,
             },
             errors: [],
             loading: false
@@ -37,27 +39,38 @@ class AdminEditor extends Component{
         this.setState({ errors });
         const article = this.state.article;
         if(Object.keys(errors).length === 0){
-            console.log(this.state);
+            console.log(article);
+            let fd = new FormData();
+            fd.append('title', article.title);
+            fd.append('description', article.description);
+            fd.append('text', article.text);
+            fd.append('claps', 0);
+            fd.append('image', article.image, article.image.name);
 
-            notify.show("Post was created successfully", "success");
+            this.props.adminAddArticle(fd).then(()=> {
+                notify.show("Post was created successfully", "success");
+            });
+
         }
     }
 
-    previewImg () {
-        const file = this.refs.fileUploader.files[0];
+    previewImg (e) {
+        console.log(e);
+        console.log(e.target.files[0]);
+        console.log(e.target.result);
+        this.setState({ article: {  ...this.state.article, image: e.target.files[0] }});
         let reader = new FileReader();
         reader.onload = function (e) {
             document.getElementById('image_preview').src = e.target.result;
-            this.setState({ article: {  ...this.state.article, imgSrc: file }})
         }.bind(this);
-        reader.readAsDataURL(file);
+        reader.readAsDataURL(e.target.files[0]);
     }
 
     validate(data){
         const errors = {};
         if(!data.title){ errors.title = "Required field"; }
         if(!data.text){errors.text = "Required field"; }
-        if(!data.imgSrc){errors.imgSrc = "Required field"; }
+        if(!data.image){errors.image = "Required field"; }
         return errors;
     }
 
@@ -109,17 +122,18 @@ class AdminEditor extends Component{
                 <div className="admin-content">
                     <div className="admin-editor">
                         <h1 className="admin-editor__head-title">Create a post</h1>
-                        <form className="editor-form main-editor" autoComplete="off" onSubmit={this.submitHandler}>
+                        <form className="editor-form main-editor" onSubmit={this.submitHandler}>
                             <div className="row m-row align-middle">
                                 <div className="column col-lg-4">
                                     <div className="form__group-30">
-                                        <label className="admin-editor__picture-upload" htmlFor="file">Choose image</label>
+                                        <label className="admin-editor__picture-upload" htmlFor="imageFile">Choose image</label>
+                                        <input type="file" onChange={this.previewImg} id="imageFile" className="hidden"/>
                                     </div>
                                 </div>
                             </div>
-                            <div className={article.imgSrc != null ? 'file-upload-previewer' : 'file-upload-previewer --placeholder'}>
+                            <div className={article.image != null ? 'file-upload-previewer' : 'file-upload-previewer --placeholder'}>
                                 <img src="" alt="" id="image_preview"/>
-                                { errors.imgSrc && <span className="form__error">{errors.imgSrc}</span>    }
+                                { errors.image && <span className="form__error">{errors.image}</span>    }
                             </div>
                             <div
                                 className="existing-img-previewer"
@@ -141,9 +155,6 @@ class AdminEditor extends Component{
                                 </textarea>
                                 { errors.text && <span className="form__error">{errors.text}</span>    }
                             </div>
-                            <div className="hidden">
-                                <input type="file" onChange={() => this.previewImg()} id="file" ref="fileUploader"/>
-                            </div>
                             <button type="submit" className="btn btn-secondary admin-editor__btn">save</button>
                         </form>
                     </div>
@@ -153,4 +164,4 @@ class AdminEditor extends Component{
     }
 }
 
-export default connect()(AdminEditor);
+export default connect(null, {adminAddArticle})(AdminEditor);
