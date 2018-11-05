@@ -49,7 +49,7 @@ class AdminAuth extends Component{
     validate(data){
         const errors = {};
         if(!data.login){ errors.login = "Required field"; }
-        if(!data.password){errors.password = "Required field"; }
+        if(!data.password){ errors.password = "Required field"; }
         return errors;
     }
 
@@ -57,7 +57,6 @@ class AdminAuth extends Component{
         let data= this.state.data;
         let errors = this.state.errors;
         let loading = this.state.loading;
-
         return(
             <div className="adm-auth display-table ">
                 <div className="display-table__cell">
