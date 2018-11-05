@@ -91,9 +91,23 @@
     </script>
   </head>
   <body>
-
     <div id="coder-app"></div>
+    <div id="fb-root"></div>
+    <div class="fb-customerchat"
+         attribution=setup_tool
+         page_id="456005134891456">
+    </div>
+
+
     <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js?76575456"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <script type="text/javascript" defer>
         var _protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
         var _site_hash_code = "136c3efbebd03855ffc4524d7b5a36bc";

@@ -53,16 +53,12 @@ class ContactForm extends React.Component{
             errors.email = 'Email is incorrect';
         }
 
-        if(!data.phone){
-            errors.phone = "Required field";
-        }  else if(!Validator.isLength(data.phone, {min:12, max: 12})) {
+       if(data.phone && !Validator.isLength(data.phone, {min:12, max: 12})) {
             errors.phone = "Phone name must be 10 characters long";
         }
 
         return errors;
     }
-
-
 
     onSubmitHandler(e){
         e.preventDefault();
@@ -102,7 +98,7 @@ class ContactForm extends React.Component{
                             value={data.name}
                             onChange={this.onChangeHandler}
                             autoComplete="off"
-                            placeholder="Enter your full name"
+                            placeholder="First & Last Name"
                         />
                         <label htmlFor="name" className="form__label">
                             <div><span>full name</span></div>
@@ -117,7 +113,7 @@ class ContactForm extends React.Component{
                                     onChange={this.onChangeHandler}
                                     autoComplete="off"
                                     mask="999 999 9999" maskChar=""
-                                    placeholder="Enter your phone"
+                                    placeholder="Cell or work phone"
                         />
                         <label htmlFor="phone" className="form__label">
                             <div><span>phone</span></div>
@@ -133,7 +129,7 @@ class ContactForm extends React.Component{
                             value={data.email}
                             onChange={this.onChangeHandler}
                             autoComplete="off"
-                            placeholder="Enter your email"
+                            placeholder="Best email address to contact you"
                         />
                         <label htmlFor="email" className="form__label">
                             <div><span>e-mail</span></div>
@@ -148,8 +144,7 @@ class ContactForm extends React.Component{
                             value={data.message}
                             onChange={this.onChangeHandler}
                             autoComplete="off"
-                            placeholder="Enter your details"
-
+                            placeholder="A few words about your project"
                         />
                         <label htmlFor="email" className="form__label">
                             <div><span>details</span></div>

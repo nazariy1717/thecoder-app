@@ -13,31 +13,31 @@ class ContactUs extends React.Component{
                         <div className="column col-lg-6 col-md-6 col-xs-12">
                             <div className="title-box contact-us__title">
                                 <p>
-                                    <span>C</span>
-                                    <span>o</span>
-                                    <span>n</span>
-                                    <span>t</span>
-                                    <span>a</span>
-                                    <span>c</span>
+                                    <span>R</span>
+                                    <span>e</span>
+                                    <span>q</span>
+                                    <span>u</span>
+                                    <span>e</span>
+                                    <span>s</span>
                                     <span>t</span>
                                     <span className="sub">m</span>
-                                    <span className="sub">u</span>
+                                    <span>a</span>
                                 </p>
                                 <p>
-                                    <span>u</span>
-                                    <span>s</span>
-                                    <span className="sub">k</span>
-                                    <span className="sub">i</span>
+                                    <span>F</span>
+                                    <span>r</span>
+                                    <span>e</span>
+                                    <span>e</span>
                                     <span className="sub">d</span>
-                                    <span className="sub">p</span>
-                                    <span className="sub">h</span>
-                                    <span className="sub">p</span>
-                                    <span className="sub">j</span>
-                                    <span className="sub">t</span>
+                                    <span>Q</span>
+                                    <span>u</span>
+                                    <span>o</span>
+                                    <span>t</span>
+                                    <span>e</span>
                                 </p>
                                 <h2 className="title-box__hidden">Contact us</h2>
                             </div>
-                            <p className="app-txt">Fill in the form and we will get back to you as soon as we can.</p>
+                            <p className="app-txt">Fill out the form and we will get in touch with you right away.</p>
                         </div>
                         <div className="column col-lg-5 col-md-6 col-xs-12">
                             <ContactForm  />

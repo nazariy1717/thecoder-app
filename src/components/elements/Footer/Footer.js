@@ -1,6 +1,8 @@
 import React from 'react';
-import './footer.scss';
 import Scrollchor from 'react-scrollchor';
+
+import './footer.scss';
+import pdf from './PrivacyPolicy.pdf';
 
 const footer = () => (
     <footer className="footer">
@@ -48,8 +50,8 @@ const footer = () => (
                                 </li>
                                 <li className="footer-nav__item">
                                     <Scrollchor to="#achievements" className="footer-nav__link">
-                                        <span>Team achievements</span>
-                                        <span>Team achievements</span>
+                                        <span>Team experience</span>
+                                        <span>Team experience</span>
                                     </Scrollchor>
                                 </li>
                                 <li className="footer-nav__item">
@@ -104,11 +106,16 @@ const footer = () => (
             </div>
         </div>
         <div className="copyright">
-            <div className="container">
-                <p className="copyright__txt">All rights reserved 2018. <a href="https://www.iubenda.com/privacy-policy/64548822" className="iubenda-white iubenda-embed footer__privacy-policy" title="Privacy Policy">Privacy Policy</a></p>
-            </div>
+            <p className="copyright__txt">All rights reserved 2018.
+                <a href={pdf} target='_blank' className="footer-nav__link copyright__link">
+                    <span> Privacy Policy</span>
+                    <span> Privacy Policy</span>
+                </a>
+            </p>
+
         </div>
     </footer>
+
 );
 
 export default footer;

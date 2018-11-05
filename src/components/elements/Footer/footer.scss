@@ -20,10 +20,6 @@
       height: 105px;
     }
   }
-  &__privacy-policy{
-    text-align: center;
-    display: block;
-  }
   &__row{
     @media (max-width: $breakpoint-sm) {
       margin: 0 -7px;
@@ -63,6 +59,8 @@
   }
   &__link{
     height: 24px;
+    width: 24px;
+    text-align: center;
     display: block;
     overflow: hidden;
     margin-bottom: 10px;
@@ -81,11 +79,12 @@
     }
   }
   &__social{
+    margin-bottom: 0;
     li{
       display: inline-block;
     }
     li + li{
-      margin-left: 20px;
+      margin-left: 15px;
 
     }
   }
@@ -120,14 +119,20 @@
 
 .copyright{
   line-height: 36px;
-  background-color: #000;
   @media (max-width: $breakpoint-sm) {
     padding-bottom: 45px;
   }
   &__txt{
     font-size: 14px;
-    color: #fff;
+    color: #000;
+    font-weight: 700;
     text-align: center;
+  }
+  &__link{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-bottom: 3px;
   }
 }
 

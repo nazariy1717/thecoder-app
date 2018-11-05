@@ -27,7 +27,7 @@ class Menu extends React.Component{
                             <Link to="/#achievements" className="menu__link" onClick={this.props.close}>Team achievements</Link>
                         </li>
                         <li className="menu__item">
-                            <Link to="/#our-mission" className="menu__link" onClick={this.props.close}>Our Mission</Link>
+                            <Link to="/#our-mission" className="menu__link" onClick={this.props.close}>Mission Statement</Link>
                         </li>
                         <li className="menu__item">
                             <Link to="/#contact-us" className="menu__link" onClick={this.props.close}>Contact us</Link>

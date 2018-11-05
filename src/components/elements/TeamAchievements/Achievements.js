@@ -53,15 +53,15 @@ class Achievements extends React.Component{
                                 <p><strong>8448</strong> hours</p>
                             </div>
                             <div className="achievement-item__txt">
-                                <p>Experience in website developing</p>
+                                <p>Experience in website development</p>
                             </div>
                         </div>
                         <div className="achievement-item --item-3">
                             <div className="achievement-item__title">
-                                <p><strong>51</strong></p>
+                                <p><strong>31</strong></p>
                             </div>
                             <div className="achievement-item__txt">
-                                <p>51 websites built</p>
+                                <p>E-commerce websites built</p>
                             </div>
                         </div>
                         <div className="achievement-item --item-4">
@@ -74,13 +74,10 @@ class Achievements extends React.Component{
                         </div>
                         <div className="achievement-item --item-5">
                             <div className="achievement-item__title">
-                                <p><strong>5</strong></p>
+                                <p><strong>20</strong></p>
                             </div>
                             <div className="achievement-item__txt">
-                                <p>startups launched with</p>
-                            </div>
-                            <div className="achievement-item__txt">
-                                <p>"business start" system</p>
+                                <p>Сommercial websites built</p>
                             </div>
                         </div>
                         <div className="achievement-item --item-6">
@@ -88,7 +85,7 @@ class Achievements extends React.Component{
                                 <p><strong>12</strong></p>
                             </div>
                             <div className="achievement-item__txt">
-                                <p>startups launched with our products</p>
+                                <p>Startups launched with our products</p>
                             </div>
                         </div>
                     </div>
