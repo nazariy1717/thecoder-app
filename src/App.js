@@ -14,7 +14,7 @@ import AdminDashboard from './components/admin/AdminDashboard/AdminDashboard';
 import AdminEditor from './components/admin/AdminEditor/AdminEditor';
 
 import ThanksPage from './components/pages/ThanksPage/ThanksPage';
-import NotFoundPage from './components/pages/NotFoundPage/NotFoundPage';
+// import NotFoundPage from './components/pages/NotFoundPage/NotFoundPage';
 
 
 const App = (location) =>(

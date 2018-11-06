@@ -32,11 +32,11 @@ module.exports = (router) => {
     /* add an article */
     router.post('/article', upload.single('image'), articleController.addArticle);
 
-
-
-
     /* get all articles */
     router.route('/articles').get(articleController.getAll);
+
+
+
 
     /* clap on an article */
     router.route('/article/clap').post(articleController.clapArticle);

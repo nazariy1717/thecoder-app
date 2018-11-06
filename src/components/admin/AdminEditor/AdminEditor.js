@@ -39,30 +39,24 @@ class AdminEditor extends Component{
         this.setState({ errors });
         const article = this.state.article;
         if(Object.keys(errors).length === 0){
-            console.log(article);
             let fd = new FormData();
             fd.append('title', article.title);
             fd.append('description', article.description);
             fd.append('text', article.text);
             fd.append('claps', 0);
             fd.append('image', article.image, article.image.name);
-
-            this.props.adminAddArticle(fd).then(()=> {
-                notify.show("Post was created successfully", "success");
-            });
-
+            this.props.adminAddArticle(fd)
+                .then(() => notify.show("Post was created successfully", "success"))
+                .catch(err => console.log('There was an error:' + err));
         }
     }
 
     previewImg (e) {
-        console.log(e);
-        console.log(e.target.files[0]);
-        console.log(e.target.result);
-        this.setState({ article: {  ...this.state.article, image: e.target.files[0] }});
+        this.setState({ article: { ...this.state.article, image: e.target.files[0] }});
         let reader = new FileReader();
         reader.onload = function (e) {
             document.getElementById('image_preview').src = e.target.result;
-        }.bind(this);
+        };
         reader.readAsDataURL(e.target.files[0]);
     }
 

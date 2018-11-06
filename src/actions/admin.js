@@ -17,8 +17,6 @@ export const adminLogin = credentials => dispatch =>
     });
 
 export const adminLogout = () => dispatch => {
-    console.log(localStorage);
-
     localStorage.removeItem('adminJWT');
     dispatch(adminLoggedOut());
 };
