@@ -7,7 +7,7 @@ class ContactUs extends React.Component{
 
     render() {
         return (
-            <section className="section contact-us" id="contact-us">
+            <section className="section contact-us" id="get-started">
                 <div className="container">
                     <div className="row m-row align-middle">
                         <div className="column col-lg-6 col-md-6 col-xs-12">
@@ -37,7 +37,7 @@ class ContactUs extends React.Component{
                                 </p>
                                 <h2 className="title-box__hidden">Contact us</h2>
                             </div>
-                            <p className="app-txt">Fill out the form and we will get in touch with you right away.</p>
+                            <p className="app-txt contact-us__txt">Fill out the form and we will get in touch with you right away.</p>
                         </div>
                         <div className="column col-lg-5 col-md-6 col-xs-12">
                             <ContactForm  />

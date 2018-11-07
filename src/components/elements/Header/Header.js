@@ -134,9 +134,9 @@ class Header extends React.Component{
                                         </Link>
                                     </li>
                                     <li className="header__list-item">
-                                        <Link to="/#contact-us" className="header__list-link">
-                                            <span>Contact us</span>
-                                            <span>Contact us</span>
+                                        <Link to="/#get-started" className="header__list-link">
+                                            <span>Get started</span>
+                                            <span>Get started</span>
                                         </Link>
                                     </li>
                                 </ul>

@@ -61,9 +61,9 @@ const footer = () => (
                                     </Scrollchor>
                                 </li>
                                 <li className="footer-nav__item">
-                                    <Scrollchor to="#contact-us" className="footer-nav__link">
-                                        <span>Contact us</span>
-                                        <span>Contact us</span>
+                                    <Scrollchor to="#get-started" className="footer-nav__link">
+                                        <span>Get started</span>
+                                        <span>Get started</span>
                                     </Scrollchor>
                                 </li>
                             </ul>

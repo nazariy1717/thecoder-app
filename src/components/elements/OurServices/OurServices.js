@@ -11,7 +11,7 @@ class OurServices extends React.Component{
                     <div className="our-services__content">
                         <div className="our-services__tab --active" id="tab-1">
                             <div className="row m-row align-middle">
-                                <div className="column col-lg-5 col-xs-12">
+                                <div className="column col-xs-12">
                                     <div className="our-services__title title-box">
                                         <p>
                                             <span>o</span>
@@ -42,50 +42,62 @@ class OurServices extends React.Component{
                                         </p>
                                         <h2 className="title-box__hidden">Our Services</h2>
                                     </div>
-                                    <Scrollchor type="button" className="btn btn-primary our-services__btn" to="contact-us" animate={{duration: 250}}>
-                                        <i className="btn-primary__line btn-primary__line-1"></i>
-                                        <i className="btn-primary__line btn-primary__line-2"></i>
-                                        <span className="btn-primary__txt">Contact Us</span>
-                                        <span className="btn-primary__txt">Contact Us</span>
-                                    </Scrollchor>
                                 </div>
-                                <div className="column col-lg-7 col-xs-12">
+                                <div className="column col-xs-12">
                                     <div className="our-services__right">
                                         <div className="services-item">
                                             <span className="services-item__title">
                                                 <i>01</i>Website development
                                             </span>
-                                            <p className="services-item__txt">We offer individual solutions for our clients. Every website with its unique design and functionality is tailored to accomplish each customer's business needs.</p>
+                                            <p className="services-item__txt">Custom built website on framework or WordPress/Squarespace? We will review business objectives with you and provide recommended solution. With 50+ websites built, we know what it takes to skyrocket your business while remaining on budget. We work with the following technologies:</p>
+                                            <p className="services-item__inner-txt">
+                                                <span>Front end</span>
+                                                HTML5, Jade, CSS3, SASS, LESS, Gulp, Grunt, Webpack, JS6, JQuery, ReactJS, AngularJS
+                                            </p>
+                                            <p className="services-item__inner-txt">
+                                                <span>Back end</span>
+                                                PHP, CakePhp, Yii, NodeJs
+                                            </p>
+                                            <p className="services-item__inner-txt">
+                                                <span>CMS</span>
+                                                Magento, Squarespace, WordPress, Joomla, OpenCart
+                                            </p>
+                                            <p className="services-item__inner-txt">
+                                                <span>Databases</span>
+                                                MongoDB, MySQL
+                                            </p>
+                                        </div>
+                                        <div className="services-item">
+                                            <span className="services-item__title">
+                                                <i>02</i>Maintenance
+                                            </span>
+                                            <p className="services-item__txt">While WordPress or Squarespace websites require little maintenance, if you need someone to quickly make any content changes, we are here for you. With the custom sites built on framework, we offer packages with:</p>
                                             <ul className="services-item__list row m-row">
-                                                <li className="column">- E-commerce</li>
-                                                <li className="column">- UX/UI design</li>
-                                                <li className="column">- Corporate websites</li>
-                                                <li className="column">- Cross-browser and cross-platform compatibility</li>
+                                                <li className="column">- Regular framework and plugin updates</li>
+                                                <li className="column">- Regular backups</li>
+                                                <li className="column">- SSL certificate and latest security compliance</li>
+                                                <li className="column">- Website testing and ongoing improvement of loading speeds </li>
+                                                <li className="column">- Content updates</li>
                                             </ul>
                                         </div>
                                         <div className="services-item">
                                             <span className="services-item__title">
-                                                <i>02</i>Branding - visual elements
+                                                <i>03</i>Branding - visual identity
                                             </span>
                                             <p className="services-item__txt">Brands have emotional connections with their customers and we know how to build those connections by developing relevant:</p>
                                             <ul className="services-item__list row m-row">
                                                 <li className="column">- Logos</li>
-                                                <li className="column">- Typographic elements</li>
-                                                <li className="column">- Style guide</li>
-                                            </ul>
-                                        </div>
-                                        <div className="services-item">
-                                            <span className="services-item__title">
-                                                <i>03</i>Consulting & Marketing
-                                            </span>
-                                            <p className="services-item__txt">We launched over 50 web projects and know what it takes to start your business successfully</p>
-                                            <ul className="services-item__list row m-row">
-                                                <li className="column">- Digital Marketing</li>
-                                                <li className="column">- Social Media Marketing</li>
-                                                <li className="column">- Email Marketing</li>
+                                                <li className="column">- Style guides</li>
+                                                <li className="column">- Brand collateral</li>
                                             </ul>
                                         </div>
                                     </div>
+                                    <Scrollchor type="button" className="btn btn-primary our-services__btn" to="get-started" animate={{duration: 250}}>
+                                        <i className="btn-primary__line btn-primary__line-1"></i>
+                                        <i className="btn-primary__line btn-primary__line-2"></i>
+                                        <span className="btn-primary__txt">Get started</span>
+                                        <span className="btn-primary__txt">Get started</span>
+                                    </Scrollchor>
                                 </div>
                             </div>
                         </div>

@@ -18,15 +18,12 @@
     margin: auto;
     max-width: 445px;
   }
-  &__btn{
-    @media (max-width: $breakpoint-lg){
-      margin-bottom: 30px;
-    }
-    @media (max-width: $breakpoint-sm){
-      display: none;
-    }
+  &__right{
+    margin-bottom: 60px;
   }
-
+  &__btn{
+    margin: auto;
+  }
 }
 
 .services-item{
@@ -114,6 +111,24 @@
       font-size: 14px;
      }
   }
+  &__inner-txt{
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding-left: 50px;
+    @media (max-width: $breakpoint-sm){
+      padding-left: 0;
+    }
+    span{
+      display: block;
+      font-family: Myriad Pro,sans-serif;
+      color: var(--primary-gray);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
   &__list{
     padding-left: 50px;
     @media (max-width: $breakpoint-sm){
@@ -124,6 +139,14 @@
       font-family: 'Raleway', sans-serif;
       font-size: 14px;
       font-weight: 700;
+      span{
+        display: block;
+        font-family: Myriad Pro,sans-serif;
+        color: var(--primary-gray);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+      }
     }
   }
 }

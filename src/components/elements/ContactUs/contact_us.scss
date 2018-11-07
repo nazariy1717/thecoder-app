@@ -14,4 +14,9 @@
   &__title{
     margin-bottom: 20px;
   }
+  &__txt{
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 30px;
+    }
+  }
 }
