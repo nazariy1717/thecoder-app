@@ -35,6 +35,9 @@ module.exports = (router) => {
     /* get all articles */
     router.route('/articles').get(articleController.getAll);
 
+    /* remove an article */
+    router.delete('/removeArticle/:articleId', articleController.removeArticle);
+
 
 
 

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import AdminHeader from '../AdminHeader/AdminHeader';
 import { connect } from 'react-redux'
-import {loadArticles} from '../../../actions/articles';
+import {loadArticles, removeArticle} from '../../../actions/articles';
 import './admin-dashboard.scss';
 
 
@@ -28,7 +28,9 @@ class AdminDashboard extends Component{
     }
 
     removePost(id){
-        console.log(id);
+        this.props.removeArticle(id).then((response)=>{
+            console.log(response);
+        });
     }
 
     render(){
@@ -78,4 +80,4 @@ class AdminDashboard extends Component{
     }
 }
 
-export default connect(mapStateToProps, {loadArticles})(AdminDashboard);
+export default connect(mapStateToProps, {loadArticles, removeArticle})(AdminDashboard);

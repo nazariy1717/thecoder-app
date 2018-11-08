@@ -1,4 +1,4 @@
-import {ADD_ARTICLE, LOAD_ARTICLES, VIEW_ARTICLE, CLAP_ARTICLE} from '../types';
+import {ADD_ARTICLE, LOAD_ARTICLES, REMOVE_ARTICLE, VIEW_ARTICLE, CLAP_ARTICLE} from '../types';
 import api from '../api';
 
 
@@ -25,6 +25,16 @@ export function loadArticles() {
 }
 
 
+/* REMOVE_ARTICLE */
+export const removedArticle = (article) => ({
+    type: REMOVE_ARTICLE,
+    article
+});
+export const removeArticle = article_id => dispatch =>
+    api.articles.removeArticle(article_id).then(response => {
+        console.log(response);
+        dispatch(removedArticle(response.removedArticle));
+    });
 
 
 

@@ -1,4 +1,4 @@
-import {ADD_ARTICLE, LOAD_ARTICLES, VIEW_ARTICLE, CLAP_ARTICLE} from '../types';
+import {ADD_ARTICLE, LOAD_ARTICLES, REMOVE_ARTICLE, VIEW_ARTICLE, CLAP_ARTICLE} from '../types';
 
 const initialState = {
     articles: [],
@@ -16,6 +16,13 @@ export default (state=initialState, action={}) => {
             return{
                 ...state,
                 articles: action.articles
+            };
+        case REMOVE_ARTICLE:
+            console.log(action);
+            console.log(state);
+            return {
+                ...state,
+                articles: state.articles.filter(item => item._id !== action.article._id)
             };
         case VIEW_ARTICLE:
             return{

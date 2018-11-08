@@ -7,6 +7,7 @@ export default{
     articles:{
         addArticle: (article) => axios.post('/api/article', article).then(res => res.data),
         getArticles: () => axios.get('/api/articles').then(res => res.data),
+        removeArticle: (article_id) => axios.delete(`/api/removeArticle/${article_id}`).then(res => res.data),
 
 
 
