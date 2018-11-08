@@ -9,8 +9,8 @@ import Achievements from "../elements/TeamAchievements/Achievements";
 import OurServices from "../elements/OurServices/OurServices";
 import OurTeam from "../elements/OurTeam/OurTeam";
 import OurClients from "../elements/OurClients/OurClients";
-
-
+import Header from "../elements/Header/Header";
+import Footer from "../elements/Footer/Footer";
 
 class HomePage extends Component {
 
@@ -21,6 +21,7 @@ class HomePage extends Component {
     render() {
         return (
             <div>
+                <Header />
                 <FirstScreen />
                 <OurServices />
                 <OurWorks />
@@ -30,6 +31,7 @@ class HomePage extends Component {
                 <OurMission />
                 <Testimonials />
                 <ContactUs />
+                <Footer />
             </div>
         );
     }
