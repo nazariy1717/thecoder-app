@@ -1,6 +1,7 @@
 import Article from './../models/Article';
 import mongoose from 'mongoose';
-import {PORT} from '../conf';
+import moment from 'moment';
+
 
 module.exports = {
 
@@ -12,6 +13,7 @@ module.exports = {
             text: req.body.text,
             claps: req.body.claps,
             articleImg: req.file.path,
+            created: moment().format('DD-MM-YYYY')
         });
         article.save().then(result => {
             res.status(201).json({
@@ -22,6 +24,7 @@ module.exports = {
                     text: result.text,
                     claps: result.claps,
                     _id: result._id,
+                    created: result.created,
                     request: {
                         type: 'GET',
                         url: `http://localhost:8080/article/` + result._id
@@ -37,10 +40,9 @@ module.exports = {
 
     getAll: (req, res, next) => {
         Article.find()
-            .select("title description text claps articleImg _id")
+            .select("title description text claps articleImg _id created")
             .exec()
             .then(docs => {
-                console.log(docs);
                 const response = docs.map(doc => {
                     return {
                         title: doc.title,
@@ -49,6 +51,7 @@ module.exports = {
                         claps: doc.claps,
                         articleImg: "http://localhost:8080/" + doc.articleImg,
                         _id: doc._id,
+                        created: doc.created,
                         request: {
                             type: "GET",
                             url: "http://localhost:8080/article/" + doc._id

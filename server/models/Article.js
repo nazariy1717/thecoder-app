@@ -5,8 +5,10 @@ let ArticleSchema = new mongoose.Schema({
     description: { type: String, required: true},
     text: { type: String, required: true},
     claps: { type: Number, required: true},
-    articleImg: { type: String, required: true}
+    articleImg: { type: String, required: true},
+    created: { type: String, required: true}
 });
+
 
 ArticleSchema.methods.clap = function() {
     this.claps++;

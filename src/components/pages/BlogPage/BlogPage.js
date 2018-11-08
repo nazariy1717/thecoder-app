@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './blog-wrap.scss'
 import { Helmet } from "react-helmet";
 
@@ -146,18 +145,6 @@ class BlogPage extends React.Component{
         )
     }
 }
-
-BlogPage.propTypes ={
-    posts: {
-        id: PropTypes.number,
-        url: PropTypes.string,
-        title: PropTypes.string,
-        description_short: PropTypes.string,
-        date: PropTypes.number,
-        category: PropTypes.array,
-        image: PropTypes.string,
-    }
-};
 
 export default BlogPage;
 
