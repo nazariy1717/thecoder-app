@@ -5,6 +5,7 @@ import MediumEditor from 'medium-editor';
 import Notifications, {notify} from 'react-notify-toast';
 import AdminHeader from "../AdminHeader/AdminHeader";
 import {adminAddArticle} from "../../../actions/articles";
+import ReactLoading from 'react-loading';
 
 import './../../../../node_modules/medium-editor/dist/css/medium-editor.min.css'
 import './../../../../node_modules/medium-editor/dist/css/themes/default.min.css'
@@ -39,6 +40,7 @@ class AdminEditor extends Component{
         this.setState({ errors });
         const article = this.state.article;
         if(Object.keys(errors).length === 0){
+            this.setState({loading: true});
             let fd = new FormData();
             fd.append('title', article.title);
             fd.append('description', article.description);
@@ -46,7 +48,20 @@ class AdminEditor extends Component{
             fd.append('claps', 0);
             fd.append('image', article.image, article.image.name);
             this.props.adminAddArticle(fd)
-                .then(() => notify.show("Post was created successfully", "success"))
+                .then(() => {
+                    this.setState({
+                        article: {
+                            title: '',
+                            description: '',
+                            text: '',
+                            image: null,
+                        },
+                        loading: false
+                    });
+                    document.getElementById('image_preview').src = "";
+                    document.querySelector('.medium-editable').innerHTML = '';
+                    notify.show("Post was created successfully", "success")
+                })
                 .catch(err => console.log('There was an error:' + err));
         }
     }
@@ -113,6 +128,13 @@ class AdminEditor extends Component{
             <div className="admin-wrapper">
                 <AdminHeader />
                 <Notifications />
+
+                { (this.state.loading) ?
+                    <div className="admin-editor__loader">
+                        <ReactLoading  height={'5%'} width={'5%'} />
+                    </div>
+                    : ''
+                }
                 <div className="admin-content">
                     <div className="admin-editor">
                         <h1 className="admin-editor__head-title">Create a post</h1>

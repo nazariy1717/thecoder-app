@@ -32,7 +32,6 @@ export const removedArticle = (article) => ({
 });
 export const removeArticle = article_id => dispatch =>
     api.articles.removeArticle(article_id).then(response => {
-        console.log(response);
         dispatch(removedArticle(response.removedArticle));
     });
 

@@ -8,21 +8,16 @@ const initialState = {
 export default (state=initialState, action={}) => {
     switch (action.type) {
         case ADD_ARTICLE:
-            return{
-                ...state,
-                articles: action.article
-            };
+            return state;
         case LOAD_ARTICLES:
             return{
                 ...state,
                 articles: action.articles
             };
         case REMOVE_ARTICLE:
-            console.log(action);
-            console.log(state);
             return {
                 ...state,
-                articles: state.articles.filter(item => item._id !== action.article._id)
+                articles: state.articles.reverse().filter(item => item._id !== action.article._id)
             };
         case VIEW_ARTICLE:
             return{

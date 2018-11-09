@@ -3,6 +3,21 @@
   padding: 0 75px;
   max-width: 1200px;
   margin: auto;
+  &__loader{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.54);
+    z-index: 9;
+    > div{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
   &__head-title{
     color: var(--black);
     font-family: Raleway,sans-serif;

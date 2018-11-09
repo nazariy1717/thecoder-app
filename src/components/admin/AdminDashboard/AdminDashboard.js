@@ -3,6 +3,8 @@ import AdminHeader from '../AdminHeader/AdminHeader';
 import { connect } from 'react-redux'
 import {loadArticles, removeArticle} from '../../../actions/articles';
 import './admin-dashboard.scss';
+import Notifications, {notify} from 'react-notify-toast';
+
 
 
 const mapStateToProps = state => {
@@ -28,9 +30,7 @@ class AdminDashboard extends Component{
     }
 
     removePost(id){
-        this.props.removeArticle(id).then((response)=>{
-            console.log(response);
-        });
+        this.props.removeArticle(id).then(()=>notify.show("Article deleted", "success"));
     }
 
     render(){
@@ -64,14 +64,17 @@ class AdminDashboard extends Component{
                </div>
            )
         });
+        console.log(articles);
         return(
             <div className="admin-wrapper">
                 <AdminHeader />
+                <Notifications />
                 <div className="admin-content">
                     <div className="container">
                         <h1 className="admin-content__title">All posts</h1>
                         <div className="row m-row">
                             {articles}
+                            { (!articles.length) ? <div>Not found any posts</div> : '' }
                         </div>
                     </div>
                 </div>
