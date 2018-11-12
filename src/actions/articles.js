@@ -37,16 +37,21 @@ export const removeArticle = article_id => dispatch =>
 
 
 
+/* GET_ARTICLE */
+export const viewArticle = (article) => ({
+    type: VIEW_ARTICLE,
+    article
+});
+export const getArticle = article_id => dispatch =>
+    api.articles.getArticle(article_id).then(response => {
+        console.log(response);
+        dispatch(viewArticle(response));
+    });
 
 
-export function getArticle(article_id) {
-    return (dispatch) => {
-        api.getArticle(article_id).then( res => {
-            let article = res.data;
-            dispatch({ type: VIEW_ARTICLE, article })
-        });
-    }
-}
+
+
+
 
 export function clapArticle(article_id) {
     return (dispatch) => {

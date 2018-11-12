@@ -44,8 +44,12 @@
     color: var(--primary-gray);
     font-size: 15px;
     font-weight: 400;
-    height: 90px;
+    height: 100px;
     display: -webkit-box;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
   }
   &__btn{

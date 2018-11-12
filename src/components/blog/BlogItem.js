@@ -7,7 +7,7 @@ const BlogItem = (props) =>{
     return(
         <div className="column col-md-4" >
             <article className="blog-item">
-                <Link to="/">
+                <Link to={`/blog/${item._id}`}>
                     <figure className="blog-item__figure">
                         <img src={item.articleImg} alt={item.title} title={item.title}/>
                     </figure>

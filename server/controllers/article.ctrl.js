@@ -88,11 +88,42 @@ module.exports = {
             });
     },
 
+
+    getArticle: (req, res, next) => {
+        const id = req.params.id;
+        Article.findById(id)
+            .select('title text claps articleImg created')
+            .exec()
+            .then(docs => {
+                console.log(docs);
+                if (docs) {
+                    const response =  {
+                            title: docs.title,
+                            text: docs.text,
+                            claps: docs.claps,
+                            articleImg: "http://localhost:8080/" + docs.articleImg,
+                            created: docs.created,
+                        };
+                    res.status(201).json(response);
+                } else {
+                    res
+                        .status(404)
+                        .json({ message: "No valid entry found for provided ID" });
+                }
+            })
+            .catch(err => {
+                console.log(err);
+                res.status(500).json({ error: err });
+            });
+    },
+
+
+
+
+
     clapArticle: (req, res, next) => {
 
     },
 
-    getArticle: (req, res, next) => {
 
-    }
 };

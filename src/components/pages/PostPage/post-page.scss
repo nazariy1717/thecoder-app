@@ -17,10 +17,7 @@
     line-height: 48px;
   }
   &__image{
-    height: 380px;
-    background: center no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
+    max-width: 100%;
     margin-bottom: 5px;
   }
   &__subtitle{
@@ -39,6 +36,22 @@
     }
     li + li{
       margin-left: 7px;
+    }
+  }
+  &__content{
+    h2,h3{
+      display: block;
+      color: #000;
+      font-family: Raleway,sans-serif;
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 36px;
+    }
+    ul{
+      list-style-type: disc;
+      li{
+        display: list-item;
+      }
     }
   }
 }

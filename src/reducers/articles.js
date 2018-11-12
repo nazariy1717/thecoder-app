@@ -24,6 +24,9 @@ export default (state=initialState, action={}) => {
                 ...state,
                 article: action.article
             };
+
+
+
         case CLAP_ARTICLE:
             let article = Object.assign({}, state.article);
             article.claps++;

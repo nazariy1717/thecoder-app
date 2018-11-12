@@ -65,9 +65,13 @@ class BlogPage extends React.Component{
                     <div className="blog-wrap__content">
                         <div className="row m-row">
                             {
-                                articles.map((item, index) => {
-                                    return <BlogItem data={item} key={index}/>
-                                })
+                                (articles.length) ?
+                                    articles.map((item, index) => {
+                                        return <BlogItem data={item} key={index}/>
+                                    }) :
+                                    <div>
+                                        Not found any posts
+                                    </div>
                             }
                         </div>
                     </div>

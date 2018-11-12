@@ -113,7 +113,7 @@ class AdminEditor extends Component{
                 this.setState({
                     article:{
                         ...this.state.article,
-                        description: `${editor.getContent(0).substring(0,30).toString()}`,
+                        description: `${editor.getContent(0).substring(0,300).toString()}`,
                         text: editor.getContent(0)
                     }
                 });

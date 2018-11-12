@@ -38,13 +38,13 @@ module.exports = (router) => {
     /* remove an article */
     router.delete('/removeArticle/:articleId', articleController.removeArticle);
 
-
+    /* get an article */
+    router.get('/article/:id', articleController.getArticle);
 
 
     /* clap on an article */
     router.route('/article/clap').post(articleController.clapArticle);
 
-    /* get an article */
-    router.route('/article/:id').get(articleController.getArticle)
+
 
 };
