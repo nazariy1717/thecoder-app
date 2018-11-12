@@ -15,8 +15,6 @@ const mapStateToProps = state => {
 class PostPage extends React.Component{
 
     componentWillMount() {
-        console.log(this.props);
-        console.log(this.props.match.params.post);
         this.props.getArticle(this.props.match.params.post)
     }
 
@@ -26,12 +24,12 @@ class PostPage extends React.Component{
         return(
             <div className="post-wrap">
                 <Helmet>
-                    <title>Post Title</title>
-                    <meta name="description" content="Lorem ipsum dolor sit amet" />
-                    <meta property="og:title" content="Post Title" />
-                    <meta property="og:description" content="Lorem ipsum dolor sit amet"/>
+                    <title>{article.title}</title>
+                    <meta name="description" content={article.description} />
+                    <meta property="og:title" content={article.title} />
+                    <meta property="og:description" content={article.description}/>
                     <meta property="og:url" content="https://www.thecoderdev.com/"/>
-                    <meta property="og:image" content="http://www.offscreen.be/sites/default/files/images/movie/fight-club-3.jpg"/>
+                    <meta property="og:image" content={ `https://www.thecoderdev.com/ + ${article.articleImg}`} />
                 </Helmet>
                 <div className="container">
                     <div className="post">

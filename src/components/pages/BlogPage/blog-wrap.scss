@@ -3,5 +3,6 @@
   min-height: 100vh;
   &__content{
     padding: 50px 0 100px 0;
+    min-height: calc(100vh - 260px);
   }
 }

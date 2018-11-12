@@ -1,0 +1,21 @@
+
+.editor-images-list{
+  border: 1px solid;
+  padding: 15px 5px;
+  position: absolute;
+  right: 60px;
+  width: 255px;
+  bottom: 95px;
+  &__btn{
+    width: 150px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    border-radius: 3px;
+    background-color: #329c0d;
+    color: #fff;
+    line-height: 28px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+}

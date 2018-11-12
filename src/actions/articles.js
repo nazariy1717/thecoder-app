@@ -44,7 +44,6 @@ export const viewArticle = (article) => ({
 });
 export const getArticle = article_id => dispatch =>
     api.articles.getArticle(article_id).then(response => {
-        console.log(response);
         dispatch(viewArticle(response));
     });
 

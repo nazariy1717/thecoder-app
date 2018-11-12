@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { connect } from 'react-redux'
 import BlogItem from '../../blog/BlogItem'
 import {loadArticles} from '../../../actions/articles';
+import {Link} from "react-router-dom";
 
 
 const mapStateToProps = state => {
@@ -75,6 +76,14 @@ class BlogPage extends React.Component{
                             }
                         </div>
                     </div>
+                    <ul className="post-breadcrumb">
+                        <li className="post-breadcrumb__item" itemScope itemType = "http://data-vocabulary.org/Breadcrumb">
+                            <Link to="/" className="post-breadcrumb__link" itemProp="url">Main</Link>
+                        </li>
+                        <li className="post-breadcrumb__item"  itemScope itemType = "http://data-vocabulary.org/Breadcrumb">
+                            <span className="post-breadcrumb__link active">Blog</span>
+                        </li>
+                    </ul>
                 </div>
             </section>
         )

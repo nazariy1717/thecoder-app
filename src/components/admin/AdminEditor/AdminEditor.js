@@ -6,6 +6,7 @@ import Notifications, {notify} from 'react-notify-toast';
 import AdminHeader from "../AdminHeader/AdminHeader";
 import {adminAddArticle} from "../../../actions/articles";
 import ReactLoading from 'react-loading';
+import ImagesList from './ImagesList';
 
 import './../../../../node_modules/medium-editor/dist/css/medium-editor.min.css'
 import './../../../../node_modules/medium-editor/dist/css/themes/default.min.css'
@@ -20,6 +21,7 @@ class AdminEditor extends Component{
                 description: '',
                 text: '',
                 image: null,
+                uploadImages: null,
             },
             errors: [],
             loading: false
@@ -28,6 +30,8 @@ class AdminEditor extends Component{
         this.onChangeHandler = this.onChangeHandler.bind(this);
         this.submitHandler = this.submitHandler.bind(this);
         this.validate = this.validate.bind(this);
+        this.uploadImage = this.uploadImage.bind(this);
+
     }
 
     onChangeHandler(e){
@@ -73,6 +77,21 @@ class AdminEditor extends Component{
             document.getElementById('image_preview').src = e.target.result;
         };
         reader.readAsDataURL(e.target.files[0]);
+    }
+
+    uploadImage(e){
+        console.log(e.target.files);
+        let reader = new FileReader();
+        Array.from(e.target.files).forEach( (item, index) => {
+            reader.onload = function (e) {
+                console.log(e.target.result);
+            };
+            reader.readAsDataURL(e.target.files[index]);
+            this.setState({
+                article: { ...this.state.article, uploadImages: item  }
+            });
+        });
+
     }
 
     validate(data){
@@ -137,6 +156,7 @@ class AdminEditor extends Component{
                 }
                 <div className="admin-content">
                     <div className="admin-editor">
+
                         <h1 className="admin-editor__head-title">Create a post</h1>
                         <form className="editor-form main-editor" onSubmit={this.submitHandler}>
                             <div className="row m-row align-middle">
@@ -173,6 +193,7 @@ class AdminEditor extends Component{
                             </div>
                             <button type="submit" className="btn btn-secondary admin-editor__btn">save</button>
                         </form>
+                        <ImagesList onChangeHandler={this.uploadImage} />
                     </div>
                 </div>
             </div>

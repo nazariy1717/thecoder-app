@@ -23,6 +23,10 @@ class HomePage extends Component {
             <div>
                 <Helmet>
                     <title>THE CODER - Website development company</title>
+                    <meta name="description" content="Our company is your trusted partner in creative website development, UX/UI design and branding. With specialists in the USA and overseas, your cost is guaranteed to be very competitive." />
+                    <meta property="og:title" content="THE CODER - Website development company" />
+                    <meta property="og:description" content="Our company is your trusted partner in creative website development, UX/UI design and branding. With specialists in the USA and overseas, your cost is guaranteed to be very competitive."/>
+                    <meta property="og:url" content="https://thecoderdev.com"/>
                 </Helmet>
                 <FirstScreen />
                 <OurServices />

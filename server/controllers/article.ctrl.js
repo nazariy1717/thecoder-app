@@ -6,16 +6,18 @@ import moment from 'moment';
 module.exports = {
 
     addArticle: (req, res, next) => {
-        const article = new Article({
+        const newArticle = new Article({
             _id: new mongoose.Types.ObjectId(),
             title: req.body.title,
             description: req.body.description,
             text: req.body.text,
             claps: req.body.claps,
             articleImg: req.file.path,
-            created: moment().format('DD-MM-YYYY')
+            created: moment().format('DD-MM-YYYY'),
+            slug: req.body.title.replace(/[\\/:"*?+!_.’”“<>|]/g, '').replace(/ /g, '-')
         });
-        article.save().then(result => {
+        console.log(newArticle);
+        newArticle.save().then(result => {
             res.status(201).json({
                 message: "Article created successfully",
                 createdArticle: {
@@ -25,10 +27,7 @@ module.exports = {
                     claps: result.claps,
                     _id: result._id,
                     created: result.created,
-                    request: {
-                        type: 'GET',
-                        url: `http://localhost:8080/article/` + result._id
-                    }
+                    slug: result.slug
                 }
             });
         })
@@ -37,10 +36,9 @@ module.exports = {
         });
     },
 
-
     getAll: (req, res, next) => {
         Article.find()
-            .select("title description text claps articleImg _id created")
+            .select("title description text claps articleImg _id created slug")
             .exec()
             .then(docs => {
                 const response = docs.map(doc => {
@@ -52,10 +50,7 @@ module.exports = {
                         articleImg: "http://localhost:8080/" + doc.articleImg,
                         _id: doc._id,
                         created: doc.created,
-                        request: {
-                            type: "GET",
-                            url: "http://localhost:8080/article/" + doc._id
-                        }
+                        slug: doc.slug
                     };
                 });
                 res.status(201).json(response);
@@ -90,14 +85,13 @@ module.exports = {
 
 
     getArticle: (req, res, next) => {
-        const id = req.params.id;
-        Article.findById(id)
+        const slug = req.params.id;
+        Article.findOne({slug: slug})
             .select('title text claps articleImg created')
             .exec()
             .then(docs => {
-                console.log(docs);
                 if (docs) {
-                    const response =  {
+                    const response = {
                             title: docs.title,
                             text: docs.text,
                             claps: docs.claps,
