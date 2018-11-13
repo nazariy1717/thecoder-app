@@ -21,8 +21,8 @@ class AdminEditor extends Component{
                 description: '',
                 text: '',
                 image: null,
-                uploadImages: null,
             },
+            images: [],
             errors: [],
             loading: false
         };
@@ -31,7 +31,6 @@ class AdminEditor extends Component{
         this.submitHandler = this.submitHandler.bind(this);
         this.validate = this.validate.bind(this);
         this.uploadImage = this.uploadImage.bind(this);
-
     }
 
     onChangeHandler(e){
@@ -80,18 +79,16 @@ class AdminEditor extends Component{
     }
 
     uploadImage(e){
-        console.log(e.target.files);
-        let reader = new FileReader();
-        Array.from(e.target.files).forEach( (item, index) => {
-            reader.onload = function (e) {
-                console.log(e.target.result);
-            };
-            reader.readAsDataURL(e.target.files[index]);
-            this.setState({
-                article: { ...this.state.article, uploadImages: item  }
-            });
-        });
-
+       if(e.target.files.length){
+           if(!this.state.images.some(item => e.target.files[0].name === item.url)){
+               this.setState({images:
+                       [ ...this.state.images, {
+                           url: e.target.files[0].name,
+                           image: e.target.files[0]
+                       }]
+               });
+           }
+       }
     }
 
     validate(data){
@@ -156,7 +153,6 @@ class AdminEditor extends Component{
                 }
                 <div className="admin-content">
                     <div className="admin-editor">
-
                         <h1 className="admin-editor__head-title">Create a post</h1>
                         <form className="editor-form main-editor" onSubmit={this.submitHandler}>
                             <div className="row m-row align-middle">
@@ -193,7 +189,7 @@ class AdminEditor extends Component{
                             </div>
                             <button type="submit" className="btn btn-secondary admin-editor__btn">save</button>
                         </form>
-                        <ImagesList onChangeHandler={this.uploadImage} />
+                        <ImagesList onChangeHandler={this.uploadImage} imageArray={this.state.images} />
                     </div>
                 </div>
             </div>
