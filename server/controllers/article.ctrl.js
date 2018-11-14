@@ -13,7 +13,7 @@ module.exports = {
             description: req.body.description,
             text: req.body.text,
             claps: req.body.claps,
-            articleImg: req.files['image'][0].path,
+            articleImg: req.file.path,
             created: moment().format('DD-MM-YYYY'),
             slug: req.body.title.replace(/[\\/:"*?+!_.’”“<>|]/g, '').replace(/ /g, '-')
         });
@@ -56,7 +56,6 @@ module.exports = {
                 res.status(201).json(response);
             })
             .catch(err => {
-                console.log(err);
                 res.status(500).json({ error: err });
             });
 
@@ -110,27 +109,64 @@ module.exports = {
             });
     },
 
+
     clapArticle: (req, res, next) => {
 
     },
 
-    addImages: (req, res, next) => {
-        let error;
-        req.files.map(item => (
-           new ArticleImages({
-               _id: new mongoose.Types.ObjectId(),
-               articleImg: item.path
-           })
-           .save()
-           .catch(err => {
-               error = err;
-               res.status(500).json({error: err});
-           })
-        ));
-        if(!error){
-            res.status(201).json({message: "Article created successfully"})
-        }
-    }
 
+    addImages: (req, res, next) => {
+        const image = new ArticleImages({
+           _id: new mongoose.Types.ObjectId(),
+           articleImg: req.file.path
+        });
+        image.save().then(result => {
+            res.status(201).json({
+                _id: result._id,
+                imageUrl: "http://localhost:8080/" + result.articleImg,
+            });
+        })
+        .catch(err => {
+            res.status(500).json({error: err});
+        });
+    },
+
+    getAllImages: (req, res, next) => {
+        ArticleImages.find()
+            .select("_id articleImg")
+            .exec()
+            .then(docs => {
+                const response = docs.map(doc => {
+                    return {
+                        _id: doc._id,
+                        imageUrl: "http://localhost:8080/" + doc.articleImg,
+                    };
+                });
+                res.status(201).json(response);
+            })
+            .catch(err => {
+                res.status(500).json({ error: err });
+            });
+    },
+
+    removeImage: (req, res, next) => {
+        const id = req.params.imageId;
+        ArticleImages.findOneAndDelete({ _id: id })
+            .exec()
+            .then(result =>{
+                res.status(200).json({
+                    message: 'Image deleted',
+                    removedImage: {
+                        _id: result._id,
+                    }
+                });
+            })
+            .catch(err => {
+                console.log(err);
+                res.status(500).json({
+                    error: err
+                });
+            });
+    },
 
 };

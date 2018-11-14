@@ -45,6 +45,12 @@ module.exports = (router) => {
     router.route('/article/clap').post(articleController.clapArticle);
 
     /* add an images */
-    router.post('/addImages', upload.array('images'), articleController.addImages);
+    router.post('/image', upload.single('image'), articleController.addImages);
+
+    /* get all images */
+    router.route('/images').get(articleController.getAllImages);
+
+    /* remove an article */
+    router.delete('/removeImage/:imageId', articleController.removeImage);
 
 };

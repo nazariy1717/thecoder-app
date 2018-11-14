@@ -13,8 +13,9 @@ export default{
         getArticle : (article_id) => axios.get(`/api/article/${article_id}`).then(res => res.data),
 
         /* images api*/
-        addImages : (images) => axios.post(`/api/addImages`, images).then(res => res.data),
+        addImages : (images) => axios.post(`/api/image`, images).then(res => res.data),
         getImages : () => axios.get(`/api/images`).then(res => res.data),
+        removeImage: (image_id) => axios.delete(`/api/removeImage/${image_id}`).then(res => res.data),
 
 
 

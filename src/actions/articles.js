@@ -1,6 +1,6 @@
 import {
-    ADD_ARTICLE, LOAD_ARTICLES, REMOVE_ARTICLE,
-    VIEW_ARTICLE, CLAP_ARTICLE, LOAD_IMAGES,
+    ADD_ARTICLE, LOAD_ARTICLES, REMOVE_ARTICLE, VIEW_ARTICLE, CLAP_ARTICLE,
+    LOAD_IMAGES, ADD_IMAGES, REMOVE_IMAGE
     } from '../types';
 import api from '../api';
 
@@ -62,20 +62,33 @@ export function clapArticle(article_id) {
 
 
 /* ADD_IMAGES */
-export const addImages = images =>
+export const addedImages = (image) => ({
+    type: ADD_IMAGES,
+    image
+});
+export const addImages = images => dispatch =>
     api.articles.addImages(images).then(response => {
-        console.log(response);
+        dispatch(addedImages(response));
     });
+
 
 /* LOAD_IMAGES */
 export const loadedImages = (images) => ({
     type: LOAD_IMAGES,
     images
 });
-
 export function loadImages() {
     return (dispatch) => {
         api.articles.getImages().then(response => dispatch(loadedImages(response)));
     }
 }
 
+/* REMOVE_IMAGE */
+export const removedImage = (image) => ({
+    type: REMOVE_IMAGE,
+    image
+});
+export const removeImage = image_id => dispatch =>
+    api.articles.removeImage(image_id).then(response => {
+        dispatch(removedImage(response.removedImage));
+    });

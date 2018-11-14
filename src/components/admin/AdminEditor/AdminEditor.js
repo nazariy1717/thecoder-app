@@ -4,13 +4,22 @@ import { connect } from 'react-redux'
 import MediumEditor from 'medium-editor';
 import Notifications, {notify} from 'react-notify-toast';
 import AdminHeader from "../AdminHeader/AdminHeader";
-import {adminAddArticle, addImages, loadImages} from "../../../actions/articles";
+import {adminAddArticle, addImages, loadImages, removeImage} from "../../../actions/articles";
 import ReactLoading from 'react-loading';
 import ImagesList from './ImagesList';
 
 import './../../../../node_modules/medium-editor/dist/css/medium-editor.min.css'
 import './../../../../node_modules/medium-editor/dist/css/themes/default.min.css'
 import './editor.scss'
+
+
+const mapStateToProps = state => {
+    return {
+        articles:{
+            images: state.articles.images
+        }
+    }
+};
 
 class AdminEditor extends Component{
     constructor (props) {
@@ -31,6 +40,7 @@ class AdminEditor extends Component{
         this.submitHandler = this.submitHandler.bind(this);
         this.validate = this.validate.bind(this);
         this.uploadImage = this.uploadImage.bind(this);
+        this.imageDelete = this.imageDelete.bind(this);
     }
 
     onChangeHandler(e){
@@ -81,15 +91,17 @@ class AdminEditor extends Component{
     uploadImage(e){
         if(e.target.files.length){
             let fd = new FormData();
-            Array.from(e.target.files).forEach(file => {
-                fd.append('images', file, file.name);
-            });
+            fd.append('image', e.target.files[0], e.target.files[0].name);
             this.setState({imageLoader: true});
-            addImages(fd).then(() => {
+            this.props.addImages(fd).then(() => {
                 this.setState({imageLoader: false});
                 notify.show("Image uploaded", "success")
             });
         }
+    }
+
+    imageDelete(id){
+        this.props.removeImage(id).then(()=>notify.show("Image deleted", "success"));
     }
 
     validate(data){
@@ -101,10 +113,7 @@ class AdminEditor extends Component{
     }
 
     componentDidMount () {
-
         this.props.loadImages();
-        console.log(this.props);
-
         const editor = new MediumEditor(".medium-editable",{
             autoLink: true,
             delay: 1000,
@@ -144,7 +153,6 @@ class AdminEditor extends Component{
     render(){
         let article = this.state.article;
         let errors = this.state.errors;
-
         return(
             <div className="admin-wrapper">
                 <AdminHeader />
@@ -195,8 +203,9 @@ class AdminEditor extends Component{
                             <button type="submit" className="btn btn-secondary admin-editor__btn">save</button>
                         </form>
                         <ImagesList onChangeHandler={this.uploadImage}
-                                    imageArray={this.state.images}
-                                    loading={this.state.imageLoader}/>
+                                    imageArray={this.props.articles.images}
+                                    removeHandler={this.imageDelete}
+                                    loading={this.state.imageLoader} />
                     </div>
                 </div>
             </div>
@@ -204,4 +213,4 @@ class AdminEditor extends Component{
     }
 }
 
-export default connect(null, {adminAddArticle, loadImages})(AdminEditor);
+export default connect(mapStateToProps, {adminAddArticle, addImages, loadImages, removeImage})(AdminEditor);

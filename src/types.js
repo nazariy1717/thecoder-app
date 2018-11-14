@@ -9,3 +9,5 @@ export const REMOVE_ARTICLE = 'REMOVE_ARTICLE';
 export const VIEW_ARTICLE = 'VIEW_ARTICLE';
 export const CLAP_ARTICLE = 'CLAP_ARTICLE';
 export const LOAD_IMAGES = 'LOAD_IMAGES';
+export const ADD_IMAGES = 'ADD_IMAGES';
+export const REMOVE_IMAGE = 'REMOVE_IMAGE';

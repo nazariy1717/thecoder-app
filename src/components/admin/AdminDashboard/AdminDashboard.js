@@ -6,7 +6,6 @@ import './admin-dashboard.scss';
 import Notifications, {notify} from 'react-notify-toast';
 
 
-
 const mapStateToProps = state => {
     return {
         articles: state.articles.articles
