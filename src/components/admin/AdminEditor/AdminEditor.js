@@ -42,6 +42,7 @@ class AdminEditor extends Component{
         const errors = this.validate(this.state.article);
         this.setState({ errors });
         const article = this.state.article;
+        const images = this.state.images;
         if(Object.keys(errors).length === 0){
             this.setState({loading: true});
             let fd = new FormData();
@@ -50,19 +51,27 @@ class AdminEditor extends Component{
             fd.append('text', article.text);
             fd.append('claps', 0);
             fd.append('image', article.image, article.image.name);
+            console.log(article.image);
+
+            this.state.images.map(item=>{
+                fd.append('images', item.image, item.image.name);
+            });
+            // fd.append('images', images);
+
             this.props.adminAddArticle(fd)
                 .then(() => {
-                    this.setState({
-                        article: {
-                            title: '',
-                            description: '',
-                            text: '',
-                            image: null,
-                        },
-                        loading: false
-                    });
-                    document.getElementById('image_preview').src = "";
-                    document.querySelector('.medium-editable').innerHTML = '';
+                    // this.setState({
+                    //     article: {
+                    //         title: '',
+                    //         description: '',
+                    //         text: '',
+                    //         image: null,
+                    //     },
+                    //     images: [],
+                    //     loading: false
+                    // });
+                    // document.getElementById('image_preview').src = "";
+                    // document.querySelector('.medium-editable').innerHTML = '';
                     notify.show("Post was created successfully", "success")
                 })
                 .catch(err => console.log('There was an error:' + err));

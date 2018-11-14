@@ -1,4 +1,5 @@
 import Article from './../models/Article';
+import ArticleImages from './../models/ArticleImages';
 import mongoose from 'mongoose';
 import moment from 'moment';
 
@@ -6,17 +7,30 @@ import moment from 'moment';
 module.exports = {
 
     addArticle: (req, res, next) => {
+        console.log(req.files['image'][0].path);
+        console.log('---------');
+        console.log(req.files['images']);
+        console.log('---------');
+        req.files['images'].map(item=>{
+            console.log(item.path);
+        });
         const newArticle = new Article({
             _id: new mongoose.Types.ObjectId(),
             title: req.body.title,
             description: req.body.description,
             text: req.body.text,
             claps: req.body.claps,
-            articleImg: req.file.path,
+            articleImg: req.files['image'][0].path,
             created: moment().format('DD-MM-YYYY'),
             slug: req.body.title.replace(/[\\/:"*?+!_.’”“<>|]/g, '').replace(/ /g, '-')
         });
-        console.log(newArticle);
+        const images = new ArticleImages({
+            _id: new mongoose.Types.ObjectId(),
+            articleId: newArticle._id,
+            articleImg: req.files['images'].map(item=> item.path)
+        });
+        console.log(images);
+        images.save();
         newArticle.save().then(result => {
             res.status(201).json({
                 message: "Article created successfully",
