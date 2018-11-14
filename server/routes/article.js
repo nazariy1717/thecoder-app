@@ -30,9 +30,7 @@ const upload = multer({
 module.exports = (router) => {
 
     /* add an article */
-    router.post('/article',
-        upload.fields([{ name: 'image'}, { name: 'images'}]),
-        articleController.addArticle);
+    router.post('/article', upload.single('image'), articleController.addArticle);
 
     /* get all articles */
     router.route('/articles').get(articleController.getAll);
@@ -45,5 +43,8 @@ module.exports = (router) => {
 
     /* clap on an article */
     router.route('/article/clap').post(articleController.clapArticle);
+
+    /* add an images */
+    router.post('/addImages', upload.array('images'), articleController.addImages);
 
 };

@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import MediumEditor from 'medium-editor';
 import Notifications, {notify} from 'react-notify-toast';
 import AdminHeader from "../AdminHeader/AdminHeader";
-import {adminAddArticle} from "../../../actions/articles";
+import {adminAddArticle, addImages, loadImages} from "../../../actions/articles";
 import ReactLoading from 'react-loading';
 import ImagesList from './ImagesList';
 
@@ -22,9 +22,9 @@ class AdminEditor extends Component{
                 text: '',
                 image: null,
             },
-            images: [],
             errors: [],
-            loading: false
+            loading: false,
+            imageLoader: false
         };
         this.previewImg = this.previewImg.bind(this);
         this.onChangeHandler = this.onChangeHandler.bind(this);
@@ -42,7 +42,6 @@ class AdminEditor extends Component{
         const errors = this.validate(this.state.article);
         this.setState({ errors });
         const article = this.state.article;
-        const images = this.state.images;
         if(Object.keys(errors).length === 0){
             this.setState({loading: true});
             let fd = new FormData();
@@ -51,27 +50,19 @@ class AdminEditor extends Component{
             fd.append('text', article.text);
             fd.append('claps', 0);
             fd.append('image', article.image, article.image.name);
-            console.log(article.image);
-
-            this.state.images.map(item=>{
-                fd.append('images', item.image, item.image.name);
-            });
-            // fd.append('images', images);
-
             this.props.adminAddArticle(fd)
                 .then(() => {
-                    // this.setState({
-                    //     article: {
-                    //         title: '',
-                    //         description: '',
-                    //         text: '',
-                    //         image: null,
-                    //     },
-                    //     images: [],
-                    //     loading: false
-                    // });
-                    // document.getElementById('image_preview').src = "";
-                    // document.querySelector('.medium-editable').innerHTML = '';
+                    this.setState({
+                        article: {
+                            title: '',
+                            description: '',
+                            text: '',
+                            image: null,
+                        },
+                        loading: false
+                    });
+                    document.getElementById('image_preview').src = "";
+                    document.querySelector('.medium-editable').innerHTML = '';
                     notify.show("Post was created successfully", "success")
                 })
                 .catch(err => console.log('There was an error:' + err));
@@ -88,16 +79,17 @@ class AdminEditor extends Component{
     }
 
     uploadImage(e){
-       if(e.target.files.length){
-           if(!this.state.images.some(item => e.target.files[0].name === item.url)){
-               this.setState({images:
-                       [ ...this.state.images, {
-                           url: e.target.files[0].name,
-                           image: e.target.files[0]
-                       }]
-               });
-           }
-       }
+        if(e.target.files.length){
+            let fd = new FormData();
+            Array.from(e.target.files).forEach(file => {
+                fd.append('images', file, file.name);
+            });
+            this.setState({imageLoader: true});
+            addImages(fd).then(() => {
+                this.setState({imageLoader: false});
+                notify.show("Image uploaded", "success")
+            });
+        }
     }
 
     validate(data){
@@ -109,6 +101,10 @@ class AdminEditor extends Component{
     }
 
     componentDidMount () {
+
+        this.props.loadImages();
+        console.log(this.props);
+
         const editor = new MediumEditor(".medium-editable",{
             autoLink: true,
             delay: 1000,
@@ -198,7 +194,9 @@ class AdminEditor extends Component{
                             </div>
                             <button type="submit" className="btn btn-secondary admin-editor__btn">save</button>
                         </form>
-                        <ImagesList onChangeHandler={this.uploadImage} imageArray={this.state.images} />
+                        <ImagesList onChangeHandler={this.uploadImage}
+                                    imageArray={this.state.images}
+                                    loading={this.state.imageLoader}/>
                     </div>
                 </div>
             </div>
@@ -206,4 +204,4 @@ class AdminEditor extends Component{
     }
 }
 
-export default connect(null, {adminAddArticle})(AdminEditor);
+export default connect(null, {adminAddArticle, loadImages})(AdminEditor);

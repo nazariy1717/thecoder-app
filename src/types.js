@@ -8,3 +8,4 @@ export const LOAD_ARTICLES = 'LOAD_ARTICLES';
 export const REMOVE_ARTICLE = 'REMOVE_ARTICLE';
 export const VIEW_ARTICLE = 'VIEW_ARTICLE';
 export const CLAP_ARTICLE = 'CLAP_ARTICLE';
+export const LOAD_IMAGES = 'LOAD_IMAGES';

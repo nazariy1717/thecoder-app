@@ -7,13 +7,6 @@ import moment from 'moment';
 module.exports = {
 
     addArticle: (req, res, next) => {
-        console.log(req.files['image'][0].path);
-        console.log('---------');
-        console.log(req.files['images']);
-        console.log('---------');
-        req.files['images'].map(item=>{
-            console.log(item.path);
-        });
         const newArticle = new Article({
             _id: new mongoose.Types.ObjectId(),
             title: req.body.title,
@@ -24,13 +17,6 @@ module.exports = {
             created: moment().format('DD-MM-YYYY'),
             slug: req.body.title.replace(/[\\/:"*?+!_.’”“<>|]/g, '').replace(/ /g, '-')
         });
-        const images = new ArticleImages({
-            _id: new mongoose.Types.ObjectId(),
-            articleId: newArticle._id,
-            articleImg: req.files['images'].map(item=> item.path)
-        });
-        console.log(images);
-        images.save();
         newArticle.save().then(result => {
             res.status(201).json({
                 message: "Article created successfully",
@@ -97,7 +83,6 @@ module.exports = {
             });
     },
 
-
     getArticle: (req, res, next) => {
         const slug = req.params.id;
         Article.findOne({slug: slug})
@@ -125,13 +110,27 @@ module.exports = {
             });
     },
 
-
-
-
-
     clapArticle: (req, res, next) => {
 
     },
+
+    addImages: (req, res, next) => {
+        let error;
+        req.files.map(item => (
+           new ArticleImages({
+               _id: new mongoose.Types.ObjectId(),
+               articleImg: item.path
+           })
+           .save()
+           .catch(err => {
+               error = err;
+               res.status(500).json({error: err});
+           })
+        ));
+        if(!error){
+            res.status(201).json({message: "Article created successfully"})
+        }
+    }
 
 
 };

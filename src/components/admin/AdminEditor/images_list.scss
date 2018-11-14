@@ -1,13 +1,37 @@
 
 .editor-images-list{
   border-radius: 5px;
-  padding: 15px 5px 45px 5px;
-  border: 1px dashed var(--gray);
+  padding: 15px;
   position: absolute;
   width: 300px;
-  height: 300px;
+  top: -50px;
   right: 30px;
   bottom: 95px;
+  background-color: rgba(230, 230, 230, 0.45);
+  &__loader{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: hsla(0,0%,90%,.45);
+    z-index: 9;
+    > div{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      fill: #000!important;
+    }
+  }
+  &__title{
+    display: block;
+    color: var(--black);
+    font-family: Raleway,sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
   ul{
     height: 235px;
     overflow-x: hidden;
@@ -31,10 +55,9 @@
   }
   &__btn{
     position: absolute;
-    bottom: 10px;
+    top: 14px;
     width: 150px;
-    left: 0;
-    right: 0;
+    right: 15px;
     display: block;
     text-align: center;
     margin: auto;
