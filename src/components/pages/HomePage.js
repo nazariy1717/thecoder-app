@@ -12,10 +12,13 @@ import OurClients from "../elements/OurClients/OurClients";
 import Header from "../elements/Header/Header";
 import Footer from "../elements/Footer/Footer";
 
+
+
 class HomePage extends Component {
 
     componentDidMount() {
         window.scrollTo(0, 0);
+
     }
 
     render() {

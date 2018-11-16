@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Raleway';
-  src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
+  font-display: auto;
+  src: local('sans-serif'), url('../fonts/Raleway-Bold.woff2') format('woff2'),
   url('../fonts/Raleway-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
@@ -8,7 +9,8 @@
 
 @font-face {
   font-family: 'Raleway';
-  src: url('../fonts/Raleway-Black.woff2') format('woff2'),
+  font-display: auto;
+  src: local('sans-serif'), url('../fonts/Raleway-Black.woff2') format('woff2'),
   url('../fonts/Raleway-Black.woff') format('woff');
   font-weight: 900;
   font-style: normal;
@@ -16,7 +18,8 @@
 
 @font-face {
   font-family: 'Raleway';
-  src: url('../fonts/Raleway-ExtraBold.woff2') format('woff2'),
+  font-display: auto;
+  src: local('sans-serif'), url('../fonts/Raleway-ExtraBold.woff2') format('woff2'),
   url('../fonts/Raleway-ExtraBold.woff') format('woff');
   font-weight: 800;
   font-style: normal;
@@ -25,7 +28,8 @@
 
 @font-face {
   font-family: 'MADE Evolve Sans EVO';
-  src: url('../fonts/MADEEvolveSansEVO-Bold.woff2') format('woff2'),
+  font-display: auto;
+  src: local('sans-serif'), url('../fonts/MADEEvolveSansEVO-Bold.woff2') format('woff2'),
   url('../fonts/MADEEvolveSansEVO-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
@@ -33,7 +37,8 @@
 
 @font-face {
   font-family: 'Myriad Pro';
-  src: url('../fonts/MyriadPro-Regular.woff2') format('woff2'),
+  font-display: auto;
+  src: local('sans-serif'), url('../fonts/MyriadPro-Regular.woff2') format('woff2'),
   url('../fonts/MyriadPro-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -41,15 +46,17 @@
 
 @font-face {
   font-family: 'CenturyGothic';
-  src: url('../fonts/CenturyGothic-Bold.woff') format('woff');
+  font-display: auto;
+  src: local('sans-serif'), url('../fonts/CenturyGothic-Bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?kdt0vo');
-  src:  url('../fonts/icomoon.eot?kdt0vo#iefix') format('embedded-opentype'),
+  font-display: auto;
+  src:  local('sans-serif'), url('../fonts/icomoon.eot?kdt0vo');
+  src:  local('sans-serif'), url('../fonts/icomoon.eot?kdt0vo#iefix') format('embedded-opentype'),
   url('../fonts/icomoon.ttf?kdt0vo') format('truetype'),
   url('../fonts/icomoon.woff?kdt0vo') format('woff'),
   url('../fonts/icomoon.svg?kdt0vo#icomoon') format('svg');

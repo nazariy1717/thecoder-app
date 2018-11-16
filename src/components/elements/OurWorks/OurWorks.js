@@ -1,5 +1,11 @@
 import React from "react";
 import './our_works.scss'
+import leo from './items/leo.mp4'
+import kucher from './items/kucher.mp4'
+import koma from './items/koma.mp4'
+import demsol from './items/demsol.mp4'
+import cater from './items/cater.mp4'
+import bombay from './items/bombay.mp4'
 
 class OurWorks extends React.Component{
 
@@ -38,14 +44,16 @@ class OurWorks extends React.Component{
                         </p>
                         <h2 className="title-box__hidden">Completed projects</h2>
                     </div>
-
                 </div>
                 <div className="our-works__container">
                     <div className="row">
                         <div className="col-lg-4 col-md-6 col-xs-12">
                             <a href="https://leodrive.com.ua/en/" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
-                                    <div className="work-item__content --item-1"></div>
+                                    <div className="work-item__content">
+                                        <video src={leo} loop muted="muted" autoPlay>
+                                        </video>
+                                    </div>
                                     <p className="work-item__desc"><span>Leodrive</span></p>
                                 </div>
                             </a>
@@ -53,7 +61,10 @@ class OurWorks extends React.Component{
                         <div className="col-lg-4 col-md-6 col-xs-12">
                             <a href="https://kucheriavi-studio.pro/" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
-                                    <div className="work-item__content --item-2"></div>
+                                    <div className="work-item__content">
+                                        <video src={kucher} loop muted="muted" autoPlay>
+                                        </video>
+                                    </div>
                                     <p className="work-item__desc"><span>Kucheriavi studio</span></p>
                                 </div>
                             </a>
@@ -61,7 +72,10 @@ class OurWorks extends React.Component{
                         <div className="col-lg-4 col-md-6 col-xs-12">
                             <a href="https://komaagency.com/" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
-                                    <div className="work-item__content --item-3"></div>
+                                    <div className="work-item__content">
+                                        <video src={koma} loop muted="muted" autoPlay>
+                                        </video>
+                                    </div>
                                     <p className="work-item__desc"><span>Koma agency</span></p>
                                 </div>
                             </a>
@@ -69,7 +83,10 @@ class OurWorks extends React.Component{
                         <div className="col-lg-4 col-md-6 col-xs-12">
                             <a href="https://www.behance.net/gallery/70082431/Branding-for-DemsolFruit" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
-                                    <div className="work-item__content --item-4"></div>
+                                    <div className="work-item__content">
+                                        <video src={demsol} loop muted="muted" autoPlay>
+                                        </video>
+                                    </div>
                                     <p className="work-item__desc"><span>Demsol Fruit</span></p>
                                 </div>
                             </a>
@@ -77,7 +94,10 @@ class OurWorks extends React.Component{
                         <div className="col-lg-4 col-md-6 col-xs-12">
                             <a href="https://procaterteam.com/" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
-                                    <div className="work-item__content --item-5"></div>
+                                    <div className="work-item__content">
+                                        <video src={cater} loop muted="muted" autoPlay>
+                                        </video>
+                                    </div>
                                     <p className="work-item__desc"><span>PROCATERTEAM Catering</span></p>
                                 </div>
                             </a>
@@ -85,7 +105,10 @@ class OurWorks extends React.Component{
                         <div className="col-lg-4 col-md-6 col-xs-12">
                             <a href="https://www.behance.net/gallery/71260113/Logo-design-and-corporate-style-for-an-Indian-restauran" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
-                                    <div className="work-item__content --item-6"></div>
+                                    <div className="work-item__content">
+                                        <video src={bombay} loop muted="muted" autoPlay>
+                                        </video>
+                                    </div>
                                     <p className="work-item__desc"><span>Bombay Ruby Indian cuisine</span></p>
                                 </div>
                             </a>
