@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import  "./testimonials.scss";
+import LazyLoad from 'react-lazyload';
+
 import client1 from './clients/client1.png';
 import client2 from './clients/client2.jpg';
 
@@ -14,7 +16,9 @@ class Testimonials extends Component {
                     </div>
                     <div className="quote-client">
                         <div className="quote-client__content">
-                            <img src={client1} alt="Nathan Downs" title="Nathan Downs"/>
+                            <LazyLoad once height={175}>
+                                <img src={client1} alt="Nathan Downs" title="Nathan Downs"/>
+                            </LazyLoad>
                             <span className="quote-client__name">
                                 Nathan Downs
                                  <a href="https://www.linkedin.com/in/ndowns1/" aria-label="Nathan Downs Linkedin" className="quote-client__link" rel="noopener noreferrer nofollow" target="_blank">
@@ -25,7 +29,9 @@ class Testimonials extends Component {
                             <p className="app-txt">I have worked with the team from THE CODER on several branding/website development projects and they check all my boxes for a creative partnership. All in all I found them to be highly collaborative & creative in their approach. Fast with communication, efficient turnaround and they have a deep technical knowledge that made project management easy on our end while always staying on budget. Taras and team are highly recommended.</p>
                         </div>
                         <div className="quote-client__content --right">
-                            <img src={client2} alt="Halina Kucheriava" title="Halina Kucheriava"/>
+                            <LazyLoad once height={175}>
+                                <img src={client2} alt="Halina Kucheriava" title="Halina Kucheriava"/>
+                            </LazyLoad>
                             <span className="quote-client__name">
                                 Halina Kucheriava
                                  <a href="https://www.linkedin.com/in/halina-kucheriava-8298ba35/" aria-label="Halina Kucheriava Linkedin" className="quote-client__link" rel="noopener noreferrer nofollow" target="_blank">

@@ -46,6 +46,7 @@
     "react-ga": "^2.5.3",
     "react-gtm-module": "^2.0.2",
     "react-input-mask": "^2.0.4",
+    "react-lazyload": "^2.3.0",
     "react-notify-toast": "^0.5.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.3.1",
