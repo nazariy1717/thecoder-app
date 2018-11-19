@@ -12,30 +12,7 @@ class ContactUs extends React.Component{
                     <div className="row m-row align-middle">
                         <div className="column col-lg-6 col-md-6 col-xs-12">
                             <div className="title-box contact-us__title">
-                                <p>
-                                    <span>R</span>
-                                    <span>e</span>
-                                    <span>q</span>
-                                    <span>u</span>
-                                    <span>e</span>
-                                    <span>s</span>
-                                    <span>t</span>
-                                    <span className="sub">m</span>
-                                    <span>a</span>
-                                </p>
-                                <p>
-                                    <span>F</span>
-                                    <span>r</span>
-                                    <span>e</span>
-                                    <span>e</span>
-                                    <span className="sub">d</span>
-                                    <span>Q</span>
-                                    <span>u</span>
-                                    <span>o</span>
-                                    <span>t</span>
-                                    <span>e</span>
-                                </p>
-                                <h2 className="title-box__hidden">Contact us</h2>
+                                <h2 className="title-box__inner">Request a Free Quote</h2>
                             </div>
                             <p className="app-txt contact-us__txt">Fill out the form and we will get in touch with you right away.</p>
                         </div>

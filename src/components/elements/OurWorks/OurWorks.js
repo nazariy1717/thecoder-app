@@ -14,41 +14,13 @@ class OurWorks extends React.Component{
             <section className="our-works" id="our-works">
                 <div className="container">
                     <div className="our-works__title title-box">
-                        <p>
-                            <span>C</span>
-                            <span>o</span>
-                            <span>m</span>
-                            <span>p</span>
-                            <span>l</span>
-                            <span>e</span>
-                            <span>t</span>
-                            <span>e</span>
-                            <span>d</span>
-                            <span className="sub">n</span>
-                            <span className="sub">r</span>
-                            <span className="sub">t</span>
-                        </p>
-                        <p>
-                            <span>p</span>
-                            <span>r</span>
-                            <span>o</span>
-                            <span>j</span>
-                            <span>e</span>
-                            <span>c</span>
-                            <span>t</span>
-                            <span>s</span>
-                            <span className="sub">c</span>
-                            <span className="sub">v</span>
-                            <span className="sub">j</span>
-                            <span className="sub">q</span>
-                        </p>
-                        <h2 className="title-box__hidden">Completed projects</h2>
+                        <h2 className="title-box__inner">Completed projects</h2>
                     </div>
                 </div>
                 <div className="our-works__container">
                     <div className="row">
                         <div className="col-lg-4 col-md-6 col-xs-12">
-                            <a href="https://leodrive.com.ua/en/" rel="nofollow noopener noreferrer" target="_blank">
+                            <a href="https://leodrive.com.ua/en/" aria-label="Site built for Leodrive" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content">
                                         <video src={leo} loop muted="muted" autoPlay>
@@ -59,7 +31,7 @@ class OurWorks extends React.Component{
                             </a>
                         </div>
                         <div className="col-lg-4 col-md-6 col-xs-12">
-                            <a href="https://kucheriavi-studio.pro/" rel="nofollow noopener noreferrer" target="_blank">
+                            <a href="https://kucheriavi-studio.pro/" aria-label="Site built for Kucheriavi-studio" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content">
                                         <video src={kucher} loop muted="muted" autoPlay>
@@ -70,7 +42,7 @@ class OurWorks extends React.Component{
                             </a>
                         </div>
                         <div className="col-lg-4 col-md-6 col-xs-12">
-                            <a href="https://komaagency.com/" rel="nofollow noopener noreferrer" target="_blank">
+                            <a href="https://komaagency.com/" aria-label="Site built for Komaagency" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content">
                                         <video src={koma} loop muted="muted" autoPlay>
@@ -81,7 +53,8 @@ class OurWorks extends React.Component{
                             </a>
                         </div>
                         <div className="col-lg-4 col-md-6 col-xs-12">
-                            <a href="https://www.behance.net/gallery/70082431/Branding-for-DemsolFruit" rel="nofollow noopener noreferrer" target="_blank">
+                            <a href="https://www.behance.net/gallery/70082431/Branding-for-DemsolFruit" aria-label="Branding for DemsolFruit"
+                               rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content">
                                         <video src={demsol} loop muted="muted" autoPlay>
@@ -92,7 +65,7 @@ class OurWorks extends React.Component{
                             </a>
                         </div>
                         <div className="col-lg-4 col-md-6 col-xs-12">
-                            <a href="https://procaterteam.com/" rel="nofollow noopener noreferrer" target="_blank">
+                            <a href="https://procaterteam.com/" aria-label="Site built for Procaterteam" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content">
                                         <video src={cater} loop muted="muted" autoPlay>
@@ -103,7 +76,8 @@ class OurWorks extends React.Component{
                             </a>
                         </div>
                         <div className="col-lg-4 col-md-6 col-xs-12">
-                            <a href="https://www.behance.net/gallery/71260113/Logo-design-and-corporate-style-for-an-Indian-restauran" rel="nofollow noopener noreferrer" target="_blank">
+                            <a href="https://www.behance.net/gallery/71260113/Logo-design-and-corporate-style-for-an-Indian-restauran"
+                               aria-label="Logo design and corporate style for an Indian restauran" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content">
                                         <video src={bombay} loop muted="muted" autoPlay>

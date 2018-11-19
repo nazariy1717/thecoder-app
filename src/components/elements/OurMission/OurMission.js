@@ -11,35 +11,7 @@ class OurMission extends React.Component{
                 </p>
                 <div className="container">
                     <div className="our-mission__title title-box">
-                        <p>
-                            <span>m</span>
-                            <span>i</span>
-                            <span>s</span>
-                            <span>s</span>
-                            <span>i</span>
-                            <span>o</span>
-                            <span>n</span>
-                            <span className="sub">e</span>
-                            <span className="sub">c</span>
-                            <span className="sub">i</span>
-                            <span className="sub">j</span>
-                            <span className="sub">y</span>
-                        </p>
-                        <p>
-                            <span>S</span>
-                            <span>t</span>
-                            <span>a</span>
-                            <span>t</span>
-                            <span>e</span>
-                            <span>m</span>
-                            <span>e</span>
-                            <span>n</span>
-                            <span>t</span>
-                            <span className="sub">i</span>
-                            <span className="sub">n</span>
-                            <span className="sub">m</span>
-                        </p>
-                        <h2 className="title-box__hidden">Mission Statement</h2>
+                        <h2 className="title-box__inner">Mission Statement</h2>
                     </div>
                     <div className="quote">
                          <div className="quote__content">

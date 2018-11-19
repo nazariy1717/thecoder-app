@@ -10,42 +10,14 @@ class Testimonials extends Component {
             <section className="testimonials" id="testimonials">
                 <div className="container">
                     <div className="testimonials__title title-box">
-                        <p>
-                            <span>T</span>
-                            <span>e</span>
-                            <span>s</span>
-                            <span>t</span>
-                            <span>i</span>
-                            <span>m</span>
-                            <span>o</span>
-                            <span>n</span>
-                            <span>i</span>
-                            <span>a</span>
-                            <span>l</span>
-                            <span>s</span>
-                        </p>
-                        <p>
-                            <span className="sub">g</span>
-                            <span className="sub">h</span>
-                            <span className="sub">r</span>
-                            <span className="sub">k</span>
-                            <span className="sub">y</span>
-                            <span className="sub">o</span>
-                            <span className="sub">n</span>
-                            <span className="sub">n</span>
-                            <span className="sub">p</span>
-                            <span className="sub">v</span>
-                            <span className="sub">y</span>
-                            <span className="sub">q</span>
-                        </p>
-                        <h2 className="title-box__hidden">Testimonials</h2>
+                        <h2 className="title-box__inner">Testimonials</h2>
                     </div>
                     <div className="quote-client">
                         <div className="quote-client__content">
                             <img src={client1} alt="Nathan Downs" title="Nathan Downs"/>
                             <span className="quote-client__name">
                                 Nathan Downs
-                                 <a href="https://www.linkedin.com/in/ndowns1/" className="quote-client__link" rel="noopener noreferrer nofollow" target="_blank">
+                                 <a href="https://www.linkedin.com/in/ndowns1/" aria-label="Nathan Downs Linkedin" className="quote-client__link" rel="noopener noreferrer nofollow" target="_blank">
                                         <span className="icon-linkedin2"></span>
                                         <span className="icon-linkedin2"></span>
                                     </a>
@@ -56,7 +28,7 @@ class Testimonials extends Component {
                             <img src={client2} alt="Halina Kucheriava" title="Halina Kucheriava"/>
                             <span className="quote-client__name">
                                 Halina Kucheriava
-                                 <a href="https://www.linkedin.com/in/halina-kucheriava-8298ba35/" className="quote-client__link" rel="noopener noreferrer nofollow" target="_blank">
+                                 <a href="https://www.linkedin.com/in/halina-kucheriava-8298ba35/" aria-label="Halina Kucheriava Linkedin" className="quote-client__link" rel="noopener noreferrer nofollow" target="_blank">
                                         <span className="icon-linkedin2"></span>
                                         <span className="icon-linkedin2"></span>
                                     </a>

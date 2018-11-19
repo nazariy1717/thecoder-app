@@ -113,7 +113,6 @@ module.exports = {
       {
 
         oneOf: [
-
           {
             test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
             loader: require.resolve('url-loader'),
@@ -122,16 +121,22 @@ module.exports = {
               name: 'static/media/[name].[hash:8].[ext]',
             },
           },
+            {
+                test: [/\.txt$/, /\.xml$/],
+                loader: require.resolve('url-loader'),
+                options: {
+                    limit: 10000,
+                    name: '/[name].[ext]',
+                },
+            },
           {
             test: /\.(js|jsx|mjs)$/,
             include: paths.appSrc,
             loader: require.resolve('babel-loader'),
             options: {
-
               cacheDirectory: true,
             },
           },
-
           {
               test: /\.css$/,
               use: ExtractTextPlugin.extract({

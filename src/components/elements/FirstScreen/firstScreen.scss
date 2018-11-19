@@ -1,51 +1,96 @@
 @import "../../../assets/styles/tools/breakpoints";
 
 .first-screen{
-  height: 100vh;
   position: relative;
-  &__coder{
+  height: 100vh;
+  padding-top: 60px;
+  //background: url('./bg.png') right top no-repeat;
+  //-webkit-background-size: cover;
+  //background-size: cover;
+  &__bg{
     position: absolute;
-    left: calc(50% - 70px);
-    top: 15px;
-    transform: rotate(-90deg) translateX(-50%);
-    z-index: 3;
-    font-family: 'Raleway',sans-serif;
-    font-weight: 700;
-    color: #000;
-    font-size: 14px;
-    letter-spacing: 3px;
-    @media (max-width: $breakpoint-md){
-      display: none;
-    }
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url('./bg.png') right top no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
   }
   &__content{
+    text-align: center;
+    max-width: 975px;
+    margin: auto;
+  }
+  &__caption{
+    display: block;
+    writing-mode: vertical-rl;
+    transform: translateX(-50%) rotate(180deg);
     position: absolute;
     left: 50%;
-    top: 50%;
-    height: calc(100vh - 140px);
-    width: 100%;
-    transform: translate(-50%, -50%);
-    max-width: 920px;
-    background: url(page-circle.jpg) center no-repeat;
-    -webkit-background-size: contain;
-    background-size: contain;
-    @media (max-width: $breakpoint-md){
+    top: 100px;
+    color: black;
+    letter-spacing: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  &__scroll{
+    &__text{
+      display: block;
+      writing-mode: vertical-rl;
       position: absolute;
-      left: 0;
-      top: 0;
-      height: 100vh;
-      width: 100%;
-      transform: translate(0, 0);
+      transform: translateX(-50%) rotate(180deg);
+      left: 50%;
+      bottom: 75px;
+      color: black;
+      font-weight: 800;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font-family: 'Raleway', sans-serif;
+      font-size: 10px;
+    }
+    &__inner{
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      margin-left: -1px;
+      overflow: hidden;
+      width: 1px;
+      height: 35px;
+      &:after{
+        content: '';
+        width: 100%;
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 0;
+        animation-name: scroll;
+        animation-fill-mode: forwards;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(.55,.055,.675,.19);
+      }
     }
   }
   &__title{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    @media (max-width: $breakpoint-md){
-      padding: 0 15px;
-      width: 100%;
-    }
+    font-size: 68px;
+    line-height: 100px;
+    margin-bottom: 10px;
+  }
+  &__subtitle{
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    letter-spacing: 10px;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+  }
+  &__btn{
+    width: 160px;
   }
 }

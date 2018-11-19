@@ -1,7 +1,6 @@
 import React from 'react';
 import './achievements.scss';
 
-
 class Achievements extends React.Component{
 
     render(){
@@ -10,36 +9,8 @@ class Achievements extends React.Component{
                 <div className="container">
                     <div className="achievements__content">
                         <div className="achievements__title title-box">
-                            <p>
-                                <span>t</span>
-                                <span>e</span>
-                                <span>a</span>
-                                <span>m</span>
-                                <span className="sub">z</span>
-                                <span className="sub">i</span>
-                                <span className="sub">n</span>
-                                <span className="sub">m</span>
-                                <span className="sub">o</span>
-                                <span className="sub">n</span>
-                                <span className="sub">j</span>
-                            </p>
-                            <p>
-                                <span>e</span>
-                                <span>x</span>
-                                <span>p</span>
-                                <span>e</span>
-                                <span>r</span>
-                                <span>i</span>
-                                <span>e</span>
-                                <span>n</span>
-                                <span>c</span>
-                                <span>e</span>
-                                <span className="sub">q</span>
-                                <span className="sub">s</span>
-                            </p>
-                            <h2 className="title-box__hidden">Team experience</h2>
+                            <h2 className="title-box__inner --white">Team experience</h2>
                         </div>
-
                         <div className="achievement-item --item-1">
                             <div className="achievement-item__title">
                                 <p><strong>4</strong> years</p>

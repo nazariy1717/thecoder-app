@@ -82,7 +82,7 @@ class Header extends React.Component{
                     <div className="header__container container">
                         <div className="header__row row m-row align-justify align-middle">
                             <div className="column">
-                                <a href="/" className="header__logo ">
+                                <a href="/" className="header__logo" aria-label="THE CODER logo">
                                     <img src={logo} alt="the coder logo" title="the coder logo" className="image"/>
                                     <img src={logo_white} alt="the coder logo" title="the coder logo" className="image"/>
                                     <svg viewBox="2 8.2 45.7 62.3">

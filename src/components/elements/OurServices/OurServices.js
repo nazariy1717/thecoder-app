@@ -13,34 +13,7 @@ class OurServices extends React.Component{
                             <div className="row m-row align-middle">
                                 <div className="column col-xs-12">
                                     <div className="our-services__title title-box">
-                                        <p>
-                                            <span>o</span>
-                                            <span>u</span>
-                                            <span>r</span>
-                                            <span className="sub">m</span>
-                                            <span className="sub">f</span>
-                                            <span className="sub">g</span>
-                                            <span className="sub">j</span>
-                                            <span className="sub">k</span>
-                                            <span className="sub">p</span>
-                                            <span className="sub">n</span>
-                                            <span className="sub">i</span>
-                                        </p>
-                                        <p>
-                                            <span>s</span>
-                                            <span>e</span>
-                                            <span>r</span>
-                                            <span>v</span>
-                                            <span>i</span>
-                                            <span>c</span>
-                                            <span>e</span>
-                                            <span>s</span>
-                                            <span className="sub">q</span>
-                                            <span className="sub">a</span>
-                                            <span className="sub">n</span>
-                                            <span className="sub">s</span>
-                                        </p>
-                                        <h2 className="title-box__hidden">Our Services</h2>
+                                        <h2 className="title-box__inner">Our Services</h2>
                                     </div>
                                 </div>
                                 <div className="column col-xs-12">

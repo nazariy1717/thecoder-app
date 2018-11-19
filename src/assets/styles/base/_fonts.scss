@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Raleway';
-  font-display: auto;
+  font-display: swap;
   src: local('sans-serif'), url('../fonts/Raleway-Bold.woff2') format('woff2'),
   url('../fonts/Raleway-Bold.woff') format('woff');
   font-weight: bold;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: 'Raleway';
-  font-display: auto;
+  font-display: swap;
   src: local('sans-serif'), url('../fonts/Raleway-Black.woff2') format('woff2'),
   url('../fonts/Raleway-Black.woff') format('woff');
   font-weight: 900;
@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: 'Raleway';
-  font-display: auto;
+  font-display: swap;
   src: local('sans-serif'), url('../fonts/Raleway-ExtraBold.woff2') format('woff2'),
   url('../fonts/Raleway-ExtraBold.woff') format('woff');
   font-weight: 800;
@@ -28,7 +28,7 @@
 
 @font-face {
   font-family: 'MADE Evolve Sans EVO';
-  font-display: auto;
+  font-display: swap;
   src: local('sans-serif'), url('../fonts/MADEEvolveSansEVO-Bold.woff2') format('woff2'),
   url('../fonts/MADEEvolveSansEVO-Bold.woff') format('woff');
   font-weight: bold;
@@ -37,16 +37,16 @@
 
 @font-face {
   font-family: 'Myriad Pro';
-  font-display: auto;
   src: local('sans-serif'), url('../fonts/MyriadPro-Regular.woff2') format('woff2'),
   url('../fonts/MyriadPro-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'CenturyGothic';
-  font-display: auto;
+  font-display: swap;
   src: local('sans-serif'), url('../fonts/CenturyGothic-Bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -54,7 +54,7 @@
 
 @font-face {
   font-family: 'icomoon';
-  font-display: auto;
+  font-display: swap;
   src:  local('sans-serif'), url('../fonts/icomoon.eot?kdt0vo');
   src:  local('sans-serif'), url('../fonts/icomoon.eot?kdt0vo#iefix') format('embedded-opentype'),
   url('../fonts/icomoon.ttf?kdt0vo') format('truetype'),

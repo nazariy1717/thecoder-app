@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './our-clients.scss';
 
-
 import client1 from "./items/client1.png";
 import client2 from "./items/client2.png";
 import client3 from "./items/client3.png";
@@ -14,35 +13,8 @@ class OurClients extends Component {
             <div className="our-clients" id="our-clients">
                 <div className="container">
                     <div className="our-clients__title title-box">
-                        <p>
-                            <span>O</span>
-                            <span>u</span>
-                            <span>r</span>
-                            <span className="sub">s</span>
-                            <span className="sub">w</span>
-                            <span className="sub">q</span>
-                            <span className="sub">x</span>
-                            <span className="sub">n</span>
-                            <span className="sub">h</span>
-                            <span className="sub">r</span>
-                            <span className="sub">k</span>
-                        </p>
-                        <p>
-                            <span>C</span>
-                            <span>l</span>
-                            <span>i</span>
-                            <span>e</span>
-                            <span>n</span>
-                            <span>t</span>
-                            <span>s</span>
-                            <span className="sub">f</span>
-                            <span className="sub">y</span>
-                            <span className="sub">g</span>
-                            <span className="sub">n</span>
-                        </p>
-                        <h2 className="title-box__hidden">Our clients</h2>
+                        <h2 className="title-box__inner --white">Our clients</h2>
                     </div>
-
                     <div className="row m-row align-middle">
                         <div className="column col-md-3 col-sm-6 col-xs-6">
                             <div className="our-clients__item">

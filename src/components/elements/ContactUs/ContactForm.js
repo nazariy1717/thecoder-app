@@ -146,7 +146,7 @@ class ContactForm extends React.Component{
                             autoComplete="off"
                             placeholder="A few words about your project"
                         />
-                        <label htmlFor="email" className="form__label">
+                        <label htmlFor="message" className="form__label">
                             <div><span>details</span></div>
                             <div><span>details</span></div>
                         </label>

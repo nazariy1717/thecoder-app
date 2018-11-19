@@ -9,7 +9,7 @@ const footer = () => (
         <div className="container">
             <div className="row m-row">
                 <div className="column col-lg-3 col-md-3 col-sm-2 col-xs-12 footer__column">
-                    <a href="/" className="footer__logo">
+                    <a href="/" className="footer__logo" aria-label="THE CODER logo">
                         <svg viewBox="2.3 8.3 45.4 62.4">
                             <g>
                                 <path stroke="#000000" strokeWidth="4.252" strokeMiterlimit="10" d="M39.5,16.4c3.7,3.7,6,8.8,6,14.4c0,5.6-2.3,10.7-6,14.4
@@ -72,28 +72,28 @@ const footer = () => (
                             <span className="footer__txt --title">Social/</span>
                             <ul className="footer__social">
                                 <li>
-                                    <a href="https://www.facebook.com/thecoderdev"
+                                    <a href="https://www.facebook.com/thecoderdev" aria-label="THE CODER facebook"
                                        className="footer__txt footer__link --icon" target="_blank" rel="nofollow noopener noreferrer">
                                         <span className="icon-facebook"></span>
                                         <span className="icon-facebook"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.instagram.com/thecoderdev/"
+                                    <a href="https://www.instagram.com/thecoderdev/" aria-label="THE CODER instagram"
                                        className="footer__txt footer__link --icon" target="_blank" rel="nofollow noopener noreferrer">
                                         <span className="icon-instagram"></span>
                                         <span className="icon-instagram"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.linkedin.com/company/the-coder/"
+                                    <a href="https://www.linkedin.com/company/the-coder/" aria-label="THE CODER linkedin"
                                        className="footer__txt footer__link --icon" target="_blank" rel="nofollow noopener noreferrer">
                                         <span className="icon-linkedin2"></span>
                                         <span className="icon-linkedin2"></span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.behance.net/thecoderdev"
+                                    <a href="https://www.behance.net/thecoderdev" aria-label="THE CODER behance"
                                        className="footer__txt footer__link --icon" target="_blank" rel="nofollow noopener noreferrer">
                                         <span className="icon-behance"></span>
                                         <span className="icon-behance"></span>

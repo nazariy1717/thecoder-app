@@ -17,32 +17,7 @@ class OurClients extends Component {
             <section className="our-team" id="our-team">
                 <div className="container">
                     <div className="our-team__title title-box">
-                        <p>
-                            <span>T</span>
-                            <span>e</span>
-                            <span>a</span>
-                            <span>m</span>
-                            <span className="sub">o</span>
-                            <span className="sub">i</span>
-                            <span className="sub">l</span>
-                            <span className="sub">k</span>
-                            <span className="sub">n</span>
-                            <span className="sub">b</span>
-                            <span className="sub">d</span>
-                        </p>
-                        <p>
-                            <span className="sub">y</span>
-                            <span className="sub">t</span>
-                            <span className="sub">r</span>
-                            <span className="sub">q</span>
-                            <span className="sub">a</span>
-                            <span className="sub">s</span>
-                            <span className="sub">d</span>
-                            <span className="sub">v</span>
-                            <span className="sub">c</span>
-                            <span className="sub">z</span>
-                        </p>
-                        <h2 className="title-box__hidden">Team</h2>
+                        <h2 className="title-box__inner">Team</h2>
                     </div>
 
                     <div className="row m-row">

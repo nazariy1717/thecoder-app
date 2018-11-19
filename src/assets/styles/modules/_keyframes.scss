@@ -37,3 +37,5 @@
     transform: translate(0) rotate(0deg);
   }
 }
+
+@keyframes scroll{ 0%{height:0} 25%{height:100%}100%, 50%{top:110%}}
