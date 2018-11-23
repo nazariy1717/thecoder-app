@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <meta name="theme-color" content="#000"/>
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="%PUBLIC_URL%/fav/apple-touch-icon-57x57.png" />
@@ -52,6 +53,8 @@
     <noscript>
       <img height="1" width="1" src="https://www.facebook.com/tr?id=2185135685095891&ev=PageView&noscript=1" alt="facebook PageView" title="facebook PageView" />
     </noscript>
+    <!-- End Facebook Pixel Code -->
+
     <script type="application/ld+json">
       [{
         "@context" : "http://schema.org",
@@ -92,6 +95,9 @@
          page_id="456005134891456">
     </div>
 
+    <script>
+        fbq('track', 'Lead');
+    </script>
     <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
 
     <script>(function(d, s, id) {

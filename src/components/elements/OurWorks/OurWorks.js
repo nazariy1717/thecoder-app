@@ -8,7 +8,6 @@ import cater from './items/cater.mp4'
 import bombay from './items/bombay.mp4'
 
 class OurWorks extends React.Component{
-
     render(){
         return(
             <section className="our-works" id="our-works">
@@ -23,7 +22,7 @@ class OurWorks extends React.Component{
                             <a href="https://leodrive.com.ua/en/" aria-label="Site built for Leodrive" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content">
-                                        <video src={leo} loop muted="muted" autoPlay>
+                                        <video src={leo} loop muted="muted" autoPlay="true" data-keepplaying data-autoplay playsInline>
                                         </video>
                                     </div>
                                     <p className="work-item__desc"><span>Leodrive</span></p>
@@ -34,7 +33,7 @@ class OurWorks extends React.Component{
                             <a href="https://kucheriavi-studio.pro/" aria-label="Site built for Kucheriavi-studio" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content">
-                                        <video src={kucher} loop muted="muted" autoPlay>
+                                        <video src={kucher} loop muted="muted" autoPlay="true" data-keepplaying data-autoplay playsInline >
                                         </video>
                                     </div>
                                     <p className="work-item__desc"><span>Kucheriavi studio</span></p>
@@ -45,7 +44,7 @@ class OurWorks extends React.Component{
                             <a href="https://komaagency.com/" aria-label="Site built for Komaagency" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content">
-                                        <video src={koma} loop muted="muted" autoPlay>
+                                        <video src={koma} loop muted="muted" autoPlay="true" data-keepplaying data-autoplay playsInline >
                                         </video>
                                     </div>
                                     <p className="work-item__desc"><span>Koma agency</span></p>
@@ -57,7 +56,7 @@ class OurWorks extends React.Component{
                                rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content">
-                                        <video src={demsol} loop muted="muted" autoPlay>
+                                        <video src={demsol} loop muted="muted" autoPlay="true" data-keepplaying data-autoplay playsInline >
                                         </video>
                                     </div>
                                     <p className="work-item__desc"><span>Demsol Fruit</span></p>
@@ -68,7 +67,7 @@ class OurWorks extends React.Component{
                             <a href="https://procaterteam.com/" aria-label="Site built for Procaterteam" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content">
-                                        <video src={cater} loop muted="muted" autoPlay>
+                                        <video src={cater} loop muted="muted" autoPlay="true" data-keepplaying data-autoplay playsInline >
                                         </video>
                                     </div>
                                     <p className="work-item__desc"><span>PROCATERTEAM Catering</span></p>
@@ -80,7 +79,7 @@ class OurWorks extends React.Component{
                                aria-label="Logo design and corporate style for an Indian restauran" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content">
-                                        <video src={bombay} loop muted="muted" autoPlay>
+                                        <video src={bombay} loop muted="muted" autoPlay="true" data-keepplaying data-autoplay playsInline >
                                         </video>
                                     </div>
                                     <p className="work-item__desc"><span>Bombay Ruby Indian cuisine</span></p>
@@ -93,5 +92,4 @@ class OurWorks extends React.Component{
         )
     }
 }
-
 export default OurWorks;
