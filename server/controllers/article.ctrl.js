@@ -41,7 +41,7 @@ module.exports = {
             .select("title description text claps articleImg _id created slug")
             .exec()
             .then(docs => {
-                const response = docs.map(doc => {
+                const response = docs.reverse().map(doc => {
                     return {
                         title: doc.title,
                         description: doc.description,

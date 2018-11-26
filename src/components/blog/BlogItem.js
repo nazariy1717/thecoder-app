@@ -5,7 +5,7 @@ import './blog-item.scss'
 const BlogItem = (props) =>{
     let item = props.data;
     return(
-        <div className="column col-md-4" >
+        <div className="column col-lg-4 col-sm-6 col-xs-12" >
             <article className="blog-item">
                 <Link to={`/blog/${item.slug}`}>
                     <figure className="blog-item__figure">
@@ -18,7 +18,7 @@ const BlogItem = (props) =>{
                            dangerouslySetInnerHTML={{__html: item.description}}>
                         </div>
                         <ul className="blog-item__list">
-                            <li>claps {item.claps}</li>
+                            {/*<li>claps {item.claps}</li>*/}
                         </ul>
                     </div>
                 </Link>

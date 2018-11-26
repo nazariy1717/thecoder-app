@@ -18,11 +18,10 @@ class BlogPage extends React.Component{
     componentDidMount(){
         window.scrollTo(0, 0);
         this.props.loadArticles();
-        console.log(this.props.articles);
     }
 
     render(){
-        const articles = this.props.articles.reverse();
+        const articles = this.props.articles;
         return(
             <section className="blog-wrap">
                 <Helmet>
