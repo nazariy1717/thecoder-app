@@ -8,7 +8,6 @@ import {isMobile} from 'react-device-detect';
 
 import { TweenMax }  from "gsap";
 import 'animation.gsap';
-import TimelineMax from "gsap/TimelineMax";
 
 const mapStateToProps = state => {
     return {
@@ -17,7 +16,6 @@ const mapStateToProps = state => {
 };
 
 class PostPage extends React.Component{
-
 
     componentDidMount() {
         console.log('componentDidMount');

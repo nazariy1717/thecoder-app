@@ -33,7 +33,7 @@ class AdminDashboard extends Component{
     }
 
     render(){
-        const articles = this.props.articles.reverse().map((item, key)=>{
+        const articles = this.props.articles.map((item, key)=>{
            return(
                <div className="column col-lg-4 admin-post" key={key}>
                    <div className="admin-post__content">

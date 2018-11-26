@@ -5,11 +5,11 @@ import routes from './routes/';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import helmet from 'helmet';
+import dotenv from 'dotenv';
 
-import {PORT, MONGODB_URL} from './conf';
-
+dotenv.config({ path: './server/.env' });
 const app = express();
-const port = PORT;
+const port = process.env.PORT;
 const router = express.Router();
 
 app.use(cors());
@@ -17,7 +17,7 @@ app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.json());
 app.use(helmet());
 
-mongoose.connect(MONGODB_URL, {
+mongoose.connect(process.env.MONGODB_URL, {
         useNewUrlParser: true,
         useCreateIndex: true
     }).then(()=>console.log('mongodb connected'));

@@ -47,7 +47,7 @@ module.exports = {
                         description: doc.description,
                         text: doc.text,
                         claps: doc.claps,
-                        articleImg: "http://localhost:8080/" + doc.articleImg,
+                        articleImg: process.env.DOMEN + doc.articleImg,
                         _id: doc._id,
                         created: doc.created,
                         slug: doc.slug
@@ -93,7 +93,7 @@ module.exports = {
                             title: docs.title,
                             text: docs.text,
                             claps: docs.claps,
-                            articleImg: "http://localhost:8080/" + docs.articleImg,
+                            articleImg: process.env.DOMEN + docs.articleImg,
                             created: docs.created,
                         };
                     res.status(201).json(response);
@@ -123,7 +123,7 @@ module.exports = {
         image.save().then(result => {
             res.status(201).json({
                 _id: result._id,
-                imageUrl: "http://localhost:8080/" + result.articleImg,
+                imageUrl: process.env.DOMEN + result.articleImg,
             });
         })
         .catch(err => {
@@ -139,7 +139,7 @@ module.exports = {
                 const response = docs.map(doc => {
                     return {
                         _id: doc._id,
-                        imageUrl: "http://localhost:8080/" + doc.articleImg,
+                        imageUrl: process.env.DOMEN + doc.articleImg,
                     };
                 });
                 res.status(201).json(response);
