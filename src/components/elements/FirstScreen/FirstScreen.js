@@ -15,7 +15,7 @@ class FirstScreen extends React.Component{
                     <div className="first-screen__content">
                         <span className="first-screen__caption">details matter</span>
                         <h1 className="first-screen__title page-title">Web Development Company</h1>
-                        <p className="first-screen__subtitle">We treat your project like <br/> our own</p>
+                        <p className="first-screen__subtitle">complimentary homepage mockup</p>
                         <div className="row m-row align-center">
                             <div className="column">
                                 <Scrollchor type="button" className="btn btn-primary first-screen__btn" to="get-started" animate={{duration: 250}}>
