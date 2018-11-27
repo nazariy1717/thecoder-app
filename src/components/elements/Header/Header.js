@@ -3,6 +3,7 @@ import Hamburger from './Hamburger';
 import Menu from './Menu';
 import { TweenMax }  from "gsap";
 import { HashLink as Link } from 'react-router-hash-link';
+import {NavLink} from 'react-router-dom';
 
 import './header.scss';
 import logo from './logo-head.svg';
@@ -132,6 +133,13 @@ class Header extends React.Component{
                                             <span>Mission Statement</span>
                                             <span>Mission Statement</span>
                                         </Link>
+
+                                    </li>
+                                    <li className="header__list-item">
+                                        <NavLink to="/blog" className="header__list-link" activeClassName="active">
+                                            <span>Blog</span>
+                                            <span>Blog</span>
+                                        </NavLink>
                                     </li>
                                     <li className="header__list-item">
                                         <Link to="/#get-started" className="header__list-link">

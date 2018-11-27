@@ -34,31 +34,8 @@ class BlogPage extends React.Component{
                 <div className="container">
                     <div className="row m-row align-justify">
                         <div className="column">
-                            <div className="title-box blog-wrap__title">
-                                <p>
-                                    <span>B</span>
-                                    <span>l</span>
-                                    <span>o</span>
-                                    <span>g</span>
-                                    <span className="sub">w</span>
-                                    <span className="sub">q</span>
-                                    <span className="sub">s</span>
-                                    <span className="sub">x</span>
-                                    <span className="sub">z</span>
-                                </p>
-                                <p>
-                                    <span className="sub">v</span>
-                                    <span className="sub">s</span>
-                                    <span className="sub">h</span>
-                                    <span className="sub">i</span>
-                                    <span className="sub">k</span>
-                                    <span className="sub">j</span>
-                                    <span className="sub">g</span>
-                                    <span className="sub">d</span>
-                                    <span className="sub">j</span>
-                                    <span className="sub">l</span>
-                                </p>
-                                <h1 className="title-box__hidden">Blog</h1>
+                            <div className="our-team__title title-box">
+                                <h1 className="title-box__inner">Blog</h1>
                             </div>
                         </div>
                     </div>
