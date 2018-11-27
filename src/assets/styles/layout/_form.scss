@@ -14,7 +14,7 @@ input[type=number]::-webkit-outer-spin-button {
   &__group-20{  margin-bottom: 20px;position: relative;  }
   &__group-30{  margin-bottom: 30px;position: relative;  }
   &__group-40{  margin-bottom: 40px;position: relative;  }
-  &__group-50{  margin-bottom: 30px;position: relative;  }
+  &__group-50{  margin-bottom: 50px;position: relative;  }
 
   &__label{
     position: absolute;
@@ -48,6 +48,15 @@ input[type=number]::-webkit-outer-spin-button {
     }
   }
 
+  &__label-custom{
+    display: block;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 24px;
+  }
+
   &__input, &__select, &__area{
     width: 100%;
     height: 60px;
@@ -63,6 +72,12 @@ input[type=number]::-webkit-outer-spin-button {
     transition: border 0.35s;
     @media (max-width: $breakpoint-sm) {
       height: 50px;
+    }
+    &.--theme{
+      height: 45px;
+    }
+    &.--error-valid{
+      border-bottom: 1px solid #E53539;
     }
     &:focus{
       border-bottom: 1px solid #000;
@@ -84,6 +99,20 @@ input[type=number]::-webkit-outer-spin-button {
    cursor: not-allowed;
   }
 
+}
+
+.credential-error{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -30px;
+  color: #E53539;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+
+  display: block;
+  text-align: center;
 }
 
 
@@ -127,20 +156,13 @@ span.form__error{
   }
   label {
     display: inline-block;
-    opacity: 0.87;
     color: black;
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Myriad Pro', sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: bold;
+    text-transform: uppercase;
     line-height: 20px;
     user-select: none;
-    span{
-      color: var(--col-blue);
-    }
-    a{
-      text-decoration: underline;
-      color: var(--col-blue);
-    }
   }
 }
 
@@ -162,25 +184,23 @@ span.form__error{
   content: '';
   position: absolute;
   left: 0;
-  top: 1px;
-  width: 18px;
-  height: 18px;
-  border: 2px solid rgba(0,0,0,.54);
-  border-radius: 2px;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 50%;
   background: #fff;
 }
 
-
-
 [type="checkbox"]:checked + label:after {
-  content: "\e909";
-  font-family: 'icomoon' !important;
+  content: "";
   position: absolute;
-  top: 1px;
-  left: 2px;
-  color: var(--col-blue);
-  font-size: 15px;
-  font-weight: bold;
+  top: 2px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #000;
   @include transition;
 }
 

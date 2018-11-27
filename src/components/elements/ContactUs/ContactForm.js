@@ -38,7 +38,6 @@ class ContactForm extends React.Component{
 
     validate(data){
 
-
         const errors = {};
 
         if(!data.name){
@@ -66,9 +65,6 @@ class ContactForm extends React.Component{
         this.setState({ errors });
 
         if(Object.keys(errors).length === 0){
-           console.log(this.props.histr);
-            this.props.history.push('/thanks');
-
             axios.post('/form.php', qs.stringify(this.state.data, { parseArrays: false }))
                 .then((res)=> {
                     this.setState({

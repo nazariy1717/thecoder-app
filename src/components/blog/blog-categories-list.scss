@@ -1,0 +1,37 @@
+
+.blog-categories-list{
+  &__item{
+    display: inline-block;
+    height: 30px;
+    overflow: hidden;
+    & + &{
+      margin-left: 30px;
+    }
+  }
+  &__link{
+    position: relative;
+    display: block;
+    color: var(--gray);
+    font-family: Raleway,sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 20px;
+    transition: all 0.3s;
+    &:hover{
+      color: #000;
+    }
+    &.active{
+      color: #000;
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        height: 3px;
+        background-color: #000;
+      }
+    }
+  }
+}

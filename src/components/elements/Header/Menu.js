@@ -24,6 +24,9 @@ class Menu extends React.Component{
                             <Link to="/#our-works" className="menu__link" onClick={this.props.close}>Portfolio</Link>
                         </li>
                         <li className="menu__item">
+                            <Link to="/blog" className="menu__link" onClick={this.props.close}>Blog</Link>
+                        </li>
+                        <li className="menu__item">
                             <Link to="/#achievements" className="menu__link" onClick={this.props.close}>Team achievements</Link>
                         </li>
                         <li className="menu__item">

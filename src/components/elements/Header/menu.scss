@@ -23,7 +23,7 @@
   }
   &__item{
     overflow: hidden;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     @media (max-width: $breakpoint-md){
       margin-bottom: 20px;
     }
@@ -40,15 +40,17 @@
     color: var(--primary-gray);
     font-family: 'Raleway', sans-serif;
     font-size: 36px;
-    line-height: 30px;
+    line-height: 40px;
     font-weight: 800;
     transition: all 0.3s;
     @media (max-width: $breakpoint-md){
       font-size: 28px;
+      line-height: 36px;
       padding-left: 60px;
     }
     @media (max-width: $breakpoint-sm){
       font-size: 20px;
+      line-height: 30px;
     }
     &:before{
       counter-increment: item1;
