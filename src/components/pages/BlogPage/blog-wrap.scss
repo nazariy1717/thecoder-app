@@ -1,0 +1,7 @@
+.blog-wrap{
+  padding-top: 125px;
+  min-height: 100vh;
+  &__content{
+    min-height: calc(100vh - 260px);
+  }
+}

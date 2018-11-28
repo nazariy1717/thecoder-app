@@ -1,0 +1,114 @@
+
+.editor-images-list{
+  border-radius: 5px;
+  padding: 15px;
+  position: absolute;
+  width: 300px;
+  top: -50px;
+  right: 30px;
+  bottom: 95px;
+  background-color: rgba(230, 230, 230, 0.45);
+  &__loader{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: hsla(0,0%,90%,.45);
+    z-index: 9;
+    > div{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      fill: #000!important;
+    }
+  }
+  &__title{
+    display: block;
+    color: var(--black);
+    font-family: Raleway,sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  ul{
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+  }
+  &__item{
+    position: relative;
+    width: 125px;
+    height: 125px;
+    display: inline-block;
+    background: #e8e7e7;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.3s;
+    &:hover{
+      .editor-images-list__remove, .editor-images-list__copy{
+        transform: scale(1);
+      }
+    }
+    img{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      max-width: 100%;
+    }
+    span{
+      display: block;
+    }
+  }
+  &__remove{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    background-color: #e53539;
+    transition: all 0.2s;
+    transform: scale(0);
+  }
+  &__copy{
+    position: absolute;
+    top: 5px;
+    right: 35px;
+    width: 45px;
+    height: 20px;
+    border-radius: 3px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    background: #3e5690;
+    transition: all 0.2s;
+    transform: scale(0);
+  }
+  &__btn{
+    position: absolute;
+    top: 14px;
+    width: 150px;
+    right: 15px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    border-radius: 3px;
+    background-color: #329c0d;
+    color: #fff;
+    line-height: 28px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+}

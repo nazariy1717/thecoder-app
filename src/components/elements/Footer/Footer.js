@@ -1,5 +1,5 @@
 import React from 'react';
-import Scrollchor from 'react-scrollchor';
+import {HashLink as Link } from 'react-router-hash-link';
 
 import './footer.scss';
 import pdf from './PrivacyPolicy.pdf';
@@ -37,34 +37,40 @@ const footer = () => (
                             <span className="footer__txt --title">MENU/</span>
                             <ul className="footer-nav">
                                 <li className="footer-nav__item">
-                                    <Scrollchor to="#our-services" className="footer-nav__link">
+                                    <Link to="/#our-services" className="footer-nav__link">
                                         <span>Our Services</span>
                                         <span>Our Services</span>
-                                    </Scrollchor>
+                                    </Link>
                                 </li>
                                 <li className="footer-nav__item">
-                                    <Scrollchor to="#our-works" className="footer-nav__link">
+                                    <Link to="/#our-works" className="footer-nav__link">
                                         <span>Portfolio</span>
                                         <span>Portfolio</span>
-                                    </Scrollchor>
+                                    </Link>
                                 </li>
                                 <li className="footer-nav__item">
-                                    <Scrollchor to="#achievements" className="footer-nav__link">
+                                    <Link to="/#achievements" className="footer-nav__link">
                                         <span>Team experience</span>
                                         <span>Team experience</span>
-                                    </Scrollchor>
+                                    </Link>
                                 </li>
                                 <li className="footer-nav__item">
-                                    <Scrollchor to="#our-mission" className="footer-nav__link">
+                                    <Link to="/#our-mission" className="footer-nav__link">
                                         <span>Our Mission</span>
                                         <span>Our Mission</span>
-                                    </Scrollchor>
+                                    </Link>
                                 </li>
                                 <li className="footer-nav__item">
-                                    <Scrollchor to="#get-started" className="footer-nav__link">
+                                    <Link to="/blog" className="footer-nav__link">
+                                        <span>Blog</span>
+                                        <span>Blog</span>
+                                    </Link>
+                                </li>
+                                <li className="footer-nav__item">
+                                    <Link to="/#get-started" className="footer-nav__link">
                                         <span>Get started</span>
                                         <span>Get started</span>
-                                    </Scrollchor>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -112,10 +118,8 @@ const footer = () => (
                     <span> Privacy Policy</span>
                 </a>
             </p>
-
         </div>
     </footer>
-
 );
 
 export default footer;

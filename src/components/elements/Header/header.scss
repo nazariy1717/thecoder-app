@@ -92,6 +92,7 @@
     }
   }
   &__list-link{
+    position: relative;
     display: block;
     transition: all .3s;
     color: var(--black);
@@ -104,6 +105,17 @@
     span{
       display: block;
       transition: all .3s;
+    }
+    &.active:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      width: 20px;
+      margin: auto;
+      height: 3px;
+      background-color: #000;
     }
     &:hover{
       span{
