@@ -1,8 +1,8 @@
 import React from 'react';
 import {HashLink as Link } from 'react-router-hash-link';
+import {NavLink} from 'react-router-dom';
 
 import './footer.scss';
-import pdf from './PrivacyPolicy.pdf';
 
 const footer = () => (
     <footer className="footer">
@@ -113,10 +113,10 @@ const footer = () => (
         </div>
         <div className="copyright">
             <p className="copyright__txt">All rights reserved 2018.
-                <a href={pdf} target='_blank' className="footer-nav__link copyright__link">
+                <NavLink to="/privacy-policy" target='_blank' className="footer-nav__link copyright__link">
                     <span> Privacy Policy</span>
                     <span> Privacy Policy</span>
-                </a>
+                </NavLink>
             </p>
         </div>
     </footer>
