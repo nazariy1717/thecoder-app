@@ -14,6 +14,7 @@ import AdminDashboard from './components/admin/AdminDashboard/AdminDashboard';
 import AdminEditor from './components/admin/AdminEditor/AdminEditor';
 
 import ThanksPage from './components/pages/ThanksPage/ThanksPage';
+import PrivacyPolicy from './components/pages/PrivacyPolicy/PrivacyPolicy';
 // import NotFoundPage from './components/pages/NotFoundPage/NotFoundPage';
 
 
@@ -30,6 +31,7 @@ const App = (location) =>(
             <AdminRoute exact path="/admin/editor" location={location} component={AdminEditor} />
 
             <UserRoute path="/thanks" component={ThanksPage} />
+            <UserRoute path="/privacy-policy" component={PrivacyPolicy} />
             {/*<UserRoute component={NotFoundPage} />*/}
 
         </Switch>

@@ -1,0 +1,16 @@
+
+.policy{
+  padding: 100px 0;
+  &__title{
+    margin-bottom: 30px;
+  }
+  &__content{
+    a{
+      color: #000;
+      text-decoration: underline;
+    }
+    strong{
+      font-weight: bold;
+    }
+  }
+}

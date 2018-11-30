@@ -9,7 +9,7 @@ import item4 from './items/bogdan.png';
 import item5 from './items/nazar.png';
 import item6 from './items/sofia.png';
 import item7 from './items/yura.png';
-import item8 from './items/misha.png';
+import item8 from './items/misha1.png';
 
 class OurClients extends Component {
 
