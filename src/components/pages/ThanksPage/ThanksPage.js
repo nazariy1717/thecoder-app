@@ -1,10 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
-
 import './thanks-page.scss';
-import Header from "../../elements/Header/Header";
-import Footer from "../../elements/Footer/Footer";
 
 class ThanksPage extends React.Component{
 
@@ -15,7 +12,6 @@ class ThanksPage extends React.Component{
     render(){
         return(
             <div>
-                <Header />
                 <div className="thanks-page display-table">
                     <div className="display-table__cell">
                         <div className="container">
@@ -27,11 +23,9 @@ class ThanksPage extends React.Component{
                                 <span className="btn-primary__txt">Go to main page</span>
                                 <span className="btn-primary__txt">Go to main page</span>
                             </Link>
-
                         </div>
                     </div>
                 </div>
-                <Footer />
             </div>
         )
     }

@@ -129,11 +129,10 @@ class Header extends React.Component{
                                         </Link>
                                     </li>
                                     <li className="header__list-item">
-                                        <Link to="/#our-mission" className="header__list-link">
-                                            <span>Mission Statement</span>
-                                            <span>Mission Statement</span>
+                                        <Link to="/#testimonials" className="header__list-link">
+                                            <span>Testimonials</span>
+                                            <span>Testimonials</span>
                                         </Link>
-
                                     </li>
                                     <li className="header__list-item">
                                         <NavLink to="/blog" className="header__list-link" activeClassName="active">
@@ -143,8 +142,8 @@ class Header extends React.Component{
                                     </li>
                                     <li className="header__list-item">
                                         <Link to="/#get-started" className="header__list-link">
-                                            <span>Get started</span>
-                                            <span>Get started</span>
+                                            <span>Contact Us</span>
+                                            <span>Contact Us</span>
                                         </Link>
                                     </li>
                                 </ul>
