@@ -22,7 +22,7 @@ class OurWorks extends React.Component{
                             <a href="https://leodrive.com.ua/en/" aria-label="Site built for Leodrive" rel="nofollow noopener noreferrer" target="_blank">
                                 <div className="work-item">
                                     <div className="work-item__content">
-                                        <video src={leo} loop muted="muted" autoPlay="true" data-keepplaying data-autoplay playsInline>
+                                        <video src={leo} loop muted="muted" pip="false" autoPlay="true" data-keepplaying data-autoplay playsInline>
                                         </video>
                                     </div>
                                     <p className="work-item__desc"><span>Leodrive</span></p>
