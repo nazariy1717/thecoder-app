@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet";
 import './post-page.scss'
 import { connect } from 'react-redux'
 import {getArticle} from "../../../actions/articles";
-import {isMobile} from 'react-device-detect';
 
 import { TweenMax }  from "gsap";
 import 'animation.gsap';
@@ -18,12 +17,9 @@ const mapStateToProps = state => {
 class PostPage extends React.Component{
 
     componentDidMount() {
-        console.log('componentDidMount');
-        if(!isMobile) {
-            TweenMax.to( document.querySelector('.post'), 0.2, {
-                opacity: 1
-            });
-        }
+        TweenMax.to( document.querySelector('.post'), 0.2, {
+            opacity: 1
+        });
     }
 
     componentWillMount() {
@@ -38,13 +34,14 @@ class PostPage extends React.Component{
 
     render(){
         let article = this.props.article;
+        console.log(article);
         return(
             <div className="post-wrap">
                 <Helmet>
                     <title>{article.title}</title>
-                    <meta name="description" content={article.description} />
+                    <meta name="description" content={article.text} />
                     <meta property="og:title" content={article.title} />
-                    <meta property="og:description" content={article.description}/>
+                    <meta property="og:description" content={article.text}/>
                     <meta property="og:url" content={window.location.href}/>
                     <meta property="og:image" content={article.articleImg} />
                 </Helmet>

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export default{
     admin:{
-        login: (credentials) => axios.post('http://localhost:8080/api/admin-auth',{credentials}).then(res => res.data)
+        login: (credentials) => axios.post('https://testingsite.pp.ua/api/admin-auth',{credentials}).then(res => res.data)
     },
     articles:{
 
@@ -16,7 +16,6 @@ export default{
         addImages : (images) => axios.post(`https://testingsite.pp.ua/api/image`, images).then(res => res.data),
         getImages : () => axios.get(`https://testingsite.pp.ua/api/images`).then(res => res.data),
         removeImage: (image_id) => axios.delete(`https://testingsite.pp.ua/api/removeImage/${image_id}`).then(res => res.data),
-
 
 
 
