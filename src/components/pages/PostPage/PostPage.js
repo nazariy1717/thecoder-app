@@ -38,7 +38,6 @@ class PostPage extends React.Component{
 
     render(){
         let article = this.props.article;
-        // console.log(this.props);
         return(
             <div className="post-wrap">
                 <Helmet>
@@ -47,7 +46,7 @@ class PostPage extends React.Component{
                     <meta property="og:title" content={article.title} />
                     <meta property="og:description" content={article.description}/>
                     <meta property="og:url" content={window.location.href}/>
-                    <meta property="og:image" content={ `https://www.thecoderdev.com/ + ${article.articleImg}`} />
+                    <meta property="og:image" content={article.articleImg} />
                 </Helmet>
                 <div className="container">
                     <article className="post" itemScope itemType="http://schema.org/Article">
@@ -82,4 +81,3 @@ class PostPage extends React.Component{
 
 
 export default connect(mapStateToProps, {getArticle})(PostPage);
-

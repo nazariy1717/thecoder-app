@@ -112,7 +112,7 @@ const footer = () => (
             </div>
         </div>
         <div className="copyright">
-            <p className="copyright__txt">All rights reserved 2018.
+            <p className="copyright__txt">All rights reserved 2019.
                 <NavLink to="/privacy-policy" target='_blank' className="footer-nav__link copyright__link">
                     <span> Privacy Policy</span>
                     <span> Privacy Policy</span>

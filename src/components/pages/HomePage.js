@@ -27,6 +27,9 @@ class HomePage extends Component {
                     <meta property="og:title" content="THE CODER - Website development company" />
                     <meta property="og:description" content="Our company is your trusted partner in creative website development, UX/UI design and branding. With specialists in the USA and overseas, your cost is guaranteed to be very competitive."/>
                     <meta property="og:url" content="https://thecoderdev.com"/>
+                    <meta property="og:image" content="%PUBLIC_URL%/fav/og-sm.png" />
+                    <meta property="og:image" content="%PUBLIC_URL%/fav/og.jpg" />
+                    <meta property="og:image" content="%PUBLIC_URL%/fav/og-sm.png" />
                 </Helmet>
                 <FirstScreen />
                 <OurServices />

@@ -25,11 +25,12 @@ class BlogPage extends React.Component{
         return(
             <section className="blog-wrap">
                 <Helmet>
-                    <title>Blog the coder </title>
-                    <meta name="description" content="Blog the coder " />
-                    <meta property="og:title" content="Blog the coder " />
-                    <meta property="og:description" content="Blog the coder "/>
+                    <title>Blog</title>
+                    <meta name="description" content="Our company is your trusted partner in creative website development, UX/UI design and branding. With specialists in the USA and overseas, your cost is guaranteed to be very competitive." />
+                    <meta property="og:title" content="Blog" />
+                    <meta property="og:description" content="Our company is your trusted partner in creative website development, UX/UI design and branding. With specialists in the USA and overseas, your cost is guaranteed to be very competitive."/>
                     <meta property="og:url" content="https://www.thecoderdev.com/blog"/>
+                    <meta property="og:image" content="/fav/og-sm.png" />
                 </Helmet>
                 <div className="container">
                     <div className="row m-row align-justify">
