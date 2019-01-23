@@ -2,7 +2,7 @@
   position: relative;
   max-width: 355px;
   margin: auto auto 30px;
-  height: 280px;
+  height: 250px;
   overflow: hidden;
   box-shadow: 3px 0 20px rgba(0,0,0,.13);
   backface-visibility: hidden;
@@ -20,7 +20,7 @@
     }
   }
   &__figure{
-    height: 180px;
+    height: 145px;
     position: relative;
     overflow: hidden;
     transition: transform 0.35s ease-out;
@@ -36,7 +36,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 180px;
+    top: 150px;
     padding: 10px;
     overflow: hidden;
     background-color: #fff;
