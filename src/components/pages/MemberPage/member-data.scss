@@ -1,0 +1,107 @@
+.team-member {
+  min-height: 100vh;
+  padding: 145px 0 0;
+  @media (max-width: 991px) {
+    padding: 100px 0 0;
+  }
+  &__block {
+    margin-bottom: 100px;
+    @media (max-width: 991px) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: 575px) {
+      margin-bottom: 30px;
+    }
+  }
+  &__image-column {
+    @media (max-width: 991px) {
+      order: 2;
+      margin-bottom: 30px;
+    }
+    @media (max-width: 575px) {
+      margin-bottom: 0;
+    }
+  }
+  &__title-column {
+    @media (max-width: 991px) {
+      order: 1;
+      margin-bottom: 30px;
+    }
+  }
+  &__image {
+    position: relative;
+    img {
+      max-width: 540px;
+      @media (max-width: 575px) {
+        max-width: 300px;
+      }
+      @media (max-width: 374px) {
+        max-width: 250px;
+      }
+    }
+  }
+  &__linkedin {
+    position: absolute;
+    right: 55px;
+    top: 0;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--black);
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    @media (max-width: 1200px) {
+      right: -30px;
+    }
+    span {
+      display: block;
+      line-height: 24px;
+      transition: all 0.3s;
+    }
+    &:hover {
+      span {
+        transform: translateY(-24px);
+      }
+    }
+  }
+  &__fact {
+    color: black;
+    font-family: MADE Evolve Sans EVO, sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1;
+    @media (max-width: 575px) {
+      font-size: 30px;
+    }
+  }
+  &__txt {
+    &.--no-margin{
+      margin-bottom: 0;
+    }
+    @media (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+    b {
+      font-weight: bold;
+    }
+  }
+  &__role {
+    display: block;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    position: absolute;
+    right: 45px;
+    bottom: 0;
+    color: #000;
+    letter-spacing: 5px;
+    font-family: Raleway, sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 48px;
+    @media (max-width: 1200px) {
+      right: -45px;
+    }
+  }
+}

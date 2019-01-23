@@ -8,6 +8,7 @@ import UserRoute from "./components/routes/UserRoute";
 import HomePage from './components/pages/HomePage';
 import BlogPage from './components/pages/BlogPage/BlogPage';
 import PostPage from './components/pages/PostPage/PostPage';
+import MemberPage from './components/pages/MemberPage/MemberPage';
 
 import AdminAuth from './components/admin/AdminAuth/AdminAuth';
 import AdminDashboard from './components/admin/AdminDashboard/AdminDashboard';
@@ -15,7 +16,7 @@ import AdminEditor from './components/admin/AdminEditor/AdminEditor';
 
 import ThanksPage from './components/pages/ThanksPage/ThanksPage';
 import PrivacyPolicy from './components/pages/PrivacyPolicy/PrivacyPolicy';
-// import NotFoundPage from './components/pages/NotFoundPage/NotFoundPage';
+import NotFoundPage from './components/pages/NotFoundPage/NotFoundPage';
 
 
 const App = (location) =>(
@@ -24,7 +25,9 @@ const App = (location) =>(
 
             <UserRoute exact path="/" component={HomePage} />
             <UserRoute exact path="/blog" component={BlogPage} />
-            <UserRoute path="/blog/:post" component={PostPage} />
+            <UserRoute exact path="/blog/:post" component={PostPage} />
+
+            <UserRoute path="/team/:member" component={MemberPage} />
 
             <Route exact path="/admin" location={location} component={AdminAuth} />
             <AdminRoute exact path="/admin/dashboard" location={location} component={AdminDashboard} />
@@ -32,7 +35,7 @@ const App = (location) =>(
 
             <UserRoute path="/thanks" component={ThanksPage} />
             <UserRoute path="/privacy-policy" component={PrivacyPolicy} />
-            {/*<UserRoute component={NotFoundPage} />*/}
+            <UserRoute component={NotFoundPage} />
 
         </Switch>
     </div>
