@@ -36,9 +36,6 @@ class MemberPage extends Component {
     render() {
         console.log(this.state.member);
         let teamMember = this.state.member;
-        console.log(teamMember.name);
-        console.log(teamMember.name);
-
         return (
             <div>
                 <Helmet>
