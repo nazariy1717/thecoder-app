@@ -1,5 +1,5 @@
 import {
-    ADD_ARTICLE, LOAD_ARTICLES, REMOVE_ARTICLE, VIEW_ARTICLE, CLAP_ARTICLE,
+    ADD_ARTICLE, LOAD_ARTICLES, REMOVE_ARTICLE, VIEW_ARTICLE, CLAP_ARTICLE, CLEAR_ARTICLE,
     LOAD_IMAGES, ADD_IMAGES, REMOVE_IMAGE
     } from '../types';
 import api from '../api';
@@ -10,11 +10,11 @@ export const adminAddedArticle = (article) => ({
     type: ADD_ARTICLE,
     article
 });
+
 export const adminAddArticle = article => dispatch =>
     api.articles.addArticle(article).then(response => {
         dispatch(adminAddedArticle(response.createdArticle));
     });
-
 
 /* LOAD_ARTICLES */
 export const loadedArticles = (articles) => ({

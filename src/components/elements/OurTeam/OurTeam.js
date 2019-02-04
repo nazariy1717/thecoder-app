@@ -78,7 +78,7 @@ class OurClients extends Component {
 
                         </div>
                         <div className="column col-lg-3 col-md-4 col-xs-6">
-                            <Link to="/team/Bohdan-Hulovatyi">
+
                                 <div className="our-team-item">
                                     <LazyLoad once height={255}>
                                         <img src={item4} alt="Front-end Developer of the CODER company" title="Front-end Developer of the CODER company" className="image"/>
@@ -86,7 +86,7 @@ class OurClients extends Component {
                                     <span className="our-team-item__name">Bohdan Hulovatyi</span>
                                     <span className="our-team-item__role app-txt">Front-end Developer</span>
                                 </div>
-                            </Link>
+
                         </div>
                         <div className="column col-lg-3 col-md-4 col-xs-6">
 

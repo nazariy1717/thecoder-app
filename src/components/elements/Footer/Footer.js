@@ -27,8 +27,11 @@ const footer = () => (
                         <div className="column col-sm-4 col-xs-12 footer__column">
                             <div>
                                 <span className="footer__txt --title">ADDRESS/</span>
-                                <span className="footer__txt">San Francisco, CA, USA</span>
+                                <span className="footer__txt">San Mateo, CA 94401, USA</span>
+                                <p className="footer__txt --modifier">817 N Humboldt St, #302</p>
                                 <span className="footer__txt">Lviv, Ukraine</span>
+                                <p className="footer__txt --modifier">Promyslova St, 50/52</p>
+                                <br/>
                                 <a href="tel:(415) 903-0707" className="footer__txt">(415) 903-0707</a>
                                 <a href="mailto:thecoder@gmail.com" className="footer__txt mb-15">info@thecoderdev.com</a>
                             </div>

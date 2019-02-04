@@ -34,7 +34,6 @@ class PostPage extends React.Component{
 
     render(){
         let article = this.props.article;
-        console.log(article);
         return(
             <div className="post-wrap">
                 <Helmet>

@@ -1,4 +1,4 @@
-import {ADD_ARTICLE, LOAD_ARTICLES, REMOVE_ARTICLE, VIEW_ARTICLE, CLAP_ARTICLE,
+import {ADD_ARTICLE, LOAD_ARTICLES, REMOVE_ARTICLE, VIEW_ARTICLE, CLEAR_ARTICLE, CLAP_ARTICLE,
     ADD_IMAGES, LOAD_IMAGES,REMOVE_IMAGE } from '../types';
 
 const initialState = {
@@ -26,6 +26,12 @@ export default (state=initialState, action={}) => {
             return{
                 ...state,
                 article: action.article
+            };
+        case CLEAR_ARTICLE:
+            console.log(state);
+            return{
+                ...state,
+                article: ''
             };
         case ADD_IMAGES:
             return{

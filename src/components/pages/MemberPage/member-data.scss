@@ -4,6 +4,11 @@
   @media (max-width: 991px) {
     padding: 100px 0 0;
   }
+  &__content {
+    .title-box{
+      max-width: 100%;
+    }
+  }
   &__block {
     margin-bottom: 100px;
     @media (max-width: 991px) {
@@ -15,11 +20,7 @@
   }
   &__image-column {
     @media (max-width: 991px) {
-      order: 2;
       margin-bottom: 30px;
-    }
-    @media (max-width: 575px) {
-      margin-bottom: 0;
     }
   }
   &__title-column {
@@ -31,19 +32,16 @@
   &__image {
     position: relative;
     img {
-      max-width: 540px;
-      @media (max-width: 575px) {
-        max-width: 300px;
-      }
-      @media (max-width: 374px) {
-        max-width: 250px;
+      max-width: 500px;
+      @media (max-width: 1200px) {
+        max-width: 100%;
       }
     }
   }
   &__linkedin {
     position: absolute;
-    right: 55px;
-    top: 0;
+    right: 0;
+    top: 9px;
     font-size: 18px;
     font-weight: 800;
     color: var(--black);
@@ -88,20 +86,15 @@
     }
   }
   &__role {
-    display: block;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    position: absolute;
-    right: 45px;
-    bottom: 0;
+    position: relative;
+    padding-right: 45px;
+    display: inline-block;
     color: #000;
     letter-spacing: 5px;
     font-family: Raleway, sans-serif;
     font-size: 12px;
     font-weight: 800;
     line-height: 48px;
-    @media (max-width: 1200px) {
-      right: -45px;
-    }
+    margin-bottom: 20px;
   }
 }
