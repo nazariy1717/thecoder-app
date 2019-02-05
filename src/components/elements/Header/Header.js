@@ -141,6 +141,12 @@ class Header extends React.Component{
                                         </NavLink>
                                     </li>
                                     <li className="header__list-item">
+                                        <NavLink to="/tools" className="header__list-link" activeClassName="active">
+                                            <span>Tools</span>
+                                            <span>Tools</span>
+                                        </NavLink>
+                                    </li>
+                                    <li className="header__list-item">
                                         <Link to="/#get-started" className="header__list-link">
                                             <span>Contact Us</span>
                                             <span>Contact Us</span>

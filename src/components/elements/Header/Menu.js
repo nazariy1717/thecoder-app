@@ -24,13 +24,16 @@ class Menu extends React.Component{
                             <Link to="/#our-works" className="menu__link" onClick={this.props.close}>Portfolio</Link>
                         </li>
                         <li className="menu__item">
-                            <Link to="/blog" className="menu__link" onClick={this.props.close}>Blog</Link>
-                        </li>
-                        <li className="menu__item">
-                            <Link to="/#achievements" className="menu__link" onClick={this.props.close}>Team achievements</Link>
+                            <Link to="/#achievements" className="menu__link" onClick={this.props.close}>Team experience</Link>
                         </li>
                         <li className="menu__item">
                             <Link to="/#testimonials" className="menu__link" onClick={this.props.close}>Testimonials</Link>
+                        </li>
+                        <li className="menu__item">
+                            <Link to="/blog" className="menu__link" onClick={this.props.close}>Blog</Link>
+                        </li>
+                        <li className="menu__item">
+                            <Link to="/tools" className="menu__link" onClick={this.props.close}>Tools</Link>
                         </li>
                         <li className="menu__item">
                             <Link to="/#contact-us" className="menu__link" onClick={this.props.close}>Contact us</Link>

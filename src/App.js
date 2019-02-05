@@ -10,6 +10,8 @@ import BlogPage from './components/pages/BlogPage/BlogPage';
 import PostPage from './components/pages/PostPage/PostPage';
 import MemberPage from './components/pages/MemberPage/MemberPage';
 
+import ToolsPage from './components/pages/ToolsPage/ToolsPage';
+
 import AdminAuth from './components/admin/AdminAuth/AdminAuth';
 import AdminDashboard from './components/admin/AdminDashboard/AdminDashboard';
 import AdminEditor from './components/admin/AdminEditor/AdminEditor';
@@ -28,6 +30,9 @@ const App = (location) =>(
             <UserRoute exact path="/blog/:post" component={PostPage} />
 
             <UserRoute path="/team/:member" component={MemberPage} />
+
+            <UserRoute path="/tools" component={ToolsPage} />
+            <UserRoute path="/tools/:tool" component={BlogPage} />
 
             <Route exact path="/admin" location={location} component={AdminAuth} />
             <AdminRoute exact path="/admin/dashboard" location={location} component={AdminDashboard} />
