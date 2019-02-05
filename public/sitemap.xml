@@ -9,16 +9,31 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thecoderdev.com/blog</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://thecoderdev.com/privacy-policy</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thecoderdev.com/thanks</loc>
+    <loc>https://thecoderdev.com/blog</loc>
     <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://thecoderdev.com/blog/44-questions-to-ask-before-hiring-web-development-company</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thecoderdev.com/blog/Developing-an-e-commerce-website</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thecoderdev.com/team/Taras-Melnychenko</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thecoderdev.com/team/Ruslan-Senyo</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thecoderdev.com/team/Nazar-Kalinchuk</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>

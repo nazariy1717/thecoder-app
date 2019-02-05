@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import MemberData from "./MemberData";
 
 import "./member-data.scss";
+import {HashLink as Link} from "react-router-hash-link";
 
 class MemberPage extends Component {
 
@@ -43,12 +44,22 @@ class MemberPage extends Component {
                 </Helmet>
                 <div className="team-member">
                     <div className="container">
+                        <ul className="breadcrumbs">
+                            <li className="breadcrumbs__item" itemScope itemType = "http://data-vocabulary.org/Breadcrumb">
+                                <Link to="/" className="breadcrumbs__link" itemProp="url">Main</Link>
+                            </li>
+                            <li className="breadcrumbs__item"  itemScope itemType = "http://data-vocabulary.org/Breadcrumb">
+                                <Link to="/#our-team" className="breadcrumbs__link" itemProp="url">Team</Link>
+                            </li>
+                            <li className="breadcrumbs__item"  itemScope itemType = "http://data-vocabulary.org/Breadcrumb">
+                                <span className="breadcrumbs__link active" itemProp="url">{teamMember.name}</span>
+                            </li>
+                        </ul>
                         <div className="team-member__block">
                             <div className="row m-row align-middle">
                                 <div className="column col-lg-6 team-member__image-column">
                                     <div className="team-member__image">
                                         <img src={teamMember.image_1} alt="" className="image"/>
-
                                     </div>
                                 </div>
                                 <div className="column col-lg-6 team-member__title-column">

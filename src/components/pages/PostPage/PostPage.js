@@ -47,15 +47,15 @@ class PostPage extends React.Component{
                 <div className="container">
                     <article className="post" itemScope itemType="http://schema.org/Article">
                         <img src={article.articleImg} alt={article.title} className="post__image" itemProp="image"/>
-                        <ul className="post-breadcrumb">
-                            <li className="post-breadcrumb__item" itemScope itemType = "http://data-vocabulary.org/Breadcrumb">
-                                <Link to="/" className="post-breadcrumb__link" itemProp="url">Main</Link>
+                        <ul className="breadcrumbs">
+                            <li className="breadcrumbs__item" itemScope itemType = "http://data-vocabulary.org/Breadcrumb">
+                                <Link to="/" className="breadcrumbs__link" itemProp="url">Main</Link>
                             </li>
-                            <li className="post-breadcrumb__item"  itemScope itemType = "http://data-vocabulary.org/Breadcrumb">
-                                <Link to="/blog" className="post-breadcrumb__link" itemProp="url">Blog</Link>
+                            <li className="breadcrumbs__item"  itemScope itemType = "http://data-vocabulary.org/Breadcrumb">
+                                <Link to="/blog" className="breadcrumbs__link" itemProp="url">Blog</Link>
                             </li>
-                            <li className="post-breadcrumb__item"  itemScope itemType = "http://data-vocabulary.org/Breadcrumb">
-                                <span className="post-breadcrumb__link active" itemProp="url">{article.title}</span>
+                            <li className="breadcrumbs__item"  itemScope itemType = "http://data-vocabulary.org/Breadcrumb">
+                                <span className="breadcrumbs__link active" itemProp="url">{article.title}</span>
                             </li>
                         </ul>
                         <div className="post__top">

@@ -25,18 +25,26 @@ class BlogPage extends React.Component{
         return(
             <section className="blog-wrap">
                 <Helmet>
-                    <title>Blog</title>
-                    <meta name="description" content="Our company is your trusted partner in creative website development, UX/UI design and branding. With specialists in the USA and overseas, your cost is guaranteed to be very competitive." />
-                    <meta property="og:title" content="Blog" />
-                    <meta property="og:description" content="Our company is your trusted partner in creative website development, UX/UI design and branding. With specialists in the USA and overseas, your cost is guaranteed to be very competitive."/>
-                    <meta property="og:url" content="https://www.thecoderdev.com/blog"/>
-                    <meta property="og:image" content="/fav/og-sm.png" />
-                </Helmet>
+                <title>Blog</title>
+                <meta name="description" content="Our company is your trusted partner in creative website development, UX/UI design and branding. With specialists in the USA and overseas, your cost is guaranteed to be very competitive." />
+                <meta property="og:title" content="Blog" />
+                <meta property="og:description" content="Our company is your trusted partner in creative website development, UX/UI design and branding. With specialists in the USA and overseas, your cost is guaranteed to be very competitive."/>
+                <meta property="og:url" content="https://www.thecoderdev.com/blog"/>
+                <meta property="og:image" content="/fav/og-sm.png" />
+            </Helmet>
                 <div className="container">
                     <div className="row m-row align-justify">
                         <div className="column">
                             <div className="our-team__title title-box">
                                 <h1 className="title-box__inner">Blog</h1>
+                                <ul className="breadcrumbs">
+                                    <li className="breadcrumbs__item" itemScope itemType = "http://data-vocabulary.org/Breadcrumb">
+                                        <Link to="/" className="breadcrumbs__link" itemProp="url">Main</Link>
+                                    </li>
+                                    <li className="breadcrumbs__item"  itemScope itemType = "http://data-vocabulary.org/Breadcrumb">
+                                        <span className="breadcrumbs__link active">Blog</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -53,14 +61,6 @@ class BlogPage extends React.Component{
                             }
                         </div>
                     </div>
-                    <ul className="post-breadcrumb">
-                        <li className="post-breadcrumb__item" itemScope itemType = "http://data-vocabulary.org/Breadcrumb">
-                            <Link to="/" className="post-breadcrumb__link" itemProp="url">Main</Link>
-                        </li>
-                        <li className="post-breadcrumb__item"  itemScope itemType = "http://data-vocabulary.org/Breadcrumb">
-                            <span className="post-breadcrumb__link active">Blog</span>
-                        </li>
-                    </ul>
                 </div>
             </section>
         )
