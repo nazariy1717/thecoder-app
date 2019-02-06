@@ -32,9 +32,7 @@ class Menu extends React.Component{
                         <li className="menu__item">
                             <Link to="/blog" className="menu__link" onClick={this.props.close}>Blog</Link>
                         </li>
-                        <li className="menu__item">
-                            <Link to="/tools" className="menu__link" onClick={this.props.close}>Tools</Link>
-                        </li>
+
                         <li className="menu__item">
                             <Link to="/#contact-us" className="menu__link" onClick={this.props.close}>Contact us</Link>
                         </li>
