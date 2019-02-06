@@ -53,7 +53,7 @@ class FirstScreen extends React.Component{
                                         {
                                             (this.state.visible)
                                                 ?
-                                                <iframe className="video-container" src="https://www.youtube.com/embed/O8uaIX7KJLU"
+                                                <iframe title="The Coder Video" className="video-container" src="https://www.youtube.com/embed/O8uaIX7KJLU"
                                                         frameBorder="0"
                                                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                                         allowFullScreen></iframe>

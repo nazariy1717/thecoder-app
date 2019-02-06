@@ -143,3 +143,56 @@
     }
   }
 }
+
+
+
+.tool{
+  &__top{
+    border-bottom: 1px solid var(--gray);
+    margin-bottom: 20px;
+  }
+  &__logo{
+    margin-bottom: 50px;
+    img{
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+  &__name{
+    max-width: 100%;
+  }
+  &__desc{
+    margin-bottom: 50px;
+  }
+  &__title{
+    font-family: Raleway,sans-serif;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  &__subtitle{
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray);
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

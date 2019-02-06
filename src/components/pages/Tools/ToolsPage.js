@@ -1,5 +1,7 @@
 import React from 'react';
 import './tools-page.scss'
+import ToolsData from './ToolsData';
+
 import { Helmet } from "react-helmet";
 import {Link} from "react-router-dom";
 
@@ -7,6 +9,7 @@ import {Link} from "react-router-dom";
 class ToolsPage extends React.Component{
 
     componentDidMount(){
+        console.log(ToolsData);
         window.scrollTo(0, 0);
     }
 
@@ -42,13 +45,14 @@ class ToolsPage extends React.Component{
                                         <div className="tool-item__overlay">
                                             <ul className="tool-item__list">
                                                 <li className="tool-item__list-item">
-                                                    <a href="http://documents.thecoderdev.com/" className="tool-item__list-link" rel="nofollow" target="_blank">
+                                                    <a href="http://documents.thecoderdev.com/" className="tool-item__list-link"
+                                                       target="_blank" rel="noopener noreferrer nofollow">
                                                         <i className="icon-sign-in"></i>
                                                         <span>Sign In</span>
                                                     </a>
                                                 </li>
                                                 <li className="tool-item__list-item">
-                                                    <Link to="/" className="tool-item__list-link">
+                                                    <Link to="/tools/tool-name" className="tool-item__list-link">
                                                         <i className="icon-info-1"></i>
                                                         <span>Details</span>
                                                     </Link>
