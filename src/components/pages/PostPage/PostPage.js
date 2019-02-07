@@ -38,9 +38,9 @@ class PostPage extends React.Component{
             <div className="post-wrap">
                 <Helmet>
                     <title>{article.title}</title>
-                    <meta name="description" content={article.text} />
+                    <meta name="description" content={article.description} />
                     <meta property="og:title" content={article.title} />
-                    <meta property="og:description" content={article.text}/>
+                    <meta property="og:description" content={article.description}/>
                     <meta property="og:url" content={window.location.href}/>
                     <meta property="og:image" content={article.articleImg} />
                 </Helmet>

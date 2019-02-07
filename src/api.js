@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// const url = 'https://testingsite.pp.ua';
-const url = 'http://localhost:8080';
+const url = 'https://testingsite.pp.ua';
+// const url = 'http://localhost:8080';
 
 
 export default{
