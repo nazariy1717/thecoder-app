@@ -5,6 +5,10 @@ import {
 import api from '../api';
 
 
+const lang = {
+    lang: 'en'
+};
+
 /* ADD_ARTICLE */
 export const adminAddedArticle = (article) => ({
     type: ADD_ARTICLE,
@@ -16,16 +20,30 @@ export const adminAddArticle = article => dispatch =>
         dispatch(adminAddedArticle(response.createdArticle));
     });
 
+
 /* LOAD_ARTICLES */
 export const loadedArticles = (articles) => ({
     type: LOAD_ARTICLES,
     articles
 });
+
 export function loadArticles() {
     return (dispatch) => {
-        api.articles.getArticles().then(response => dispatch(loadedArticles(response)));
+        api.articles.getArticles(lang).then(response => dispatch(loadedArticles(response)));
     }
 }
+
+
+/* GET_ARTICLE */
+export const viewArticle = (article) => ({
+    type: VIEW_ARTICLE,
+    article
+});
+export const getArticle = article_id => dispatch =>
+    api.articles.getArticle(article_id, lang).then(response => {
+        dispatch(viewArticle(response));
+    });
+
 
 
 /* REMOVE_ARTICLE */
@@ -40,17 +58,10 @@ export const removeArticle = article_id => dispatch =>
 
 
 
-/* GET_ARTICLE */
-export const viewArticle = (article) => ({
-    type: VIEW_ARTICLE,
-    article
-});
-export const getArticle = article_id => dispatch =>
-    api.articles.getArticle(article_id).then(response => {
-        dispatch(viewArticle(response));
-    });
 
 
+
+/* CLAP_ARTICLE */
 export function clapArticle(article_id) {
     return (dispatch) => {
         api.clapArticle(article_id).then( dispatch({ type: CLAP_ARTICLE}));

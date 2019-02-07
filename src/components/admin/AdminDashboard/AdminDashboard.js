@@ -21,7 +21,6 @@ class AdminDashboard extends Component{
 
     componentDidMount(){
         this.props.loadArticles();
-        console.log(this.props.articles);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -63,7 +62,6 @@ class AdminDashboard extends Component{
                </div>
            )
         });
-        console.log(articles);
         return(
             <div className="admin-wrapper">
                 <AdminHeader />

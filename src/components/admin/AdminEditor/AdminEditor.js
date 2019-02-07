@@ -27,8 +27,11 @@ class AdminEditor extends Component{
         this.state = {
             article: {
                 title: '',
+                titleUkr: '',
                 description: '',
+                descriptionUkr: '',
                 text: '',
+                textUkr: '',
                 image: null,
             },
             errors: [],
@@ -58,6 +61,9 @@ class AdminEditor extends Component{
             fd.append('title', article.title);
             fd.append('description', article.description);
             fd.append('text', article.text);
+            fd.append('titleUkr', article.titleUkr);
+            fd.append('descriptionUkr', article.descriptionUkr);
+            fd.append('textUkr', article.textUkr);
             fd.append('claps', 0);
             fd.append('image', article.image, article.image.name);
             this.props.adminAddArticle(fd)
@@ -67,12 +73,18 @@ class AdminEditor extends Component{
                             title: '',
                             description: '',
                             text: '',
+
+                            titleUkr: '',
+                            descriptionUkr: '',
+                            textUkr: '',
+
                             image: null,
                         },
                         loading: false
                     });
                     document.getElementById('image_preview').src = "";
-                    document.querySelector('.medium-editable').innerHTML = '';
+                    document.querySelectorAll('.medium-editable')[0].innerHTML = '';
+                    document.querySelectorAll('.medium-editable')[1].innerHTML = '';
                     notify.show("Post was created successfully", "success")
                 })
                 .catch(err => console.log('There was an error:' + err));
@@ -107,12 +119,15 @@ class AdminEditor extends Component{
     validate(data){
         const errors = {};
         if(!data.title){ errors.title = "Required field"; }
+        if(!data.titleUkr){ errors.titleUkr = "Required field"; }
         if(!data.text){errors.text = "Required field"; }
+        if(!data.textUkr){errors.textUkr = "Required field"; }
         if(!data.image){errors.image = "Required field"; }
         return errors;
     }
 
     componentDidMount () {
+        console.log(document.querySelectorAll('.medium-editable'));
         this.props.loadImages();
         const editor = new MediumEditor(".medium-editable",{
             autoLink: true,
@@ -144,7 +159,9 @@ class AdminEditor extends Component{
                     article:{
                         ...this.state.article,
                         description: `${editor.getContent(0).substring(0,300).toString()}`,
-                        text: editor.getContent(0)
+                        descriptionUkr: `${editor.getContent(1).substring(0,300).toString()}`,
+                        text: editor.getContent(0),
+                        textUkr: editor.getContent(1)
                     }
                 });
         })
@@ -184,22 +201,47 @@ class AdminEditor extends Component{
                                 className="existing-img-previewer"
                                 id="existing-img-previewer">
                             </div>
-                            <div className="form__group-30">
-                                <textarea className="admin-editor__title"
-                                          name="title"
-                                          id="editor-title"
-                                          value={article.title}
-                                          onChange={this.onChangeHandler}
-                                          placeholder="Title">
-                                </textarea>
-                                { errors.title && <span className="form__error">{errors.title}</span>    }
+                            <div className="row m-row">
+                                <div className="column col-lg-6">
+                                    <h2 className="admin-editor__head-subtitle">English</h2>
+                                    <div className="form__group-30">
+                                        <textarea className="admin-editor__title"
+                                                  name="title"
+                                                  id="editor-title"
+                                                  value={article.title}
+                                                  onChange={this.onChangeHandler}
+                                                  placeholder="Title">
+                                        </textarea>
+                                        { errors.title && <span className="form__error">{errors.title}</span>    }
+                                    </div>
+                                    <div className="form__group-50">
+                                        <textarea className="medium-editable">
+                                        </textarea>
+                                        { errors.text && <span className="form__error">{errors.text}</span>    }
+                                    </div>
+                                </div>
+                                <div className="column col-lg-6">
+                                    <h2 className="admin-editor__head-subtitle">Ukrainian</h2>
+                                    <div className="form__group-30">
+                                        <textarea className="admin-editor__title"
+                                                  name="titleUkr"
+                                                  id="editor-titleUkr"
+                                                  value={article.titleUkr}
+                                                  onChange={this.onChangeHandler}
+                                                  placeholder="Заголовок">
+                                        </textarea>
+                                        { errors.title && <span className="form__error">{errors.titleUkr}</span>    }
+                                    </div>
+                                    <div className="form__group-50">
+                                        <textarea
+                                            className="medium-editable">
+                                        </textarea>
+                                        { errors.text && <span className="form__error">{errors.textUkr}</span>    }
+                                    </div>
+                                </div>
                             </div>
-                            <div className="form__group-50">
-                                <textarea className="medium-editable"
-                                          id="medium-editable">
-                                </textarea>
-                                { errors.text && <span className="form__error">{errors.text}</span>    }
-                            </div>
+
+
                             <button type="submit" className="btn btn-secondary admin-editor__btn">save</button>
                         </form>
                         <ImagesList onChangeHandler={this.uploadImage}
