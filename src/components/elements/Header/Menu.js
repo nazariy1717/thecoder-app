@@ -69,7 +69,6 @@ class Menu extends React.Component{
                     </ul>
                 </div>
             </div>
-
         )
     }
 };

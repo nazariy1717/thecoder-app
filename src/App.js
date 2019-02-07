@@ -35,7 +35,7 @@ const App = (location) =>(
             <UserRoute exact path="/tools" component={ToolsPage} />
             <UserRoute exact path="/tools/:tool" component={ToolPage} />
 
-            <Route exact path="/admin" location={location} component={AdminAuth} />
+            <UserRoute exact path="/admin" location={location} component={AdminAuth} />
             <AdminRoute exact path="/admin/dashboard" location={location} component={AdminDashboard} />
             <AdminRoute exact path="/admin/editor" location={location} component={AdminEditor} />
 
