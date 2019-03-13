@@ -1,4 +1,5 @@
 User-agent: *
 Disallow:
+Disallow: /tools
 Disallow: /admin
 Sitemap: https://thecoderdev.com/sitemap.xml
