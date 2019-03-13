@@ -16,7 +16,6 @@ class MemberPage extends Component {
                 "role":"",
                 "linkedin":"",
                 "image_1":"",
-                "image_2":"",
                 "text":"",
                 "fact":"",
             }

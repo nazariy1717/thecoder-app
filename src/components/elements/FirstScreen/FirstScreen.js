@@ -1,7 +1,6 @@
 import React from 'react';
 import './firstScreen.scss';
 import Scrollchor from "react-scrollchor";
-import LazyLoad from 'react-lazyload';
 import Modal from 'react-awesome-modal';
 
 class FirstScreen extends React.Component{
@@ -29,9 +28,7 @@ class FirstScreen extends React.Component{
     render(){
         return(
             <div className="first-screen display-table">
-                <LazyLoad once >
-                    <div className="first-screen__bg"></div>
-                </LazyLoad>
+                <div className="first-screen__bg"></div>
                 <div className="display-table__cell">
                     <div className="first-screen__content">
                         <span className="first-screen__caption">details matter</span>

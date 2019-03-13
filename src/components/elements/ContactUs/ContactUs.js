@@ -2,9 +2,7 @@ import React from 'react';
 import './contact_us.scss';
 import ContactForm from "./ContactForm";
 
-
 class ContactUs extends React.Component{
-
     render() {
         return (
             <section className="section contact-us" id="get-started">

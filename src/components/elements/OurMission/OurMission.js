@@ -2,13 +2,10 @@ import React from "react";
 import './our_mission.scss'
 
 class OurMission extends React.Component{
-
     render(){
         return(
             <section className="our-mission" id="our-mission">
-                <p className="our-mission__coder">
-                    details matter
-                </p>
+                <p className="our-mission__coder">details matter</p>
                 <div className="container">
                     <div className="our-mission__title title-box">
                         <h2 className="title-box__inner">Mission Statement</h2>
