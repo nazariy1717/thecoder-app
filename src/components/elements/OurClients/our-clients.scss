@@ -16,14 +16,26 @@
     }
   }
   &__item{
-    margin-bottom: 45px;
-    img{
-      display: block;
+    height: 115px;
+    width: 100%;
+    max-width: 185px;
+    margin: auto auto 45px;
+    background-image: url(./items/clients_sprite.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    &:last-child{
       margin: auto;
-      max-width: 175px;
-      @media (max-width: 991px){
-        max-width: 100%;
+    }
+    @media (max-width: $breakpoint-sm) {
+      margin: auto auto 30px;
+      &:last-child{
+        margin: auto;
       }
     }
+    &.--item1{ background-position: 15px 0; }
+    &.--item2{ background-position: -145px 0; }
+    &.--item3{ background-position: -335px 0; }
+    &.--item4{ background-position: -580px 0; }
   }
 }

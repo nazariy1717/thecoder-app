@@ -1,13 +1,7 @@
 import React, {Component} from 'react';
 import './our-clients.scss';
 
-import client1 from "./items/client1.png";
-import client2 from "./items/client2.png";
-import client3 from "./items/client3.png";
-import client4 from "./items/client4.png";
-
 class OurClients extends Component {
-
     render() {
         return (
             <div className="our-clients" id="our-clients">
@@ -16,24 +10,20 @@ class OurClients extends Component {
                         <h2 className="title-box__inner --white">Our clients</h2>
                     </div>
                     <div className="row m-row align-middle">
-                        <div className="column col-md-3 col-sm-6 col-xs-6">
-                            <div className="our-clients__item">
-                                <img src={client1} alt="CLOUD ONLY IT" title="CLOUD ONLY IT"/>
+                        <div className="column col-md-3 col-sm-6 col-xs-12">
+                            <div className="our-clients__item --item1">
                             </div>
                         </div>
-                        <div className="column col-md-3 col-sm-6 col-xs-6">
-                            <div className="our-clients__item">
-                                <img src={client2} alt="Bombay Ruby" title="Bombay Ruby"/>
+                        <div className="column col-md-3 col-sm-6 col-xs-12">
+                            <div className="our-clients__item --item2">
                             </div>
                         </div>
-                        <div className="column col-md-3 col-sm-6 col-xs-6">
-                            <div className="our-clients__item">
-                                <img src={client3} alt="CONCIERGE CATERING" title="CONCIERGE CATERING"/>
+                        <div className="column col-md-3 col-sm-6 col-xs-12">
+                            <div className="our-clients__item --item3">
                             </div>
                         </div>
-                        <div className="column col-md-3 col-sm-6 col-xs-6">
-                            <div className="our-clients__item">
-                                <img src={client4} alt="METIS" title="METIS"/>
+                        <div className="column col-md-3 col-sm-6 col-xs-12">
+                            <div className="our-clients__item --item4">
                             </div>
                         </div>
                     </div>
