@@ -1,11 +1,11 @@
 import React from "react";
 import './our_works.scss'
-import leo from './items/leo.mp4'
-import kucher from './items/kucher.mp4'
-import koma from './items/koma.mp4'
-import demsol from './items/demsol.mp4'
-import cater from './items/cater.mp4'
-import bombay from './items/bombay.mp4'
+import leo from './items/leo_1.mp4'
+import kucher from './items/kucher_1.mp4'
+import koma from './items/koma_1.mp4'
+import demsol from './items/demsol_1.mp4'
+import cater from './items/cater_1.mp4'
+import bombay from './items/bombay_1.mp4'
 
 class OurWorks extends React.Component{
     render(){

@@ -2,14 +2,14 @@ import React, {Component} from 'react';
 import './our-team.scss';
 import {Link} from 'react-router-dom';
 
-import item1 from './items/taras.png';
-import item2 from './items/ruslan.png';
-import item3 from './items/taras1.png';
-import item4 from './items/bogdan.png';
-import item5 from './items/nazar.png';
-import item6 from './items/sofia.png';
-import item7 from './items/yura.png';
-import item8 from './items/misha1.png';
+import item1 from './items/taras.jpg';
+import item2 from './items/ruslan.jpg';
+import item3 from './items/taras1.jpg';
+import item4 from './items/bohdan.jpg';
+import item5 from './items/nazar.jpg';
+import item6 from './items/sofia.jpg';
+import item7 from './items/yura.jpg';
+import item8 from './items/misha.jpg';
 
 class OurClients extends Component {
 
