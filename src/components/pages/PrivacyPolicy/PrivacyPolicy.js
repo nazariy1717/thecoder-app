@@ -111,7 +111,7 @@ export default class PrivacyPolicy extends Component {
                             believe that The Coder has not adhered to this Statement, please contact The Coder at: </p>
                         <p className="app-txt --margin">The Coder Web Development Company <br/>
                             <strong>1888 Geneva Ave, Unit 914</strong><br/>
-                            <strong>San Francisco, California 94134</strong><br/>
+                            <strong>San Mateo, California 94134</strong><br/>
                         </p>
                         <p className="app-txt --margin">Email Address:<br/>
                             <strong>info@thecoderdev.com</strong> </p>
