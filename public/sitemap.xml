@@ -17,23 +17,35 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thecoderdev.com/blog/44-questions-to-ask-before-hiring-web-development-company</loc>
+    <loc>https://thecoderdev.com/team/taras-melnychenko</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thecoderdev.com/blog/Developing-an-e-commerce-website</loc>
+    <loc>https://thecoderdev.com/team/ruslan-senyo</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thecoderdev.com/team/Taras-Melnychenko</loc>
+    <loc>https://thecoderdev.com/team/nazar-kalinchuk</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thecoderdev.com/team/Ruslan-Senyo</loc>
+    <loc>https://thecoderdev.com/team/sofia-havryso</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thecoderdev.com/team/Nazar-Kalinchuk</loc>
+    <loc>https://thecoderdev.com/team/taras-navosha</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thecoderdev.com/team/bohdan-hulovatyi</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thecoderdev.com/team/yura-hymenetskiy</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thecoderdev.com/team/mykhailo-baran</loc>
     <priority>0.7</priority>
   </url>
 </urlset>

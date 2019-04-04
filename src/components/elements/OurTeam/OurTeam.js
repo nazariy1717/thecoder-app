@@ -22,7 +22,7 @@ class OurClients extends Component {
                     </div>
                     <div className="row m-row">
                         <div className="column col-lg-3 col-md-4 col-xs-6">
-                            <Link to="/team/Taras-Melnychenko">
+                            <Link to="/team/taras-melnychenko">
                                 <div className="our-team-item">
                                     <img src={item1} alt="Co-Founder, CMO of the CODER company" title="Co-Founder, CMO of the CODER company" className="image"/>
                                     <span className="our-team-item__name">Taras Melnychenko</span>
@@ -31,7 +31,7 @@ class OurClients extends Component {
                             </Link>
                         </div>
                         <div className="column col-lg-3 col-md-4 col-xs-6">
-                            <Link to="/team/Ruslan-Senyo">
+                            <Link to="/team/ruslan-senyo">
                                 <div className="our-team-item">
                                     <img src={item2} alt="Co-Founder, CEO of the CODER company" title="Co-Founder, CEO of the CODER company" className="image"/>
                                     <span className="our-team-item__name">Ruslan Senyo</span>
@@ -40,7 +40,7 @@ class OurClients extends Component {
                             </Link>
                         </div>
                         <div className="column col-lg-3 col-md-4 col-xs-6">
-                            <Link to="/team/Nazar-Kalinchuk">
+                            <Link to="/team/nazar-kalinchuk">
                                 <div className="our-team-item">
                                     <img src={item5} alt="Team lead, Senior Front-end of the CODER company" title="Team lead, Senior Front-end of the CODER company" className="image"/>
                                     <span className="our-team-item__name">Nazar Kalinchuk</span>
@@ -49,48 +49,49 @@ class OurClients extends Component {
                             </Link>
                         </div>
                         <div className="column col-lg-3 col-md-4 col-xs-6">
-
+                            <Link to="/team/sofia-havryso">
                                 <div className="our-team-item">
                                     <img src={item6} alt="Art Director of the CODER company" title="Art Director of the CODER company" className="image"/>
                                     <span className="our-team-item__name">Sofia Havryso</span>
                                     <span className="our-team-item__role app-txt">Art Director</span>
                                 </div>
-
+                            </Link>
                         </div>
                         <div className="column col-lg-3 col-md-4 col-xs-6">
+                            <Link to="/team/taras-navosha">
                                 <div className="our-team-item">
                                     <img src={item3} alt="Office manager of the CODER company" title="Office manager of the CODER company" className="image"/>
                                     <span className="our-team-item__name">Taras Navosha</span>
                                     <span className="our-team-item__role app-txt">Office manager</span>
                                 </div>
-
+                            </Link>
                         </div>
                         <div className="column col-lg-3 col-md-4 col-xs-6">
-
+                            <Link to="/team/bohdan-hulovatyi">
                                 <div className="our-team-item">
                                     <img src={item4} alt="Front-end Developer of the CODER company" title="Front-end Developer of the CODER company" className="image"/>
                                     <span className="our-team-item__name">Bohdan Hulovatyi</span>
                                     <span className="our-team-item__role app-txt">Front-end Developer</span>
                                 </div>
-
+                            </Link>
                         </div>
                         <div className="column col-lg-3 col-md-4 col-xs-6">
-
+                            <Link to="/team/yura-hymenetskiy">
                                 <div className="our-team-item">
                                     <img src={item7} alt="Senior Back-end Developer of the CODER company" title="Senior Back-end Developer of the CODER company" className="image"/>
                                     <span className="our-team-item__name">Yura Hymenetskiy</span>
                                     <span className="our-team-item__role app-txt">Senior Back-end Developer</span>
                                 </div>
-
+                            </Link>
                         </div>
                         <div className="column col-lg-3 col-md-4 col-xs-6">
-
+                            <Link to="/team/mykhailo-baran">
                                 <div className="our-team-item">
                                     <img src={item8} alt="QA engineer of the CODER company" title="QA engineer of the CODER company" className="image"/>
                                     <span className="our-team-item__name">Mykhailo Baran</span>
                                     <span className="our-team-item__role app-txt">QA engineer</span>
                                 </div>
-
+                            </Link>
                         </div>
                     </div>
                 </div>
