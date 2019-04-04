@@ -110,7 +110,7 @@ export default class PrivacyPolicy extends Component {
                         <p className="app-txt --margin">The Coder welcomes your questions or comments regarding this Statement of Privacy. If you
                             believe that The Coder has not adhered to this Statement, please contact The Coder at: </p>
                         <p className="app-txt --margin">The Coder Web Development Company <br/>
-                            <strong>1888 Geneva Ave, Unit 914</strong><br/>
+                            <strong>817 N Humboldt St, #302</strong><br/>
                             <strong>San Mateo, California 94134</strong><br/>
                         </p>
                         <p className="app-txt --margin">Email Address:<br/>

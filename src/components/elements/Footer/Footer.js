@@ -33,7 +33,7 @@ const footer = () => (
                                 <p className="footer__txt --modifier">Promyslova St, 50/52</p>
                                 <br/>
                                 <a href="tel:(415) 903-0707" className="footer__txt">(415) 903-0707</a>
-                                <a href="mailto:thecoder@gmail.com" className="footer__txt mb-15">info@thecoderdev.com</a>
+                                <a href="mailto:info@thecoderdev.com" className="footer__txt mb-15">info@thecoderdev.com</a>
                             </div>
                         </div>
                         <div className="column col-sm-4 col-xs-12 footer__column">
