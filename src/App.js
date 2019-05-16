@@ -39,8 +39,8 @@ const App = (location) =>(
             <AdminRoute exact path="/admin/dashboard" location={location} component={AdminDashboard} />
             <AdminRoute exact path="/admin/editor" location={location} component={AdminEditor} />
 
-            <UserRoute path="/thanks" component={ThanksPage} />
-            <UserRoute path="/privacy-policy" component={PrivacyPolicy} />
+            <UserRoute exact path="/thanks" component={ThanksPage} />
+            <UserRoute exact path="/privacy-policy" component={PrivacyPolicy} />
             <UserRoute component={NotFoundPage} />
 
         </Switch>

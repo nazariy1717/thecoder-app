@@ -48,4 +48,20 @@
     <loc>https://thecoderdev.com/team/mykhailo-baran</loc>
     <priority>0.7</priority>
   </url>
+    <url>
+        <loc>https://thecoderdev.com/blog</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+      <loc>https://thecoderdev.com/blog/10-main-questions-you-should-ask-your-potential-web-developer</loc>
+      <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://thecoderdev.com/blog/Why-is-Custom-Web-Development-Better-Than-Website-Builders</loc>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://thecoderdev.com/blog/5-Key-Steps-To-Learn-Web-Development-On-Your-Own</loc>
+        <priority>0.7</priority>
+    </url>
 </urlset>

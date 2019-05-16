@@ -25,11 +25,10 @@
     overflow: hidden;
     transition: transform 0.35s ease-out;
     img{
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      max-width: 100%;
-      transform: translate(-50%,-50%) translateZ(0);
+      width: 100%;
+      height: 145px;
+      object-fit: cover;
+      object-position: center;
     }
   }
   &__content{

@@ -14,15 +14,15 @@
     display: block;
     color: #000;
     font-family: Raleway,sans-serif;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 900;
-    line-height: 48px;
+    line-height: 42px;
     @media (max-width: 991px){
-      font-size: 32px;
-      line-height: 40px;
+      font-size: 28px;
+      line-height: 36px;
     }
     @media (max-width: 767px){
-      font-size: 28px;
+      font-size: 24px;
       line-height: 36px;
     }
     @media (max-width: 575px){
@@ -31,9 +31,18 @@
     }
   }
   &__image{
-    max-width: 100%;
+    display: block;
+    width: 100%;
     margin-bottom: 5px;
-    max-height: 450px;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    @media (max-width: 991px){
+      height: 350px;
+    }
+    @media (max-width: 575px){
+      height: 200px;
+    }
   }
   &__subtitle{
     font-size: 13px;
@@ -66,8 +75,8 @@
       color: #000;
       font-family: Raleway,sans-serif;
       font-size: 24px;
-      font-weight: 900;
-      line-height: 36px;
+      font-weight: 700;
+      line-height: 32px;
       @media (max-width: 767px){
         font-size: 22px;
         line-height: 28px;
@@ -81,9 +90,9 @@
       display: block;
       color: #000;
       font-family: Raleway,sans-serif;
-      font-weight: 900;
-      font-size: 22px;
-      line-height: 36px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 28px;
       @media (max-width: 767px){
         font-size: 20px;
         line-height: 28px;
@@ -96,7 +105,12 @@
     img{
       max-width: 100%;
     }
+    b, strong{
+      color: #000;
+      font-weight: bold;
+    }
     ul{
+      padding: 0 0 0 20px;
       list-style-type: disc;
       li{
         display: list-item;
