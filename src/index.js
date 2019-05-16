@@ -4,7 +4,8 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import {Provider} from 'react-redux';
 import './assets/styles/app.scss';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker from './registerServiceWorker';
+import { unregister as unregisterServiceWorker } from './registerServiceWorker';
 
 import { store } from './store';
 import {adminLoggedIn} from './actions/admin';
@@ -32,4 +33,5 @@ ReactDOM.render(
     </BrowserRouter>,
     document.getElementById('coder-app')
 );
-registerServiceWorker();
+// registerServiceWorker();
+unregisterServiceWorker();

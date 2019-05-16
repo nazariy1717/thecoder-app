@@ -1,6 +1,5 @@
 @font-face {
   font-family: 'Raleway';
-  font-display: swap;
   src: local('sans-serif'), url('../fonts/Raleway-Bold.woff2?7567567') format('woff2'),
   url('../fonts/Raleway-Bold.woff?7567567') format('woff');
   font-weight: bold;
@@ -9,7 +8,6 @@
 
 @font-face {
   font-family: 'Raleway';
-  font-display: swap;
   src: local('sans-serif'), url('../fonts/Raleway-Black.woff2?7567567') format('woff2'),
   url('../fonts/Raleway-Black.woff?7567567') format('woff');
   font-weight: 900;
@@ -18,7 +16,6 @@
 
 @font-face {
   font-family: 'Raleway';
-  font-display: swap;
   src: local('sans-serif'), url('../fonts/Raleway-ExtraBold.woff2?7567567') format('woff2'),
   url('../fonts/Raleway-ExtraBold.woff?7567567') format('woff');
   font-weight: 800;
@@ -28,7 +25,6 @@
 
 @font-face {
   font-family: 'MADE Evolve Sans EVO';
-  font-display: swap;
   src: local('sans-serif'), url('../fonts/MADEEvolveSansEVO-Bold.woff2?7567567') format('woff2'),
   url('../fonts/MADEEvolveSansEVO-Bold.woff?7567567') format('woff');
   font-weight: bold;
@@ -41,12 +37,10 @@
   url('../fonts/MyriadPro-Regular.woff?7567567') format('woff');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
   font-family: 'icomoon';
-  font-display: swap;
   src:  url('../fonts/icomoon.eot?fwx2ax');
   src:  url('../fonts/icomoon.eot?fwx2ax#iefix') format('embedded-opentype'),
   url('../fonts/icomoon.ttf?fwx2ax') format('truetype'),

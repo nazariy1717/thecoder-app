@@ -17,6 +17,7 @@ const mapStateToProps = state => {
 class PostPage extends React.Component{
 
     componentDidMount() {
+        window.scrollTo(0, 0);
         TweenMax.to( document.querySelector('.post'), 0.2, {
             opacity: 1
         });
